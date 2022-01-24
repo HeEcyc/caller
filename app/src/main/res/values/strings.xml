@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Caller After Lovelycall</string>
+    <string name="call">Call</string>
+    <string name="settings">Settings</string>
+    <string name="custom">Custom</string>
+    <string name="popular">Popular</string>
+    <string name="games">Games</string>
+    <string name="cats">Cats</string>
+    <string name="movies">Movies</string>
+    <string name="give_permissions_for_the_application_work_properly">Give permissions for the application work properly</string>
+    <string name="allow">Allow</string>
+    <string name="permissionPhoneDescription">Set application as your default phone app. This is necessary for correct work application</string>
+    <string name="permissionContactsDescription">Read contacts. Allows an application to access your contacts</string>
+    <string name="permissionOverlayDescription">Allow display over other app. This is necessary for set pictures and videos for a call</string>
+</resources>
