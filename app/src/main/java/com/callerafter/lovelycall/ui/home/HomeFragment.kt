@@ -13,6 +13,7 @@ import com.callerafter.lovelycall.repository.LocaleRepository
 import com.callerafter.lovelycall.ui.custom.ItemDecorationWithEnds
 import com.callerafter.lovelycall.ui.home.HomeFragment.Mode.*
 import com.callerafter.lovelycall.ui.main.MainActivity
+import com.callerafter.lovelycall.ui.settings.SettingsFragment
 import com.callerafter.lovelycall.utils.setOnClickListener
 import org.koin.android.ext.android.inject
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -60,7 +61,7 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
 //            activityAs<MainActivity>().addFragment()
         }
         binding.buttonSettings.setOnClickListener {
-//            activityAs<MainActivity>().addFragment()
+            activityAs<MainActivity>().addFragment(SettingsFragment())
         }
     }
 

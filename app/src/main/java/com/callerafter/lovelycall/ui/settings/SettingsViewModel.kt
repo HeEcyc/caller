@@ -1,4 +1,6 @@
 package com.callerafter.lovelycall.ui.settings
 
-class SettingsViewModel {
+import com.callerafter.lovelycall.base.BaseViewModel
+
+class SettingsViewModel : BaseViewModel() {
 }

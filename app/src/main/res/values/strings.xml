@@ -12,4 +12,11 @@
     <string name="permissionPhoneDescription">Set application as your default phone app. This is necessary for correct work application</string>
     <string name="permissionContactsDescription">Read contacts. Allows an application to access your contacts</string>
     <string name="permissionOverlayDescription">Allow display over other app. This is necessary for set pictures and videos for a call</string>
+    <string name="languages">Languages</string>
+    <string name="call_theme">Call Theme</string>
+    <string name="call_flash">Call Flash</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="share">Share</string>
+    <string name="rate_us">Rate us</string>
+    <string name="privacy_policy">Privacy Policy</string>
 </resources>
