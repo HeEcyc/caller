@@ -12,5 +12,5 @@ val viewModels = module {
     viewModel { SplashViewModel() }
     viewModel { MainViewModel() }
     viewModel { (mode: HomeFragment.Mode) -> HomeViewModel(mode, get()) }
-    viewModel { SettingsViewModel() }
+    viewModel { SettingsViewModel(get()) }
 }

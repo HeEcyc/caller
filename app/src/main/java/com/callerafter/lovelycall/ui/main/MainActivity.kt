@@ -18,6 +18,10 @@ class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
 
     override fun setupUI() {
         viewModel.permissionRepository = PermissionRepository(this)
+    }
+
+    override fun onResume() {
+        super.onResume()
         if (!viewModel.permissionRepository.hasNecessaryPermissions)
             PermissionDialog().show(supportFragmentManager)
     }

@@ -1,6 +1,7 @@
 package com.callerafter.lovelycall.repository
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.Activity.RESULT_OK
 import android.app.role.RoleManager
 import android.content.Intent
@@ -116,5 +117,17 @@ class PermissionRepository(private val componentActivity: ComponentActivity) {
             listOf(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE),
             onResult
         )
+
+    @SuppressLint("NewApi")
+    fun openDefaultPhoneSelection() =
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
+            componentActivity.startActivity(Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS))
+        else {
+            val sysDialer = componentActivity
+                .getSystemService(TelecomManager::class.java).systemDialerPackage
+            Intent(TelecomManager.ACTION_CHANGE_DEFAULT_DIALER)
+                .putExtra(TelecomManager.EXTRA_CHANGE_DEFAULT_DIALER_PACKAGE_NAME, sysDialer)
+                .let(componentActivity::startActivity)
+        }
 
 }
