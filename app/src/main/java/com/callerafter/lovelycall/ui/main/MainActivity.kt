@@ -7,7 +7,7 @@ import com.callerafter.lovelycall.R
 import com.callerafter.lovelycall.base.BaseActivity
 import com.callerafter.lovelycall.databinding.MainActivityBinding
 import com.callerafter.lovelycall.repository.PermissionRepository
-import com.callerafter.lovelycall.ui.home.permission.PermissionDialog
+import com.callerafter.lovelycall.ui.main.permission.PermissionDialog
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
@@ -22,9 +22,12 @@ class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
 
     override fun onResume() {
         super.onResume()
-        if (!viewModel.permissionRepository.hasNecessaryPermissions)
+        if (needToShowPermissionDialog())
             PermissionDialog().show(supportFragmentManager)
     }
+
+    private fun needToShowPermissionDialog() =
+        !viewModel.permissionRepository.hasNecessaryPermissions && supportFragmentManager.fragments.none { it is PermissionDialog }
 
     override fun provideViewModel(): MainViewModel = viewModel
 

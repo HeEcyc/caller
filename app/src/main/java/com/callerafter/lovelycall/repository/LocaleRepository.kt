@@ -1,6 +1,6 @@
 package com.callerafter.lovelycall.repository
 
-import androidx.lifecycle.MutableLiveData
+import androidx.databinding.ObservableField
 
 class LocaleRepository(
     private val preferences: PreferencesRepository
@@ -11,10 +11,10 @@ class LocaleRepository(
         set(value) {
             val prevLocale = preferences.locale
             preferences.locale = value
-            if (prevLocale != value) localeObservable.postValue(value)
+            if (prevLocale != value) localeObservable.set(value)
         }
 
-    val localeObservable = MutableLiveData<Locale?>()
+    val localeObservable = ObservableField<Locale?>(locale)
 
     enum class Locale(val languageCode: String, val displayName: String)  {
         ARABIC("ar", "اَلْعَرَبِيَّةُ"),

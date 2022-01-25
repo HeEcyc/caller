@@ -1,4 +1,4 @@
-package com.callerafter.lovelycall.ui.home.permission
+package com.callerafter.lovelycall.ui.main.permission
 
 import android.text.SpannableStringBuilder
 import androidx.core.text.inSpans
@@ -29,7 +29,7 @@ class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission
                 else -> throw IllegalStateException("No more permissions to handle")
             }
         }.invoke {
-            if (it && mainViewModel.permissionRepository.hasOverlayPermission)
+            if (mainViewModel.permissionRepository.hasNecessaryPermissions)
                 dismiss()
             else if (it)
                 refreshUI()

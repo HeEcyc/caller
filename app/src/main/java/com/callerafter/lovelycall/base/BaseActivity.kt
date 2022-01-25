@@ -10,19 +10,15 @@ import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import com.callerafter.lovelycall.repository.LocaleRepository
 import com.callerafter.lovelycall.BR
-import com.callerafter.lovelycall.utils.*
+import com.callerafter.lovelycall.repository.LocaleRepository
 import org.koin.android.ext.android.inject
 import java.util.*
-import java.util.Locale
 
-abstract class BaseActivity<TViewModel : BaseViewModel, TBinding : ViewDataBinding> :
+abstract class BaseActivity<TViewModel : ActivityViewModel, TBinding : ViewDataBinding> :
     AppCompatActivity() {
 
     lateinit var binding: TBinding
-
-    private val localeRepository: LocaleRepository by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,8 +27,10 @@ abstract class BaseActivity<TViewModel : BaseViewModel, TBinding : ViewDataBindi
         binding = DataBindingUtil.setContentView(this, provideLayoutId())
         binding.setVariable(BR.viewModel, provideViewModel())
         binding.lifecycleOwner = this
-        localeRepository.localeObservable.observe(this) {
-            if (needToChangeLocale(this)) recreate()
+        provideViewModel().onLocaleChanged.observe(this) {
+            if (needToChangeLocale(this)) {
+                recreate()
+            }
         }
         setupUI()
     }
@@ -48,7 +46,8 @@ abstract class BaseActivity<TViewModel : BaseViewModel, TBinding : ViewDataBindi
     }
 
     private fun updateBaseContextLocale(context: Context): Context {
-        val locale = Locale(localeRepository.locale?.languageCode ?: return context)
+        val tmpLR by inject<LocaleRepository>()
+        val locale = Locale(tmpLR.locale?.languageCode ?: return context)
         Locale.setDefault(locale)
         return if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
             updateResourcesLocale(context, locale)
@@ -71,7 +70,7 @@ abstract class BaseActivity<TViewModel : BaseViewModel, TBinding : ViewDataBindi
     }
 
     private fun needToChangeLocale(context: Context) =
-        (localeRepository.locale?.languageCode ?: "en") != with(context.resources.configuration) {
+        (provideViewModel().localeRepository.locale?.languageCode ?: "en") != with(context.resources.configuration) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) locales[0] else locale
         }.language
 

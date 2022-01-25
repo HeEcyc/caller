@@ -7,6 +7,7 @@ import androidx.fragment.app.activityViewModels
 import com.callerafter.lovelycall.R
 import com.callerafter.lovelycall.base.BaseFragment
 import com.callerafter.lovelycall.databinding.SettingsFragmentBinding
+import com.callerafter.lovelycall.ui.language.LanguageFragment
 import com.callerafter.lovelycall.ui.main.MainActivity
 import com.callerafter.lovelycall.ui.main.MainViewModel
 import com.callerafter.lovelycall.utils.appLink
@@ -30,7 +31,7 @@ class SettingsFragment : BaseFragment<SettingsViewModel, SettingsFragmentBinding
             }
         }
         binding.buttonLanguages.setOnClickListener {
-//            activityAs<MainActivity>().replaceFragmentsAddToBackStack()
+            activityAs<MainActivity>().replaceFragmentsAddToBackStack(LanguageFragment())
         }
         binding.buttonShare.setOnClickListener(::shareApp)
         binding.buttonRateUs.setOnClickListener(::openPlayMarketPage)
