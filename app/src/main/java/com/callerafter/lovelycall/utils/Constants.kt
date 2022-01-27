@@ -5,6 +5,7 @@ import com.callerafter.lovelycall.model.theme.ImageTheme
 import com.callerafter.lovelycall.model.theme.Theme
 import com.callerafter.lovelycall.model.theme.VideoTheme
 
+val defaultTheme = ImageTheme("file:///android_asset/theme_placeholder.png")
 val themesPopular: List<Theme> = List(0) {
     VideoTheme(
         "file:///android_asset/popular/videos/$it.mp4",

@@ -4,21 +4,22 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity.RESULT_OK
 import android.app.role.RoleManager
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.provider.Settings
 import android.telecom.TelecomManager
-import androidx.activity.ComponentActivity
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.LifecycleCoroutineScope
 import com.callerafter.lovelycall.App
+import com.callerafter.lovelycall.base.LauncherRegistrator
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlin.coroutines.suspendCoroutine
 
-class PermissionRepository(private val componentActivity: ComponentActivity) {
+class PermissionRepository(launcherRegistrator: LauncherRegistrator) {
 
     val hasCallerPermission: Boolean get() = with(App.instance) {
         getSystemService(TelecomManager::class.java).defaultDialerPackage == packageName
@@ -31,8 +32,8 @@ class PermissionRepository(private val componentActivity: ComponentActivity) {
         get() = hasCallerPermission && hasOverlayPermission && hasContactsPermission
 
     private var onCallerPermissionResult: ((Boolean) -> Unit)? = null
-    private val callerPermissionLauncher = componentActivity
-        .registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+    private val callerPermissionLauncher = launcherRegistrator
+        .registerActivityResultLauncher(ActivityResultContracts.StartActivityForResult()) {
             onCallerPermissionResult?.invoke(it.resultCode == RESULT_OK)
             onCallerPermissionResult = null
         }
@@ -55,8 +56,8 @@ class PermissionRepository(private val componentActivity: ComponentActivity) {
         }
 
     private var onOverlayPermissionResult: ((Boolean) -> Unit)? = null
-    private val overlayPermissionLauncher = componentActivity
-        .registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+    private val overlayPermissionLauncher = launcherRegistrator
+        .registerActivityResultLauncher(ActivityResultContracts.StartActivityForResult()) {
             onOverlayPermissionResult?.invoke(hasOverlayPermission)
             onOverlayPermissionResult = null
         }
@@ -72,8 +73,8 @@ class PermissionRepository(private val componentActivity: ComponentActivity) {
         }
 
     private var onRuntimePermissionResult: ((Boolean) -> Unit)? = null
-    private val runtimePermissionLauncher = componentActivity
-        .registerForActivityResult(ActivityResultContracts.RequestPermission()) {
+    private val runtimePermissionLauncher = launcherRegistrator
+        .registerActivityResultLauncher(ActivityResultContracts.RequestPermission()) {
             onRuntimePermissionResult?.invoke(it)
             onRuntimePermissionResult = null
         }
@@ -88,8 +89,9 @@ class PermissionRepository(private val componentActivity: ComponentActivity) {
 
     private fun askMultipleRuntimePermissions(
         permissions: List<String>,
+        lifecycleCoroutineScope: LifecycleCoroutineScope,
         onResult: (Boolean) -> Unit
-    ) = componentActivity.lifecycleScope.launch(Dispatchers.Main) {
+    ) = lifecycleCoroutineScope.launch(Dispatchers.Main) {
         val results = mutableListOf<Boolean>()
         permissions.forEach { permission ->
             val isGranted = checkPermission(permission) || suspendCoroutine {  continuation ->
@@ -106,28 +108,33 @@ class PermissionRepository(private val componentActivity: ComponentActivity) {
     fun askContactsPermission(onResult: (Boolean) -> Unit) =
         askRuntimePermission(Manifest.permission.READ_CONTACTS, onResult)
 
-    fun askOutgoingCallPermissions(onResult: (Boolean) -> Unit) =
-        askMultipleRuntimePermissions(
-            listOf(Manifest.permission.CALL_PHONE, Manifest.permission.READ_PHONE_STATE),
-            onResult
-        )
+    fun askOutgoingCallPermissions(
+        lifecycleCoroutineScope: LifecycleCoroutineScope,
+        onResult: (Boolean) -> Unit
+    ) = askMultipleRuntimePermissions(
+        listOf(Manifest.permission.CALL_PHONE, Manifest.permission.READ_PHONE_STATE),
+        lifecycleCoroutineScope,
+        onResult
+    )
 
-    fun askStoragePermissions(onResult: (Boolean) -> Unit) =
-        askMultipleRuntimePermissions(
-            listOf(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE),
-            onResult
-        )
+    fun askStoragePermissions(
+        lifecycleCoroutineScope: LifecycleCoroutineScope,
+        onResult: (Boolean) -> Unit
+    ) = askMultipleRuntimePermissions(
+        listOf(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE),
+        lifecycleCoroutineScope,
+        onResult
+    )
 
     @SuppressLint("NewApi")
-    fun openDefaultPhoneSelection() =
+    fun openDefaultPhoneSelection(context: Context) =
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
-            componentActivity.startActivity(Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS))
+            context.startActivity(Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS))
         else {
-            val sysDialer = componentActivity
-                .getSystemService(TelecomManager::class.java).systemDialerPackage
+            val sysDialer = context.getSystemService(TelecomManager::class.java).systemDialerPackage
             Intent(TelecomManager.ACTION_CHANGE_DEFAULT_DIALER)
                 .putExtra(TelecomManager.EXTRA_CHANGE_DEFAULT_DIALER_PACKAGE_NAME, sysDialer)
-                .let(componentActivity::startActivity)
+                .let(context::startActivity)
         }
 
 }

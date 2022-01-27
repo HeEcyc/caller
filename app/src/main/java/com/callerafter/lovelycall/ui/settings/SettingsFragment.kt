@@ -25,7 +25,7 @@ class SettingsFragment : BaseFragment<SettingsViewModel, SettingsFragmentBinding
         binding.buttonPower.setOnClickListener {
             with(mainViewModel.permissionRepository) {
                 if (hasCallerPermission)
-                    openDefaultPhoneSelection()
+                    openDefaultPhoneSelection(requireContext())
                 else
                     askCallerPermission {}
             }

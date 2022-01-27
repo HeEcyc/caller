@@ -6,6 +6,7 @@ buildscript {
     ext.lifecycle_version = '1.1.1'
 
     repositories {
+        jcenter()
         google()
         mavenCentral()
         maven { url "https://jitpack.io" }
@@ -14,7 +15,9 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:7.0.4"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
-
+        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5"
+//        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }

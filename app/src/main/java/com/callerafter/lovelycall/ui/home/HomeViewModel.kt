@@ -1,9 +1,11 @@
 package com.callerafter.lovelycall.ui.home
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.callerafter.lovelycall.base.BaseViewModel
 import com.callerafter.lovelycall.model.theme.NewTheme
 import com.callerafter.lovelycall.model.theme.Theme
+import com.callerafter.lovelycall.repository.ImagePickerRepository
 import com.callerafter.lovelycall.repository.ThemeRepository
 import com.callerafter.lovelycall.utils.themesCats
 import com.callerafter.lovelycall.utils.themesGames
@@ -17,6 +19,10 @@ class HomeViewModel(
     val mode: HomeFragment.Mode,
     private val themeRepository: ThemeRepository
 ) : BaseViewModel() {
+
+    lateinit var imagePickerRepository: ImagePickerRepository
+
+    val onNewThemeClick = MutableLiveData<Unit>()
 
     val adapterCustom = ThemeAdapter(::onThemeClick)
     val adapterPopular = ThemeAdapter(::onThemeClick, true)
@@ -46,7 +52,7 @@ class HomeViewModel(
     }
 
     private fun onThemeClick(theme: Theme) = when {
-        theme is NewTheme -> {}
+        theme is NewTheme -> onNewThemeClick.postValue(Unit)
         else -> {}
     }
 

@@ -1,5 +1,6 @@
 package com.callerafter.lovelycall.di
 
+import com.callerafter.lovelycall.ui.crop.CropViewModel
 import com.callerafter.lovelycall.ui.home.HomeFragment
 import com.callerafter.lovelycall.ui.home.HomeViewModel
 import com.callerafter.lovelycall.ui.language.LanguageViewModel
@@ -15,4 +16,5 @@ val viewModels = module {
     viewModel { (mode: HomeFragment.Mode) -> HomeViewModel(mode, get()) }
     viewModel { SettingsViewModel(get()) }
     viewModel { LanguageViewModel(get()) }
+    viewModel { CropViewModel(get(), get()) }
 }

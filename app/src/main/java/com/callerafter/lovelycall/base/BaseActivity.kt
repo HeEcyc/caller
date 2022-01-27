@@ -7,16 +7,22 @@ import android.os.Build
 import android.os.Bundle
 import android.os.StrictMode
 import android.view.Window
+import androidx.activity.result.ActivityResultCallback
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContract
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.callerafter.lovelycall.BR
 import com.callerafter.lovelycall.repository.LocaleRepository
+import com.nguyenhoanglam.imagepicker.ui.imagepicker.ImagePickerCallback
+import com.nguyenhoanglam.imagepicker.ui.imagepicker.ImagePickerLauncher
+import com.nguyenhoanglam.imagepicker.ui.imagepicker.registerImagePicker
 import org.koin.android.ext.android.inject
 import java.util.*
 
 abstract class BaseActivity<TViewModel : ActivityViewModel, TBinding : ViewDataBinding> :
-    AppCompatActivity() {
+    AppCompatActivity(), LauncherRegistrator {
 
     lateinit var binding: TBinding
 
@@ -73,5 +79,14 @@ abstract class BaseActivity<TViewModel : ActivityViewModel, TBinding : ViewDataB
         (provideViewModel().localeRepository.locale?.languageCode ?: "en") != with(context.resources.configuration) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) locales[0] else locale
         }.language
+
+    override fun <I, O> registerActivityResultLauncher(
+        contract: ActivityResultContract<I, O>,
+        callback: ActivityResultCallback<O>
+    ): ActivityResultLauncher<I> = registerForActivityResult(contract, callback)
+
+    override fun registerImagePickerLauncher(
+        callback: ImagePickerCallback
+    ): ImagePickerLauncher = registerImagePicker(callback = callback)
 
 }
