@@ -22,4 +22,8 @@
     <string name="phone_contacts">Phone contacts</string>
     <string name="click_to_find_someone">Click to find someone</string>
     <string name="apply">Apply</string>
+    <string name="do_you_want_to_set_this_picture_for_all_contacts">Do you want to set this picture for all contacts?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="hooray_photo_is_updated">Hooray! Photo is updated</string>
 </resources>

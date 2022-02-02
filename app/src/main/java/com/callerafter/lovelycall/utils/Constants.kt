@@ -9,7 +9,7 @@ val defaultTheme = ImageTheme("file:///android_asset/theme_placeholder.png")
 val themesPopular: List<Theme> = List(0) {
     VideoTheme(
         "file:///android_asset/popular/videos/$it.mp4",
-        "file:///android_asset/popular/gifs$it.gif"
+        "file:///android_asset/popular/gifs/$it.gif"
     )
 }
 val themesGames: List<Theme> = List(6) {

@@ -3,12 +3,12 @@ package com.callerafter.lovelycall.ui.contacts
 import android.annotation.SuppressLint
 import android.view.View
 import androidx.core.os.bundleOf
-import androidx.fragment.app.activityViewModels
 import com.callerafter.lovelycall.R
 import com.callerafter.lovelycall.base.BaseFragment
 import com.callerafter.lovelycall.databinding.ContactsFragmentBinding
 import com.callerafter.lovelycall.ui.contacts.ContactsFragment.Mode.DEFAULT
-import com.callerafter.lovelycall.ui.main.MainViewModel
+import com.callerafter.lovelycall.ui.main.MainActivity
+import com.callerafter.lovelycall.ui.theme.ThemeFragment
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
@@ -33,7 +33,10 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentBinding
         binding.keyboard.binding.buttonClose.setOnClickListener { binding.keyboard.visibility = View.GONE }
         binding.buttonKeyboard.setOnClickListener { binding.keyboard.visibility = View.VISIBLE }
         viewModel.selectedContacts.observe(this) {
-            activityViewModels<MainViewModel>().value.onContactsSelected?.invoke(it)
+            with(activityAs<MainActivity>()) {
+                fragment(ThemeFragment::class.java)?.viewModel?.applyToContacts(it)
+                onBackPressed()
+            }
         }
         binding.keyboard.binding.buttonCall.setOnClickListener {
             TODO()

@@ -1,8 +1,9 @@
 package com.callerafter.lovelycall.model.theme
 
 import com.callerafter.lovelycall.utils.presetThemes
+import java.io.Serializable
 
-sealed class Theme(val backgroundFile: String) {
+sealed class Theme(val backgroundFile: String) : Serializable {
 
     abstract val previewFile: String
     abstract val isCustom: Boolean

@@ -15,6 +15,7 @@ import com.callerafter.lovelycall.ui.home.HomeFragment.Mode.DEFAULT
 import com.callerafter.lovelycall.ui.main.MainActivity
 import com.callerafter.lovelycall.ui.main.MainViewModel
 import com.callerafter.lovelycall.ui.settings.SettingsFragment
+import com.callerafter.lovelycall.ui.theme.ThemeFragment
 import com.callerafter.lovelycall.utils.setOnClickListener
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
@@ -78,6 +79,9 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
                         activityAs<MainActivity>().addFragment(CropFragment.newInstance(image))
                     }
             }
+        }
+        viewModel.onThemeClick.observe(this) {
+            activityAs<MainActivity>().addFragment(ThemeFragment.newInstance(it))
         }
     }
 

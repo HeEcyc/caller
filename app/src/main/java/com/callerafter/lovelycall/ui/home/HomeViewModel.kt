@@ -23,6 +23,7 @@ class HomeViewModel(
     lateinit var imagePickerRepository: ImagePickerRepository
 
     val onNewThemeClick = MutableLiveData<Unit>()
+    val onThemeClick = MutableLiveData<Theme>()
 
     val adapterCustom = ThemeAdapter(::onThemeClick)
     val adapterPopular = ThemeAdapter(::onThemeClick, true)
@@ -53,7 +54,7 @@ class HomeViewModel(
 
     private fun onThemeClick(theme: Theme) = when {
         theme is NewTheme -> onNewThemeClick.postValue(Unit)
-        else -> {}
+        else -> onThemeClick.postValue(theme)
     }
 
 }

@@ -16,4 +16,5 @@ val repositories = module {
     single { ContactsRepository(App.instance) }
     single { LocaleRepository(get()) }
     single { FileRepository() }
+    single { CallRepository() }
 }

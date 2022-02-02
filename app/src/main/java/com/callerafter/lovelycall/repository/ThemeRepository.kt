@@ -6,6 +6,7 @@ import com.callerafter.lovelycall.repository.database.dao.ThemeDao
 import com.callerafter.lovelycall.repository.database.entity.ContactTheme
 import com.callerafter.lovelycall.repository.database.entity.CustomTheme
 import kotlinx.coroutines.flow.MutableSharedFlow
+import java.io.File
 
 class ThemeRepository(private val themeDao: ThemeDao) {
 
@@ -20,6 +21,7 @@ class ThemeRepository(private val themeDao: ThemeDao) {
     fun getCustomThemes() = themeDao.selectCustomThemes().map { it.toImageTheme() }
 
     suspend fun deleteCustomTheme(pictureFile: String) {
+        File(pictureFile).apply { if (exists()) delete() }
         if (themeDao.deleteCustomThemeCompletely(CustomTheme(pictureFile)))
             deletedThemes.emit(ImageTheme(pictureFile))
     }
