@@ -8,6 +8,7 @@ import com.callerafter.lovelycall.R
 import com.callerafter.lovelycall.base.BaseFragment
 import com.callerafter.lovelycall.databinding.HomeFragmentBinding
 import com.callerafter.lovelycall.repository.ImagePickerRepository
+import com.callerafter.lovelycall.ui.contacts.ContactsFragment
 import com.callerafter.lovelycall.ui.crop.CropFragment
 import com.callerafter.lovelycall.ui.custom.ItemDecorationWithEnds
 import com.callerafter.lovelycall.ui.home.HomeFragment.Mode.DEFAULT
@@ -46,7 +47,9 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
                 leftLast = if (isLtr) innerSpace else edgeSpace,
                 rightFirst = if (isLtr) innerSpace else edgeSpace,
                 right = innerSpace,
-                rightLast = if (isLtr) edgeSpace else innerSpace
+                rightLast = if (isLtr) edgeSpace else innerSpace,
+                firstPredicate = ::isFirstAdapterItem,
+                lastPredicate = ::isLastAdapterItem
             )
             binding.rvCustom.addItemDecoration(itemDecoration)
             binding.rvPopular.addItemDecoration(itemDecoration)
@@ -56,10 +59,14 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
         }
     }
 
+    private fun isFirstAdapterItem(position: Int) = position == 0
+
+    private fun isLastAdapterItem(position: Int, count: Int) = position == count - 1
+
     private fun initListeners() {
         binding.buttonBack.setOnClickListener(requireActivity()::onBackPressed)
         binding.buttonCall.setOnClickListener {
-//            activityAs<MainActivity>().addFragment()
+            activityAs<MainActivity>().addFragment(ContactsFragment.newInstance(ContactsFragment.Mode.DEFAULT))
         }
         binding.buttonSettings.setOnClickListener {
             activityAs<MainActivity>().addFragment(SettingsFragment())

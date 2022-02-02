@@ -16,7 +16,9 @@ class ItemDecorationWithEnds(
     private val leftLast: Int = 0,
     private val rightFirst: Int = 0,
     private val right: Int = 0,
-    private val rightLast: Int = 0
+    private val rightLast: Int = 0,
+    private val firstPredicate: (position: Int) -> Boolean = { false },
+    private val lastPredicate: (position: Int, count: Int) -> Boolean = { _, _ -> false }
 ) : RecyclerView.ItemDecoration() {
 
     override fun getItemOffsets(
@@ -27,8 +29,8 @@ class ItemDecorationWithEnds(
     ) {
         val position = parent.getChildAdapterPosition(view)
         val adapter = parent.adapter
-        val isFirst = position == 0
-        val isLast = adapter !== null && position == adapter.itemCount - 1
+        val isFirst = firstPredicate(position)
+        val isLast = adapter !== null && lastPredicate(position, adapter.itemCount)
         outRect.top = when {
             isFirst -> topFirst
             isLast -> topLast

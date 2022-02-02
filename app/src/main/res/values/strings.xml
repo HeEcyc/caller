@@ -19,4 +19,7 @@
     <string name="share">Share</string>
     <string name="rate_us">Rate us</string>
     <string name="privacy_policy">Privacy Policy</string>
+    <string name="phone_contacts">Phone contacts</string>
+    <string name="click_to_find_someone">Click to find someone</string>
+    <string name="apply">Apply</string>
 </resources>

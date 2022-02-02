@@ -1,5 +1,7 @@
 package com.callerafter.lovelycall.di
 
+import com.callerafter.lovelycall.ui.contacts.ContactsFragment
+import com.callerafter.lovelycall.ui.contacts.ContactsViewModel
 import com.callerafter.lovelycall.ui.crop.CropViewModel
 import com.callerafter.lovelycall.ui.home.HomeFragment
 import com.callerafter.lovelycall.ui.home.HomeViewModel
@@ -17,4 +19,5 @@ val viewModels = module {
     viewModel { SettingsViewModel(get()) }
     viewModel { LanguageViewModel(get()) }
     viewModel { CropViewModel(get(), get()) }
+    viewModel { (mode: ContactsFragment.Mode) -> ContactsViewModel(mode, get()) }
 }
