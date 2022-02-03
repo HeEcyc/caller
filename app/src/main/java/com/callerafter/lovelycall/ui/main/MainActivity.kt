@@ -40,11 +40,13 @@ class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
         addToBackStack(null)
     }
 
+    fun removeFragment(fragment: Fragment) = supportFragmentManager.commit { remove(fragment) }
+
     override fun onBackPressed() {
         val fragments = supportFragmentManager.fragments
             .filterNot { it is SupportRequestManagerFragment }
         if (fragments.size > 1)
-            supportFragmentManager.commit { remove(fragments.last()) }
+            removeFragment(fragments.last())
         else
             super.onBackPressed()
     }

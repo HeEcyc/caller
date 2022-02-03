@@ -6,6 +6,7 @@ import androidx.core.os.bundleOf
 import com.callerafter.lovelycall.R
 import com.callerafter.lovelycall.base.BaseFragment
 import com.callerafter.lovelycall.databinding.ContactsFragmentBinding
+import com.callerafter.lovelycall.ui.contact.ContactFragment
 import com.callerafter.lovelycall.ui.contacts.ContactsFragment.Mode.DEFAULT
 import com.callerafter.lovelycall.ui.contacts.ContactsFragment.Mode.INTERLOCUTOR_SELECTOR
 import com.callerafter.lovelycall.ui.contacts.number.NumberDialog
@@ -49,6 +50,9 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentBinding
         viewModel.addInterlocutor.observe(this, ::addInterlocutor)
         viewModel.selectInterlocutorNumber.observe(this) {
             NumberDialog.newInstance(it).show(parentFragmentManager)
+        }
+        viewModel.openContact.observe(this) {
+            activityAs<MainActivity>().addFragment(ContactFragment.newInstance(it))
         }
     }
 

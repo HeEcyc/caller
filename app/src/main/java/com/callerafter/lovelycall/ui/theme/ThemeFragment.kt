@@ -76,7 +76,8 @@ class ThemeFragment : BaseFragment<ThemeViewModel, ThemeFragmentBinding>(R.layou
     }
 
     private fun stopPlayer() {
-        binding.themeVideo.player?.apply { stop(); release() }
+        if (viewModel.theme is VideoTheme)
+            binding.themeVideo.player?.apply { stop(); release() }
     }
 
 }

@@ -10,7 +10,7 @@ import com.callerafter.lovelycall.BR
 abstract class BaseAdapter<T, V : ViewDataBinding>(private val onItemClick: ((T) -> Unit)? = null) :
     RecyclerView.Adapter<BaseAdapter.BaseItem<T, out ViewDataBinding>>() {
 
-    private var items: MutableList<T> = mutableListOf()
+    protected var items: MutableList<T> = mutableListOf()
 
     override fun onCreateViewHolder(@NonNull viewGroup: ViewGroup, i: Int): BaseItem<T, V> =
         createHolder(getViewBinding(LayoutInflater.from(viewGroup.context), viewGroup, i))

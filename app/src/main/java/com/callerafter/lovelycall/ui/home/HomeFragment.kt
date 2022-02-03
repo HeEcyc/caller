@@ -5,18 +5,20 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import com.callerafter.lovelycall.R
+import com.callerafter.lovelycall.base.BaseActivity
 import com.callerafter.lovelycall.base.BaseFragment
 import com.callerafter.lovelycall.databinding.HomeFragmentBinding
 import com.callerafter.lovelycall.repository.ImagePickerRepository
+import com.callerafter.lovelycall.ui.contact.ContactFragment
 import com.callerafter.lovelycall.ui.contacts.ContactsFragment
 import com.callerafter.lovelycall.ui.crop.CropFragment
 import com.callerafter.lovelycall.ui.custom.ItemDecorationWithEnds
 import com.callerafter.lovelycall.ui.home.HomeFragment.Mode.DEFAULT
+import com.callerafter.lovelycall.ui.home.HomeFragment.Mode.THEME_PICKER
 import com.callerafter.lovelycall.ui.main.MainActivity
 import com.callerafter.lovelycall.ui.main.MainViewModel
 import com.callerafter.lovelycall.ui.settings.SettingsFragment
 import com.callerafter.lovelycall.ui.theme.ThemeFragment
-import com.callerafter.lovelycall.utils.setOnClickListener
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
@@ -65,7 +67,12 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
     private fun isLastAdapterItem(position: Int, count: Int) = position == count - 1
 
     private fun initListeners() {
-        binding.buttonBack.setOnClickListener(requireActivity()::onBackPressed)
+        binding.buttonBack.setOnClickListener {
+            with(activityAs<BaseActivity<*,*>>()) {
+                if (mode == THEME_PICKER) fragment(ContactFragment::class.java)?.setVideoTheme()
+                onBackPressed()
+            }
+        }
         binding.buttonCall.setOnClickListener {
             activityAs<MainActivity>().addFragment(ContactsFragment.newInstance(ContactsFragment.Mode.DEFAULT))
         }
@@ -81,7 +88,13 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
             }
         }
         viewModel.onThemeClick.observe(this) {
-            activityAs<MainActivity>().addFragment(ThemeFragment.newInstance(it))
+            if (mode == THEME_PICKER)
+                with(activityAs<MainActivity>()) {
+                    fragment(ContactFragment::class.java)?.viewModel?.applyTheme(it)
+                    removeFragment(this@HomeFragment)
+                }
+            else
+                activityAs<MainActivity>().addFragment(ThemeFragment.newInstance(it))
         }
     }
 
