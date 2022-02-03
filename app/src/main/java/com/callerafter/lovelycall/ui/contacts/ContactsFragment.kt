@@ -7,6 +7,8 @@ import com.callerafter.lovelycall.R
 import com.callerafter.lovelycall.base.BaseFragment
 import com.callerafter.lovelycall.databinding.ContactsFragmentBinding
 import com.callerafter.lovelycall.ui.contacts.ContactsFragment.Mode.DEFAULT
+import com.callerafter.lovelycall.ui.contacts.ContactsFragment.Mode.INTERLOCUTOR_SELECTOR
+import com.callerafter.lovelycall.ui.contacts.number.NumberDialog
 import com.callerafter.lovelycall.ui.main.MainActivity
 import com.callerafter.lovelycall.ui.theme.ThemeFragment
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -39,8 +41,19 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentBinding
             }
         }
         binding.keyboard.binding.buttonCall.setOnClickListener {
-            TODO()
+            if (mode == DEFAULT)
+                TODO()
+            else if (mode == INTERLOCUTOR_SELECTOR)
+                addInterlocutor(binding.keyboard.binding.textView.text.toString())
         }
+        viewModel.addInterlocutor.observe(this, ::addInterlocutor)
+        viewModel.selectInterlocutorNumber.observe(this) {
+            NumberDialog.newInstance(it).show(parentFragmentManager)
+        }
+    }
+
+    fun addInterlocutor(number: String) {
+        TODO()
     }
 
     override fun provideViewModel() = viewModel

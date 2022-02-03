@@ -49,9 +49,4 @@ class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
             super.onBackPressed()
     }
 
-    fun <T : Fragment> fragment(fragmentClass: Class<T>): T? =
-        supportFragmentManager.fragments.firstOrNull {
-            fragmentClass.isInstance(it)
-        } as? T
-
 }

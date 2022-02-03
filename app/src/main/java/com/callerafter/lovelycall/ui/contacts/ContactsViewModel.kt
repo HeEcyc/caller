@@ -17,6 +17,8 @@ class ContactsViewModel(
 
     val onBackClickEvents = MutableLiveData<Unit>()
     val selectedContacts = MutableLiveData<List<UserContact>>()
+    val addInterlocutor = MutableLiveData<String>()
+    val selectInterlocutorNumber = MutableLiveData<UserContact>()
 
     val searchQuery = ObservableField("")
     val isSearching = ObservableBoolean(false)
@@ -45,7 +47,11 @@ class ContactsViewModel(
     private fun onContactClick(contact: UserContactViewModel) = when (mode) {
         DEFAULT -> TODO()
         CONTACT_SELECTOR -> updateSelection(contact)
-        INTERLOCUTOR_SELECTOR -> TODO()
+        INTERLOCUTOR_SELECTOR -> when (contact.contact.phoneNumbers.size) {
+            0 -> {}
+            1 -> addInterlocutor.postValue(contact.contact.contactNumber!!)
+            else -> {}
+        }
     }
 
     private fun updateSelection(contact: UserContactViewModel) {

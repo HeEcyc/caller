@@ -13,6 +13,7 @@ import androidx.activity.result.contract.ActivityResultContract
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import androidx.fragment.app.Fragment
 import com.callerafter.lovelycall.BR
 import com.callerafter.lovelycall.repository.LocaleRepository
 import com.nguyenhoanglam.imagepicker.ui.imagepicker.ImagePickerCallback
@@ -88,5 +89,10 @@ abstract class BaseActivity<TViewModel : ActivityViewModel, TBinding : ViewDataB
     override fun registerImagePickerLauncher(
         callback: ImagePickerCallback
     ): ImagePickerLauncher = registerImagePicker(callback = callback)
+
+    fun <T : Fragment> fragment(fragmentClass: Class<T>): T? =
+        supportFragmentManager.fragments.firstOrNull {
+            fragmentClass.isInstance(it)
+        } as? T
 
 }
