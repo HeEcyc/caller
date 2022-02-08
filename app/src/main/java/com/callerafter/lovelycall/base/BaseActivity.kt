@@ -1,8 +1,11 @@
 package com.callerafter.lovelycall.base
 
+import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.content.Context
+import android.content.Intent
 import android.content.res.Configuration
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.StrictMode
@@ -94,5 +97,10 @@ abstract class BaseActivity<TViewModel : ActivityViewModel, TBinding : ViewDataB
         supportFragmentManager.fragments.firstOrNull {
             fragmentClass.isInstance(it)
         } as? T
+
+    @SuppressLint("MissingPermission")
+    fun call(number: String) = startActivity(
+        Intent(Intent.ACTION_CALL, Uri.parse("tel:$number"))
+    )
 
 }

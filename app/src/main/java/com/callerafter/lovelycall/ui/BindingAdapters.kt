@@ -2,6 +2,7 @@ package com.callerafter.lovelycall.ui
 
 import android.graphics.Typeface
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -72,3 +73,8 @@ private fun gridIsLastVertical(position: Int, count: Int) =
     position == count - 1 ||
     (count % 3 in listOf(0, 2) && position == count - 2) ||
     (count % 3 == 0 && position == count - 3)
+
+@BindingAdapter("icon")
+fun setIcon(iv: AppCompatImageView, r: Int) {
+    iv.setImageResource(r)
+}

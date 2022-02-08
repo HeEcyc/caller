@@ -7,6 +7,7 @@ import com.callerafter.lovelycall.base.BaseViewModel
 import com.callerafter.lovelycall.model.contact.UserContact
 import com.callerafter.lovelycall.model.contact.UserContactViewModel
 import com.callerafter.lovelycall.repository.ContactsRepository
+import com.callerafter.lovelycall.repository.PermissionRepository
 import com.callerafter.lovelycall.ui.contacts.ContactsFragment.Mode
 import com.callerafter.lovelycall.ui.contacts.ContactsFragment.Mode.*
 
@@ -14,6 +15,8 @@ class ContactsViewModel(
     val mode: Mode,
     private val contactsRepository: ContactsRepository
 ) : BaseViewModel() {
+
+    lateinit var permissionRepository: PermissionRepository
 
     val onBackClickEvents = MutableLiveData<Unit>()
     val selectedContacts = MutableLiveData<List<UserContact>>()
@@ -51,7 +54,7 @@ class ContactsViewModel(
         INTERLOCUTOR_SELECTOR -> when (contact.contact.phoneNumbers.size) {
             0 -> {}
             1 -> addInterlocutor.postValue(contact.contact.contactNumber!!)
-            else -> {}
+            else -> selectInterlocutorNumber.postValue(contact.contact)
         }
     }
 

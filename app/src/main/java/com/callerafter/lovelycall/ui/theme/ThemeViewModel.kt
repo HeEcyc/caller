@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.callerafter.lovelycall.base.BaseViewModel
 import com.callerafter.lovelycall.model.contact.UserContact
 import com.callerafter.lovelycall.model.theme.Theme
-import com.callerafter.lovelycall.repository.CallRepository
+import com.callerafter.lovelycall.repository.call.CallRepository
 import com.callerafter.lovelycall.repository.ContactsRepository
 import com.callerafter.lovelycall.repository.ThemeRepository
 import kotlinx.coroutines.Dispatchers

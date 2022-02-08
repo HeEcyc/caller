@@ -5,7 +5,8 @@ import androidx.lifecycle.viewModelScope
 import com.callerafter.lovelycall.base.BaseViewModel
 import com.callerafter.lovelycall.model.contact.UserContact
 import com.callerafter.lovelycall.model.theme.Theme
-import com.callerafter.lovelycall.repository.CallRepository
+import com.callerafter.lovelycall.repository.PermissionRepository
+import com.callerafter.lovelycall.repository.call.CallRepository
 import com.callerafter.lovelycall.repository.ThemeRepository
 import com.callerafter.lovelycall.utils.defaultTheme
 import kotlinx.coroutines.Dispatchers
@@ -17,6 +18,8 @@ class ContactViewModel(
     private val themeRepository: ThemeRepository,
     val callRepository: CallRepository
 ) : BaseViewModel() {
+
+    lateinit var permissionRepository: PermissionRepository
 
     val callNumber = MutableLiveData<String>()
     val recreateFragment = MutableLiveData<Unit>()

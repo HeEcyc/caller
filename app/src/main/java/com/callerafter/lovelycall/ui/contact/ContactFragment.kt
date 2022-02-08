@@ -2,20 +2,20 @@ package com.callerafter.lovelycall.ui.contact
 
 import android.net.Uri
 import androidx.core.os.bundleOf
+import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.callerafter.lovelycall.App
 import com.callerafter.lovelycall.R
+import com.callerafter.lovelycall.base.BaseActivity
 import com.callerafter.lovelycall.base.BaseFragment
 import com.callerafter.lovelycall.databinding.ContactFragmentBinding
 import com.callerafter.lovelycall.model.contact.UserContact
 import com.callerafter.lovelycall.model.theme.VideoTheme
+import com.callerafter.lovelycall.repository.PermissionRepository
 import com.callerafter.lovelycall.ui.home.HomeFragment
 import com.callerafter.lovelycall.ui.main.MainActivity
 import com.callerafter.lovelycall.utils.setOnClickListener
-import com.google.android.exoplayer2.C
-import com.google.android.exoplayer2.ExoPlayer
-import com.google.android.exoplayer2.MediaItem
-import com.google.android.exoplayer2.Player
+import com.google.android.exoplayer2.*
 import com.google.android.exoplayer2.audio.AudioAttributes
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -38,10 +38,11 @@ class ContactFragment : BaseFragment<ContactViewModel, ContactFragmentBinding>(R
     }
 
     override fun setupUI() {
+        viewModel.permissionRepository = PermissionRepository(this)
         if (viewModel.theme is VideoTheme)
             setVideoTheme()
         else
-            Glide.with(App.instance).load(viewModel.theme.previewFile).centerCrop().into(binding.themeImage)
+            Glide.with(App.instance).load(viewModel.theme.backgroundFile).centerCrop().into(binding.themeImage)
         Glide.with(App.instance).let {
             if (contact.photoThumbnailUri !== null) it.load(contact.photoThumbnailUri)
             else it.load(R.mipmap.ic_no_logo)
@@ -49,7 +50,9 @@ class ContactFragment : BaseFragment<ContactViewModel, ContactFragmentBinding>(R
 
         binding.buttonBack.setOnClickListener(requireActivity()::onBackPressed)
         viewModel.callNumber.observe(this) {
-            TODO()
+            viewModel.permissionRepository.askOutgoingCallPermissions(lifecycleScope) { res ->
+                if (res) activityAs<BaseActivity<*, *>>().call(it)
+            }
         }
         binding.buttonEdit.setOnClickListener {
             stopPlayer()
@@ -60,14 +63,14 @@ class ContactFragment : BaseFragment<ContactViewModel, ContactFragmentBinding>(R
 
     fun setVideoTheme() {
         if (viewModel.theme !is VideoTheme) return
-        val player = ExoPlayer.Builder(binding.themeVideo.context).build()//SimpleExoPlayer.Builder(binding.themeVideo.context).build()
+        val player = SimpleExoPlayer.Builder(binding.themeVideo.context).build()
         val mediaItem =
             MediaItem.fromUri(Uri.parse(viewModel.theme.backgroundFile))
         player.setMediaItem(mediaItem)
         binding.themeVideo.player = player
-        if (viewModel.callRepository.hasAcceptedCalls) {
+        if (viewModel.callRepository.hasAcceptedCall) {
             player.volume = 0f
-        } else if (viewModel.callRepository.hasCalls) {
+        } else if (viewModel.callRepository.hasCall) {
             val attr = AudioAttributes.Builder()
                 .setContentType(C.CONTENT_TYPE_SONIFICATION)
                 .setUsage(C.USAGE_ALARM)

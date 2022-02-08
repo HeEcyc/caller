@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.telecom.Call"/>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.callerafter.lovelycall.ui.call.fragment.CallViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.gjiazhe.panoramaimageview.PanoramaImageView
+            android:id="@+id/themeImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:piv_show_scrollbar="false"
+            bind:gyroscopeObserver="@{viewModel.gyroscopeObserver}" />
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/themeVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:use_controller="false" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#50000000"
+            android:visibility="@{viewModel.callState == Call.STATE_ACTIVE || viewModel.callState == Call.STATE_DIALING || viewModel.callState == Call.STATE_HOLDING ? View.VISIBLE : View.GONE }" />
+
+        <include
+            android:id="@+id/layout_not_accepted"
+            layout="@layout/call_fragment_layout_not_accepted"
+            bind:viewModel="@{viewModel}"/>
+
+        <include
+            android:id="@+id/layout_accepted"
+            layout="@layout/call_fragment_layout_accepted"
+            android:visibility="gone"
+            bind:viewModel="@{viewModel}"/>
+
+        <com.callerafter.lovelycall.ui.custom.DialKeyBoard
+            android:id="@+id/keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="360:468"
+            android:background="@color/white"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

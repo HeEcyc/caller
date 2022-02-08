@@ -11,7 +11,7 @@ class ImagePickerRepository(launcherRegistrator: LauncherRegistrator) {
     private var onImagePickerResult: ((ArrayList<Image>) -> Unit)? = null
     private val imagePickerActivityLauncher =
         launcherRegistrator.registerImagePickerLauncher {
-            onImagePickerResult?.invoke(it)
+            if (it.isNotEmpty()) onImagePickerResult?.invoke(it)
             onImagePickerResult = null
         }
 

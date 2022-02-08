@@ -26,4 +26,17 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="hooray_photo_is_updated">Hooray! Photo is updated</string>
+    <string name="mute">Mute</string>
+    <string name="keypad">Keypad</string>
+    <string name="speaker">Speaker</string>
+    <string name="hold">Hold</string>
+    <string name="add_call">Add call</string>
+    <string name="swap">Swap</string>
+    <string name="choose_interlocutor">Choose interlocutor</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="public_speaker">Public speaker</string>
+    <string name="phone">Phone</string>
+    <string name="cancel">Cancel</string>
+    <string name="choose_your_speaker">Choose your speaker</string>
+    <string name="choose_sim_card">Choose Sim-card</string>
 </resources>

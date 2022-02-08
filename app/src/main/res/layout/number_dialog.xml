@@ -122,7 +122,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="358:54"
                 app:layout_constraintHeight_percent="0.964"
-                android:gravity="center_vertical"
+                android:gravity="center"
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="20sp"
                 app:autoSizeMinTextSize="1sp"
@@ -130,7 +130,8 @@
                 android:fontFamily="@font/roboto_regular"
                 android:singleLine="true"
                 android:lines="1"
-                android:ellipsize="end"/>
+                android:ellipsize="end"
+                android:text="@string/cancel"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

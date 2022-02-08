@@ -3,12 +3,15 @@ package com.callerafter.lovelycall.ui.contacts
 import android.annotation.SuppressLint
 import android.view.View
 import androidx.core.os.bundleOf
+import androidx.lifecycle.lifecycleScope
 import com.callerafter.lovelycall.R
+import com.callerafter.lovelycall.base.BaseActivity
 import com.callerafter.lovelycall.base.BaseFragment
 import com.callerafter.lovelycall.databinding.ContactsFragmentBinding
+import com.callerafter.lovelycall.repository.PermissionRepository
+import com.callerafter.lovelycall.ui.call.CallActivity
 import com.callerafter.lovelycall.ui.contact.ContactFragment
-import com.callerafter.lovelycall.ui.contacts.ContactsFragment.Mode.DEFAULT
-import com.callerafter.lovelycall.ui.contacts.ContactsFragment.Mode.INTERLOCUTOR_SELECTOR
+import com.callerafter.lovelycall.ui.contacts.ContactsFragment.Mode.*
 import com.callerafter.lovelycall.ui.contacts.number.NumberDialog
 import com.callerafter.lovelycall.ui.main.MainActivity
 import com.callerafter.lovelycall.ui.theme.ThemeFragment
@@ -30,9 +33,14 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentBinding
 
     @SuppressLint("ClickableViewAccessibility")
     override fun setupUI() {
+        viewModel.permissionRepository = PermissionRepository(this)
         with(binding.keyboard.binding.buttonCall) { post { visibility = View.VISIBLE } }
         binding.topPanel.setOnTouchListener { _, _ -> true }
-        viewModel.onBackClickEvents.observe(this) { requireActivity().onBackPressed() }
+        viewModel.onBackClickEvents.observe(this) {
+            if (mode == INTERLOCUTOR_SELECTOR)
+                activityAs<CallActivity>().removeNoneCallFragment(this)
+            else
+                requireActivity().onBackPressed() }
         binding.keyboard.binding.buttonClose.setOnClickListener { binding.keyboard.visibility = View.GONE }
         binding.buttonKeyboard.setOnClickListener { binding.keyboard.visibility = View.VISIBLE }
         viewModel.selectedContacts.observe(this) {
@@ -42,10 +50,7 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentBinding
             }
         }
         binding.keyboard.binding.buttonCall.setOnClickListener {
-            if (mode == DEFAULT)
-                TODO()
-            else if (mode == INTERLOCUTOR_SELECTOR)
-                addInterlocutor(binding.keyboard.binding.textView.text.toString())
+            addInterlocutor(binding.keyboard.binding.textView.text.toString())
         }
         viewModel.addInterlocutor.observe(this, ::addInterlocutor)
         viewModel.selectInterlocutorNumber.observe(this) {
@@ -57,7 +62,10 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentBinding
     }
 
     fun addInterlocutor(number: String) {
-        TODO()
+        viewModel.permissionRepository.askOutgoingCallPermissions(lifecycleScope) {
+            if (it) activityAs<BaseActivity<*, *>>().call(number)
+            if (mode == INTERLOCUTOR_SELECTOR) activityAs<CallActivity>().removeNoneCallFragment(this)
+        }
     }
 
     override fun provideViewModel() = viewModel

@@ -35,7 +35,7 @@ class ThemeFragment : BaseFragment<ThemeViewModel, ThemeFragmentBinding>(R.layou
         if (theme is VideoTheme)
             setVideoTheme()
         else
-            Glide.with(App.instance).load(theme.previewFile).centerCrop().into(binding.themeImage)
+            Glide.with(App.instance).load(theme.backgroundFile).centerCrop().into(binding.themeImage)
 
         binding.buttonBack.setOnClickListener(requireActivity()::onBackPressed)
         viewModel.closeFragment.observe(this) { requireActivity().onBackPressed() }
@@ -47,14 +47,14 @@ class ThemeFragment : BaseFragment<ThemeViewModel, ThemeFragmentBinding>(R.layou
     }
 
     private fun setVideoTheme() {
-        val player = ExoPlayer.Builder(binding.themeVideo.context).build()//SimpleExoPlayer.Builder(binding.themeVideo.context).build()
+        val player = SimpleExoPlayer.Builder(binding.themeVideo.context).build()
         val mediaItem =
             MediaItem.fromUri(Uri.parse(theme.backgroundFile))
         player.setMediaItem(mediaItem)
         binding.themeVideo.player = player
-        if (viewModel.callRepository.hasAcceptedCalls) {
+        if (viewModel.callRepository.hasAcceptedCall) {
             player.volume = 0f
-        } else if (viewModel.callRepository.hasCalls) {
+        } else if (viewModel.callRepository.hasCall) {
             val attr = AudioAttributes.Builder()
                 .setContentType(C.CONTENT_TYPE_SONIFICATION)
                 .setUsage(C.USAGE_ALARM)

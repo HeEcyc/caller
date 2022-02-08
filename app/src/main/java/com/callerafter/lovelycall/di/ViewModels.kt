@@ -2,6 +2,8 @@ package com.callerafter.lovelycall.di
 
 import com.callerafter.lovelycall.model.contact.UserContact
 import com.callerafter.lovelycall.model.theme.Theme
+import com.callerafter.lovelycall.ui.call.CallActivityViewModel
+import com.callerafter.lovelycall.ui.call.fragment.CallViewModel
 import com.callerafter.lovelycall.ui.contact.ContactViewModel
 import com.callerafter.lovelycall.ui.contacts.ContactsFragment
 import com.callerafter.lovelycall.ui.contacts.ContactsViewModel
@@ -28,4 +30,6 @@ val viewModels = module {
     viewModel { (theme: Theme) -> ThemeViewModel(theme, get(), get(), get()) }
     viewModel { (contact: UserContact) -> ContactViewModel(contact, get(), get()) }
     viewModel { DialViewModel(get()) }
+    viewModel { CallActivityViewModel(get(), get(), get()) }
+    viewModel { (contact: UserContact) -> CallViewModel(contact, get(), get(), get()) }
 }

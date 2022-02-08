@@ -1,5 +1,7 @@
 package com.callerafter.lovelycall.utils
 
+import android.telecom.Call
+import android.telecom.VideoProfile
 import android.view.View
 import androidx.databinding.Observable
 
@@ -12,3 +14,7 @@ fun Observable.addOnPropertyChangedCallback(
     }.also { addOnPropertyChangedCallback(it) }
 
 fun View.setOnClickListener(lambda: () -> Unit) = setOnClickListener { lambda() }
+
+fun Call.hangup() = disconnect()
+
+fun Call.answer() = answer(VideoProfile.STATE_AUDIO_ONLY)
