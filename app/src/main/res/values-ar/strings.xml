@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="call">يتصل</string>
+    <string name="settings">إعدادات</string>
+    <string name="custom">العادة</string>
+    <string name="popular">شائع</string>
+    <string name="games">ألعاب</string>
+    <string name="cats">القطط</string>
+    <string name="movies">أفلام</string>
+    <string name="give_permissions_for_the_application_work_properly">منح أذونات للتطبيق يعمل بشكل صحيح</string>
+    <string name="allow">السماح</string>
+    <string name="permissionPhoneDescription">تعيين التطبيق كتطبيق الهاتف الافتراضي الخاص بك. هذا ضروري لتطبيق العمل الصحيح</string>
+    <string name="permissionContactsDescription">قراءة جهات الاتصال. ؛ يسمح للتطبيق بالوصول إلى جهات الاتصال الخاصة بك</string>
+    <string name="permissionOverlayDescription">السماح بالعرض فوق تطبيق آخر. يعد ذلك ضروريًا لتعيين الصور ومقاطع الفيديو لإجراء مكالمة</string>
+    <string name="languages">اللغات</string>
+    <string name="call_theme">موضوع المكالمة</string>
+    <string name="call_flash">استدعاء فلاش</string>
+    <string name="accelerometer">مقياس التسارع</string>
+    <string name="share">شارك</string>
+    <string name="rate_us">قيمنا</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="phone_contacts">اتصالات الهاتف</string>
+    <string name="click_to_find_someone">انقر للعثور على شخص ما</string>
+    <string name="apply">يتقدم</string>
+    <string name="do_you_want_to_set_this_picture_for_all_contacts">هل تريد تعيين هذه الصورة لجميع جهات الاتصال؟</string>
+    <string name="yes">نعم</string>
+    <string name="no">رقم</string>
+    <string name="hooray_photo_is_updated">الصيحة! تم تحديث الصورة</string>
+    <string name="mute">صامت</string>
+    <string name="keypad">لوحة المفاتيح</string>
+    <string name="speaker">مكبر الصوت</string>
+    <string name="hold">معلق</string>
+    <string name="add_call">أضف مكالمة</string>
+    <string name="swap">مبادلة، مقايضة</string>
+    <string name="choose_interlocutor">اختر المحاور</string>
+    <string name="bluetooth">بلوتوث</string>
+    <string name="public_speaker">المتحدث العام</string>
+    <string name="phone">هاتف</string>
+    <string name="cancel">يلغي</string>
+    <string name="choose_your_speaker">اختر السماعة الخاصة بك</string>
+    <string name="choose_sim_card">اختر بطاقة Sim</string>
+</resources>

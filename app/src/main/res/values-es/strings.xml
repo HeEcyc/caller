@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="call">Llamar</string>
+    <string name="settings">Ajustes</string>
+    <string name="custom">Personalizado</string>
+    <string name="popular">Popular</string>
+    <string name="games">Juegos</string>
+    <string name="cats">gatos</string>
+    <string name="movies">Películas</string>
+    <string name="give_permissions_for_the_application_work_properly">Dar permisos para que la aplicación funcione correctamente</string>
+    <string name="allow">Permitir</string>
+    <string name="permissionPhoneDescription">Establezca la aplicación como su aplicación de teléfono predeterminada. Esto es necesario para la correcta aplicación del trabajo.</string>
+    <string name="permissionContactsDescription">Leer contactos. Permite que una aplicación acceda a tus contactos</string>
+    <string name="permissionOverlayDescription">Permitir la visualización sobre otra aplicación. Esto es necesario para establecer imágenes y videos para una llamada.</string>
+    <string name="languages">Idiomas</string>
+    <string name="call_theme">Tema de llamada</string>
+    <string name="call_flash">Flash de llamada</string>
+    <string name="accelerometer">Acelerómetro</string>
+    <string name="share">Cuota</string>
+    <string name="rate_us">Nos califica</string>
+    <string name="privacy_policy">Política de privacidad</string>
+    <string name="phone_contacts">Los contactos del teléfono</string>
+    <string name="click_to_find_someone">Haga clic para encontrar a alguien</string>
+    <string name="apply">Solicitar</string>
+    <string name="do_you_want_to_set_this_picture_for_all_contacts">¿Quieres configurar esta imagen para todos los contactos?</string>
+    <string name="yes">sí</string>
+    <string name="no">No</string>
+    <string name="hooray_photo_is_updated">¡Hurra! La foto está actualizada</string>
+    <string name="mute">Silencio</string>
+    <string name="keypad">teclado</string>
+    <string name="speaker">Altavoz</string>
+    <string name="hold">Sostener</string>
+    <string name="add_call">Agregar llamada</string>
+    <string name="swap">Intercambio</string>
+    <string name="choose_interlocutor">Elegir interlocutor</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="public_speaker">Orador público</string>
+    <string name="phone">Teléfono</string>
+    <string name="cancel">Cancelar</string>
+    <string name="choose_your_speaker">Elige tu altavoz</string>
+    <string name="choose_sim_card">Elija la tarjeta SIM</string>
+</resources>

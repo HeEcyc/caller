@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="call">Panggil</string>
+    <string name="settings">tetapan</string>
+    <string name="custom">Adat</string>
+    <string name="popular">Popular</string>
+    <string name="games">Permainan</string>
+    <string name="cats">kucing</string>
+    <string name="movies">Wayang</string>
+    <string name="give_permissions_for_the_application_work_properly">Beri kebenaran untuk aplikasi berfungsi dengan betul</string>
+    <string name="allow">benarkan</string>
+    <string name="permissionPhoneDescription">Tetapkan aplikasi sebagai apl telefon lalai anda. Ini adalah perlu untuk permohonan kerja yang betul</string>
+    <string name="permissionContactsDescription">Baca kenalan. Membenarkan aplikasi mengakses kenalan anda</string>
+    <string name="permissionOverlayDescription">Benarkan paparan di atas apl lain. Ini diperlukan untuk menetapkan gambar dan video untuk panggilan</string>
+    <string name="languages">Bahasa</string>
+    <string name="call_theme">Tema Panggilan</string>
+    <string name="call_flash">Panggil Flash</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="share">Kongsi</string>
+    <string name="rate_us">Nilaikan kami</string>
+    <string name="privacy_policy">Dasar Privasi</string>
+    <string name="phone_contacts">Kenalan telefon</string>
+    <string name="click_to_find_someone">Klik untuk mencari seseorang</string>
+    <string name="apply">Mohon</string>
+    <string name="do_you_want_to_set_this_picture_for_all_contacts">Adakah anda mahu menetapkan gambar ini untuk semua kenalan?</string>
+    <string name="yes">ya</string>
+    <string name="no">Tidak</string>
+    <string name="hooray_photo_is_updated">Hooray! Foto dikemas kini</string>
+    <string name="mute">bisu</string>
+    <string name="keypad">Pad kekunci</string>
+    <string name="speaker">Penceramah</string>
+    <string name="hold">tahan</string>
+    <string name="add_call">Tambah panggilan</string>
+    <string name="swap">Tukar</string>
+    <string name="choose_interlocutor">Pilih lawan bicara</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="public_speaker">Penceramah awam</string>
+    <string name="phone">telefon</string>
+    <string name="cancel">Batal</string>
+    <string name="choose_your_speaker">Pilih pembesar suara anda</string>
+    <string name="choose_sim_card">Pilih Sim-kad</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="call">Telefon etmek</string>
+    <string name="settings">Ayarlar</string>
+    <string name="custom">Gelenek</string>
+    <string name="popular">Popüler</string>
+    <string name="games">Oyunlar</string>
+    <string name="cats">kediler</string>
+    <string name="movies">Filmler</string>
+    <string name="give_permissions_for_the_application_work_properly">Uygulamanın düzgün çalışması için izinler verin</string>
+    <string name="allow">İzin vermek</string>
+    <string name="permissionPhoneDescription">Uygulamayı varsayılan telefon uygulamanız olarak ayarlayın. Bu, doğru iş uygulaması için gereklidir</string>
+    <string name="permissionContactsDescription">Kişileri okuyun. Bir uygulamanın kişilerinize erişmesine izin verir</string>
+    <string name="permissionOverlayDescription">Diğer uygulama üzerinde görüntülemeye izin ver. Bu, bir arama için ayarlanan resimler ve videolar için gereklidir.</string>
+    <string name="languages">Diller</string>
+    <string name="call_theme">Çağrı Teması</string>
+    <string name="call_flash">Çağrı Flaşı</string>
+    <string name="accelerometer">ivmeölçer</string>
+    <string name="share">Paylaş</string>
+    <string name="rate_us">Bizi değerlendirin</string>
+    <string name="privacy_policy">Gizlilik Politikası</string>
+    <string name="phone_contacts">Telefon kişileri</string>
+    <string name="click_to_find_someone">Birini bulmak için tıklayın</string>
+    <string name="apply">Uygulamak</string>
+    <string name="do_you_want_to_set_this_picture_for_all_contacts">Bu resmi tüm kişiler için ayarlamak istiyor musunuz?</string>
+    <string name="yes">Evet</string>
+    <string name="no">Numara</string>
+    <string name="hooray_photo_is_updated">Yaşasın! Fotoğraf güncellendi</string>
+    <string name="mute">Sesini kapatmak</string>
+    <string name="keypad">Klavye</string>
+    <string name="speaker">hoparlör</string>
+    <string name="hold">Tutmak</string>
+    <string name="add_call">Çağrı ekle</string>
+    <string name="swap">Takas</string>
+    <string name="choose_interlocutor">muhatap seçin</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="public_speaker">Genel konuşmacı</string>
+    <string name="phone">Telefon</string>
+    <string name="cancel">İptal etmek</string>
+    <string name="choose_your_speaker">Hoparlörünüzü seçin</string>
+    <string name="choose_sim_card">Sim kartı seçin</string>
+</resources>

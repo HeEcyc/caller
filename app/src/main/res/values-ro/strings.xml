@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="call">Apel</string>
+    <string name="settings">Setări</string>
+    <string name="custom">Personalizat</string>
+    <string name="popular">Popular</string>
+    <string name="games">Jocuri</string>
+    <string name="cats">Pisicile</string>
+    <string name="movies">Filme</string>
+    <string name="give_permissions_for_the_application_work_properly">Oferiți permisiuni pentru ca aplicația să funcționeze corect</string>
+    <string name="allow">Permite</string>
+    <string name="permissionPhoneDescription">Setați aplicația ca aplicație implicită pentru telefon. Acest lucru este necesar pentru aplicarea corectă a lucrărilor</string>
+    <string name="permissionContactsDescription">Citiți contacte. Permite unei aplicații să vă acceseze contactele</string>
+    <string name="permissionOverlayDescription">Permite afișarea peste altă aplicație. Acest lucru este necesar pentru setarea imaginilor și videoclipurilor pentru un apel</string>
+    <string name="languages">Limbi</string>
+    <string name="call_theme">Tema apelului</string>
+    <string name="call_flash">Apelați Flash</string>
+    <string name="accelerometer">Accelerometru</string>
+    <string name="share">Acțiune</string>
+    <string name="rate_us">Ne evalua</string>
+    <string name="privacy_policy">Politica de Confidențialitate</string>
+    <string name="phone_contacts">Contacte telefonice</string>
+    <string name="click_to_find_someone">Faceți clic pentru a găsi pe cineva</string>
+    <string name="apply">aplica</string>
+    <string name="do_you_want_to_set_this_picture_for_all_contacts">Doriți să setați această imagine pentru toate persoanele de contact?</string>
+    <string name="yes">da</string>
+    <string name="no">Nu</string>
+    <string name="hooray_photo_is_updated">Ura! Fotografia este actualizată</string>
+    <string name="mute">Mut</string>
+    <string name="keypad">Tastatura</string>
+    <string name="speaker">Difuzor</string>
+    <string name="hold">Ține</string>
+    <string name="add_call">Adăugați apel</string>
+    <string name="swap">Schimbați</string>
+    <string name="choose_interlocutor">Alegeți interlocutorul</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="public_speaker">Vorbitor public</string>
+    <string name="phone">Telefon</string>
+    <string name="cancel">Anulare</string>
+    <string name="choose_your_speaker">Alegeți difuzorul dvs</string>
+    <string name="choose_sim_card">Alegeți cartela SIM</string>
+</resources>
