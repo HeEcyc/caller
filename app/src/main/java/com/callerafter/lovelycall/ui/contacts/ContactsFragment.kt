@@ -36,6 +36,7 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentBinding
         viewModel.permissionRepository = PermissionRepository(this)
         with(binding.keyboard.binding.buttonCall) { post { visibility = View.VISIBLE } }
         binding.topPanel.setOnTouchListener { _, _ -> true }
+        binding.keyboard.setOnClickListener {}
         viewModel.onBackClickEvents.observe(this) {
             if (mode == INTERLOCUTOR_SELECTOR)
                 activityAs<CallActivity>().removeNoneCallFragment(this)

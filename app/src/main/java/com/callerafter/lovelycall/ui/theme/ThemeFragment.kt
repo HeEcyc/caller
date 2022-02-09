@@ -57,7 +57,7 @@ class ThemeFragment : BaseFragment<ThemeViewModel, ThemeFragmentBinding>(R.layou
         } else if (viewModel.callRepository.hasCall) {
             val attr = AudioAttributes.Builder()
                 .setContentType(C.CONTENT_TYPE_SONIFICATION)
-                .setUsage(C.USAGE_ALARM)
+                .setUsage(C.USAGE_MEDIA)
                 .build()
             player.setAudioAttributes(attr, false)
         }

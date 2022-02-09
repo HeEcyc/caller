@@ -8,6 +8,8 @@ import androidx.lifecycle.viewModelScope
 import com.callerafter.lovelycall.R
 import com.callerafter.lovelycall.base.BaseViewModel
 import com.callerafter.lovelycall.model.contact.UserContact
+import com.callerafter.lovelycall.model.theme.VideoTheme
+import com.callerafter.lovelycall.repository.PermissionRepository
 import com.callerafter.lovelycall.repository.PreferencesRepository
 import com.callerafter.lovelycall.repository.ThemeRepository
 import com.callerafter.lovelycall.repository.call.AudioManagerRepository
@@ -26,6 +28,8 @@ class CallViewModel(
     val preferencesRepository: PreferencesRepository,
     private val themeRepository: ThemeRepository
 ) : BaseViewModel() {
+
+    lateinit var permissionRepository: PermissionRepository
 
     val onAddCallEvents = MutableLiveData<Unit>()
     val onSwapClickEvents = MutableLiveData<Unit>()
@@ -81,6 +85,7 @@ class CallViewModel(
     val gyroscopeObserver = GyroscopeObserver().apply { setMaxRotateRadian(Math.PI / 2.5) }
 
     init {
+        if (theme is VideoTheme && theme.hasAudio) callRepository.audioManagerRepository.muteRinging()
         handleCallTypeChange(callRepository.audioManagerRepository.currentCallType)
         viewModelScope.launch(Dispatchers.IO) {
             callRepository.audioManagerRepository.callTypeFlow.collect {
@@ -186,5 +191,13 @@ class CallViewModel(
     fun onAddClick() = onAddCallEvents.postValue(Unit)
 
     fun onSwapClick() = onSwapClickEvents.postValue(Unit)
+
+    fun onDialButtonClick(symbol: String) {
+        GlobalScope.launch(Dispatchers.IO) {
+            call.get()?.playDtmfTone(symbol.first())
+            delay(700)
+            call.get()?.stopDtmfTone()
+        }
+    }
 
 }

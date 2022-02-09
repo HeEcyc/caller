@@ -34,7 +34,7 @@ class ImageTheme(pictureFile: String) : Theme(pictureFile) {
 
 }
 
-class VideoTheme(videoFile: String, gifFile: String) : Theme(videoFile) {
+class VideoTheme(videoFile: String, gifFile: String, val hasAudio: Boolean) : Theme(videoFile) {
 
     override val previewFile: String = gifFile
     override val isCustom: Boolean = false

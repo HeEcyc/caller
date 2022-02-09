@@ -24,7 +24,7 @@ class CallRepository(
 
     var callService: BaseCallService? = null
 
-    val hasCall get() = calls.isEmpty()
+    val hasCall get() = calls.isNotEmpty()
     val hasAcceptedCall get() = calls.any { it.state == Call.STATE_ACTIVE }
     val hasRingingCall get() = calls.any { it.state == Call.STATE_RINGING }
     val callAmount get() = calls.size

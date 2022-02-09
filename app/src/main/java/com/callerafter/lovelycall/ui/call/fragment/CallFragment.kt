@@ -11,15 +11,18 @@ import android.view.View
 import android.widget.ImageView
 import androidx.core.os.bundleOf
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
 import com.callerafter.lovelycall.App
 import com.callerafter.lovelycall.R
+import com.callerafter.lovelycall.base.BaseActivity
 import com.callerafter.lovelycall.base.BaseFragment
 import com.callerafter.lovelycall.databinding.CallFragmentBinding
 import com.callerafter.lovelycall.model.contact.UserContact
 import com.callerafter.lovelycall.model.theme.VideoTheme
+import com.callerafter.lovelycall.repository.PermissionRepository
 import com.callerafter.lovelycall.ui.call.CallActivity
 import com.callerafter.lovelycall.ui.call.dialog.ActiveCallDialog
 import com.callerafter.lovelycall.ui.call.dialog.SimDialog
@@ -55,6 +58,7 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
     }
 
     override fun setupUI() {
+        viewModel.permissionRepository = PermissionRepository(this)
         binding.layoutAccepted.callKeyboard.binding.viewModel = viewModel
         viewModel.callRepository.hasMultipleCalls.set(viewModel.callRepository.callAmount > 1)
         binding.keyboard.binding.buttonCall.visibility = View.VISIBLE
@@ -64,9 +68,12 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
         binding.themeImage.setEnablePanoramaMode(viewModel.preferencesRepository.isAccelerometerOn)
 
         binding.keyboard.setOnClickListener {}
-        binding.keyboard.setOnClickListener {
-
+        binding.keyboard.binding.buttonCall.setOnClickListener {
+            viewModel.permissionRepository.askOutgoingCallPermissions(lifecycleScope) {
+                if (it) activityAs<BaseActivity<*, *>>().call(binding.keyboard.binding.textView.text.toString())
+            }
         }
+        binding.keyboard.onButtonClickListener = { viewModel.onDialButtonClick(it) }
         viewModel.callState.observeForever { handleCallState(it) }
         binding.layoutAccepted.callKeyboard.binding.kKeypad.root.setOnClickListener {
             binding.keyboard.visibility = View.VISIBLE
@@ -144,6 +151,7 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
             player.videoScalingMode = C.VIDEO_SCALING_MODE_SCALE_TO_FIT_WITH_CROPPING
             player.playWhenReady = true
             player.prepare()
+            binding.themeVideo.visibility = View.VISIBLE
         } else {
             Glide.with(App.instance).asBitmap().load(theme.backgroundFile).centerCrop().into(object : CustomTarget<Bitmap>() {
                 override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
@@ -221,6 +229,7 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
     private fun switchLayoutToAccepted() {
         binding.layoutNotAccepted.root.visibility = View.GONE
         binding.layoutAccepted.root.visibility = View.VISIBLE
+        binding.themeVideo.player?.volume = 0f
     }
 
 }
