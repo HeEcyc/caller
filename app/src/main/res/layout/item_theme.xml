@@ -4,10 +4,10 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.callerafter.lovelycall.model.theme.NewTheme"/>
+        <import type="com.megaaa.caaall.model.theme.NewTheme"/>
         <variable
             name="item"
-            type="com.callerafter.lovelycall.model.theme.Theme" />
+            type="com.megaaa.caaall.model.theme.Theme" />
         <variable
             name="isDemo"
             type="Boolean" />

@@ -5,7 +5,7 @@
     <data>
         <variable
             name="item"
-            type="com.callerafter.lovelycall.ui.call.dialog.ActiveCallAdapter.ActiveCallViewModel" />
+            type="com.megaaa.caaall.ui.call.dialog.ActiveCallAdapter.ActiveCallViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

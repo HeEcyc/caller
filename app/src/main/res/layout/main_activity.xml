@@ -4,13 +4,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.callerafter.lovelycall.ui.main.MainViewModel" />
+            type="com.megaaa.caaall.ui.main.MainViewModel" />
     </data>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.callerafter.lovelycall.ui.home.HomeFragment"/>
+        android:name="com.megaaa.caaall.ui.home.HomeFragment"/>
 
 </layout>

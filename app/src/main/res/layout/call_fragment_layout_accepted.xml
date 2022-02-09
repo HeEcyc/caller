@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.callerafter.lovelycall.ui.call.fragment.CallViewModel" />
+            type="com.megaaa.caaall.ui.call.fragment.CallViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -65,7 +65,7 @@
                 android:textColor="@color/white"
                 android:fontFamily="@font/roboto_regular"/>
 
-            <com.callerafter.lovelycall.ui.custom.CallKeyboard
+            <com.megaaa.caaall.ui.custom.CallKeyboard
                 android:id="@+id/callKeyboard"
                 android:layout_width="0dp"
                 android:layout_height="0dp"

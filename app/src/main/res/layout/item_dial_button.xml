@@ -5,7 +5,7 @@
     <data>
         <variable
             name="item"
-            type="com.callerafter.lovelycall.ui.custom.DialKeyBoard.DialButtonViewModel" />
+            type="com.megaaa.caaall.ui.custom.DialKeyBoard.DialButtonViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

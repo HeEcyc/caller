@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.callerafter.lovelycall.ui.contacts.ContactsFragment.Mode"/>
+        <import type="com.megaaa.caaall.ui.contacts.ContactsFragment.Mode"/>
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.callerafter.lovelycall.ui.contacts.ContactsViewModel" />
+            type="com.megaaa.caaall.ui.contacts.ContactsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -160,7 +160,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <com.callerafter.lovelycall.ui.custom.DialKeyBoard
+        <com.megaaa.caaall.ui.custom.DialKeyBoard
             android:id="@+id/keyboard"
             android:layout_width="match_parent"
             android:layout_height="0dp"

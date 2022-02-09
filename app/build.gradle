@@ -9,7 +9,7 @@ android {
     buildToolsVersion '30.0.2'
 
     defaultConfig {
-        applicationId "com.callerafter.lovelycall"
+        applicationId "com.megaaa.caaall"
         minSdk 23
         targetSdk 30
         versionCode 1

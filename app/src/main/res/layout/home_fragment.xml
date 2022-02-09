@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.callerafter.lovelycall.ui.home.HomeFragment.Mode"/>
+        <import type="com.megaaa.caaall.ui.home.HomeFragment.Mode"/>
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.callerafter.lovelycall.ui.home.HomeViewModel" />
+            type="com.megaaa.caaall.ui.home.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.callerafter.lovelycall.ui.crop.CropViewModel" />
+            type="com.megaaa.caaall.ui.crop.CropViewModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat

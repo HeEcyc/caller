@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.callerafter.lovelycall.ui.settings.SettingsViewModel" />
+            type="com.megaaa.caaall.ui.settings.SettingsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -181,7 +181,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="10"/>
 
-                        <com.callerafter.lovelycall.ui.custom.FancySwitch
+                        <com.megaaa.caaall.ui.custom.FancySwitch
                             android:id="@+id/switchPower"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
@@ -253,7 +253,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="10"/>
 
-                        <com.callerafter.lovelycall.ui.custom.FancySwitch
+                        <com.megaaa.caaall.ui.custom.FancySwitch
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="34"
@@ -325,7 +325,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="10"/>
 
-                        <com.callerafter.lovelycall.ui.custom.FancySwitch
+                        <com.megaaa.caaall.ui.custom.FancySwitch
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="34"

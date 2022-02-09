@@ -4,10 +4,10 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.callerafter.lovelycall.model.theme.VideoTheme"/>
+        <import type="com.megaaa.caaall.model.theme.VideoTheme"/>
         <variable
             name="viewModel"
-            type="com.callerafter.lovelycall.ui.contact.ContactViewModel" />
+            type="com.megaaa.caaall.ui.contact.ContactViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

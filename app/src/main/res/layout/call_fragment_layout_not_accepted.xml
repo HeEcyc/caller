@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.callerafter.lovelycall.ui.call.fragment.CallViewModel" />
+            type="com.megaaa.caaall.ui.call.fragment.CallViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

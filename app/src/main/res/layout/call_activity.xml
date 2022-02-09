@@ -4,7 +4,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.callerafter.lovelycall.ui.call.CallActivityViewModel" />
+            type="com.megaaa.caaall.ui.call.CallActivityViewModel" />
     </data>
 
     <androidx.fragment.app.FragmentContainerView

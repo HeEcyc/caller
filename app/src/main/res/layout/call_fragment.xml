@@ -8,7 +8,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.callerafter.lovelycall.ui.call.fragment.CallViewModel" />
+            type="com.megaaa.caaall.ui.call.fragment.CallViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -47,7 +47,7 @@
             android:visibility="gone"
             bind:viewModel="@{viewModel}"/>
 
-        <com.callerafter.lovelycall.ui.custom.DialKeyBoard
+        <com.megaaa.caaall.ui.custom.DialKeyBoard
             android:id="@+id/keyboard"
             android:layout_width="match_parent"
             android:layout_height="0dp"

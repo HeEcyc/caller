@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.callerafter.lovelycall.repository.LocaleRepository"/>
+        <import type="com.megaaa.caaall.repository.LocaleRepository"/>
         <import type="android.graphics.Typeface"/>
         <variable
             name="item"

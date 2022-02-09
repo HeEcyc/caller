@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="item"
-            type="com.callerafter.lovelycall.model.contact.UserContactViewModel" />
+            type="com.megaaa.caaall.model.contact.UserContactViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

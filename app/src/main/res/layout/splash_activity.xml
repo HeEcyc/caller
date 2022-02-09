@@ -4,7 +4,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.callerafter.lovelycall.ui.splash.SplashViewModel" />
+            type="com.megaaa.caaall.ui.splash.SplashViewModel" />
         <variable
             name="item"
             type="kotlin.Unit" />

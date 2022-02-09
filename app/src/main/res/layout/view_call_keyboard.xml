@@ -4,12 +4,12 @@
     xmlns:bind="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.callerafter.lovelycall.R"/>
+        <import type="com.megaaa.caaall.R"/>
         <import type="android.view.View"/>
         <import type="android.telecom.Call"/>
         <variable
             name="viewModel"
-            type="com.callerafter.lovelycall.ui.call.fragment.CallViewModel" />
+            type="com.megaaa.caaall.ui.call.fragment.CallViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

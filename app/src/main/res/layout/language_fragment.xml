@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.callerafter.lovelycall.ui.language.LanguageViewModel" />
+            type="com.megaaa.caaall.ui.language.LanguageViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

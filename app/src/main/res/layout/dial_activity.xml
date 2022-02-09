@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.callerafter.lovelycall.ui.dial.DialViewModel" />
+            type="com.megaaa.caaall.ui.dial.DialViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:background="#000000">
 
-        <com.callerafter.lovelycall.ui.custom.DialKeyBoard
+        <com.megaaa.caaall.ui.custom.DialKeyBoard
             android:id="@+id/keyboard"
             android:layout_width="match_parent"
             android:layout_height="0dp"
