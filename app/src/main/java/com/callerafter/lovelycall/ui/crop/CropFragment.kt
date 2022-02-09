@@ -15,7 +15,7 @@ class CropFragment : BaseFragment<CropViewModel, CropFragmentBinding>(R.layout.c
 
     private val viewModel: CropViewModel by viewModel()
 
-    private val image: Image by lazy { arguments!!.getParcelable(ARGUMENT_IMAGE)!! }
+    private val image: Image by lazy { requireArguments().getParcelable(ARGUMENT_IMAGE)!! }
 
     companion object {
         private const val ARGUMENT_IMAGE = "argument_image"

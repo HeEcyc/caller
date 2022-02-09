@@ -13,7 +13,7 @@ import com.callerafter.lovelycall.ui.contacts.ContactsFragment.Mode.*
 
 class ContactsViewModel(
     val mode: Mode,
-    private val contactsRepository: ContactsRepository
+    contactsRepository: ContactsRepository
 ) : BaseViewModel() {
 
     lateinit var permissionRepository: PermissionRepository

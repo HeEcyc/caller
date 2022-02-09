@@ -2,11 +2,8 @@ package com.callerafter.lovelycall.ui.splash
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.postDelayed
 import com.callerafter.lovelycall.R
 import com.callerafter.lovelycall.base.BaseActivity
