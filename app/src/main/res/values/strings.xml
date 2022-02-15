@@ -17,4 +17,13 @@
     <string name="cats">Cats</string>
     <string name="games">Games</string>
     <string name="movies">Movies</string>
+    <string name="main">Main</string>
+    <string name="call_theme">Call Theme</string>
+    <string name="call_flash">Call Flash</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="language">Language</string>
+    <string name="social">Social</string>
+    <string name="share">Share</string>
+    <string name="rate_us">Rate us</string>
+    <string name="privacy_policy">Privacy Policy</string>
 </resources>

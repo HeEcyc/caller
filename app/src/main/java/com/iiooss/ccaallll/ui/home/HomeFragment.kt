@@ -11,6 +11,8 @@ import com.iiooss.ccaallll.R
 import com.iiooss.ccaallll.base.BaseFragment
 import com.iiooss.ccaallll.databinding.HomeFragmentBinding
 import com.iiooss.ccaallll.ui.custom.ItemDecorationWithEnds
+import com.iiooss.ccaallll.ui.main.MainActivity
+import com.iiooss.ccaallll.ui.settings.SettingsFragment
 import com.iiooss.ccaallll.utils.themesPopular
 import io.github.florent37.shapeofview.shapes.RoundRectView
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -62,7 +64,7 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
             //todo
         }
         binding.buttonSettings.setOnClickListener {
-            //todo
+            activityAs<MainActivity>().addFragment(SettingsFragment())
         }
         binding.buttonApply.setOnClickListener {
             //todo
