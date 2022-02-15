@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+        <import type="com.iiooss.ccaallll.repository.LocaleRepository.Locale"/>
         <variable
             name="viewModel"
             type="com.iiooss.ccaallll.ui.settings.SettingsViewModel" />
@@ -78,7 +79,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:scrollbars="none">
+            android:scrollbars="none"
+            android:overScrollMode="never">
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -373,7 +375,7 @@
                         app:autoSizeMinTextSize="1sp"
                         android:textColor="#0A0A0B"
                         android:fontFamily="@font/sf_pro_display_regular"
-                        android:text="@string/accelerometer"/>
+                        android:text="@string/caller_language"/>
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="0dp"
@@ -394,7 +396,7 @@
                         android:singleLine="true"
                         android:lines="1"
                         android:ellipsize="end"
-                        android:text="@{viewModel.localeRepository.localeObservable.displayName}"/>
+                        android:text="@{(viewModel.localeRepository.localeObservable ?? Locale.ENGLISH).displayName}"/>
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="0dp"

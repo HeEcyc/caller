@@ -6,6 +6,7 @@ import androidx.core.app.ShareCompat
 import com.iiooss.ccaallll.R
 import com.iiooss.ccaallll.base.BaseFragment
 import com.iiooss.ccaallll.databinding.SettingsFragmentBinding
+import com.iiooss.ccaallll.ui.language.LanguageFragment
 import com.iiooss.ccaallll.ui.main.MainActivity
 import com.iiooss.ccaallll.utils.appLink
 import com.iiooss.ccaallll.utils.setOnClickListener
@@ -28,7 +29,7 @@ class SettingsFragment : BaseFragment<SettingsViewModel, SettingsFragmentBinding
             }
         }
         binding.buttonLanguage.setOnClickListener {
-//            activityAs<MainActivity>().replaceFragmentsAddToBackStack(LanguageFragment()) todo
+            activityAs<MainActivity>().replaceFragmentsAddToBackStack(LanguageFragment())
         }
         binding.buttonShare.setOnClickListener(::shareApp)
         binding.buttonRateUs.setOnClickListener(::openPlayMarketPage)
