@@ -20,7 +20,7 @@ val themesGames: List<Theme> = List(6) {
 val themesCats: List<Theme> = List(6) {
     ImageTheme("file:///android_asset/cats/$it.webp")
 }
-val themesMovies: List<Theme> = List(5) {
+val themesMovies: List<Theme> = List(6) {
     ImageTheme("file:///android_asset/movies/$it.webp")
 }
 val presetThemes: List<Theme> = listOf(
