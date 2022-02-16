@@ -29,5 +29,6 @@ val presetThemes: List<Theme> = listOf(
     *themesCats.toTypedArray(),
     *themesMovies.toTypedArray()
 )
+val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ#".toList()
 
 val appLink: String by lazy { "https://play.google.com/store/apps/details?id=" + App.instance.packageName }

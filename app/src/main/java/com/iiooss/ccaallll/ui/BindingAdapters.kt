@@ -12,7 +12,8 @@ fun setText(sla: SingleLetterAvatar, s: String?) {
 }
 
 @BindingAdapter("adapter")
-fun setRVAdapter(rv: RecyclerView, rva: RecyclerView.Adapter<*>) {
+fun setRVAdapter(rv: RecyclerView, rva: RecyclerView.Adapter<*>?) {
+    rva ?: return
     rv.adapter = rva
 }
 

@@ -1,6 +1,5 @@
 package com.iiooss.ccaallll.model.contact
 
-import androidx.databinding.ObservableBoolean
 import java.io.Serializable
 
 data class UserContact(
@@ -10,7 +9,3 @@ data class UserContact(
     val photoThumbnailUri: String? = null,
     var phoneNumbers: List<String> = listOf()
 ) : Serializable
-
-class UserContactViewModel(val contact: UserContact) {
-    val isSelected = ObservableBoolean(false)
-}

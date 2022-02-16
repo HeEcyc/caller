@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.iiooss.ccaallll.App
 import com.iiooss.ccaallll.base.BaseViewModel
+import com.iiooss.ccaallll.model.contact.UserContact
 import com.iiooss.ccaallll.model.theme.NewTheme
 import com.iiooss.ccaallll.model.theme.Theme
 import com.iiooss.ccaallll.repository.FileRepository
@@ -74,6 +75,13 @@ class HomeViewModel(
         } else {
             selectedTheme.set(theme)
             themeSelected.postValue(theme)
+        }
+    }
+
+    fun applyThemeToContacts(contacts: List<UserContact>) {
+        val theme = selectedTheme.get() ?: return
+        viewModelScope.launch(Dispatchers.IO) {
+            contacts.forEach { themeRepository.setContactTheme(it.contactId, theme.backgroundFile) }
         }
     }
 

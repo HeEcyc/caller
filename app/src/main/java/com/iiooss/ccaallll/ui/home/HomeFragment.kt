@@ -10,6 +10,7 @@ import com.iiooss.ccaallll.App
 import com.iiooss.ccaallll.R
 import com.iiooss.ccaallll.base.BaseFragment
 import com.iiooss.ccaallll.databinding.HomeFragmentBinding
+import com.iiooss.ccaallll.ui.contacts.ContactsFragment
 import com.iiooss.ccaallll.ui.custom.ItemDecorationWithEnds
 import com.iiooss.ccaallll.ui.main.MainActivity
 import com.iiooss.ccaallll.ui.settings.SettingsFragment
@@ -61,13 +62,17 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
             }
         }
         binding.buttonContacts.setOnClickListener {
-            //todo
+            viewModel.permissionRepository.askContactsPermission {
+                if (it) activityAs<MainActivity>().addFragment(ContactsFragment.newInstance())
+            }
         }
         binding.buttonSettings.setOnClickListener {
             activityAs<MainActivity>().addFragment(SettingsFragment())
         }
         binding.buttonApply.setOnClickListener {
-            //todo
+            viewModel.permissionRepository.askContactsPermission {
+                if (it) activityAs<MainActivity>().addFragment(ContactsFragment.newInstance(ContactsFragment.Mode.CONTACT_SELECTOR))
+            }
         }
         viewModel.themeSelected.observe(this) {
             Glide.with(App.instance).load(it.previewFile).centerCrop().into(binding.imagePreview)
