@@ -15,6 +15,7 @@ import com.iiooss.ccaallll.databinding.ContactsFragmentsBinding
 import com.iiooss.ccaallll.model.contact.UserContact
 import com.iiooss.ccaallll.ui.contact.ContactFragment
 import com.iiooss.ccaallll.ui.contacts.ContactsFragment.Mode.DEFAULT
+import com.iiooss.ccaallll.ui.dial.fragment.DialFragment
 import com.iiooss.ccaallll.ui.home.HomeFragment
 import com.iiooss.ccaallll.ui.main.MainActivity
 import com.iiooss.ccaallll.utils.setOnClickListener
@@ -40,7 +41,7 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentsBindin
         binding.recyclerContacts.addItemDecoration(getNewItemDecoration())
         binding.buttonBack.setOnClickListener(requireActivity()::onBackPressed)
         binding.buttonCall.setOnClickListener {
-            //todo
+            activityAs<MainActivity>().addFragment(DialFragment())
         }
         binding.buttonApply.setOnClickListener {
             applyThemeToContacts(viewModel.contactsRepository.contacts)

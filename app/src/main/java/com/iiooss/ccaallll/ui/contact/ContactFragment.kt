@@ -5,6 +5,7 @@ import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.iiooss.ccaallll.App
 import com.iiooss.ccaallll.R
+import com.iiooss.ccaallll.base.BaseActivity
 import com.iiooss.ccaallll.base.BaseFragment
 import com.iiooss.ccaallll.databinding.ContactFragmentBinding
 import com.iiooss.ccaallll.model.contact.UserContact
@@ -38,9 +39,9 @@ class ContactFragment : BaseFragment<ContactViewModel, ContactFragmentBinding>(R
         binding.buttonEdit.setOnClickListener {
             activityAs<MainActivity>().addFragment(ThemeFragment())
         }
-        viewModel.callNumber.observe(this) {
+        viewModel.callNumber.observe(this) { number ->
             viewModel.permissionRepository.askOutgoingCallPermissions(lifecycleScope) {
-                //todo
+                if (it) activityAs<BaseActivity<*, *>>().call(number)
             }
         }
         viewModel.recreateFragment.observe(this) { recreate() }

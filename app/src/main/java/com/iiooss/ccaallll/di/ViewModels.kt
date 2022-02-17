@@ -5,6 +5,8 @@ import com.iiooss.ccaallll.model.contact.UserContact
 import com.iiooss.ccaallll.ui.contact.ContactViewModel
 import com.iiooss.ccaallll.ui.contacts.ContactsFragment
 import com.iiooss.ccaallll.ui.contacts.ContactsViewModel
+import com.iiooss.ccaallll.ui.dial.activity.DialActivityViewModel
+import com.iiooss.ccaallll.ui.dial.fragment.DialViewModel
 import com.iiooss.ccaallll.ui.home.HomeViewModel
 import com.iiooss.ccaallll.ui.language.LanguageViewModel
 import com.iiooss.ccaallll.ui.main.MainViewModel
@@ -22,4 +24,6 @@ val viewModels = module {
     viewModel { (mode: ContactsFragment.Mode) -> ContactsViewModel(mode, get(), get()) }
     viewModel { (contact: UserContact, lr: LauncherRegistrator) -> ContactViewModel(contact, get { parametersOf(lr) }, get()) }
     viewModel { (lr: LauncherRegistrator) -> ThemeViewModel(get { parametersOf(lr) }, get(), get { parametersOf(lr) }, get()) }
+    viewModel { (lr: LauncherRegistrator) -> DialViewModel(get { parametersOf(lr) }) }
+    viewModel { DialActivityViewModel(get()) }
 }
