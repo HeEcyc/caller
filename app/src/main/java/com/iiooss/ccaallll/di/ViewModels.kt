@@ -9,6 +9,7 @@ import com.iiooss.ccaallll.ui.home.HomeViewModel
 import com.iiooss.ccaallll.ui.language.LanguageViewModel
 import com.iiooss.ccaallll.ui.main.MainViewModel
 import com.iiooss.ccaallll.ui.settings.SettingsViewModel
+import com.iiooss.ccaallll.ui.theme.ThemeViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.core.parameter.parametersOf
 import org.koin.dsl.module
@@ -20,4 +21,5 @@ val viewModels = module {
     viewModel { LanguageViewModel(get()) }
     viewModel { (mode: ContactsFragment.Mode) -> ContactsViewModel(mode, get(), get()) }
     viewModel { (contact: UserContact, lr: LauncherRegistrator) -> ContactViewModel(contact, get { parametersOf(lr) }, get()) }
+    viewModel { (lr: LauncherRegistrator) -> ThemeViewModel(get { parametersOf(lr) }, get(), get { parametersOf(lr) }, get()) }
 }

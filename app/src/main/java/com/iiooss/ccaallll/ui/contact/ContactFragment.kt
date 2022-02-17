@@ -8,6 +8,8 @@ import com.iiooss.ccaallll.R
 import com.iiooss.ccaallll.base.BaseFragment
 import com.iiooss.ccaallll.databinding.ContactFragmentBinding
 import com.iiooss.ccaallll.model.contact.UserContact
+import com.iiooss.ccaallll.ui.main.MainActivity
+import com.iiooss.ccaallll.ui.theme.ThemeFragment
 import com.iiooss.ccaallll.utils.setOnClickListener
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
@@ -34,12 +36,22 @@ class ContactFragment : BaseFragment<ContactViewModel, ContactFragmentBinding>(R
             Glide.with(App.instance).load(contact.photoThumbnailUri).into(binding.contactPicture)
         binding.buttonBack.setOnClickListener(requireActivity()::onBackPressed)
         binding.buttonEdit.setOnClickListener {
-            //todo
+            activityAs<MainActivity>().addFragment(ThemeFragment())
         }
         viewModel.callNumber.observe(this) {
             viewModel.permissionRepository.askOutgoingCallPermissions(lifecycleScope) {
                 //todo
             }
+        }
+        viewModel.recreateFragment.observe(this) { recreate() }
+    }
+
+    private fun recreate() {
+        val newInstance = ContactFragment()
+        newInstance.arguments = arguments
+        with(activityAs<MainActivity>()) {
+            removeFragment(this@ContactFragment)
+            addFragment(newInstance)
         }
     }
 
