@@ -1,6 +1,8 @@
 package com.iiooss.ccaallll.di
 
 import com.iiooss.ccaallll.base.LauncherRegistrator
+import com.iiooss.ccaallll.model.contact.UserContact
+import com.iiooss.ccaallll.ui.contact.ContactViewModel
 import com.iiooss.ccaallll.ui.contacts.ContactsFragment
 import com.iiooss.ccaallll.ui.contacts.ContactsViewModel
 import com.iiooss.ccaallll.ui.home.HomeViewModel
@@ -17,4 +19,5 @@ val viewModels = module {
     viewModel { (lr: LauncherRegistrator) -> SettingsViewModel(get(), get { parametersOf(lr) }, get()) }
     viewModel { LanguageViewModel(get()) }
     viewModel { (mode: ContactsFragment.Mode) -> ContactsViewModel(mode, get(), get()) }
+    viewModel { (contact: UserContact, lr: LauncherRegistrator) -> ContactViewModel(contact, get { parametersOf(lr) }, get()) }
 }

@@ -28,4 +28,6 @@
     <string name="privacy_policy">Privacy Policy</string>
     <string name="caller_language">Caller Language</string>
     <string name="apply_to_all">Apply to all</string>
+    <string name="edit">Edit</string>
+    <string name="mobile">mobile</string>
 </resources>

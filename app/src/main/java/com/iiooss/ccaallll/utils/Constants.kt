@@ -5,7 +5,7 @@ import com.iiooss.ccaallll.model.theme.ImageTheme
 import com.iiooss.ccaallll.model.theme.Theme
 import com.iiooss.ccaallll.model.theme.VideoTheme
 
-val defaultTheme = ImageTheme("file:///android_asset/theme_placeholder.png")
+val defaultTheme = ImageTheme("file:///android_asset/theme_placeholder.webp")
 val audioThemesIndexes = listOf<Int>()
 val themesPopular: List<Theme> = List(0) {
     VideoTheme(

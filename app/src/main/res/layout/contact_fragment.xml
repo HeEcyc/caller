@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.iiooss.ccaallll.ui.contact.ContactViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="360:225">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/themePreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#4D0A0A0B"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/buttonBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintHeight_percent="0.21333"
+                    app:layout_constraintVertical_bias="0.056497">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iconBack"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintHorizontal_bias="0"
+                        android:src="@drawable/ic_back_blue"
+                        app:tint="@color/white"/>
+                    <Space
+                        android:id="@+id/markerBack"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="@id/iconBack"
+                        app:layout_constraintEnd_toEndOf="@id/iconBack"
+                        app:layout_constraintHorizontal_bias="0.791666"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/markerBack"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.3541666"
+                        app:layout_constraintHorizontal_bias="0"
+                        android:gravity="center_vertical"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="14sp"
+                        app:autoSizeMinTextSize="1sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:lines="1"
+                        android:text="@string/contacts"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/markerEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.9444"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/buttonEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/markerEdit"
+                    app:layout_constraintHeight_percent="0.09777"
+                    app:layout_constraintVertical_bias="0.1133">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.7727272"
+                        android:gravity="center_vertical"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="14sp"
+                        app:autoSizeMinTextSize="1sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:lines="1"
+                        android:text="@string/edit"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintHeight_percent="0.38222">
+                    <com.iiooss.ccaallll.ui.custom.SingleLetterAvatar
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        text="@{viewModel.contact.contactName}"
+                        android:visibility="@{viewModel.contact.photoThumbnailUri == null ? View.VISIBLE : View.INVISIBLE}"/>
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/contactPicture"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="@{viewModel.contact.photoThumbnailUri != null ? View.VISIBLE : View.INVISIBLE}"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="320:36"
+                    app:layout_constraintHeight_percent="0.16"
+                    app:layout_constraintVertical_bias="0.873"
+                    android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="30sp"
+                    app:autoSizeMinTextSize="1sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:lines="1"
+                    android:text="@{viewModel.contact.contactName ?? viewModel.contact.contactNumber}"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="320:27"
+                app:layout_constraintWidth_percent="0.88888888">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintHeight_percent="0.740740740"
+                    android:gravity="center_vertical"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="15sp"
+                    app:autoSizeMinTextSize="1sp"
+                    android:textColor="#990A0A0B"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/mobile"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                adapter="@{viewModel.adapter}"
+                android:overScrollMode="never"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

@@ -43,7 +43,7 @@
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/call_fragment.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/call_fragment_layout_accepted.xml" value="0.25" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/call_fragment_layout_not_accepted.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/contact_fragment.xml" value="0.21" />
+        <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/contact_fragment.xml" value="0.22" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/contacts_fragment.xml" value="0.12" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/contacts_fragments.xml" value="0.33" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/crop_fragment.xml" value="0.22" />
@@ -62,6 +62,7 @@
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/item_language.xml" value="0.25" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/item_number_contact.xml" value="0.33" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/item_number_contact_delimiter.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/item_number_contact_fragment.xml" value="0.5" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/item_number_select_interlocutor.xml" value="0.12" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/item_theme.xml" value="0.25" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/language_fragment.xml" value="0.22" />

@@ -16,6 +16,7 @@ class ContactsViewModel(
     private val locale = localeRepository.locale ?: LocaleRepository.Locale.ENGLISH
 
     val onContactSelected = MutableLiveData<UserContact>()
+    val openContact = MutableLiveData<UserContact>()
 
     val adapterContacts = ContactAdapter(::onContactClick)
     val adapterAlphabet = if (locale == LocaleRepository.Locale.ENGLISH)
@@ -33,7 +34,7 @@ class ContactsViewModel(
     }
 
     private fun onContactClick(contact: UserContact) = when (mode) {
-        ContactsFragment.Mode.DEFAULT -> {}//todo
+        ContactsFragment.Mode.DEFAULT -> openContact.postValue(contact)
         ContactsFragment.Mode.CONTACT_SELECTOR -> onContactSelected.postValue(contact)
         ContactsFragment.Mode.INTERLOCUTOR_SELECTOR -> {}//todo
     }

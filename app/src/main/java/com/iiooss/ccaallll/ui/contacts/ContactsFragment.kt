@@ -13,6 +13,7 @@ import com.iiooss.ccaallll.R
 import com.iiooss.ccaallll.base.BaseFragment
 import com.iiooss.ccaallll.databinding.ContactsFragmentsBinding
 import com.iiooss.ccaallll.model.contact.UserContact
+import com.iiooss.ccaallll.ui.contact.ContactFragment
 import com.iiooss.ccaallll.ui.contacts.ContactsFragment.Mode.DEFAULT
 import com.iiooss.ccaallll.ui.home.HomeFragment
 import com.iiooss.ccaallll.ui.main.MainActivity
@@ -46,6 +47,9 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentsBindin
         }
         viewModel.onContactSelected.observe(this) {
             applyThemeToContacts(listOf(it))
+        }
+        viewModel.openContact.observe(this) {
+            activityAs<MainActivity>().addFragment(ContactFragment.newInstance(it))
         }
         binding.recyclerAlphabet.setOnTouchListener { _, event ->
             binding
