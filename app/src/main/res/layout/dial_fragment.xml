@@ -3,122 +3,166 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+        <import type="android.view.View"/>
         <variable
             name="viewModel"
             type="com.iiooss.ccaallll.ui.dial.fragment.DialViewModel" />
+        <variable
+            name="isBackVisible"
+            type="Boolean" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF">
+        android:orientation="vertical"
+        android:background="@color/white">
+
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="360:10"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="360:48"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/buttonBack"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="360:776">
+            app:layout_constraintDimensionRatio="1:1"
+            android:src="@drawable/ic_back_blue"
+            android:visibility="@{isBackVisible ? View.VISIBLE : View.GONE}"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.appcompat.widget.AppCompatTextView
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="320:40.68"
-                app:layout_constraintWidth_percent="0.88888888"
-                app:layout_constraintVertical_bias="0.0992765"
-                android:gravity="center"
-                app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="33.9sp"
-                app:autoSizeMinTextSize="1sp"
-                android:textColor="#0A0A0B"
-                android:fontFamily="@font/sf_pro_display_regular"
-                android:singleLine="true"
-                android:lines="1"
-                android:ellipsize="start"
-                android:text="@{viewModel.text}"/>
+                app:layout_constraintDimensionRatio="360:718">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="360:560.375">
-                <androidx.recyclerview.widget.RecyclerView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintWidth_percent="0.81925"
-                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                    app:spanCount="3"
-                    android:overScrollMode="never"
-                    adapter="@{viewModel.adapter}"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    tools:itemCount="12"
-                    tools:listitem="@layout/item_dial_button"/>
+                    app:layout_constraintDimensionRatio="320:40.68"
+                    app:layout_constraintWidth_percent="0.88888888"
+                    app:layout_constraintVertical_bias="0.0221461"
+                    android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="33.9sp"
+                    app:autoSizeMinTextSize="1sp"
+                    android:textColor="#0A0A0B"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:singleLine="true"
+                    android:lines="1"
+                    android:ellipsize="start"
+                    android:text="@{viewModel.text}"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="360:560.375">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintWidth_percent="0.81925"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="3"
+                        android:overScrollMode="never"
+                        adapter="@{viewModel.adapter}"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        tools:itemCount="12"
+                        tools:listitem="@layout/item_dial_button"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/buttonCall"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintWidth_percent="0.20555"
+                    app:layout_constraintVertical_bias="0.8055"
+                    android:src="@drawable/button_call"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iconBackspace"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="25.42:18.64"
+                    app:layout_constraintWidth_percent="0.0706111"
+                    app:layout_constraintVertical_bias="0.7800131"
+                    app:layout_constraintHorizontal_bias="0.781"
+                    android:src="@drawable/ic_backspace"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="@id/iconBackspace"
+                    app:layout_constraintBottom_toBottomOf="@id/iconBackspace"
+                    app:layout_constraintStart_toStartOf="@id/iconBackspace"
+                    app:layout_constraintEnd_toEndOf="@id/iconBackspace"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintWidth_percent="0.20555"
+                    android:onClick="@{(_) -> viewModel.backspace()}"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.0362"
+                    app:layout_constraintVertical_bias="0.87393"
+                    android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="22sp"
+                    app:autoSizeMinTextSize="1sp"
+                    android:textColor="#007AFF"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/call"/>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/buttonCall"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintWidth_percent="0.20555"
-                app:layout_constraintVertical_bias="0.82159"
-                android:src="@drawable/button_call"/>
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/iconBackspace"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="25.42:18.64"
-                app:layout_constraintWidth_percent="0.0706111"
-                app:layout_constraintVertical_bias="0.79686"
-                app:layout_constraintHorizontal_bias="0.781"
-                android:src="@drawable/ic_backspace"/>
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="@id/iconBackspace"
-                app:layout_constraintBottom_toBottomOf="@id/iconBackspace"
-                app:layout_constraintStart_toStartOf="@id/iconBackspace"
-                app:layout_constraintEnd_toEndOf="@id/iconBackspace"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintWidth_percent="0.20555"
-                android:onClick="@{(_) -> viewModel.backspace()}"/>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHeight_percent="0.0335"
-                app:layout_constraintVertical_bias="0.88368"
-                android:gravity="center"
-                app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="22sp"
-                app:autoSizeMinTextSize="1sp"
-                android:textColor="#007AFF"
-                android:fontFamily="@font/sf_pro_display_regular"
-                android:text="@string/call"/>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </layout>

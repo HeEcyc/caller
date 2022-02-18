@@ -6,6 +6,8 @@ import com.iiooss.ccaallll.base.BaseActivity
 import com.iiooss.ccaallll.base.BaseFragment
 import com.iiooss.ccaallll.databinding.DialFragmentBinding
 import com.iiooss.ccaallll.ui.dial.activity.DialActivity
+import com.iiooss.ccaallll.ui.main.MainActivity
+import com.iiooss.ccaallll.utils.setOnClickListener
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
@@ -14,6 +16,7 @@ class DialFragment : BaseFragment<DialViewModel, DialFragmentBinding>(R.layout.d
     val viewModel: DialViewModel by viewModel { parametersOf(this) }
     // todo always try to get current call
     override fun setupUI() {
+        binding.isBackVisible = requireActivity() !is DialActivity
         (requireActivity() as? DialActivity)?.intent?.data?.schemeSpecificPart?.let(viewModel.text::set)
         binding.buttonCall.setOnClickListener {
             viewModel.permissionRepository.askOutgoingCallPermissions(lifecycleScope) {
@@ -23,7 +26,11 @@ class DialFragment : BaseFragment<DialViewModel, DialFragmentBinding>(R.layout.d
                 }
             }
         }
+        binding.buttonBack.setOnClickListener(::onBackPressed)
     }
+
+    private fun onBackPressed() =
+        (requireActivity() as? MainActivity)?.onBackPressed() ?: {}//todo back to call fragment
 
     override fun provideViewModel() = viewModel
 
