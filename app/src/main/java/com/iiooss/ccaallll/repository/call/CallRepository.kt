@@ -20,7 +20,7 @@ class CallRepository(
     val telecomManager: TelecomManager
 ) {
 
-    private val calls = mutableListOf<Call>()
+    val calls = mutableListOf<Call>()
 
     var callService: BaseCallService? = null
 

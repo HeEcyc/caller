@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.iiooss.ccaallll.ui.call.fragment.CallViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.gjiazhe.panoramaimageview.PanoramaImageView
+            android:id="@+id/themeImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:piv_show_scrollbar="false"
+            bind:gyroscopeObserver="@{viewModel.gyroscopeObserver}" />
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/themeVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:use_controller="false" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#4D0A0A0B"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

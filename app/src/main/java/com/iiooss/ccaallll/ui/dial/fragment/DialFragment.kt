@@ -5,6 +5,7 @@ import com.iiooss.ccaallll.R
 import com.iiooss.ccaallll.base.BaseActivity
 import com.iiooss.ccaallll.base.BaseFragment
 import com.iiooss.ccaallll.databinding.DialFragmentBinding
+import com.iiooss.ccaallll.ui.call.CallActivity
 import com.iiooss.ccaallll.ui.dial.activity.DialActivity
 import com.iiooss.ccaallll.ui.main.MainActivity
 import com.iiooss.ccaallll.utils.setOnClickListener
@@ -22,7 +23,7 @@ class DialFragment : BaseFragment<DialViewModel, DialFragmentBinding>(R.layout.d
             viewModel.permissionRepository.askOutgoingCallPermissions(lifecycleScope) {
                 if (it) {
                     activityAs<BaseActivity<*, * >>().call(viewModel.text.get()!!)
-                    //todo remove from call activity
+                    (requireActivity() as? CallActivity)?.removeFragment(this)
                 }
             }
         }
@@ -30,7 +31,8 @@ class DialFragment : BaseFragment<DialViewModel, DialFragmentBinding>(R.layout.d
     }
 
     private fun onBackPressed() =
-        (requireActivity() as? MainActivity)?.onBackPressed() ?: {}//todo back to call fragment
+        (requireActivity() as? MainActivity)?.onBackPressed() ?:
+        (requireActivity() as? CallActivity)?.removeFragment(this)
 
     override fun provideViewModel() = viewModel
 

@@ -2,6 +2,8 @@ package com.iiooss.ccaallll.di
 
 import com.iiooss.ccaallll.base.LauncherRegistrator
 import com.iiooss.ccaallll.model.contact.UserContact
+import com.iiooss.ccaallll.ui.call.CallActivityViewModel
+import com.iiooss.ccaallll.ui.call.fragment.CallViewModel
 import com.iiooss.ccaallll.ui.contact.ContactViewModel
 import com.iiooss.ccaallll.ui.contacts.ContactsFragment
 import com.iiooss.ccaallll.ui.contacts.ContactsViewModel
@@ -26,4 +28,6 @@ val viewModels = module {
     viewModel { (lr: LauncherRegistrator) -> ThemeViewModel(get { parametersOf(lr) }, get(), get { parametersOf(lr) }, get()) }
     viewModel { (lr: LauncherRegistrator) -> DialViewModel(get { parametersOf(lr) }) }
     viewModel { DialActivityViewModel(get()) }
+    viewModel { (lr: LauncherRegistrator) -> CallActivityViewModel(get(), get(), get(), get { parametersOf(lr) }) }
+    viewModel { (contact: UserContact, lr: LauncherRegistrator) -> CallViewModel(contact, get(), get(), get(), get { parametersOf(lr) }) }
 }
