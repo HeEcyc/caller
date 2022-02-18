@@ -6,8 +6,8 @@ import com.megaaa.caaall.model.theme.Theme
 import com.megaaa.caaall.model.theme.VideoTheme
 
 val defaultTheme = ImageTheme("file:///android_asset/theme_placeholder.png")
-val audioThemesIndexes = listOf<Int>()
-val themesPopular: List<Theme> = List(0) {
+val audioThemesIndexes = List(6) { it }
+val themesPopular: List<Theme> = List(6) {
     VideoTheme(
         "file:///android_asset/popular/videos/$it.mp4",
         "file:///android_asset/popular/gifs/$it.gif",
