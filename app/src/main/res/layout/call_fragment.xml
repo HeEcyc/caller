@@ -33,6 +33,16 @@
             android:layout_height="match_parent"
             android:background="#4D0A0A0B"/>
 
+        <include
+            android:id="@+id/layoutRinging"
+            layout="@layout/call_fragment_ringing"/>
+        <include
+            android:id="@+id/layoutDialing"
+            layout="@layout/call_fragment_dialing"/>
+        <include
+            android:id="@+id/layoutAccepted"
+            layout="@layout/call_fragment_accepted"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
