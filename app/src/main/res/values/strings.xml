@@ -31,4 +31,10 @@
     <string name="edit">Edit</string>
     <string name="mobile">mobile</string>
     <string name="call">call</string>
+    <string name="mobile_capital">Mobile</string>
+    <string name="ringing">ringing</string>
+    <string name="end_to_end_encrypted">End-to-end Encrypted</string>
+    <string name="speaker">speaker</string>
+    <string name="keys">keys</string>
+    <string name="mute">mute</string>
 </resources>

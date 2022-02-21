@@ -1,18 +1,292 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+        <import type="android.view.View"/>
         <variable
             name="viewModel"
             type="com.iiooss.ccaallll.ui.call.fragment.CallViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="360:58">
 
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintHeight_percent="0.8275862"
+                    android:src="@drawable/ic_back_blue"
+                    app:tint="@color/white"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.275862"
+                    app:layout_constraintVertical_bias="0.5714">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ic_lock"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/lock_space"
+                        app:layout_constraintDimensionRatio="10:13"
+                        app:layout_constraintHeight_percent="0.8125"
+                        android:src="@mipmap/ic_lock"/>
+                    <android.widget.Space
+                        android:id="@+id/lock_space"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toEndOf="@id/ic_lock"
+                        app:layout_constraintEnd_toStartOf="@id/lock_text"
+                        app:layout_constraintDimensionRatio="6:16"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lock_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toEndOf="@id/lock_space"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:gravity="center"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="13sp"
+                        app:autoSizeMinTextSize="1sp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:lines="1"
+                        android:text="@string/end_to_end_encrypted"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintHeight_percent="0.8275862"
+                    android:src="@{viewModel.callRepository.hasMultipleCalls ? @drawable/ic_swap : @drawable/ic_add_call}"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="360:718">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="280:36"
+                    app:layout_constraintWidth_percent="0.7777777"
+                    app:layout_constraintVertical_bias="0.0293255"
+                    android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="30sp"
+                    app:autoSizeMinTextSize="1sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:text="@{viewModel.contact.contactName ?? viewModel.contact.contactNumber}"/>
+
+                <Chronometer
+                    android:id="@+id/chronometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintVertical_bias="0.092219"
+                    android:textSize="20sp"
+                    android:textColor="#A8FFFFFF"
+                    android:fontFamily="@font/sf_pro_display_regular"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/contactPicture"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintWidth_percent="0.55555"
+                    app:layout_constraintVertical_bias="0.305"
+                    android:visibility="@{viewModel.contact.photoThumbnailUri != null ? View.VISIBLE : View.GONE}"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintWidth_percent="0.20555"
+                    app:layout_constraintVertical_bias="0.8869969"
+                    android:src="@drawable/button_decline"
+                    android:rotation="135"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="360:99"
+                    app:layout_constraintVertical_bias="0.70113">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/buttonSpeaker"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintHeight_percent="0.767676"
+                        app:layout_constraintHorizontal_bias="0.140845"
+                        android:background="@{viewModel.isSpeakerModeOn ? @drawable/call_button_bg_active : @drawable/call_button_bg}">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="36:26"
+                            app:layout_constraintHeight_percent="0.3421"
+                            android:src="@drawable/ic_speaker"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/buttonKeys"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintHeight_percent="0.767676"
+                        android:background="@drawable/call_button_bg">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintHeight_percent="0.38"
+                            android:src="@drawable/ic_keys"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/buttonMute"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintHeight_percent="0.767676"
+                        app:layout_constraintHorizontal_bias="0.859155"
+                        android:background="@{viewModel.isMuteOn ? @drawable/call_button_bg_active : @drawable/call_button_bg}">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="28.06:31.13"
+                            app:layout_constraintHeight_percent="0.4096"
+                            android:src="@drawable/ic_mute"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/buttonSpeaker"
+                        app:layout_constraintEnd_toEndOf="@id/buttonSpeaker"
+                        app:layout_constraintHeight_percent="0.161616"
+                        android:gravity="center"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="13sp"
+                        app:autoSizeMinTextSize="1sp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:text="@string/speaker"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/buttonKeys"
+                        app:layout_constraintEnd_toEndOf="@id/buttonKeys"
+                        app:layout_constraintHeight_percent="0.161616"
+                        android:gravity="center"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="13sp"
+                        app:autoSizeMinTextSize="1sp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:text="@string/keys"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/buttonMute"
+                        app:layout_constraintEnd_toEndOf="@id/buttonMute"
+                        app:layout_constraintHeight_percent="0.161616"
+                        android:gravity="center"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="13sp"
+                        app:autoSizeMinTextSize="1sp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:text="@string/mute"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </layout>

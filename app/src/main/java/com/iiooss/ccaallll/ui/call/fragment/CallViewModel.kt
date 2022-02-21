@@ -37,7 +37,7 @@ class CallViewModel(
         themeRepository.getContactTheme(contact.contactId) ?: defaultTheme
     }
 
-    val callIcon = ObservableField(R.drawable.ic_keyboard_speaker_default)
+//    val callIcon = ObservableField(R.drawable.ic_keyboard_speaker_default)
 
     private val callCallback = object : Call.Callback() {
 
@@ -95,28 +95,28 @@ class CallViewModel(
     }
 
     private fun handleCallTypeChange(type: AudioManagerRepository.CallType) {
-        when (type) {
-            AudioManagerRepository.CallType.PHONE -> {
-                callIcon.set(
-                    if (callRepository.audioManagerRepository.hasActiveCallBluetoothDevice) R.drawable.ic_keyboard_speaker_phone
-                    else R.drawable.ic_keyboard_speaker_default
-                )
-                isSpeakerModeOn.set(false)
-            }
-            AudioManagerRepository.CallType.SPEAKER -> {
-                if (callRepository.audioManagerRepository.hasActiveCallBluetoothDevice) {
-                    callIcon.set(R.drawable.ic_keyboard_speaker_loud)
-                    isSpeakerModeOn.set(false)
-                } else {
-                    callIcon.set(R.drawable.ic_keyboard_speaker_default)
-                    isSpeakerModeOn.set(true)
-                }
-            }
-            AudioManagerRepository.CallType.BLUETOOTH -> {
-                callIcon.set(R.drawable.ic_keyboard_speaker_bluetooth)
-                isSpeakerModeOn.set(false)
-            }
-        }
+//        when (type) {
+//            AudioManagerRepository.CallType.PHONE -> {
+//                callIcon.set(
+//                    if (callRepository.audioManagerRepository.hasActiveCallBluetoothDevice) R.drawable.ic_keyboard_speaker_phone
+//                    else R.drawable.ic_keyboard_speaker_default
+//                )
+//                isSpeakerModeOn.set(false)
+//            }
+//            AudioManagerRepository.CallType.SPEAKER -> {
+//                if (callRepository.audioManagerRepository.hasActiveCallBluetoothDevice) {
+//                    callIcon.set(R.drawable.ic_keyboard_speaker_loud)
+//                    isSpeakerModeOn.set(false)
+//                } else {
+//                    callIcon.set(R.drawable.ic_keyboard_speaker_default)
+//                    isSpeakerModeOn.set(true)
+//                }
+//            }
+//            AudioManagerRepository.CallType.BLUETOOTH -> {
+//                callIcon.set(R.drawable.ic_keyboard_speaker_bluetooth)
+//                isSpeakerModeOn.set(false)
+//            }
+//        }
     }
 
     private fun turnOnFlashing() {
@@ -165,18 +165,18 @@ class CallViewModel(
     }
 
     fun setSpeakerCallType() {
-        callRepository.audioManagerRepository.setPhoneCallType(callRepository.callService)
-        callIcon.set(R.drawable.ic_keyboard_speaker_phone)
+//        callRepository.audioManagerRepository.setPhoneCallType(callRepository.callService)
+//        callIcon.set(R.drawable.ic_keyboard_speaker_phone)
     }
 
     fun setBluetoothCallType() {
-        callRepository.audioManagerRepository.setBluetoothCallType(callRepository.callService)
-        callIcon.set(R.drawable.ic_keyboard_speaker_bluetooth)
+//        callRepository.audioManagerRepository.setBluetoothCallType(callRepository.callService)
+//        callIcon.set(R.drawable.ic_keyboard_speaker_bluetooth)
     }
 
     fun setSpeakerType() {
-        callRepository.audioManagerRepository.setSpeakerModeOn(callRepository.callService)
-        callIcon.set(R.drawable.ic_keyboard_speaker_loud)
+//        callRepository.audioManagerRepository.setSpeakerModeOn(callRepository.callService)
+//        callIcon.set(R.drawable.ic_keyboard_speaker_loud)
     }
 
     private fun unMuteRinging() {

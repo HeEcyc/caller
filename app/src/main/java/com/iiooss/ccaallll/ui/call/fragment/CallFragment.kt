@@ -54,47 +54,47 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
     }
 
     override fun setupUI() {
-        binding.layoutAccepted.callKeyboard.binding.viewModel = viewModel
-        viewModel.callRepository.hasMultipleCalls.set(viewModel.callRepository.callAmount > 1)
-        binding.keyboard.binding.buttonCall.visibility = View.VISIBLE
-
-        showContact()
-
-        binding.themeImage.setEnablePanoramaMode(viewModel.preferencesRepository.isAccelerometerOn)
-
-        binding.keyboard.setOnClickListener {}
-        binding.keyboard.binding.buttonCall.setOnClickListener {
-            viewModel.permissionRepository.askOutgoingCallPermissions(lifecycleScope) {
-                if (it) activityAs<BaseActivity<*, *>>().call(binding.keyboard.binding.textView.text.toString())
-            }
-        }
-        binding.keyboard.onButtonClickListener = { viewModel.onDialButtonClick(it) }
-        viewModel.callState.observeForever { handleCallState(it) }
-        binding.layoutAccepted.callKeyboard.binding.kKeypad.root.setOnClickListener {
-            binding.keyboard.visibility = View.VISIBLE
-        }
-        binding.keyboard.binding.buttonClose.setOnClickListener {
-            binding.keyboard.visibility = View.GONE
-        }
-
-        viewModel.onDialogOpenListener.observe(this) { SpeakerTypeDialog().show(parentFragmentManager) }
-        viewModel.onAddCallEvents.observe(this) {
-            activityAs<CallActivity>().addFragment(ContactsFragment.newInstance(ContactsFragment.Mode.INTERLOCUTOR_SELECTOR))
-        }
-        viewModel.onSwapClickEvents.observe(this) {
-            with(activityAs<CallActivity>()) {
-                callSwapDialog = ActiveCallDialog()
-                callSwapDialog?.show(parentFragmentManager)
-            }
-        }
-
-        setTheme()
-        attachTheme()
-        if (viewModel.call.get()?.state != Call.STATE_RINGING) switchLayoutToAccepted()
-
-        if (viewModel.call.get() === null) {
-            activityAs<CallActivity>().removeFragment(this)
-        }
+//        binding.layoutAccepted.callKeyboard.binding.viewModel = viewModel
+//        viewModel.callRepository.hasMultipleCalls.set(viewModel.callRepository.callAmount > 1)
+//        binding.keyboard.binding.buttonCall.visibility = View.VISIBLE
+//
+//        showContact()
+//
+//        binding.themeImage.setEnablePanoramaMode(viewModel.preferencesRepository.isAccelerometerOn)
+//
+//        binding.keyboard.setOnClickListener {}
+//        binding.keyboard.binding.buttonCall.setOnClickListener {
+//            viewModel.permissionRepository.askOutgoingCallPermissions(lifecycleScope) {
+//                if (it) activityAs<BaseActivity<*, *>>().call(binding.keyboard.binding.textView.text.toString())
+//            }
+//        }
+//        binding.keyboard.onButtonClickListener = { viewModel.onDialButtonClick(it) }
+//        viewModel.callState.observeForever { handleCallState(it) }
+//        binding.layoutAccepted.callKeyboard.binding.kKeypad.root.setOnClickListener {
+//            binding.keyboard.visibility = View.VISIBLE
+//        }
+//        binding.keyboard.binding.buttonClose.setOnClickListener {
+//            binding.keyboard.visibility = View.GONE
+//        }
+//
+//        viewModel.onDialogOpenListener.observe(this) { SpeakerTypeDialog().show(parentFragmentManager) }
+//        viewModel.onAddCallEvents.observe(this) {
+//            activityAs<CallActivity>().addFragment(ContactsFragment.newInstance(ContactsFragment.Mode.INTERLOCUTOR_SELECTOR))
+//        }
+//        viewModel.onSwapClickEvents.observe(this) {
+//            with(activityAs<CallActivity>()) {
+//                callSwapDialog = ActiveCallDialog()
+//                callSwapDialog?.show(parentFragmentManager)
+//            }
+//        }
+//
+//        setTheme()
+//        attachTheme()
+//        if (viewModel.call.get()?.state != Call.STATE_RINGING) switchLayoutToAccepted()
+//
+//        if (viewModel.call.get() === null) {
+//            activityAs<CallActivity>().removeFragment(this)
+//        }
     }
 
     private fun attachTheme() {
@@ -113,15 +113,15 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
     }
 
     private fun showContact() {
-        loadUserPhotoInto(binding.layoutNotAccepted.thumbnail)
-        loadUserPhotoInto(binding.layoutAccepted.thumbnail)
+//        loadUserPhotoInto(binding.layoutNotAccepted.thumbnail)
+//        loadUserPhotoInto(binding.layoutAccepted.thumbnail)
     }
 
     private fun loadUserPhotoInto(iv: ImageView) {
-        Glide.with(App.instance).let {
-            if (contact.photoThumbnailUri === null) it.load(R.mipmap.ic_no_logo)
-            else it.load(contact.photoThumbnailUri)
-        }.into(iv)
+//        Glide.with(App.instance).let {
+//            if (contact.photoThumbnailUri === null) it.load(R.mipmap.ic_no_logo)
+//            else it.load(contact.photoThumbnailUri)
+//        }.into(iv)
     }
 
     private fun setTheme() {
@@ -188,7 +188,7 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
 
     @SuppressLint("MissingPermission")
     private fun chooseSimAccount() {
-        SimDialog().show(parentFragmentManager)
+//        SimDialog().show(parentFragmentManager)
     }
 
     private fun onActiveCall() {
@@ -198,10 +198,10 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
     }
 
     private fun startChronometer() {
-        if (isChronometerStarted) return
-        binding.layoutAccepted.chronometer.base = SystemClock.elapsedRealtime()
-        binding.layoutAccepted.chronometer.start()
-        isChronometerStarted = true
+//        if (isChronometerStarted) return
+//        binding.layoutAccepted.chronometer.base = SystemClock.elapsedRealtime()
+//        binding.layoutAccepted.chronometer.start()
+//        isChronometerStarted = true
     }
 
     override fun provideViewModel() = viewModel
@@ -222,9 +222,9 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
     }
 
     private fun switchLayoutToAccepted() {
-        binding.layoutNotAccepted.root.visibility = View.GONE
-        binding.layoutAccepted.root.visibility = View.VISIBLE
-        binding.themeVideo.player?.volume = 0f
+//        binding.layoutNotAccepted.root.visibility = View.GONE
+//        binding.layoutAccepted.root.visibility = View.VISIBLE
+//        binding.themeVideo.player?.volume = 0f
     }
 
 
