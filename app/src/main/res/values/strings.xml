@@ -42,4 +42,7 @@
     <string name="select_sim">Select SIM</string>
     <string name="which_sim_card_do_you_want_to_use">Which SIM-card do you want to use?</string>
     <string name="please_select_a_phone_number">Please, select a phone number</string>
+    <string name="interesting_fact">Interesting fact</string>
+    <string name="you_can_swipe_to_see_more_pictures">You can swipe to see more pictures</string>
+    <string name="ok">Ok</string>
 </resources>

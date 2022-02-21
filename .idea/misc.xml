@@ -34,6 +34,7 @@
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable/ic_speaker_bluetooth.xml" value="0.3769230769230769" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable/ic_swap.xml" value="0.3828125" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable/ios_dialog_background.xml" value="0.3828125" />
+        <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable/ios_dialog_background_270x234.xml" value="0.3828125" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable/ios_dialog_edge.xml" value="0.3828125" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable/language_bg.xml" value="0.3828125" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable/language_bg_selected.xml" value="0.3828125" />
@@ -53,6 +54,7 @@
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/dial_activity.xml" value="0.2" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/dial_fragment.xml" value="0.2504528985507246" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/dialog_select_speaker_type.xml" value="0.25" />
+        <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/guid_dialog.xml" value="0.33" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/home_fragment.xml" value="0.25" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/item_active_call.xml" value="0.75" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/item_call_keyboard_button.xml" value="0.36666666666666664" />

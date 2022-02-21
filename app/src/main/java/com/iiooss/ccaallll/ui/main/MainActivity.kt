@@ -23,6 +23,10 @@ class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
 
     override fun onResume() {
         super.onResume()
+        if (!viewModel.preferencesRepository.hasShownGuid) {
+            GuidDialog().show(supportFragmentManager)
+            viewModel.preferencesRepository.hasShownGuid = true
+        }
         if (needToShowPermissionDialog())
             PermissionDialog().show(supportFragmentManager)
     }
