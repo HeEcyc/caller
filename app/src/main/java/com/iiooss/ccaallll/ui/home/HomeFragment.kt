@@ -50,7 +50,7 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
             themesBackground.setRadius(cornerRadius)
         }
         binding.motionLayout.addTransitionListener(newTransactionListener())
-        themesPopular.firstOrNull()?.let {
+        themesPopular.getOrNull(1)?.let {
             Glide.with(App.instance).load(it.previewFile).centerCrop().into(binding.imagePreview)
         }
         viewModel.needRequestLayout.observe(this) {
