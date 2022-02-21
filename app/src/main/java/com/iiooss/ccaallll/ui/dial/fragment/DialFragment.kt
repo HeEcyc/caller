@@ -15,15 +15,18 @@ import org.koin.core.parameter.parametersOf
 class DialFragment : BaseFragment<DialViewModel, DialFragmentBinding>(R.layout.dial_fragment) {
 
     val viewModel: DialViewModel by viewModel { parametersOf(this) }
-    // todo always try to get current call
+
+    var onButtonClick: (String) -> Unit = {}
+
     override fun setupUI() {
+        viewModel.onButtonClickAdditional = onButtonClick
         binding.isBackVisible = requireActivity() !is DialActivity
         (requireActivity() as? DialActivity)?.intent?.data?.schemeSpecificPart?.let(viewModel.text::set)
         binding.buttonCall.setOnClickListener {
             viewModel.permissionRepository.askOutgoingCallPermissions(lifecycleScope) {
                 if (it) {
                     activityAs<BaseActivity<*, * >>().call(viewModel.text.get()!!)
-                    (requireActivity() as? CallActivity)?.removeFragment(this)
+                    (requireActivity() as? CallActivity)?.removeNoneCallFragment(this)
                 }
             }
         }
@@ -32,7 +35,7 @@ class DialFragment : BaseFragment<DialViewModel, DialFragmentBinding>(R.layout.d
 
     private fun onBackPressed() =
         (requireActivity() as? MainActivity)?.onBackPressed() ?:
-        (requireActivity() as? CallActivity)?.removeFragment(this)
+        (requireActivity() as? CallActivity)?.removeNoneCallFragment(this)
 
     override fun provideViewModel() = viewModel
 

@@ -84,7 +84,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintHeight_percent="0.8275862"
-                    android:src="@{viewModel.callRepository.hasMultipleCalls ? @drawable/ic_swap : @drawable/ic_add_call}"/>
+                    android:src="@{viewModel.callRepository.hasMultipleCalls ? @drawable/ic_swap : @drawable/ic_add_call}"
+                    android:onClick="@{(_) -> viewModel.onSwapOrAddClick()}"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -159,7 +160,8 @@
                     app:layout_constraintWidth_percent="0.20555"
                     app:layout_constraintVertical_bias="0.8869969"
                     android:src="@drawable/button_decline"
-                    android:rotation="135"/>
+                    android:rotation="135"
+                    android:onClick="@{(_) -> viewModel.cancelCall()}"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -179,7 +181,8 @@
                         app:layout_constraintDimensionRatio="1:1"
                         app:layout_constraintHeight_percent="0.767676"
                         app:layout_constraintHorizontal_bias="0.140845"
-                        android:background="@{viewModel.isSpeakerModeOn ? @drawable/call_button_bg_active : @drawable/call_button_bg}">
+                        android:background="@{viewModel.isSpeakerModeOn ? @drawable/call_button_bg_active : @drawable/call_button_bg}"
+                        android:onClick="@{(_) -> viewModel.toggleCallType()}">
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="0dp"
                             android:layout_height="0dp"
@@ -224,7 +227,8 @@
                         app:layout_constraintDimensionRatio="1:1"
                         app:layout_constraintHeight_percent="0.767676"
                         app:layout_constraintHorizontal_bias="0.859155"
-                        android:background="@{viewModel.isMuteOn ? @drawable/call_button_bg_active : @drawable/call_button_bg}">
+                        android:background="@{viewModel.isMuteOn ? @drawable/call_button_bg_active : @drawable/call_button_bg}"
+                        android:onClick="@{(_) -> viewModel.onMuteClick()}">
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="0dp"
                             android:layout_height="0dp"

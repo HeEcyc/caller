@@ -11,8 +11,11 @@ class DialViewModel(
     val text = ObservableField("")
     val adapter = DialAdapter(::onButtonClick)
 
+    var onButtonClickAdditional: (String) -> Unit = {}
+
     private fun onButtonClick(s: String) {
         text.set(text.get() + s)
+        onButtonClickAdditional(s)
     }
 
     fun backspace() {

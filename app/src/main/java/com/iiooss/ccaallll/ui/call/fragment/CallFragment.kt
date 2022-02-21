@@ -11,7 +11,6 @@ import android.view.View
 import android.widget.ImageView
 import androidx.core.os.bundleOf
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
@@ -23,13 +22,14 @@ import com.google.android.exoplayer2.audio.AudioAttributes
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
 import com.iiooss.ccaallll.App
 import com.iiooss.ccaallll.R
-import com.iiooss.ccaallll.base.BaseActivity
 import com.iiooss.ccaallll.base.BaseFragment
 import com.iiooss.ccaallll.databinding.CallFragmentBinding
 import com.iiooss.ccaallll.model.contact.UserContact
 import com.iiooss.ccaallll.model.theme.VideoTheme
 import com.iiooss.ccaallll.ui.call.CallActivity
+import com.iiooss.ccaallll.ui.call.dialog.SimDialog
 import com.iiooss.ccaallll.ui.contacts.ContactsFragment
+import com.iiooss.ccaallll.ui.dial.fragment.DialFragment
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
@@ -54,47 +54,45 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
     }
 
     override fun setupUI() {
-//        binding.layoutAccepted.callKeyboard.binding.viewModel = viewModel
-//        viewModel.callRepository.hasMultipleCalls.set(viewModel.callRepository.callAmount > 1)
-//        binding.keyboard.binding.buttonCall.visibility = View.VISIBLE
-//
-//        showContact()
-//
-//        binding.themeImage.setEnablePanoramaMode(viewModel.preferencesRepository.isAccelerometerOn)
-//
-//        binding.keyboard.setOnClickListener {}
-//        binding.keyboard.binding.buttonCall.setOnClickListener {
-//            viewModel.permissionRepository.askOutgoingCallPermissions(lifecycleScope) {
-//                if (it) activityAs<BaseActivity<*, *>>().call(binding.keyboard.binding.textView.text.toString())
-//            }
-//        }
-//        binding.keyboard.onButtonClickListener = { viewModel.onDialButtonClick(it) }
-//        viewModel.callState.observeForever { handleCallState(it) }
-//        binding.layoutAccepted.callKeyboard.binding.kKeypad.root.setOnClickListener {
-//            binding.keyboard.visibility = View.VISIBLE
-//        }
-//        binding.keyboard.binding.buttonClose.setOnClickListener {
-//            binding.keyboard.visibility = View.GONE
-//        }
-//
-//        viewModel.onDialogOpenListener.observe(this) { SpeakerTypeDialog().show(parentFragmentManager) }
-//        viewModel.onAddCallEvents.observe(this) {
-//            activityAs<CallActivity>().addFragment(ContactsFragment.newInstance(ContactsFragment.Mode.INTERLOCUTOR_SELECTOR))
-//        }
-//        viewModel.onSwapClickEvents.observe(this) {
-//            with(activityAs<CallActivity>()) {
-//                callSwapDialog = ActiveCallDialog()
-//                callSwapDialog?.show(parentFragmentManager)
-//            }
-//        }
-//
-//        setTheme()
-//        attachTheme()
-//        if (viewModel.call.get()?.state != Call.STATE_RINGING) switchLayoutToAccepted()
-//
-//        if (viewModel.call.get() === null) {
-//            activityAs<CallActivity>().removeFragment(this)
-//        }
+        if (viewModel.call.get()?.state == Call.STATE_RINGING) {
+            binding.layoutRinging.root.visibility = View.VISIBLE
+        } else {
+            binding.layoutDialing.root.visibility = View.VISIBLE
+        }
+        binding.layoutAccepted.buttonKeys.setOnClickListener {
+            activityAs<CallActivity>().addFragment(DialFragment().apply {
+                onButtonClick = this@CallFragment.viewModel::onDialButtonClick
+            })
+        }
+        viewModel.callRepository.hasMultipleCalls.set(viewModel.callRepository.callAmount > 1)
+
+        showContact()
+
+        binding.themeImage.setEnablePanoramaMode(viewModel.preferencesRepository.isAccelerometerOn)
+
+        viewModel.callState.observeForever { handleCallState(it) }
+
+        viewModel.onAddCallEvents.observe(this) {
+            activityAs<CallActivity>().addFragment(ContactsFragment.newInstance(ContactsFragment.Mode.INTERLOCUTOR_SELECTOR))
+        }
+        viewModel.onSwapClickEvents.observe(this) {
+            with(activityAs<CallActivity>()) {
+                supportFragmentManager
+                    .fragments
+                    .filterIsInstance<CallFragment>()
+                    .firstOrNull { it.viewModel.callStateObservable.get() == Call.STATE_HOLDING }
+                    ?.contact
+                    ?.let(::swapCallsToContact)
+            }
+        }
+
+        setTheme()
+        attachTheme()
+        if (viewModel.call.get()?.state != Call.STATE_RINGING) switchLayoutToAccepted()
+
+        if (viewModel.call.get() === null) {
+            activityAs<CallActivity>().removeFragment(this)
+        }
     }
 
     private fun attachTheme() {
@@ -113,15 +111,14 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
     }
 
     private fun showContact() {
-//        loadUserPhotoInto(binding.layoutNotAccepted.thumbnail)
-//        loadUserPhotoInto(binding.layoutAccepted.thumbnail)
+        loadUserPhotoInto(binding.layoutRinging.contactPicture)
+        loadUserPhotoInto(binding.layoutDialing.contactPicture)
+        loadUserPhotoInto(binding.layoutAccepted.contactPicture)
     }
 
     private fun loadUserPhotoInto(iv: ImageView) {
-//        Glide.with(App.instance).let {
-//            if (contact.photoThumbnailUri === null) it.load(R.mipmap.ic_no_logo)
-//            else it.load(contact.photoThumbnailUri)
-//        }.into(iv)
+        contact.photoThumbnailUri ?: return
+        Glide.with(App.instance).load(contact.photoThumbnailUri).into(iv)
     }
 
     private fun setTheme() {
@@ -188,7 +185,7 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
 
     @SuppressLint("MissingPermission")
     private fun chooseSimAccount() {
-//        SimDialog().show(parentFragmentManager)
+        SimDialog().show(parentFragmentManager)
     }
 
     private fun onActiveCall() {
@@ -198,10 +195,10 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
     }
 
     private fun startChronometer() {
-//        if (isChronometerStarted) return
-//        binding.layoutAccepted.chronometer.base = SystemClock.elapsedRealtime()
-//        binding.layoutAccepted.chronometer.start()
-//        isChronometerStarted = true
+        if (isChronometerStarted) return
+        binding.layoutAccepted.chronometer.base = SystemClock.elapsedRealtime()
+        binding.layoutAccepted.chronometer.start()
+        isChronometerStarted = true
     }
 
     override fun provideViewModel() = viewModel
@@ -222,9 +219,10 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
     }
 
     private fun switchLayoutToAccepted() {
-//        binding.layoutNotAccepted.root.visibility = View.GONE
-//        binding.layoutAccepted.root.visibility = View.VISIBLE
-//        binding.themeVideo.player?.volume = 0f
+        binding.layoutRinging.root.visibility = View.GONE
+        binding.layoutDialing.root.visibility = View.GONE
+        binding.layoutAccepted.root.visibility = View.VISIBLE
+        binding.themeVideo.player?.volume = 0f
     }
 
 

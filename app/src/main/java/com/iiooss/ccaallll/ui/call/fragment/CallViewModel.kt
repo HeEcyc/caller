@@ -6,7 +6,6 @@ import androidx.databinding.ObservableField
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.gjiazhe.panoramaimageview.GyroscopeObserver
-import com.iiooss.ccaallll.R
 import com.iiooss.ccaallll.base.BaseViewModel
 import com.iiooss.ccaallll.model.contact.UserContact
 import com.iiooss.ccaallll.model.theme.VideoTheme
@@ -36,8 +35,6 @@ class CallViewModel(
     val theme = runBlocking(Dispatchers.IO) {
         themeRepository.getContactTheme(contact.contactId) ?: defaultTheme
     }
-
-//    val callIcon = ObservableField(R.drawable.ic_keyboard_speaker_default)
 
     private val callCallback = object : Call.Callback() {
 
@@ -79,12 +76,12 @@ class CallViewModel(
         }
     }
     val callStateObservable = ObservableField<Int>()
-    val onDialogOpenListener = SingleLiveData<AudioManagerRepository.CallType>()
 
     val gyroscopeObserver = GyroscopeObserver().apply { setMaxRotateRadian(Math.PI / 2.5) }
 
     init {
         if (theme is VideoTheme && theme.hasAudio) callRepository.audioManagerRepository.muteRinging()
+        setSpeakerCallType()
         handleCallTypeChange(callRepository.audioManagerRepository.currentCallType)
         viewModelScope.launch(Dispatchers.IO) {
             callRepository.audioManagerRepository.callTypeFlow.collect {
@@ -95,28 +92,21 @@ class CallViewModel(
     }
 
     private fun handleCallTypeChange(type: AudioManagerRepository.CallType) {
-//        when (type) {
-//            AudioManagerRepository.CallType.PHONE -> {
-//                callIcon.set(
-//                    if (callRepository.audioManagerRepository.hasActiveCallBluetoothDevice) R.drawable.ic_keyboard_speaker_phone
-//                    else R.drawable.ic_keyboard_speaker_default
-//                )
-//                isSpeakerModeOn.set(false)
-//            }
-//            AudioManagerRepository.CallType.SPEAKER -> {
-//                if (callRepository.audioManagerRepository.hasActiveCallBluetoothDevice) {
-//                    callIcon.set(R.drawable.ic_keyboard_speaker_loud)
-//                    isSpeakerModeOn.set(false)
-//                } else {
-//                    callIcon.set(R.drawable.ic_keyboard_speaker_default)
-//                    isSpeakerModeOn.set(true)
-//                }
-//            }
-//            AudioManagerRepository.CallType.BLUETOOTH -> {
-//                callIcon.set(R.drawable.ic_keyboard_speaker_bluetooth)
-//                isSpeakerModeOn.set(false)
-//            }
-//        }
+        when (type) {
+            AudioManagerRepository.CallType.PHONE -> {
+                isSpeakerModeOn.set(false)
+            }
+            AudioManagerRepository.CallType.SPEAKER -> {
+                if (callRepository.audioManagerRepository.hasActiveCallBluetoothDevice) {
+                    isSpeakerModeOn.set(false)
+                } else {
+                    isSpeakerModeOn.set(true)
+                }
+            }
+            AudioManagerRepository.CallType.BLUETOOTH -> {
+                isSpeakerModeOn.set(false)
+            }
+        }
     }
 
     private fun turnOnFlashing() {
@@ -154,29 +144,19 @@ class CallViewModel(
         isMuteOn.set(!isMuteOn.get()!!)
     }
 
-    fun onSpeakerClick() {
-        if (callRepository.audioManagerRepository.hasActiveCallBluetoothDevice) {
-            onDialogOpenListener.postValue(callRepository.audioManagerRepository.currentCallType)
-            return
-        }
-        if (isSpeakerModeOn.get() == true) callRepository.audioManagerRepository.setPhoneCallType(callRepository.callService)
-        else callRepository.audioManagerRepository.setSpeakerModeOn(callRepository.callService)
-        isSpeakerModeOn.set(!isSpeakerModeOn.get()!!)
-    }
-
     fun setSpeakerCallType() {
-//        callRepository.audioManagerRepository.setPhoneCallType(callRepository.callService)
-//        callIcon.set(R.drawable.ic_keyboard_speaker_phone)
-    }
-
-    fun setBluetoothCallType() {
-//        callRepository.audioManagerRepository.setBluetoothCallType(callRepository.callService)
-//        callIcon.set(R.drawable.ic_keyboard_speaker_bluetooth)
+        callRepository.audioManagerRepository.setPhoneCallType(callRepository.callService)
     }
 
     fun setSpeakerType() {
-//        callRepository.audioManagerRepository.setSpeakerModeOn(callRepository.callService)
-//        callIcon.set(R.drawable.ic_keyboard_speaker_loud)
+        callRepository.audioManagerRepository.setSpeakerModeOn(callRepository.callService)
+    }
+
+    fun toggleCallType() {
+        if (isSpeakerModeOn.get()!!)
+            setSpeakerCallType()
+        else
+            setSpeakerType()
     }
 
     private fun unMuteRinging() {
@@ -190,6 +170,13 @@ class CallViewModel(
     fun onAddClick() = onAddCallEvents.postValue(Unit)
 
     fun onSwapClick() = onSwapClickEvents.postValue(Unit)
+
+    fun onSwapOrAddClick() {
+        if (callRepository.hasMultipleCalls.get())
+            onSwapClick()
+        else
+            onAddClick()
+    }
 
     fun onDialButtonClick(symbol: String) {
         GlobalScope.launch(Dispatchers.IO) {

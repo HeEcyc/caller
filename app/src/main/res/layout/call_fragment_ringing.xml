@@ -160,7 +160,8 @@
                     app:layout_constraintWidth_percent="0.20555"
                     app:layout_constraintHorizontal_bias="0.13986"
                     app:layout_constraintVertical_bias="0.877329"
-                    android:src="@drawable/button_accept"/>
+                    android:src="@drawable/button_accept"
+                    android:onClick="@{(_) -> viewModel.answerCall()}"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/buttonDecline"
@@ -175,7 +176,8 @@
                     app:layout_constraintHorizontal_bias="0.86014"
                     app:layout_constraintVertical_bias="0.877329"
                     android:src="@drawable/button_decline"
-                    android:rotation="135"/>
+                    android:rotation="135"
+                    android:onClick="@{(_) -> viewModel.cancelCall()}"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"

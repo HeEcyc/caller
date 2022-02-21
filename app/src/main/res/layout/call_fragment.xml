@@ -4,6 +4,7 @@
     xmlns:bind="http://schemas.android.com/tools">
 
     <data>
+        <import type="android.telecom.Call"/>
         <variable
             name="viewModel"
             type="com.iiooss.ccaallll.ui.call.fragment.CallViewModel" />
@@ -35,13 +36,19 @@
 
         <include
             android:id="@+id/layoutRinging"
-            layout="@layout/call_fragment_ringing"/>
+            layout="@layout/call_fragment_ringing"
+            android:visibility="gone"
+            bind:viewModel="@{viewModel}"/>
         <include
             android:id="@+id/layoutDialing"
-            layout="@layout/call_fragment_dialing"/>
+            layout="@layout/call_fragment_dialing"
+            android:visibility="gone"
+            bind:viewModel="@{viewModel}"/>
         <include
             android:id="@+id/layoutAccepted"
-            layout="@layout/call_fragment_accepted"/>
+            layout="@layout/call_fragment_accepted"
+            android:visibility="gone"
+            bind:viewModel="@{viewModel}"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

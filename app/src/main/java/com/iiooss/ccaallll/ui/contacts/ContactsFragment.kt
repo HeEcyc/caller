@@ -8,11 +8,15 @@ import android.view.View
 import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.core.view.children
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
 import com.iiooss.ccaallll.R
+import com.iiooss.ccaallll.base.BaseActivity
 import com.iiooss.ccaallll.base.BaseFragment
 import com.iiooss.ccaallll.databinding.ContactsFragmentsBinding
 import com.iiooss.ccaallll.model.contact.UserContact
+import com.iiooss.ccaallll.ui.call.CallActivity
+import com.iiooss.ccaallll.ui.call.dialog.NumberDialog
 import com.iiooss.ccaallll.ui.contact.ContactFragment
 import com.iiooss.ccaallll.ui.contacts.ContactsFragment.Mode.DEFAULT
 import com.iiooss.ccaallll.ui.dial.fragment.DialFragment
@@ -24,7 +28,7 @@ import org.koin.core.parameter.parametersOf
 
 class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentsBinding>(R.layout.contacts_fragments) {
 
-    val viewModel: ContactsViewModel by viewModel { parametersOf(mode) }
+    val viewModel: ContactsViewModel by viewModel { parametersOf(mode, this) }
 
     private val mode: Mode by lazy { arguments?.getSerializable(ARGUMENT_MODE) as? Mode ?: DEFAULT }
 
@@ -39,7 +43,7 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentsBindin
     @SuppressLint("ClickableViewAccessibility")
     override fun setupUI() {
         binding.recyclerContacts.addItemDecoration(getNewItemDecoration())
-        binding.buttonBack.setOnClickListener(requireActivity()::onBackPressed)
+        binding.buttonBack.setOnClickListener(::onBackPressed)
         binding.buttonCall.setOnClickListener {
             activityAs<MainActivity>().addFragment(DialFragment())
         }
@@ -61,6 +65,22 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentsBindin
                 ?.getOrNull(0)
                 ?.let(::goToSection)
             true
+        }
+        viewModel.addInterlocutor.observe(this, ::addInterlocutor)
+        viewModel.selectInterlocutorNumber.observe(this) {
+            NumberDialog.newInstance(it).show(parentFragmentManager)
+        }
+    }
+
+    private fun onBackPressed() {
+        (requireActivity() as? MainActivity)?.onBackPressed()
+        (requireActivity() as? CallActivity)?.removeNoneCallFragment(this)
+    }
+
+    fun addInterlocutor(number: String) {
+        viewModel.permissionRepository.askOutgoingCallPermissions(lifecycleScope) {
+            if (it) activityAs<BaseActivity<*, *>>().call(number)
+            if (mode == Mode.INTERLOCUTOR_SELECTOR) activityAs<CallActivity>().removeNoneCallFragment(this)
         }
     }
 

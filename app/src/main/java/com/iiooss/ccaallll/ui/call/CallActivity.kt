@@ -35,8 +35,7 @@ class CallActivity : BaseActivity<CallActivityViewModel, CallActivityBinding>() 
         } else {
             window.addFlags(
                 WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED or
-                        WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON or
-                        WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
+                        WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
             )
         }
         handleIntent(intent)

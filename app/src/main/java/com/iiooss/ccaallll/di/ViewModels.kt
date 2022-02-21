@@ -23,7 +23,7 @@ val viewModels = module {
     viewModel { (lr: LauncherRegistrator) -> HomeViewModel(get(), get { parametersOf(lr) }, get { parametersOf(lr) }, get()) }
     viewModel { (lr: LauncherRegistrator) -> SettingsViewModel(get(), get { parametersOf(lr) }, get()) }
     viewModel { LanguageViewModel(get()) }
-    viewModel { (mode: ContactsFragment.Mode) -> ContactsViewModel(mode, get(), get()) }
+    viewModel { (mode: ContactsFragment.Mode, lr: LauncherRegistrator) -> ContactsViewModel(mode, get(), get(), get { parametersOf(lr) }) }
     viewModel { (contact: UserContact, lr: LauncherRegistrator) -> ContactViewModel(contact, get { parametersOf(lr) }, get()) }
     viewModel { (lr: LauncherRegistrator) -> ThemeViewModel(get { parametersOf(lr) }, get(), get { parametersOf(lr) }, get()) }
     viewModel { (lr: LauncherRegistrator) -> DialViewModel(get { parametersOf(lr) }) }

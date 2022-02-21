@@ -101,7 +101,8 @@
                     app:layout_constraintWidth_percent="0.20555"
                     app:layout_constraintVertical_bias="0.8869969"
                     android:src="@drawable/button_decline"
-                    android:rotation="135"/>
+                    android:rotation="135"
+                    android:onClick="@{(_) -> viewModel.cancelCall()}"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
