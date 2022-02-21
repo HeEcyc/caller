@@ -14,6 +14,7 @@ class PreferencesRepository(context: Context) {
         private const val KEY_LOCALE = "key_locale"
         private const val KEY_IS_FLASH_ON = "key_is_flash_on"
         private const val KEY_IS_ACCELEROMETER_ON = "key_is_accelerometer_on"
+        private const val KEY_HAS_PLAYED_GUID_ANIMATION = "key_has_played_guid_animation"
     }
 
     var locale: Locale?
@@ -29,6 +30,10 @@ class PreferencesRepository(context: Context) {
     var isAccelerometerOn: Boolean
         get() = preferences.getBoolean(KEY_IS_ACCELEROMETER_ON, true)
         set(value) = edit { putBoolean(KEY_IS_ACCELEROMETER_ON, value) }
+
+    var hasPlayedGuidAnimation: Boolean
+        get() = preferences.getBoolean(KEY_HAS_PLAYED_GUID_ANIMATION, false)
+        set(value) = edit { putBoolean(KEY_HAS_PLAYED_GUID_ANIMATION, value) }
 
     @SuppressLint("CommitPrefEdits")
     private fun edit(block: SharedPreferences.Editor.() -> SharedPreferences.Editor) =

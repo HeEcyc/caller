@@ -13,6 +13,7 @@
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable/button_decline_white.xml" value="0.3828125" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable/dialog_bg_top_rounded_white.xml" value="0.3769230769230769" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable/edit_text_cursor.xml" value="0.3828125" />
+        <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable/guid_hand.xml" value="0.3828125" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable/ic_call_round.xml" value="0.3828125" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable/ic_keyboard_dial.xml" value="0.3769230769230769" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable/ic_keyboard_mic.xml" value="0.3769230769230769" />
@@ -31,14 +32,17 @@
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/active_call_dialog.xml" value="0.25" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/call_activity.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/call_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/call_fragment_accepted.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/call_fragment_dialing.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/call_fragment_layout_accepted.xml" value="0.25" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/call_fragment_layout_not_accepted.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/call_fragment_ringing.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/contact_fragment.xml" value="0.21" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/contacts_fragment.xml" value="0.12" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/crop_fragment.xml" value="0.22" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/dial_activity.xml" value="0.2" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/dialog_select_speaker_type.xml" value="0.25" />
-        <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/home_fragment.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/home_fragment.xml" value="0.25" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/item_active_call.xml" value="0.75" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/item_call_keyboard_button.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/layout/item_contact_grid.xml" value="0.15" />

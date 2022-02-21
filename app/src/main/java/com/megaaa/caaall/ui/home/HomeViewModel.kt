@@ -6,6 +6,7 @@ import com.megaaa.caaall.base.BaseViewModel
 import com.megaaa.caaall.model.theme.NewTheme
 import com.megaaa.caaall.model.theme.Theme
 import com.megaaa.caaall.repository.ImagePickerRepository
+import com.megaaa.caaall.repository.PreferencesRepository
 import com.megaaa.caaall.repository.ThemeRepository
 import com.megaaa.caaall.utils.themesCats
 import com.megaaa.caaall.utils.themesGames
@@ -17,7 +18,8 @@ import kotlinx.coroutines.launch
 
 class HomeViewModel(
     val mode: HomeFragment.Mode,
-    private val themeRepository: ThemeRepository
+    private val themeRepository: ThemeRepository,
+    val preferencesRepository: PreferencesRepository
 ) : BaseViewModel() {
 
     lateinit var imagePickerRepository: ImagePickerRepository

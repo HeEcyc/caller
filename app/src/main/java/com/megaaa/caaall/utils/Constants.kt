@@ -5,7 +5,6 @@ import com.megaaa.caaall.model.theme.ImageTheme
 import com.megaaa.caaall.model.theme.Theme
 import com.megaaa.caaall.model.theme.VideoTheme
 
-val defaultTheme = ImageTheme("file:///android_asset/theme_placeholder.png")
 val audioThemesIndexes = List(6) { it }
 val themesPopular: List<Theme> = List(6) {
     VideoTheme(
@@ -29,5 +28,6 @@ val presetThemes: List<Theme> = listOf(
     *themesCats.toTypedArray(),
     *themesMovies.toTypedArray()
 )
+val defaultTheme = themesGames.first()
 
 val appLink: String by lazy { "https://play.google.com/store/apps/details?id=" + App.instance.packageName }

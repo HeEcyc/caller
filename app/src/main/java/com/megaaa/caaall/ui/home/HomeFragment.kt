@@ -1,9 +1,16 @@
 package com.megaaa.caaall.ui.home
 
+import android.animation.ValueAnimator
+import android.transition.ChangeBounds
+import android.transition.Transition
 import android.view.View
+import android.view.animation.LinearInterpolator
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
+import android.transition.TransitionManager
 import com.megaaa.caaall.R
 import com.megaaa.caaall.base.BaseActivity
 import com.megaaa.caaall.base.BaseFragment
@@ -59,6 +66,51 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
             binding.rvGames.addItemDecoration(itemDecoration)
             binding.rvCats.addItemDecoration(itemDecoration)
             binding.rvMovies.addItemDecoration(itemDecoration)
+        }
+        if (mainViewModel.permissionRepository.hasNecessaryPermissions)
+            playGuidAnimation()
+        else
+            activityAs<MainActivity>().onPermissionDialogDismiss = ::playGuidAnimation
+    }
+
+    private fun playGuidAnimation() {
+        if (viewModel.preferencesRepository.hasPlayedGuidAnimation) return
+        viewModel.preferencesRepository.hasPlayedGuidAnimation = true
+        ValueAnimator.ofFloat(0f, 1f).apply {
+            interpolator = LinearInterpolator()
+            duration = 1000
+            addUpdateListener {
+                binding.guid.alpha = it.animatedValue as Float
+                if (it.animatedValue == 1f) {
+                    val set = ConstraintSet().apply {
+                        clone(binding.guidContainer)
+                        setHorizontalBias(R.id.guid, 0f)
+                    }
+                    ChangeBounds().apply {
+                        interpolator = LinearInterpolator()
+                        duration = 1500
+                        addListener(object : Transition.TransitionListener {
+                            override fun onTransitionStart(transition: Transition?) {}
+                            override fun onTransitionEnd(transition: Transition?) {
+                                ValueAnimator.ofFloat(1f, 0f).apply {
+                                    interpolator = LinearInterpolator()
+                                    duration = 1000
+                                    addUpdateListener {
+                                        binding.guid.alpha = it.animatedValue as Float
+                                    }
+                                    start()
+                                }
+                            }
+                            override fun onTransitionCancel(transition: Transition?) {}
+                            override fun onTransitionPause(transition: Transition?) {}
+                            override fun onTransitionResume(transition: Transition?) {}
+                        })
+                        TransitionManager.beginDelayedTransition(binding.guidContainer, this)
+                    }
+                    set.applyTo(binding.guidContainer)
+                }
+            }
+            start()
         }
     }
 

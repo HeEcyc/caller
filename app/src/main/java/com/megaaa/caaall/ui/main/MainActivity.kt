@@ -14,6 +14,15 @@ class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
 
     private val viewModel: MainViewModel by viewModel()
 
+    var onPermissionDialogDismiss: (() -> Unit)? = null
+        set(value) {
+            field = value
+            supportFragmentManager
+                .fragments.firstOrNull { it is PermissionDialog }
+                .let { it as PermissionDialog? }
+                ?.onDismiss = value
+        }
+
     override fun provideLayoutId(): Int = R.layout.main_activity
 
     override fun setupUI() {
@@ -23,7 +32,7 @@ class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
     override fun onResume() {
         super.onResume()
         if (needToShowPermissionDialog())
-            PermissionDialog().show(supportFragmentManager)
+            PermissionDialog().apply { onDismiss = onPermissionDialogDismiss }.show(supportFragmentManager)
     }
 
     private fun needToShowPermissionDialog() =

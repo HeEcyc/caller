@@ -22,7 +22,7 @@ import org.koin.dsl.module
 val viewModels = module {
     viewModel { SplashViewModel(get()) }
     viewModel { MainViewModel(get()) }
-    viewModel { (mode: HomeFragment.Mode) -> HomeViewModel(mode, get()) }
+    viewModel { (mode: HomeFragment.Mode) -> HomeViewModel(mode, get(), get()) }
     viewModel { SettingsViewModel(get()) }
     viewModel { LanguageViewModel(get()) }
     viewModel { CropViewModel(get(), get()) }

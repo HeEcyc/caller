@@ -1,5 +1,6 @@
 package com.megaaa.caaall.ui.main.permission
 
+import android.content.DialogInterface
 import android.text.SpannableStringBuilder
 import androidx.core.text.inSpans
 import androidx.fragment.app.activityViewModels
@@ -13,6 +14,8 @@ import com.megaaa.caaall.utils.setOnClickListener
 class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission_dialog) {
 
     private val mainViewModel: MainViewModel by activityViewModels()
+
+    var onDismiss: (() -> Unit)? = null
 
     override fun setupUI() {
         isCancelable = false
@@ -51,6 +54,11 @@ class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission
         binding.counter.text = SpannableStringBuilder()
             .append("$currentPermission")
             .inSpans(AlphaSpan()) { append(" / 3") }
+    }
+
+    override fun onDismiss(dialog: DialogInterface) {
+        super.onDismiss(dialog)
+        onDismiss?.invoke()
     }
 
 }
