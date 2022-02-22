@@ -1,3 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="contacts">Liên lạc</string>
+    <string name="settings">Cài đặt</string>
+    <string name="calling">đang gọi ...</string>
+    <string name="accept">Chấp nhận</string>
+    <string name="decline">Sự suy sụp</string>
+    <string name="apply">Áp dụng</string>
+    <string name="get_permissions">Nhận quyền</string>
+    <string name="not_now">Không phải bây giờ</string>
+    <string name="allow">Cho phép</string>
+    <string name="permissionPhoneDescription">Đặt ứng dụng làm ứng dụng điện thoại mặc định của bạn</string>
+    <string name="permissionContactsDescription">Cho phép ứng dụng truy cập danh bạ của bạn</string>
+    <string name="permissionOverlayDescription">Cho phép hiển thị trên ứng dụng khác</string>
+    <string name="custom">Phong tục</string>
+    <string name="popular">Phổ biến</string>
+    <string name="cats">Những con mèo</string>
+    <string name="games">Trò chơi</string>
+    <string name="movies">Phim</string>
+    <string name="main">Chủ yếu</string>
+    <string name="call_theme">Chủ đề cuộc gọi</string>
+    <string name="call_flash">Gọi Flash</string>
+    <string name="accelerometer">Gia tốc kế</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="social">Xã hội</string>
+    <string name="share">Đăng lại</string>
+    <string name="rate_us">Đánh giá chúng tôi</string>
+    <string name="privacy_policy">Chính sách bảo mật</string>
+    <string name="caller_language">Ngôn ngữ người gọi</string>
+    <string name="apply_to_all">Áp dụng cho tất cả</string>
+    <string name="edit">Biên tập</string>
+    <string name="mobile">di động</string>
+    <string name="call">gọi</string>
+    <string name="mobile_capital">Di động</string>
+    <string name="ringing">rung chuông</string>
+    <string name="end_to_end_encrypted">Mã hóa end-to-end</string>
+    <string name="speaker">loa</string>
+    <string name="keys">chìa khóa</string>
+    <string name="mute">tắt tiếng</string>
+    <string name="select_sim">Chọn SIM</string>
+    <string name="which_sim_card_do_you_want_to_use">Bạn muốn sử dụng thẻ SIM nào?</string>
+    <string name="please_select_a_phone_number">Vui lòng chọn một số điện thoại</string>
+    <string name="interesting_fact">Sự thật thú vị</string>
+    <string name="you_can_swipe_to_see_more_pictures">Bạn có thể vuốt để xem thêm hình ảnh</string>
+    <string name="ok">Đồng ý</string>
 </resources>

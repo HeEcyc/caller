@@ -1,3 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="contacts">جهات الاتصال</string>
+    <string name="settings">إعدادات</string>
+    <string name="calling">داعيا ...</string>
+    <string name="accept">قبول</string>
+    <string name="decline">انخفاض</string>
+    <string name="apply">تطبيق</string>
+    <string name="get_permissions">احصل على أذونات</string>
+    <string name="not_now">ليس الان</string>
+    <string name="allow">السماح</string>
+    <string name="permissionPhoneDescription">تعيين التطبيق كتطبيق الهاتف الافتراضي الخاص بك</string>
+    <string name="permissionContactsDescription">؛ يسمح للتطبيق بالوصول إلى جهات الاتصال الخاصة بك</string>
+    <string name="permissionOverlayDescription">السماح بالعرض فوق تطبيق آخر</string>
+    <string name="custom">العادة</string>
+    <string name="popular">جمع</string>
+    <string name="cats">القطط</string>
+    <string name="games">ألعاب</string>
+    <string name="movies">أفلام</string>
+    <string name="main">رئيسي</string>
+    <string name="call_theme">موضوع المكالمة</string>
+    <string name="call_flash">استدعاء فلاش</string>
+    <string name="accelerometer">مقياس التسارع</string>
+    <string name="language">لغة</string>
+    <string name="social">اجتماعي</string>
+    <string name="share">يشارك</string>
+    <string name="rate_us">قيمنا</string>
+    <string name="privacy_policy">سياسة خاصة</string>
+    <string name="caller_language">لغة المتصل</string>
+    <string name="apply_to_all">تنطبق على الجميع</string>
+    <string name="edit">يحرر</string>
+    <string name="mobile">التليفون المحمول</string>
+    <string name="call">يتصل</string>
+    <string name="mobile_capital">متحرك</string>
+    <string name="ringing">رنين</string>
+    <string name="end_to_end_encrypted">مشفر من طرف إلى طرف</string>
+    <string name="speaker">مكبر الصوت</string>
+    <string name="keys">مفاتيح</string>
+    <string name="mute">كتم الصوت</string>
+    <string name="select_sim">حدد SIM</string>
+    <string name="which_sim_card_do_you_want_to_use">ما هي بطاقة SIM التي تريد استخدامها؟</string>
+    <string name="please_select_a_phone_number">الرجاء تحديد رقم هاتف</string>
+    <string name="interesting_fact">حقيقة مثيرة للاهتمام</string>
+    <string name="you_can_swipe_to_see_more_pictures">يمكنك التمرير لرؤية المزيد من الصور</string>
+    <string name="ok">نعم</string>
 </resources>

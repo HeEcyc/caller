@@ -1,3 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="contacts">ទំនាក់ទំនង</string>
+    <string name="settings">ការកំណត់</string>
+    <string name="calling">ហៅ...</string>
+    <string name="accept">ទទួលយក</string>
+    <string name="decline">បដិសេធ</string>
+    <string name="apply">អនុវត្ត</string>
+    <string name="get_permissions">ទទួលបានការអនុញ្ញាត</string>
+    <string name="not_now">មិនមែន​ឥឡូវ​ទេ</string>
+    <string name="allow">អនុញ្ញាត</string>
+    <string name="permissionPhoneDescription">កំណត់កម្មវិធីជាកម្មវិធីទូរស័ព្ទលំនាំដើមរបស់អ្នក។</string>
+    <string name="permissionContactsDescription">អនុញ្ញាតឱ្យកម្មវិធីចូលប្រើទំនាក់ទំនងរបស់អ្នក។</string>
+    <string name="permissionOverlayDescription">អនុញ្ញាតឱ្យបង្ហាញនៅលើកម្មវិធីផ្សេងទៀត។</string>
+    <string name="custom">ផ្ទាល់ខ្លួន</string>
+    <string name="popular">ពេញនិយម</string>
+    <string name="cats">ឆ្មា</string>
+    <string name="games">ហ្គេម</string>
+    <string name="movies">ភាពយន្ត</string>
+    <string name="main">មេ</string>
+    <string name="call_theme">ហៅប្រធានបទ</string>
+    <string name="call_flash">ហៅទូរស័ព្ទទៅ Flash</string>
+    <string name="accelerometer">ឧបករណ៍វាស់ល្បឿន</string>
+    <string name="language">ភាសា</string>
+    <string name="social">សង្គម</string>
+    <string name="share">ចែករំលែក</string>
+    <string name="rate_us">វាយតម្លៃពួកយើង</string>
+    <string name="privacy_policy">គោលការណ៍​ភាព​ឯកជន</string>
+    <string name="caller_language">ភាសាអ្នកហៅទូរសព្ទ</string>
+    <string name="apply_to_all">អនុវត្តចំពោះទាំងអស់គ្នា</string>
+    <string name="edit">កែសម្រួល</string>
+    <string name="mobile">ចល័ត</string>
+    <string name="call">ហៅ</string>
+    <string name="mobile_capital">ទូរស័ព្ទចល័ត</string>
+    <string name="ringing">រោទ៍</string>
+    <string name="end_to_end_encrypted">បានអ៊ិនគ្រីបពីចុងដល់ចប់</string>
+    <string name="speaker">វាគ្មិន</string>
+    <string name="keys">សោ</string>
+    <string name="mute">ស្ងាត់</string>
+    <string name="select_sim">ជ្រើសរើសស៊ីម</string>
+    <string name="which_sim_card_do_you_want_to_use">តើអ្នកចង់ប្រើស៊ីមកាតមួយណា?</string>
+    <string name="please_select_a_phone_number">សូមជ្រើសរើសលេខទូរស័ព្ទ</string>
+    <string name="interesting_fact">ការពិតគួរឱ្យចាប់អារម្មណ៍</string>
+    <string name="you_can_swipe_to_see_more_pictures">អ្នកអាចអូសដើម្បីមើលរូបភាពច្រើនទៀត</string>
+    <string name="ok">យល់ព្រម</string>
 </resources>

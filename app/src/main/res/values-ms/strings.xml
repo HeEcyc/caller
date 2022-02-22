@@ -1,3 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="contacts">Kenalan</string>
+    <string name="settings">tetapan</string>
+    <string name="calling">memanggil...</string>
+    <string name="accept">Terima</string>
+    <string name="decline">Tolak</string>
+    <string name="apply">Mohon</string>
+    <string name="get_permissions">Dapatkan Kebenaran</string>
+    <string name="not_now">Bukan sekarang</string>
+    <string name="allow">benarkan</string>
+    <string name="permissionPhoneDescription">Tetapkan aplikasi sebagai apl telefon lalai anda</string>
+    <string name="permissionContactsDescription">Membenarkan aplikasi mengakses kenalan anda</string>
+    <string name="permissionOverlayDescription">Benarkan paparan di atas apl lain</string>
+    <string name="custom">Adat</string>
+    <string name="popular">Popular</string>
+    <string name="cats">kucing</string>
+    <string name="games">Permainan</string>
+    <string name="movies">Wayang</string>
+    <string name="main">Utama</string>
+    <string name="call_theme">Tema Panggilan</string>
+    <string name="call_flash">Panggil Flash</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="language">Bahasa</string>
+    <string name="social">sosial</string>
+    <string name="share">Kongsi</string>
+    <string name="rate_us">Nilaikan kami</string>
+    <string name="privacy_policy">Dasar Privasi</string>
+    <string name="caller_language">Bahasa Pemanggil</string>
+    <string name="apply_to_all">Terpakai kepada semua</string>
+    <string name="edit">Sunting</string>
+    <string name="mobile">mudah alih</string>
+    <string name="call">panggilan</string>
+    <string name="mobile_capital">mudah alih</string>
+    <string name="ringing">berdering</string>
+    <string name="end_to_end_encrypted">Hujung ke hujung Disulitkan</string>
+    <string name="speaker">pembesar suara</string>
+    <string name="keys">kunci</string>
+    <string name="mute">bisu</string>
+    <string name="select_sim">Pilih SIM</string>
+    <string name="which_sim_card_do_you_want_to_use">Kad SIM mana yang anda mahu gunakan?</string>
+    <string name="please_select_a_phone_number">Sila pilih nombor telefon</string>
+    <string name="interesting_fact">Fakta menarik</string>
+    <string name="you_can_swipe_to_see_more_pictures">Anda boleh leret untuk melihat lebih banyak gambar</string>
+    <string name="ok">Okey</string>
 </resources>

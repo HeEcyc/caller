@@ -1,3 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="contacts">Mga contact</string>
+    <string name="settings">Mga setting</string>
+    <string name="calling">tumatawag...</string>
+    <string name="accept">Tanggapin</string>
+    <string name="decline">Tanggihan</string>
+    <string name="apply">Mag-apply</string>
+    <string name="get_permissions">Kumuha ng Mga Pahintulot</string>
+    <string name="not_now">Hindi ngayon</string>
+    <string name="allow">Payagan</string>
+    <string name="permissionPhoneDescription">Itakda ang application bilang iyong default na app ng telepono</string>
+    <string name="permissionContactsDescription">Nagbibigay-daan sa isang application na i-access ang iyong mga contact</string>
+    <string name="permissionOverlayDescription">Payagan ang pagpapakita sa iba pang app</string>
+    <string name="custom">Custom</string>
+    <string name="popular">Sikat</string>
+    <string name="cats">Mga pusa</string>
+    <string name="games">Mga laro</string>
+    <string name="movies">Mga pelikula</string>
+    <string name="main">Pangunahin</string>
+    <string name="call_theme">Tema ng Tawag</string>
+    <string name="call_flash">Tumawag kay Flash</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="language">Wika</string>
+    <string name="social">Sosyal</string>
+    <string name="share">Ibahagi</string>
+    <string name="rate_us">I-rate kami</string>
+    <string name="privacy_policy">Patakaran sa Privacy</string>
+    <string name="caller_language">Wika ng tumatawag</string>
+    <string name="apply_to_all">Mag-apply sa lahat</string>
+    <string name="edit">I-edit</string>
+    <string name="mobile">mobile</string>
+    <string name="call">tawag</string>
+    <string name="mobile_capital">Mobile</string>
+    <string name="ringing">nagri-ring</string>
+    <string name="end_to_end_encrypted">End-to-end na Naka-encrypt</string>
+    <string name="speaker">tagapagsalita</string>
+    <string name="keys">mga susi</string>
+    <string name="mute">pipi</string>
+    <string name="select_sim">Piliin ang SIM</string>
+    <string name="which_sim_card_do_you_want_to_use">Aling SIM card ang gusto mong gamitin?</string>
+    <string name="please_select_a_phone_number">Mangyaring pumili ng numero ng telepono</string>
+    <string name="interesting_fact">Kawili-wiling katotohanan</string>
+    <string name="you_can_swipe_to_see_more_pictures">Maaari kang mag-swipe upang makakita ng higit pang mga larawan</string>
+    <string name="ok">Ok</string>
 </resources>

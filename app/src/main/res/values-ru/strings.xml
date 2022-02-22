@@ -1,3 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="contacts">Контакты</string>
+    <string name="settings">Настройки</string>
+    <string name="calling">звонит...</string>
+    <string name="accept">Ответить</string>
+    <string name="decline">Отклонить</string>
+    <string name="apply">Применить</string>
+    <string name="get_permissions">Разрешения</string>
+    <string name="not_now">Не Сейчас</string>
+    <string name="allow">Разрешить</string>
+    <string name="permissionPhoneDescription">Сделайте приложение телефоном по умолчанию</string>
+    <string name="permissionContactsDescription">Дайте приложени доступ к контактам</string>
+    <string name="permissionOverlayDescription">Разрешите отображение поверх других приложений</string>
+    <string name="custom">Свои</string>
+    <string name="popular">Популярные</string>
+    <string name="cats">Коты</string>
+    <string name="games">Игры</string>
+    <string name="movies">Фильмы</string>
+    <string name="main">Главное</string>
+    <string name="call_theme">Тема звонка</string>
+    <string name="call_flash">Вспышка</string>
+    <string name="accelerometer">Акселерометр</string>
+    <string name="language">Язык</string>
+    <string name="social">Социальное</string>
+    <string name="share">Поделиться</string>
+    <string name="rate_us">Оцените нас</string>
+    <string name="privacy_policy">Политика Конфиденциальности</string>
+    <string name="caller_language">Язык Приложения</string>
+    <string name="apply_to_all">Применить ко всем</string>
+    <string name="edit">Редактировать</string>
+    <string name="mobile">номер</string>
+    <string name="call">позвонить</string>
+    <string name="mobile_capital">Мобильный</string>
+    <string name="ringing">звонит</string>
+    <string name="end_to_end_encrypted">Сквозное шифрование</string>
+    <string name="speaker">динамик</string>
+    <string name="keys">клавиши</string>
+    <string name="mute">микрофон</string>
+    <string name="select_sim">Выберите SIM-карту</string>
+    <string name="which_sim_card_do_you_want_to_use">Какую SIM-карту вы хотите использовать?</string>
+    <string name="please_select_a_phone_number">Пожалуйста, выберите номер телефона</string>
+    <string name="interesting_fact">Интересный факт</string>
+    <string name="you_can_swipe_to_see_more_pictures">Проведите по эерану, чтобы увидель больше тем</string>
+    <string name="ok">Ok</string>
 </resources>

@@ -1,3 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="contacts">รายชื่อผู้ติดต่อ</string>
+    <string name="settings">การตั้งค่า</string>
+    <string name="calling">โทร ...</string>
+    <string name="accept">ยอมรับ</string>
+    <string name="decline">ปฏิเสธ</string>
+    <string name="apply">นำมาใช้</string>
+    <string name="get_permissions">รับสิทธิ์</string>
+    <string name="not_now">ไม่ใช่ตอนนี้</string>
+    <string name="allow">อนุญาต</string>
+    <string name="permissionPhoneDescription">ตั้งค่าแอปพลิเคชันเป็นแอปโทรศัพท์เริ่มต้นของคุณ</string>
+    <string name="permissionContactsDescription">อนุญาตให้แอปพลิเคชันเข้าถึงรายชื่อของคุณ</string>
+    <string name="permissionOverlayDescription">อนุญาตให้แสดงทับแอปอื่น</string>
+    <string name="custom">กำหนดเอง</string>
+    <string name="popular">เป็นที่นิยม</string>
+    <string name="cats">แมว</string>
+    <string name="games">เกม</string>
+    <string name="movies">ภาพยนตร์</string>
+    <string name="main">หลัก</string>
+    <string name="call_theme">ธีมการโทร</string>
+    <string name="call_flash">โทรแฟลช</string>
+    <string name="accelerometer">มาตรความเร่ง</string>
+    <string name="language">ภาษา</string>
+    <string name="social">ทางสังคม</string>
+    <string name="share">แบ่งปัน</string>
+    <string name="rate_us">ให้คะแนนเรา</string>
+    <string name="privacy_policy">นโยบายความเป็นส่วนตัว</string>
+    <string name="caller_language">ภาษาของผู้โทร</string>
+    <string name="apply_to_all">นำไปใช้กับทั้งหมด</string>
+    <string name="edit">แก้ไข</string>
+    <string name="mobile">มือถือ</string>
+    <string name="call">เรียก</string>
+    <string name="mobile_capital">มือถือ</string>
+    <string name="ringing">เสียงเรียกเข้า</string>
+    <string name="end_to_end_encrypted">เข้ารหัสตั้งแต่ต้นทางถึงปลายทาง</string>
+    <string name="speaker">ลำโพง</string>
+    <string name="keys">กุญแจ</string>
+    <string name="mute">ปิดเสียง</string>
+    <string name="select_sim">เลือกซิม</string>
+    <string name="which_sim_card_do_you_want_to_use">คุณต้องการใช้ซิมการ์ดใด</string>
+    <string name="please_select_a_phone_number">กรุณาเลือกหมายเลขโทรศัพท์</string>
+    <string name="interesting_fact">ความจริงที่น่าสนใจ</string>
+    <string name="you_can_swipe_to_see_more_pictures">สามารถเลื่อนดูภาพเพิ่มเติมได้</string>
+    <string name="ok">ตกลง</string>
 </resources>

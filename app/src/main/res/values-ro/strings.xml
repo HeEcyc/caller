@@ -1,3 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="contacts">Contacte</string>
+    <string name="settings">Setări</string>
+    <string name="calling">sunand...</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Declin</string>
+    <string name="apply">aplica</string>
+    <string name="get_permissions">Obțineți permisiuni</string>
+    <string name="not_now">Nu acum</string>
+    <string name="allow">Permite</string>
+    <string name="permissionPhoneDescription">Setați aplicația ca aplicație implicită pentru telefon</string>
+    <string name="permissionContactsDescription">Permite unei aplicații să vă acceseze contactele</string>
+    <string name="permissionOverlayDescription">Permite afișarea peste altă aplicație</string>
+    <string name="custom">Personalizat</string>
+    <string name="popular">Popular</string>
+    <string name="cats">Pisicile</string>
+    <string name="games">Jocuri</string>
+    <string name="movies">Filme</string>
+    <string name="main">Principal</string>
+    <string name="call_theme">Tema apelului</string>
+    <string name="call_flash">Apelați Flash</string>
+    <string name="accelerometer">Accelerometru</string>
+    <string name="language">Limba</string>
+    <string name="social">Social</string>
+    <string name="share">Acțiune</string>
+    <string name="rate_us">Ne evalua</string>
+    <string name="privacy_policy">Politica de Confidențialitate</string>
+    <string name="caller_language">Limba apelantului</string>
+    <string name="apply_to_all">Aplica la toate</string>
+    <string name="edit">Editați | ×</string>
+    <string name="mobile">mobil</string>
+    <string name="call">apel</string>
+    <string name="mobile_capital">Mobil</string>
+    <string name="ringing">sunând</string>
+    <string name="end_to_end_encrypted">Criptat de la capăt la capăt</string>
+    <string name="speaker">vorbitor</string>
+    <string name="keys">chei</string>
+    <string name="mute">mut</string>
+    <string name="select_sim">Selectați SIM</string>
+    <string name="which_sim_card_do_you_want_to_use">Ce cartelă SIM doriți să utilizați?</string>
+    <string name="please_select_a_phone_number">Vă rugăm să selectați un număr de telefon</string>
+    <string name="interesting_fact">Fapt interesant</string>
+    <string name="you_can_swipe_to_see_more_pictures">Puteți glisa pentru a vedea mai multe imagini</string>
+    <string name="ok">Bine</string>
 </resources>

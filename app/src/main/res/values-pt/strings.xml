@@ -1,3 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="contacts">Contatos</string>
+    <string name="settings">Configurações</string>
+    <string name="calling">chamando...</string>
+    <string name="accept">Aceitar</string>
+    <string name="decline">Declínio</string>
+    <string name="apply">Aplicar</string>
+    <string name="get_permissions">Obter permissões</string>
+    <string name="not_now">Agora não</string>
+    <string name="allow">Permitir</string>
+    <string name="permissionPhoneDescription">Definir aplicativo como seu aplicativo de telefone padrão</string>
+    <string name="permissionContactsDescription">Permite que um aplicativo acesse seus contatos</string>
+    <string name="permissionOverlayDescription">Permitir exibição sobre outro aplicativo</string>
+    <string name="custom">Personalizado</string>
+    <string name="popular">Popular</string>
+    <string name="cats">Gatos</string>
+    <string name="games">Jogos</string>
+    <string name="movies">Filmes</string>
+    <string name="main">Principal</string>
+    <string name="call_theme">Tema da chamada</string>
+    <string name="call_flash">Chamar Flash</string>
+    <string name="accelerometer">Acelerômetro</string>
+    <string name="language">Linguagem</string>
+    <string name="social">Social</string>
+    <string name="share">Participação</string>
+    <string name="rate_us">Nos avalie</string>
+    <string name="privacy_policy">Política de Privacidade</string>
+    <string name="caller_language">Idioma do chamador</string>
+    <string name="apply_to_all">Aplicar a todos</string>
+    <string name="edit">Editar</string>
+    <string name="mobile">Móvel</string>
+    <string name="call">chamar</string>
+    <string name="mobile_capital">Móvel</string>
+    <string name="ringing">toque</string>
+    <string name="end_to_end_encrypted">Criptografado de ponta a ponta</string>
+    <string name="speaker">palestrante</string>
+    <string name="keys">chaves</string>
+    <string name="mute">mudo</string>
+    <string name="select_sim">Selecionar chip</string>
+    <string name="which_sim_card_do_you_want_to_use">Qual cartão SIM você deseja usar?</string>
+    <string name="please_select_a_phone_number">Selecione um número de telefone</string>
+    <string name="interesting_fact">Fato interessante</string>
+    <string name="you_can_swipe_to_see_more_pictures">Você pode deslizar para ver mais fotos</string>
+    <string name="ok">OK</string>
 </resources>
