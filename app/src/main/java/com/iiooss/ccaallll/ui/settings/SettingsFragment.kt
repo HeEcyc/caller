@@ -51,7 +51,7 @@ class SettingsFragment : BaseFragment<SettingsViewModel, SettingsFragmentBinding
 
     override fun onResume() {
         super.onResume()
-        binding.switchPower.isChecked = viewModel.permissionRepository.hasCallerPermission
+        binding.switchPower.toggle(viewModel.permissionRepository.hasCallerPermission)
     }
 
 
