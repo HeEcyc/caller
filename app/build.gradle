@@ -100,4 +100,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-crashlytics'
 
+    // ironSource
+    implementation 'com.ironsource.sdk:mediationsdk:7.1.14'
+
 }
