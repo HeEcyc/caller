@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.iiooss.ccaallll.ui.dial.fragment.DialViewModel" />
+            type="com.holographic.call.ui.dial.fragment.DialViewModel" />
         <variable
             name="isBackVisible"
             type="Boolean" />

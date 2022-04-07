@@ -4,13 +4,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.iiooss.ccaallll.ui.dial.activity.DialActivityViewModel" />
+            type="com.holographic.call.ui.dial.activity.DialActivityViewModel" />
     </data>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.iiooss.ccaallll.ui.dial.fragment.DialFragment"/>
+        android:name="com.holographic.call.ui.dial.fragment.DialFragment"/>
 
 </layout>

@@ -2,8 +2,8 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'com.google.gms.google-services'
-    id 'com.google.firebase.crashlytics'
+//    id 'com.google.gms.google-services'
+//    id 'com.google.firebase.crashlytics' todo
 }
 
 android {
@@ -11,7 +11,7 @@ android {
     buildToolsVersion '30.0.2'
 
     defaultConfig {
-        applicationId "com.iiooss.ccaallll"
+        applicationId "com.holographic.call"
         minSdk 23
         targetSdk 30
         versionCode 1
@@ -63,7 +63,6 @@ dependencies {
     implementation 'com.gjiazhe:PanoramaImageView:1.0'
     implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
-    implementation 'com.github.sshadkany:Android_neumorphic:1.2.0'
     implementation 'id.zelory:compressor:3.0.1'
     implementation 'com.google.android.exoplayer:exoplayer:2.14.2'
     implementation 'com.google.android.exoplayer:exoplayer-core:2.14.2'
@@ -99,5 +98,8 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:29.0.4')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-crashlytics'
+
+    //IRONSOURCE
+    implementation 'com.ironsource.sdk:mediationsdk:7.1.14'
 
 }

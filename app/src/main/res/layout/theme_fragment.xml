@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.iiooss.ccaallll.ui.theme.ThemeViewModel" />
+            type="com.holographic.call.ui.theme.ThemeViewModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat

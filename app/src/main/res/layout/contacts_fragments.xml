@@ -4,11 +4,11 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.iiooss.ccaallll.ui.contacts.ContactsFragment.Mode"/>
-        <import type="com.iiooss.ccaallll.repository.LocaleRepository.Locale"/>
+        <import type="com.holographic.call.ui.contacts.ContactsFragment.Mode"/>
+        <import type="com.holographic.call.repository.LocaleRepository.Locale"/>
         <variable
             name="viewModel"
-            type="com.iiooss.ccaallll.ui.contacts.ContactsViewModel" />
+            type="com.holographic.call.ui.contacts.ContactsViewModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat

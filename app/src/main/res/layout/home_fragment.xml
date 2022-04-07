@@ -7,7 +7,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.iiooss.ccaallll.ui.home.HomeViewModel" />
+            type="com.holographic.call.ui.home.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.motion.widget.MotionLayout
@@ -131,7 +131,7 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/theme_preview_overlay"/>
 
-                    <com.iiooss.ccaallll.ui.custom.SingleLetterAvatar
+                    <com.holographic.call.ui.custom.SingleLetterAvatar
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"

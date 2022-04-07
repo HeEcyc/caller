@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.iiooss.ccaallll.repository.LocaleRepository.Locale"/>
+        <import type="com.holographic.call.repository.LocaleRepository.Locale"/>
         <variable
             name="viewModel"
-            type="com.iiooss.ccaallll.ui.settings.SettingsViewModel" />
+            type="com.holographic.call.ui.settings.SettingsViewModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat

@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.iiooss.ccaallll.ui.contact.ContactViewModel" />
+            type="com.holographic.call.ui.contact.ContactViewModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -124,7 +124,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintHeight_percent="0.38222">
-                    <com.iiooss.ccaallll.ui.custom.SingleLetterAvatar
+                    <com.holographic.call.ui.custom.SingleLetterAvatar
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         text="@{viewModel.contact.contactName}"

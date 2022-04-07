@@ -4,10 +4,10 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.iiooss.ccaallll.model.theme.NewTheme"/>
+        <import type="com.holographic.call.model.theme.NewTheme"/>
         <variable
             name="item"
-            type="com.iiooss.ccaallll.model.theme.Theme" />
+            type="com.holographic.call.model.theme.Theme" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

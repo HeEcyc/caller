@@ -4,13 +4,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.iiooss.ccaallll.ui.main.MainViewModel" />
+            type="com.holographic.call.ui.main.MainViewModel" />
     </data>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.iiooss.ccaallll.ui.home.HomeFragment"/>
+        android:name="com.holographic.call.ui.home.HomeFragment"/>
 
 </layout>

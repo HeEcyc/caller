@@ -5,7 +5,7 @@
     <data>
         <variable
             name="item"
-            type="com.iiooss.ccaallll.ui.contacts.ContactAdapter.Contact" />
+            type="com.holographic.call.ui.contacts.ContactAdapter.Contact" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

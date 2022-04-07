@@ -7,7 +7,7 @@
         <import type="android.telecom.Call"/>
         <variable
             name="viewModel"
-            type="com.iiooss.ccaallll.ui.call.fragment.CallViewModel" />
+            type="com.holographic.call.ui.call.fragment.CallViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

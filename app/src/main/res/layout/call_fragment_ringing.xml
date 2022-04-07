@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.iiooss.ccaallll.ui.call.fragment.CallViewModel" />
+            type="com.holographic.call.ui.call.fragment.CallViewModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -104,7 +104,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:visibility="@{viewModel.contact.photoThumbnailUri != null ? View.VISIBLE : View.GONE}"/>
-                        <com.iiooss.ccaallll.ui.custom.SingleLetterAvatar
+                        <com.holographic.call.ui.custom.SingleLetterAvatar
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             text="@{viewModel.contact.contactName}"
