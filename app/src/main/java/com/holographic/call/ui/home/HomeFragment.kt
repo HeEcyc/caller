@@ -1,9 +1,6 @@
 package com.holographic.call.ui.home
 
-import android.animation.ValueAnimator
 import android.view.View
-import android.view.animation.LinearInterpolator
-import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.holographic.call.App
@@ -15,7 +12,6 @@ import com.holographic.call.ui.custom.ItemDecorationWithEnds
 import com.holographic.call.ui.main.MainActivity
 import com.holographic.call.ui.settings.SettingsFragment
 import com.holographic.call.utils.themesPopular
-import io.github.florent37.shapeofview.shapes.RoundRectView
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
@@ -23,16 +19,19 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
 
     val viewModel: HomeViewModel by viewModel { parametersOf(this) }
 
-    private val cornerRadius by lazy { binding.themesContainer.width / 360f * 24 }
-    private val themesBackground by lazy { binding.themesBackground }
-
     override fun setupUI() {
-        binding.themesContainer.setOnClickListener {}
         binding.root.post {
             val isLtr = resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_LTR
-            val edgeSpace = binding.root.width * 28 / 360
-            val innerSpace = binding.root.width * 5 / 360
+            val edgeSpace = binding.root.width * 20 / 360
+            val innerSpace = binding.root.width * 6 / 360
+            val verticalSpace = binding.root.width * 34 / 360
             val itemDecoration = ItemDecorationWithEnds(
+                topFirst = verticalSpace,
+                top = verticalSpace,
+                topLast = verticalSpace,
+                bottomFirst = verticalSpace,
+                bottom = verticalSpace,
+                bottomLast = verticalSpace,
                 leftFirst = if (isLtr) edgeSpace else innerSpace,
                 left = innerSpace,
                 leftLast = if (isLtr) innerSpace else edgeSpace,
@@ -42,14 +41,8 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
                 firstPredicate = ::isFirstAdapterItem,
                 lastPredicate = ::isLastAdapterItem
             )
-            binding.rvCustom.addItemDecoration(itemDecoration)
-            binding.rvPopular.addItemDecoration(itemDecoration)
-            binding.rvGames.addItemDecoration(itemDecoration)
-            binding.rvCats.addItemDecoration(itemDecoration)
-            binding.rvMovies.addItemDecoration(itemDecoration)
-            themesBackground.setRadius(cornerRadius)
+            binding.recyclerView.addItemDecoration(itemDecoration)
         }
-        binding.motionLayout.addTransitionListener(newTransactionListener())
         themesPopular.getOrNull(1)?.let {
             Glide.with(App.instance).load(it.previewFile).centerCrop().into(binding.imagePreview)
         }
@@ -83,35 +76,6 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
 
     private fun isLastAdapterItem(position: Int, count: Int) = position == count - 1
 
-    private fun RoundRectView.setRadius(radius: Float) {
-        topLeftRadius = radius
-        topRightRadius = radius
-    }
-
-    private fun animateCorners(from: Float, to: Float) {
-        if (themesBackground.topLeftRadius != to)
-            ValueAnimator.ofFloat(from, to).apply {
-                interpolator = LinearInterpolator()
-                duration = 250
-                addUpdateListener { themesBackground.setRadius(it.animatedValue as Float) }
-            }.start()
-    }
-
-    private fun roundCorners() = animateCorners(0f, cornerRadius)
-
-    private fun sharpenCorners() = animateCorners(cornerRadius, 0f)
-
     override fun provideViewModel() = viewModel
-
-    private fun newTransactionListener() = object : MotionLayout.TransitionListener {
-        override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
-            roundCorners()
-        }
-        override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {}
-        override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
-            if (p1 == R.id.end) sharpenCorners()
-        }
-        override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {}
-    }
 
 }

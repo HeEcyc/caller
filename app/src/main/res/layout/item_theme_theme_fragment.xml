@@ -34,7 +34,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintWidth_percent="0.2453271"
-                    android:src="@drawable/ic_add"/>
+                    android:src="@mipmap/ic_add"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <com.makeramen.roundedimageview.RoundedImageView

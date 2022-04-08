@@ -12,10 +12,7 @@ import com.holographic.call.repository.FileRepository
 import com.holographic.call.repository.ImagePickerRepository
 import com.holographic.call.repository.PermissionRepository
 import com.holographic.call.repository.ThemeRepository
-import com.holographic.call.utils.themesCats
-import com.holographic.call.utils.themesGames
-import com.holographic.call.utils.themesMovies
-import com.holographic.call.utils.themesPopular
+import com.holographic.call.utils.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -33,29 +30,25 @@ class HomeViewModel(
 
     val selectedTheme = ObservableField<Theme>()
 
-    val adapterCustom = ThemeAdapter(this, ::onThemeClick)
-    val adapterPopular = ThemeAdapter(this, ::onThemeClick)
-    val adapterGames = ThemeAdapter(this, ::onThemeClick)
-    val adapterCats = ThemeAdapter(this, ::onThemeClick)
-    val adapterMovies = ThemeAdapter(this, ::onThemeClick)
+    val adapter = ThemeAdapter(this, ::onThemeClick)
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
             val themes: List<Theme> = themeRepository.getCustomThemes()
             launch(Dispatchers.Main) {
-                adapterCustom.reloadData(themes.toMutableList().apply { add(0, NewTheme) })
+                adapter.reloadData(themes.toMutableList().apply {
+                    add(0, NewTheme)
+                    addAll(presetThemes)
+                })
             }
         }
-        adapterPopular.reloadData(themesPopular)
-        adapterGames.reloadData(themesGames)
-        adapterCats.reloadData(themesCats)
-        adapterMovies.reloadData(themesMovies)
+
         viewModelScope.launch(Dispatchers.Main) {
-            themeRepository.newThemes.collect { adapterCustom.addItem(it, 1) }
+            themeRepository.newThemes.collect { adapter.addItem(it, 1) }
         }
         viewModelScope.launch(Dispatchers.Main) {
             themeRepository.deletedThemes.collect {
-                adapterCustom.removeItem(adapterCustom.getData().indexOf(it))
+                adapter.removeItem(adapter.getData().indexOf(it))
             }
         }
         observe(selectedTheme) { _, _ -> needRequestLayout.postValue(Unit) }
