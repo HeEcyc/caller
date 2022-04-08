@@ -46,7 +46,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintDimensionRatio="1:1"
-            android:src="@drawable/ic_back_blue"
+            android:src="@drawable/ic_back"
             android:visibility="@{isBackVisible ? View.VISIBLE : View.GONE}"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 

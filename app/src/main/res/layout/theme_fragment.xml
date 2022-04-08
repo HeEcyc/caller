@@ -37,7 +37,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintWidth_percent="0.1333"
-                android:src="@drawable/ic_back_blue"/>
+                android:src="@drawable/ic_back"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ScrollView

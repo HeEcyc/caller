@@ -22,8 +22,8 @@ import android.view.animation.AccelerateInterpolator;
 
 public class SwitchView extends View {
 
-    private final int DEFAULT_COLOR_ON = 0xff53d769;
-    private final int DEFAULT_COLOR_OFF = 0xffe3e3e3;
+    private final int DEFAULT_COLOR_ON = 0xff148E14;
+    private final int DEFAULT_COLOR_OFF = 0xffD64D43;
 
     private int colorOn = DEFAULT_COLOR_ON;
     private int colorOff = DEFAULT_COLOR_OFF;
@@ -241,7 +241,7 @@ public class SwitchView extends View {
         final float scaleOffset = (bOnLeftX + bRadius - sCenterX) * (isChecked ? 1 - dsAnim : dsAnim);
         canvas.save();
         canvas.scale(scale, scale, sCenterX + scaleOffset, sCenterY);
-        paint.setColor(0xFFC7C7CC);
+        paint.setColor(state == STATE_SWITCH_ON || state == STATE_SWITCH_ON2 ? DEFAULT_COLOR_ON : DEFAULT_COLOR_OFF);
         canvas.drawPath(sPath, paint);
         canvas.restore();
         // draw center bar
@@ -266,7 +266,7 @@ public class SwitchView extends View {
         paint.setStrokeWidth(bStrokeWidth * 0.5f);
 
         paint.setColor(isChecked ? colorOn : colorOff);
-        canvas.drawPath(bPath, paint);
+//        canvas.drawPath(bPath, paint);
 
         canvas.restore();
 
