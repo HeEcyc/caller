@@ -40,7 +40,4 @@
     <string name="select_sim">SIM\'i seçin</string>
     <string name="which_sim_card_do_you_want_to_use">Hangi SIM kartı kullanmak istiyorsunuz?</string>
     <string name="please_select_a_phone_number">Lütfen bir telefon numarası seçin</string>
-    <string name="interesting_fact">İlginç gerçek</string>
-    <string name="you_can_swipe_to_see_more_pictures">Daha fazla resim görmek için kaydırabilirsiniz</string>
-    <string name="ok">Tamam</string>
 </resources>

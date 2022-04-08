@@ -40,7 +40,4 @@
     <string name="select_sim">Selectați SIM</string>
     <string name="which_sim_card_do_you_want_to_use">Ce cartelă SIM doriți să utilizați?</string>
     <string name="please_select_a_phone_number">Vă rugăm să selectați un număr de telefon</string>
-    <string name="interesting_fact">Fapt interesant</string>
-    <string name="you_can_swipe_to_see_more_pictures">Puteți glisa pentru a vedea mai multe imagini</string>
-    <string name="ok">Bine</string>
 </resources>

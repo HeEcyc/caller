@@ -40,7 +40,4 @@
     <string name="select_sim">เลือกซิม</string>
     <string name="which_sim_card_do_you_want_to_use">คุณต้องการใช้ซิมการ์ดใด</string>
     <string name="please_select_a_phone_number">กรุณาเลือกหมายเลขโทรศัพท์</string>
-    <string name="interesting_fact">ความจริงที่น่าสนใจ</string>
-    <string name="you_can_swipe_to_see_more_pictures">สามารถเลื่อนดูภาพเพิ่มเติมได้</string>
-    <string name="ok">ตกลง</string>
 </resources>

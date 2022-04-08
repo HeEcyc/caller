@@ -40,7 +40,4 @@
     <string name="select_sim">Chọn SIM</string>
     <string name="which_sim_card_do_you_want_to_use">Bạn muốn sử dụng thẻ SIM nào?</string>
     <string name="please_select_a_phone_number">Vui lòng chọn một số điện thoại</string>
-    <string name="interesting_fact">Sự thật thú vị</string>
-    <string name="you_can_swipe_to_see_more_pictures">Bạn có thể vuốt để xem thêm hình ảnh</string>
-    <string name="ok">Đồng ý</string>
 </resources>

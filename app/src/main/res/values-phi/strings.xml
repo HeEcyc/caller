@@ -40,7 +40,4 @@
     <string name="select_sim">Piliin ang SIM</string>
     <string name="which_sim_card_do_you_want_to_use">Aling SIM card ang gusto mong gamitin?</string>
     <string name="please_select_a_phone_number">Mangyaring pumili ng numero ng telepono</string>
-    <string name="interesting_fact">Kawili-wiling katotohanan</string>
-    <string name="you_can_swipe_to_see_more_pictures">Maaari kang mag-swipe upang makakita ng higit pang mga larawan</string>
-    <string name="ok">Ok</string>
 </resources>
