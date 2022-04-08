@@ -11,6 +11,7 @@ import com.holographic.call.databinding.ContactFragmentBinding
 import com.holographic.call.model.contact.UserContact
 import com.holographic.call.ui.main.MainActivity
 import com.holographic.call.ui.theme.ThemeFragment
+import com.holographic.call.utils.setOnClickListener
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 

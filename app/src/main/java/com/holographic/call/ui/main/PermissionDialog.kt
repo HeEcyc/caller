@@ -4,6 +4,7 @@ import androidx.fragment.app.activityViewModels
 import com.holographic.call.R
 import com.holographic.call.base.BaseDialog
 import com.holographic.call.databinding.PermissionDialogBinding
+import com.holographic.call.utils.setOnClickListener
 
 class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission_dialog) {
 

@@ -22,6 +22,7 @@ import com.holographic.call.ui.contacts.ContactsFragment.Mode.DEFAULT
 import com.holographic.call.ui.dial.fragment.DialFragment
 import com.holographic.call.ui.home.HomeFragment
 import com.holographic.call.ui.main.MainActivity
+import com.holographic.call.utils.setOnClickListener
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 

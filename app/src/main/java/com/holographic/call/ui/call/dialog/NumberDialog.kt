@@ -7,6 +7,7 @@ import com.holographic.call.base.BaseDialog
 import com.holographic.call.databinding.NumberDialogBinding
 import com.holographic.call.model.contact.UserContact
 import com.holographic.call.ui.contacts.ContactsFragment
+import com.holographic.call.utils.setOnClickListener
 
 class NumberDialog : BaseDialog<NumberDialogBinding>(R.layout.number_dialog) {
 

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.holographic.call.R
 import com.holographic.call.base.BaseFragment
 import com.holographic.call.databinding.LanguageFragmentBinding
+import com.holographic.call.utils.setOnClickListener
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class LanguageFragment : BaseFragment<LanguageViewModel, LanguageFragmentBinding>(R.layout.language_fragment) {
