@@ -2,6 +2,7 @@ package com.holographic.call.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.databinding.ObservableField
 import com.bumptech.glide.Glide
 import com.holographic.call.base.BaseAdapter
 import com.holographic.call.databinding.ItemThemeBinding
@@ -9,7 +10,7 @@ import com.holographic.call.model.theme.NewTheme
 import com.holographic.call.model.theme.Theme
 
 class ThemeAdapter(
-    private val viewModel: HomeViewModel,
+    private val viewModel: SelectThemeViewModel,
     onItemClick: (Theme) -> Unit
 ) : BaseAdapter<Theme, ItemThemeBinding>(onItemClick) {
 
@@ -33,5 +34,9 @@ class ThemeAdapter(
             }
 
         }
+
+    interface SelectThemeViewModel {
+        val selectedTheme: ObservableField<Theme>
+    }
 
 }

@@ -1,5 +1,6 @@
 package com.holographic.call.ui.theme
 
+import androidx.databinding.ObservableField
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.holographic.call.App
@@ -10,10 +11,7 @@ import com.holographic.call.repository.FileRepository
 import com.holographic.call.repository.ImagePickerRepository
 import com.holographic.call.repository.PermissionRepository
 import com.holographic.call.repository.ThemeRepository
-import com.holographic.call.utils.themesCats
-import com.holographic.call.utils.themesGames
-import com.holographic.call.utils.themesMovies
-import com.holographic.call.utils.themesPopular
+import com.holographic.call.utils.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -23,42 +21,47 @@ class ThemeViewModel(
     private val themeRepository: ThemeRepository,
     private val imagePickerRepository: ImagePickerRepository,
     private val fileRepository: FileRepository
-) : BaseViewModel() {
+) : BaseViewModel(), com.holographic.call.ui.home.ThemeAdapter.SelectThemeViewModel {
 
+    val needRequestLayout = MutableLiveData<Unit>()
     val addNewTheme = MutableLiveData<Unit>()
-    val setTheme = MutableLiveData<Theme>()
 
-    val adapterCustom = ThemeAdapter(::onThemeClick)
-    val adapterPopular = ThemeAdapter(::onThemeClick)
-    val adapterGames = ThemeAdapter(::onThemeClick)
-    val adapterCats = ThemeAdapter(::onThemeClick)
-    val adapterMovies = ThemeAdapter(::onThemeClick)
+    val themeSelected = MutableLiveData<Theme>()
+
+    override val selectedTheme by lazy { ObservableField<Theme>() }
+
+    val adapter = com.holographic.call.ui.home.ThemeAdapter(this, ::onThemeClick)
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
             val themes: List<Theme> = themeRepository.getCustomThemes()
             launch(Dispatchers.Main) {
-                adapterCustom.reloadData(themes.toMutableList().apply { add(0, NewTheme) })
+                adapter.reloadData(themes.toMutableList().apply {
+                    add(0, NewTheme)
+                    addAll(presetThemes)
+                })
             }
         }
-        adapterPopular.reloadData(themesPopular)
-        adapterGames.reloadData(themesGames)
-        adapterCats.reloadData(themesCats)
-        adapterMovies.reloadData(themesMovies)
+
         viewModelScope.launch(Dispatchers.Main) {
-            themeRepository.newThemes.collect { adapterCustom.addItem(it, 1) }
+            themeRepository.newThemes.collect { adapter.addItem(it, 1) }
         }
         viewModelScope.launch(Dispatchers.Main) {
             themeRepository.deletedThemes.collect {
-                adapterCustom.removeItem(adapterCustom.getData().indexOf(it))
+                adapter.removeItem(adapter.getData().indexOf(it))
             }
         }
+        observe(selectedTheme) { _, _ -> needRequestLayout.postValue(Unit) }
     }
 
-    private fun onThemeClick(theme: Theme) = if (theme is NewTheme)
-        addNewTheme.postValue(Unit)
-    else
-        setTheme.postValue(theme)
+    private fun onThemeClick(theme: Theme) {
+        if (theme is NewTheme) {
+            addNewTheme.postValue(Unit)
+        } else {
+            selectedTheme.set(theme)
+            themeSelected.postValue(theme)
+        }
+    }
 
     fun addNewTheme() {
         imagePickerRepository.pickImage {

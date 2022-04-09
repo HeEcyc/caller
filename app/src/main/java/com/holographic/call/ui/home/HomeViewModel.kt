@@ -22,13 +22,13 @@ class HomeViewModel(
     private val imagePickerRepository: ImagePickerRepository,
     val permissionRepository: PermissionRepository,
     private val fileRepository: FileRepository
-) : BaseViewModel() {
+) : BaseViewModel(), ThemeAdapter.SelectThemeViewModel {
 
     val needRequestLayout = MutableLiveData<Unit>()
     val addNew = MutableLiveData<Unit>()
     val themeSelected = MutableLiveData<Theme>()
 
-    val selectedTheme = ObservableField<Theme>()
+    override val selectedTheme by lazy { ObservableField<Theme>() }
 
     val adapter = ThemeAdapter(this, ::onThemeClick)
 

@@ -11,7 +11,7 @@
             type="com.holographic.call.model.theme.Theme" />
         <variable
             name="viewModel"
-            type="com.holographic.call.ui.home.HomeViewModel" />
+            type="com.holographic.call.ui.home.ThemeAdapter.SelectThemeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -11,7 +11,7 @@ import com.holographic.call.ui.contacts.ContactsFragment
 import com.holographic.call.ui.custom.ItemDecorationWithEnds
 import com.holographic.call.ui.main.MainActivity
 import com.holographic.call.ui.settings.SettingsFragment
-import com.holographic.call.utils.themesPopular
+import com.holographic.call.utils.presetThemes
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
@@ -43,7 +43,7 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
             )
             binding.recyclerView.addItemDecoration(itemDecoration)
         }
-        themesPopular.getOrNull(1)?.let {
+        presetThemes.getOrNull(1)?.let {
             Glide.with(App.instance).load(it.previewFile).centerCrop().into(binding.imagePreview)
         }
         viewModel.needRequestLayout.observe(this) {
