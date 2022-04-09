@@ -33,4 +33,5 @@
     <string name="select_sim">Piliin ang SIM</string>
     <string name="which_sim_card_do_you_want_to_use">Aling SIM card ang gusto mong gamitin?</string>
     <string name="please_select_a_phone_number">Mangyaring pumili ng numero ng telepono</string>
+    <string name="select">Pumili</string>
 </resources>

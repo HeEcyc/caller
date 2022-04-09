@@ -33,4 +33,5 @@
     <string name="select_sim">Выберите SIM-карту</string>
     <string name="which_sim_card_do_you_want_to_use">Какую SIM-карту вы хотите использовать?</string>
     <string name="please_select_a_phone_number">Пожалуйста, выберите номер телефона</string>
+    <string name="select">Выбрать</string>
 </resources>

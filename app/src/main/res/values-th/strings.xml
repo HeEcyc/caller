@@ -33,4 +33,5 @@
     <string name="select_sim">เลือกซิม</string>
     <string name="which_sim_card_do_you_want_to_use">คุณต้องการใช้ซิมการ์ดใด</string>
     <string name="please_select_a_phone_number">กรุณาเลือกหมายเลขโทรศัพท์</string>
+    <string name="select">เลือก</string>
 </resources>
