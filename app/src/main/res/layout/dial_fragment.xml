@@ -47,7 +47,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintDimensionRatio="1:1"
             android:src="@drawable/ic_back"
-            android:visibility="@{isBackVisible ? View.VISIBLE : View.GONE}"/>
+            android:visibility="@{isBackVisible ? View.VISIBLE : View.GONE}"
+            android:tint="#007AFF"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -116,7 +117,7 @@
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintWidth_percent="0.20555"
                     app:layout_constraintVertical_bias="0.8055"
-                    android:src="@drawable/button_call"/>
+                    android:src="@mipmap/button_call_holo"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/iconBackspace"
