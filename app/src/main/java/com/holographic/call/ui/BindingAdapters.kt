@@ -1,5 +1,7 @@
 package com.holographic.call.ui
 
+import android.content.res.ColorStateList
+import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.holographic.call.ui.custom.SingleLetterAvatar
@@ -20,6 +22,15 @@ fun setRVAdapter(rv: RecyclerView, rva: RecyclerView.Adapter<*>?) {
 @BindingAdapter("border_color")
 fun setBorderColorInt(riv: RoundedImageView, color: Int) {
     riv.borderColor = color
+}
+
+@BindingAdapter("tintInt")
+fun setTintInt(iv: ImageView, c: Int) {
+    if (c == -1) {
+        iv.imageTintList = null
+        return
+    }
+    iv.imageTintList = ColorStateList.valueOf(c)
 }
 
 @BindingAdapter("checked")

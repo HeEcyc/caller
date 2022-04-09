@@ -6,6 +6,8 @@
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/button_accept.xml" value="0.2375" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/button_call.xml" value="0.2375" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/button_decline.xml" value="0.2375" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/call_button_bg.xml" value="0.238" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/call_button_bg_active.xml" value="0.238" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/holo_bg_360x254.xml" value="0.2375" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/ic_add.xml" value="0.2375" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/ic_back.xml" value="0.238" />
@@ -16,6 +18,9 @@
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/stroke_item_selected.xml" value="0.2375" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/theme_preview_overlay.xml" value="0.2375" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/call_activity.xml" value="0.36666666666666664" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/call_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/call_fragment_accepted.xml" value="0.36666666666666664" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/call_fragment_dialing.xml" value="0.36666666666666664" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/contact_fragment.xml" value="0.36666666666666664" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/contacts_fragments.xml" value="0.36666666666666664" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/guid_dialog.xml" value="0.18802083333333333" />
