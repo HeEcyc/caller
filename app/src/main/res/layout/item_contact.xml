@@ -28,7 +28,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="320:17"
                 app:layout_constraintHeight_percent="0.47222"
-                android:gravity="center_vertical"
+                android:gravity="center"
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="14sp"
                 app:autoSizeMinTextSize="1sp"

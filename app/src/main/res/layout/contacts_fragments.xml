@@ -72,7 +72,7 @@
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="14sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#027AFF"
+                android:textColor="#404040"
                 android:fontFamily="@font/sf_pro_display_regular"
                 android:lines="1"
                 android:text="@string/apply_to_all"
@@ -103,11 +103,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="320:44"
                 app:layout_constraintWidth_percent="0.88888888"
-                android:gravity="center_vertical"
+                android:gravity="center"
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="37sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#0A0A0B"
+                android:textColor="#404040"
                 android:fontFamily="@font/sf_pro_display_bold"
                 android:text="@string/contacts"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -151,67 +151,6 @@
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </androidx.core.widget.NestedScrollView>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/alphabetContainer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:visibility="@{(viewModel.localeRepository.localeObservable ?? Locale.ENGLISH) == Locale.ENGLISH ? View.VISIBLE : View.GONE}">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="360:24"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintWidth_percent="0.0555">
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            app:layout_constraintStart_toStartOf="@id/recyclerAlphabet"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:background="@color/white"/>
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/recyclerAlphabet"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="20:378"
-                            app:layout_constraintVertical_bias="0"
-                            app:layout_constraintHorizontal_bias="1"
-                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                            android:orientation="vertical"
-                            adapter="@{viewModel.adapterAlphabet}"
-                            android:overScrollMode="never"
-                            xmlns:tools="http://schemas.android.com/tools"
-                            tools:listitem="@layout/item_alphabet"
-                            tools:itemCount="27"/>
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

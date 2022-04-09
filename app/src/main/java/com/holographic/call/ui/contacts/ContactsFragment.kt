@@ -4,8 +4,6 @@ import android.annotation.SuppressLint
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
-import android.view.View
-import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.core.view.children
 import androidx.lifecycle.lifecycleScope
@@ -56,16 +54,6 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentsBindin
         viewModel.openContact.observe(this) {
             activityAs<MainActivity>().addFragment(ContactFragment.newInstance(it))
         }
-        binding.recyclerAlphabet.setOnTouchListener { _, event ->
-            binding
-                .recyclerAlphabet
-                .findChildViewUnder(event.x, event.y)
-                ?.findViewById<TextView>(R.id.character)
-                ?.text
-                ?.getOrNull(0)
-                ?.let(::goToSection)
-            true
-        }
         viewModel.addInterlocutor.observe(this, ::addInterlocutor)
         viewModel.selectInterlocutorNumber.observe(this) {
             NumberDialog.newInstance(it).show(parentFragmentManager)
@@ -89,31 +77,19 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentsBindin
         requireActivity().onBackPressed()
     }
 
-    private fun goToSection(c: Char) {
-        val index = viewModel
-            .adapterContacts
-            .getData()
-            .indexOfFirst { it is ContactAdapter.SegmentHeader && it.c == c }
-        if (index == -1) return
-        binding.recyclerContacts.findViewHolderForAdapterPosition(index)?.itemView?.let {
-            binding.scrollView.scrollTo(it.x.toInt(), it.y.toInt())
-        }
-    }
-
     private fun getNewItemDecoration() = object : RecyclerView.ItemDecoration() {
 
         private val paint = Paint().apply { color = Color.parseColor("#EDEDED") }
 
-        private val lineWidth by lazy { binding.root.width / 360f * 340 }
+        private val lineWidth by lazy { binding.root.width / 360f * 320 }
         private val lineHeight by lazy { binding.root.width / 360f * 1 }
 
         override fun onDraw(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
-            val isLtr = parent.layoutDirection == View.LAYOUT_DIRECTION_LTR
             for (i in 1 until parent.childCount) {
                 c.drawRect(
-                    if (isLtr) parent.width - lineWidth else 0f,
+                    (parent.width - lineWidth) / 2,
                     parent.children.first().height * i - lineHeight / 2,
-                    if (isLtr) parent.width.toFloat() else lineWidth,
+                    parent.width - (parent.width - lineWidth) / 2,
                     parent.children.first().height * i + lineHeight / 2,
                     paint
                 )

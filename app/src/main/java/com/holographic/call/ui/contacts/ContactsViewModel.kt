@@ -6,7 +6,6 @@ import com.holographic.call.model.contact.UserContact
 import com.holographic.call.repository.ContactsRepository
 import com.holographic.call.repository.LocaleRepository
 import com.holographic.call.repository.PermissionRepository
-import com.holographic.call.utils.alphabet
 
 class ContactsViewModel(
     val mode: ContactsFragment.Mode,
@@ -23,10 +22,6 @@ class ContactsViewModel(
     val selectInterlocutorNumber = MutableLiveData<UserContact>()
 
     val adapterContacts = ContactAdapter(::onContactClick)
-    val adapterAlphabet = if (locale == LocaleRepository.Locale.ENGLISH)
-        AlphabetAdapter()
-    else
-        null
 
     init {
         val contacts = if (locale == LocaleRepository.Locale.ENGLISH)
@@ -34,7 +29,6 @@ class ContactsViewModel(
         else
             ContactAdapter.getFormattedItemsWithoutHeaders(contactsRepository.contacts)
         adapterContacts.reloadData(contacts)
-        adapterAlphabet?.reloadData(alphabet)
     }
 
     private fun onContactClick(contact: UserContact) = when (mode) {
