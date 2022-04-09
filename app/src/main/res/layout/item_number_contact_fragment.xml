@@ -28,11 +28,11 @@
                 app:layout_constraintDimensionRatio="320:22"
                 app:layout_constraintHeight_percent="0.363636"
                 app:layout_constraintVertical_bias="0.753246"
-                android:gravity="center_vertical"
+                android:gravity="center"
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="17sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#007AFF"
+                android:textColor="#404040"
                 android:fontFamily="@font/sf_pro_display_regular"
                 android:lines="1"
                 android:text="@{item}"/>
