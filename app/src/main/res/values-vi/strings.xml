@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="contacts">Liên lạc</string>
-    <string name="settings">Cài đặt</string>
     <string name="calling">đang gọi ...</string>
     <string name="accept">Chấp nhận</string>
     <string name="decline">Sự suy sụp</string>
-    <string name="apply">Áp dụng</string>
     <string name="get_permissions">Nhận quyền</string>
     <string name="not_now">Không phải bây giờ</string>
     <string name="allow">Cho phép</string>
     <string name="permissionPhoneDescription">Đặt ứng dụng làm ứng dụng điện thoại mặc định của bạn</string>
     <string name="permissionContactsDescription">Cho phép ứng dụng truy cập danh bạ của bạn</string>
     <string name="permissionOverlayDescription">Cho phép hiển thị trên ứng dụng khác</string>
-    <string name="custom">Phong tục</string>
-    <string name="popular">Phổ biến</string>
-    <string name="cats">Những con mèo</string>
-    <string name="games">Trò chơi</string>
-    <string name="movies">Phim</string>
     <string name="main">Chủ yếu</string>
     <string name="call_theme">Chủ đề cuộc gọi</string>
     <string name="call_flash">Gọi Flash</string>

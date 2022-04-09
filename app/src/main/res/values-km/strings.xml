@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="contacts">ទំនាក់ទំនង</string>
-    <string name="settings">ការកំណត់</string>
     <string name="calling">ហៅ...</string>
     <string name="accept">ទទួលយក</string>
     <string name="decline">បដិសេធ</string>
-    <string name="apply">អនុវត្ត</string>
     <string name="get_permissions">ទទួលបានការអនុញ្ញាត</string>
     <string name="not_now">មិនមែន​ឥឡូវ​ទេ</string>
     <string name="allow">អនុញ្ញាត</string>
     <string name="permissionPhoneDescription">កំណត់កម្មវិធីជាកម្មវិធីទូរស័ព្ទលំនាំដើមរបស់អ្នក។</string>
     <string name="permissionContactsDescription">អនុញ្ញាតឱ្យកម្មវិធីចូលប្រើទំនាក់ទំនងរបស់អ្នក។</string>
     <string name="permissionOverlayDescription">អនុញ្ញាតឱ្យបង្ហាញនៅលើកម្មវិធីផ្សេងទៀត។</string>
-    <string name="custom">ផ្ទាល់ខ្លួន</string>
-    <string name="popular">ពេញនិយម</string>
-    <string name="cats">ឆ្មា</string>
-    <string name="games">ហ្គេម</string>
-    <string name="movies">ភាពយន្ត</string>
     <string name="main">មេ</string>
     <string name="call_theme">ហៅប្រធានបទ</string>
     <string name="call_flash">ហៅទូរស័ព្ទទៅ Flash</string>

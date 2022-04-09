@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="contacts">جهات الاتصال</string>
-    <string name="settings">إعدادات</string>
     <string name="calling">داعيا ...</string>
     <string name="accept">قبول</string>
     <string name="decline">انخفاض</string>
-    <string name="apply">تطبيق</string>
     <string name="get_permissions">احصل على أذونات</string>
     <string name="not_now">ليس الان</string>
     <string name="allow">السماح</string>
     <string name="permissionPhoneDescription">تعيين التطبيق كتطبيق الهاتف الافتراضي الخاص بك</string>
     <string name="permissionContactsDescription">؛ يسمح للتطبيق بالوصول إلى جهات الاتصال الخاصة بك</string>
     <string name="permissionOverlayDescription">السماح بالعرض فوق تطبيق آخر</string>
-    <string name="custom">العادة</string>
-    <string name="popular">جمع</string>
-    <string name="cats">القطط</string>
-    <string name="games">ألعاب</string>
-    <string name="movies">أفلام</string>
     <string name="main">رئيسي</string>
     <string name="call_theme">موضوع المكالمة</string>
     <string name="call_flash">استدعاء فلاش</string>

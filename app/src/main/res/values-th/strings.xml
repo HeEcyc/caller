@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="contacts">รายชื่อผู้ติดต่อ</string>
-    <string name="settings">การตั้งค่า</string>
     <string name="calling">โทร ...</string>
     <string name="accept">ยอมรับ</string>
     <string name="decline">ปฏิเสธ</string>
-    <string name="apply">นำมาใช้</string>
     <string name="get_permissions">รับสิทธิ์</string>
     <string name="not_now">ไม่ใช่ตอนนี้</string>
     <string name="allow">อนุญาต</string>
     <string name="permissionPhoneDescription">ตั้งค่าแอปพลิเคชันเป็นแอปโทรศัพท์เริ่มต้นของคุณ</string>
     <string name="permissionContactsDescription">อนุญาตให้แอปพลิเคชันเข้าถึงรายชื่อของคุณ</string>
     <string name="permissionOverlayDescription">อนุญาตให้แสดงทับแอปอื่น</string>
-    <string name="custom">กำหนดเอง</string>
-    <string name="popular">เป็นที่นิยม</string>
-    <string name="cats">แมว</string>
-    <string name="games">เกม</string>
-    <string name="movies">ภาพยนตร์</string>
     <string name="main">หลัก</string>
     <string name="call_theme">ธีมการโทร</string>
     <string name="call_flash">โทรแฟลช</string>

@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="contacts">Kişiler</string>
-    <string name="settings">Ayarlar</string>
     <string name="calling">arıyor...</string>
     <string name="accept">Kabul</string>
     <string name="decline">Reddetmek</string>
-    <string name="apply">Uygulamak</string>
     <string name="get_permissions">İzinleri Alın</string>
     <string name="not_now">Şimdi değil</string>
     <string name="allow">İzin vermek</string>
     <string name="permissionPhoneDescription">Uygulamayı varsayılan telefon uygulamanız olarak ayarlayın</string>
     <string name="permissionContactsDescription">Bir uygulamanın kişilerinize erişmesine izin verir</string>
     <string name="permissionOverlayDescription">Diğer uygulama üzerinde görüntülemeye izin ver</string>
-    <string name="custom">Gelenek</string>
-    <string name="popular">Popüler</string>
-    <string name="cats">kediler</string>
-    <string name="games">Oyunlar</string>
-    <string name="movies">Filmler</string>
     <string name="main">Ana</string>
     <string name="call_theme">Çağrı Teması</string>
     <string name="call_flash">Çağrı Flaşı</string>

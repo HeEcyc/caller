@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/button_accept.xml" value="0.2375" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/button_add_new_bg.xml" value="0.196" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/button_apply_bg.xml" value="0.196" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/button_call.xml" value="0.2375" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/button_decline.xml" value="0.2375" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/call_button_bg.xml" value="0.238" />

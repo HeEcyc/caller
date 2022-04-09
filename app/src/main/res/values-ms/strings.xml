@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="contacts">Kenalan</string>
-    <string name="settings">tetapan</string>
     <string name="calling">memanggil...</string>
     <string name="accept">Terima</string>
     <string name="decline">Tolak</string>
-    <string name="apply">Mohon</string>
     <string name="get_permissions">Dapatkan Kebenaran</string>
     <string name="not_now">Bukan sekarang</string>
     <string name="allow">benarkan</string>
     <string name="permissionPhoneDescription">Tetapkan aplikasi sebagai apl telefon lalai anda</string>
     <string name="permissionContactsDescription">Membenarkan aplikasi mengakses kenalan anda</string>
     <string name="permissionOverlayDescription">Benarkan paparan di atas apl lain</string>
-    <string name="custom">Adat</string>
-    <string name="popular">Popular</string>
-    <string name="cats">kucing</string>
-    <string name="games">Permainan</string>
-    <string name="movies">Wayang</string>
     <string name="main">Utama</string>
     <string name="call_theme">Tema Panggilan</string>
     <string name="call_flash">Panggil Flash</string>

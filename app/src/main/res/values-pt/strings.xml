@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="contacts">Contatos</string>
-    <string name="settings">Configurações</string>
     <string name="calling">chamando...</string>
     <string name="accept">Aceitar</string>
     <string name="decline">Declínio</string>
-    <string name="apply">Aplicar</string>
     <string name="get_permissions">Obter permissões</string>
     <string name="not_now">Agora não</string>
     <string name="allow">Permitir</string>
     <string name="permissionPhoneDescription">Definir aplicativo como seu aplicativo de telefone padrão</string>
     <string name="permissionContactsDescription">Permite que um aplicativo acesse seus contatos</string>
     <string name="permissionOverlayDescription">Permitir exibição sobre outro aplicativo</string>
-    <string name="custom">Personalizado</string>
-    <string name="popular">Popular</string>
-    <string name="cats">Gatos</string>
-    <string name="games">Jogos</string>
-    <string name="movies">Filmes</string>
     <string name="main">Principal</string>
     <string name="call_theme">Tema da chamada</string>
     <string name="call_flash">Chamar Flash</string>

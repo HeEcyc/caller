@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="contacts">Mga contact</string>
-    <string name="settings">Mga setting</string>
     <string name="calling">tumatawag...</string>
     <string name="accept">Tanggapin</string>
     <string name="decline">Tanggihan</string>
-    <string name="apply">Mag-apply</string>
     <string name="get_permissions">Kumuha ng Mga Pahintulot</string>
     <string name="not_now">Hindi ngayon</string>
     <string name="allow">Payagan</string>
     <string name="permissionPhoneDescription">Itakda ang application bilang iyong default na app ng telepono</string>
     <string name="permissionContactsDescription">Nagbibigay-daan sa isang application na i-access ang iyong mga contact</string>
     <string name="permissionOverlayDescription">Payagan ang pagpapakita sa iba pang app</string>
-    <string name="custom">Custom</string>
-    <string name="popular">Sikat</string>
-    <string name="cats">Mga pusa</string>
-    <string name="games">Mga laro</string>
-    <string name="movies">Mga pelikula</string>
     <string name="main">Pangunahin</string>
     <string name="call_theme">Tema ng Tawag</string>
     <string name="call_flash">Tumawag kay Flash</string>
