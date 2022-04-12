@@ -2,8 +2,8 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'com.google.gms.google-services'
-    id 'com.google.firebase.crashlytics'
+//    id 'com.google.gms.google-services'
+//    id 'com.google.firebase.crashlytics' todo
 }
 
 android {
@@ -40,8 +40,6 @@ android {
 }
 
 dependencies {
-
-    implementation project(":simplecropview")
 
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
@@ -100,5 +98,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-crashlytics'
 
+    // ironSource
+    implementation 'com.ironsource.sdk:mediationsdk:7.1.14'
 
 }
