@@ -21,7 +21,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/gradient_pink_blue">
+                android:background="@drawable/status_bar_bg">
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/navigationContainer"
                     android:layout_width="match_parent"

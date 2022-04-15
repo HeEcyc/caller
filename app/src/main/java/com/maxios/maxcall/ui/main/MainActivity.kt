@@ -11,16 +11,20 @@ import com.maxios.maxcall.ui.home.HomeFragment
 import com.maxios.maxcall.ui.settings.SettingsFragment
 import com.maxios.maxcall.utils.IRON_SOURCE_API_KEY
 import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.core.parameter.parametersOf
 
 class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
 
-    val viewModel: MainViewModel by viewModel()
+    val viewModel: MainViewModel by viewModel { parametersOf(this) }
 
     override fun provideLayoutId(): Int = R.layout.main_activity
 
     override fun setupUI() {
         IronSource.setMetaData("is_child_directed","false")
         IronSource.init(this, IRON_SOURCE_API_KEY)
+
+        if (needToShowPermissionDialog())
+            PermissionDialog().show(supportFragmentManager)
 
         viewModel.openHome.observe(this) {
             supportFragmentManager.commit { replace(R.id.homeFragmentContainer, HomeFragment()) }
@@ -39,6 +43,9 @@ class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
         super.onResume()
         IronSource.onResume(this)
     }
+
+    private fun needToShowPermissionDialog() =
+        !viewModel.permissionRepository.hasNecessaryPermissions && supportFragmentManager.fragments.none { it is PermissionDialog }
 
     fun addFragment(f: Fragment) = supportFragmentManager.commit {
         add(R.id.fragmentContainer, f)

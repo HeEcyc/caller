@@ -4,8 +4,12 @@ import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.MutableLiveData
 import com.maxios.maxcall.base.ActivityViewModel
 import com.maxios.maxcall.repository.LocaleRepository
+import com.maxios.maxcall.repository.PermissionRepository
 
-class MainViewModel(localeRepository: LocaleRepository) : ActivityViewModel(localeRepository) {
+class MainViewModel(
+    localeRepository: LocaleRepository,
+    val permissionRepository: PermissionRepository
+) : ActivityViewModel(localeRepository) {
 
     val openContacts = MutableLiveData<Unit>()
     val openHome = MutableLiveData<Unit>()
