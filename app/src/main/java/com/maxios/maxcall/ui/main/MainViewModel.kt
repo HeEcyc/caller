@@ -1,0 +1,39 @@
+package com.maxios.maxcall.ui.main
+
+import androidx.databinding.ObservableBoolean
+import androidx.lifecycle.MutableLiveData
+import com.maxios.maxcall.base.ActivityViewModel
+import com.maxios.maxcall.repository.LocaleRepository
+
+class MainViewModel(localeRepository: LocaleRepository) : ActivityViewModel(localeRepository) {
+
+    val openContacts = MutableLiveData<Unit>()
+    val openHome = MutableLiveData<Unit>()
+    val openSettings = MutableLiveData<Unit>()
+
+    val contactsOpen = ObservableBoolean(false)
+    val homeOpen = ObservableBoolean(true)
+    val settingsOpen = ObservableBoolean(false)
+
+    fun onContactsClick() {
+        contactsOpen.set(true)
+        homeOpen.set(false)
+        settingsOpen.set(false)
+        openContacts.postValue(Unit)
+    }
+
+    fun onHomeClick() {
+        contactsOpen.set(false)
+        homeOpen.set(true)
+        settingsOpen.set(false)
+        openHome.postValue(Unit)
+    }
+
+    fun onSettingsClick() {
+        contactsOpen.set(false)
+        homeOpen.set(false)
+        settingsOpen.set(true)
+        openSettings.postValue(Unit)
+    }
+
+}

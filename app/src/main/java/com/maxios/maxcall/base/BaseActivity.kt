@@ -10,14 +10,17 @@ import android.os.Build
 import android.os.Bundle
 import android.os.StrictMode
 import android.view.Window
+import android.view.WindowManager
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import com.maxios.maxcall.BR
+import com.maxios.maxcall.R
 import com.maxios.maxcall.repository.LocaleRepository
 import com.nguyenhoanglam.imagepicker.ui.imagepicker.ImagePickerCallback
 import com.nguyenhoanglam.imagepicker.ui.imagepicker.ImagePickerLauncher
@@ -32,6 +35,7 @@ abstract class BaseActivity<TViewModel : ActivityViewModel, TBinding : ViewDataB
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setStatusBarGradiant()
         StrictMode.setVmPolicy(StrictMode.VmPolicy.Builder().build())
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         binding = DataBindingUtil.setContentView(this, provideLayoutId())
@@ -43,6 +47,12 @@ abstract class BaseActivity<TViewModel : ActivityViewModel, TBinding : ViewDataB
             }
         }
         setupUI()
+    }
+
+    private fun setStatusBarGradiant() {
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.statusBarColor = ContextCompat.getColor(this, android.R.color.transparent)
+        window.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.status_bar_bg))
     }
 
     abstract fun provideLayoutId(): Int

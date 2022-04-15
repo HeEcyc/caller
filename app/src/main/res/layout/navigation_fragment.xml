@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.maxios.maxcall.ui.main.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="360:56">
+
+            <com.maxios.maxcall.ui.custom.ScalableCardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintHeight_percent="0.569"
+                app:layout_constraintVertical_bias="0.739"
+                app:layout_constraintHorizontal_bias="0.0489"
+                app:cardBackgroundColor="@android:color/transparent"
+                scalableCornerRadius="@{0.5f}"
+                android:onClick="@{(_) -> viewModel.onContactsClick()}">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipChildren="false">
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="360:56"
+                        app:layout_constraintHeight_percent="1.757"
+                        app:layout_constraintVertical_bias="0.75"
+                        android:background="@drawable/status_bar_bg"
+                        app:layout_constraintHorizontal_bias="0.045"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        backgroundColorInt="@{viewModel.contactsOpen ? 0xffffffff : 0x33ffffff}"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintWidth_percent="0.757575"
+                        android:src="@mipmap/ic_contacts"
+                        backgroundColorInt="@{viewModel.contactsOpen ? 0xffffffff : 0x33ffffff}"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.maxios.maxcall.ui.custom.ScalableCardView>
+
+            <com.maxios.maxcall.ui.custom.ScalableCardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintHeight_percent="0.569"
+                app:layout_constraintVertical_bias="0.739"
+                app:cardBackgroundColor="@android:color/transparent"
+                scalableCornerRadius="@{0.5f}"
+                android:onClick="@{(_) -> viewModel.onHomeClick()}">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipChildren="false">
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="360:56"
+                        app:layout_constraintHeight_percent="1.757"
+                        app:layout_constraintVertical_bias="0.75"
+                        android:background="@drawable/status_bar_bg"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        backgroundColorInt="@{viewModel.homeOpen ? 0xffffffff : 0x33ffffff}"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintWidth_percent="0.848484"
+                        android:src="@mipmap/ic_home"
+                        backgroundColorInt="@{viewModel.homeOpen ? 0xffffffff : 0x33ffffff}"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.maxios.maxcall.ui.custom.ScalableCardView>
+
+            <com.maxios.maxcall.ui.custom.ScalableCardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintHeight_percent="0.569"
+                app:layout_constraintVertical_bias="0.739"
+                app:layout_constraintHorizontal_bias="0.9511"
+                app:cardBackgroundColor="@android:color/transparent"
+                scalableCornerRadius="@{0.5f}"
+                android:onClick="@{(_) -> viewModel.onSettingsClick()}">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipChildren="false">
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="360:56"
+                        app:layout_constraintHeight_percent="1.757"
+                        app:layout_constraintVertical_bias="0.75"
+                        android:background="@drawable/status_bar_bg"
+                        app:layout_constraintHorizontal_bias="0.955"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        backgroundColorInt="@{viewModel.settingsOpen ? 0xffffffff : 0x33ffffff}"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintWidth_percent="0.757575"
+                        android:src="@mipmap/ic_settings" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.maxios.maxcall.ui.custom.ScalableCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

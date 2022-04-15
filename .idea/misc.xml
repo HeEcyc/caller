@@ -3,6 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/______.xml" value="0.239" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/gradient_blue.xml" value="0.239" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/gradient_pink_blue.xml" value="0.238" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/orange_button_fragment_home.xml" value="0.239" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/orange_button_fragment_home_idle.xml" value="0.239" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/orange_button_fragment_home_pressed.xml" value="0.239" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/orange_button_text_color.xml" value="0.239" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/single_letter_avatar_background.xml" value="0.239" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/status_bar_bg.xml" value="0.238" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/theme_container_background_top.xml" value="0.239" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/theme_container_bg.xml" value="0.239" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/dummy_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/home_fragment.xml" value="0.2" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/item_theme.xml" value="0.17831813576494426" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/main_activity.xml" value="0.17831813576494426" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/navigation_fragment.xml" value="0.33" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/view_single_letter_avatar.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3769230769230769" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable/button_bg_yellow.xml" value="0.3828125" />
         <entry key="..\:/Users/irina/AndroidStudioProjects/CallerAfterLovelycall/app/src/main/res/drawable/button_bg_yellow_230_x_48.xml" value="0.3828125" />

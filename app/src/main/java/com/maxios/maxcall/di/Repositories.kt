@@ -7,6 +7,7 @@ import android.telecom.TelecomManager
 import android.telephony.SubscriptionManager
 import androidx.room.Room
 import com.maxios.maxcall.App
+import com.maxios.maxcall.base.LauncherRegistrator
 import com.maxios.maxcall.repository.*
 import com.maxios.maxcall.repository.call.AudioManagerRepository
 import com.maxios.maxcall.repository.call.CallRepository
@@ -33,4 +34,6 @@ val repositories = module {
     ) }
     single { VibrationRepository(App.instance.getSystemService(Vibrator::class.java)) }
     single { FlashRepository(App.instance.getSystemService(CameraManager::class.java)) }
+    factory { (lr: LauncherRegistrator) -> PermissionRepository(lr) }
+    factory { (lr: LauncherRegistrator) -> ImagePickerRepository(lr) }
 }
