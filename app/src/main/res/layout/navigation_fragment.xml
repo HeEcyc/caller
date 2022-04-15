@@ -18,7 +18,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="360:56">
+            app:layout_constraintDimensionRatio="360:56"
+            android:background="@drawable/gradient_pink_blue">
 
             <com.maxios.maxcall.ui.custom.ScalableCardView
                 android:layout_width="0dp"

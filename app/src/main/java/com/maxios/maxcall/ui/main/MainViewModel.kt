@@ -16,6 +16,7 @@ class MainViewModel(localeRepository: LocaleRepository) : ActivityViewModel(loca
     val settingsOpen = ObservableBoolean(false)
 
     fun onContactsClick() {
+        if (contactsOpen.get()) return
         contactsOpen.set(true)
         homeOpen.set(false)
         settingsOpen.set(false)
@@ -23,6 +24,7 @@ class MainViewModel(localeRepository: LocaleRepository) : ActivityViewModel(loca
     }
 
     fun onHomeClick() {
+        if (homeOpen.get()) return
         contactsOpen.set(false)
         homeOpen.set(true)
         settingsOpen.set(false)
@@ -30,6 +32,7 @@ class MainViewModel(localeRepository: LocaleRepository) : ActivityViewModel(loca
     }
 
     fun onSettingsClick() {
+        if (settingsOpen.get()) return
         contactsOpen.set(false)
         homeOpen.set(false)
         settingsOpen.set(true)

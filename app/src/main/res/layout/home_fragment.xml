@@ -15,7 +15,8 @@
     <androidx.constraintlayout.motion.widget.MotionLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutDescription="@xml/motion_scene_home_fragment">
+        app:layoutDescription="@xml/motion_scene_home_fragment"
+        android:background="@color/white">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/previewCollapsedBottom"
