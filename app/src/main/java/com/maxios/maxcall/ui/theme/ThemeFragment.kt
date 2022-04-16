@@ -1,25 +1,21 @@
-package com.maxios.maxcall.ui.home
+package com.maxios.maxcall.ui.theme
 
 import android.view.View
 import androidx.lifecycle.lifecycleScope
-import com.bumptech.glide.Glide
-import com.maxios.maxcall.App
 import com.maxios.maxcall.R
 import com.maxios.maxcall.base.BaseFragment
-import com.maxios.maxcall.databinding.HomeFragmentBinding
-import com.maxios.maxcall.ui.contacts.ContactsFragment
+import com.maxios.maxcall.databinding.ThemeFragmentBinding
+import com.maxios.maxcall.ui.contact.ContactFragment
 import com.maxios.maxcall.ui.custom.ItemDecorationWithEnds
 import com.maxios.maxcall.ui.main.MainActivity
-import com.maxios.maxcall.utils.themesPopular
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
-class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.home_fragment) {
+class ThemeFragment : BaseFragment<ThemeViewModel, ThemeFragmentBinding>(R.layout.theme_fragment) {
 
-    val viewModel: HomeViewModel by viewModel { parametersOf(this) }
+    val viewModel: ThemeViewModel by viewModel { parametersOf(this) }
 
     override fun setupUI() {
-        binding.themesContainer.setOnClickListener {}
         binding.root.post {
             val isLtr = resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_LTR
             val edgeSpace = binding.root.width * 14 / 360
@@ -40,24 +36,14 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
             binding.rvCats.addItemDecoration(itemDecoration)
             binding.rvMovies.addItemDecoration(itemDecoration)
         }
-        themesPopular.getOrNull(1)?.let {
-            Glide.with(App.instance).load(it.previewFile).centerCrop().into(binding.imagePreview)
-        }
-        viewModel.needRequestLayout.observe(this) {
-            binding.buttonApply.requestLayout()
-        }
-        viewModel.addNew.observe(this) {
+        viewModel.addNewTheme.observe(this) {
             viewModel.permissionRepository.askStoragePermissions(lifecycleScope) {
                 if (it) viewModel.addNewTheme()
             }
         }
-        binding.buttonApply.setOnClickListener {
-            viewModel.permissionRepository.askContactsPermission {
-                if (it) activityAs<MainActivity>().addFragment(ContactsFragment.newInstance(ContactsFragment.Mode.CONTACT_SELECTOR))
-            }
-        }
-        viewModel.themeSelected.observe(this) {
-            Glide.with(App.instance).load(it.previewFile).centerCrop().into(binding.imagePreview)
+        viewModel.setTheme.observe(this) {
+            activityAs<MainActivity>().fragment(ContactFragment::class.java)?.viewModel?.setContactTheme(it)
+            requireActivity().onBackPressed()
         }
     }
 

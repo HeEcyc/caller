@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="com.maxios.maxcall.ui.contacts.ContactsFragment.Mode"/>
+        <variable
+            name="viewModel"
+            type="com.maxios.maxcall.ui.contacts.ContactsViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.mode == Mode.DEFAULT || viewModel.mode == Mode.INTERLOCUTOR_SELECTOR ? View.VISIBLE : View.GONE}">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="360:62">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/buttonBack1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintHeight_percent="0.3548"
+                    app:layout_constraintHorizontal_bias="0.04142"
+                    app:layout_constraintVertical_bias="0.75"
+                    android:src="@mipmap/ic_back"
+                    android:visibility="@{viewModel.mode == Mode.INTERLOCUTOR_SELECTOR ? View.VISIBLE : View.GONE}"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="244:22"
+                    app:layout_constraintHeight_percent="0.3548"
+                    app:layout_constraintVertical_bias="0.75"
+                    android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="1sp"
+                    android:textColor="#333333"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/contacts"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/buttonCall"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintHeight_percent="0.48387"
+                    app:layout_constraintVertical_bias="0.8125"
+                    app:layout_constraintHorizontal_bias="0.9575757"
+                    android:src="@mipmap/ic_call"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.mode == Mode.CONTACT_SELECTOR ? View.VISIBLE : View.GONE}">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="360:165">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/buttonBack2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintHeight_percent="0.1333"
+                    app:layout_constraintHorizontal_bias="0.04142"
+                    app:layout_constraintVertical_bias="0.1888"
+                    android:src="@mipmap/ic_back"
+                    android:visibility="@{viewModel.mode == Mode.INTERLOCUTOR_SELECTOR ? View.VISIBLE : View.GONE}"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonApply"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="191:33"
+                    app:layout_constraintHeight_percent="0.2"
+                    app:layout_constraintVertical_bias="0.3787878"
+                    android:stateListAnimator="@null"
+                    android:background="@drawable/orange_button_fragment_contacts"
+                    android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="16sp"
+                    app:autoSizeMinTextSize="1sp"
+                    android:textColor="@color/orange_button_text_color"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textAllCaps="false"
+                    android:text="@string/apply_to_all"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/buttonApplyToSelected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.1333"
+                    app:layout_constraintVertical_bias="0.93"
+                    android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="1sp"
+                    android:textColor="#333333"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/select_contacts"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            adapter="@{viewModel.adapterContacts}"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

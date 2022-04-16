@@ -30,18 +30,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Caller">
 
-<!--        <activity-->
-<!--            android:name="com.megaaa.caaall.ui.splash.SplashActivity"-->
-<!--            android:exported="true"-->
-<!--            android:screenOrientation="portrait"-->
-<!--            tools:ignore="LockedOrientationActivity">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
-
         <activity
             android:name="com.maxios.maxcall.ui.main.MainActivity"
             android:screenOrientation="portrait"
@@ -54,28 +42,28 @@
             </intent-filter>
         </activity>
 
-<!--        <activity-->
-<!--            android:name="com.megaaa.caaall.ui.dial.DialActivity"-->
-<!--            android:screenOrientation="portrait"-->
-<!--            tools:ignore="LockedOrientationActivity"-->
-<!--            android:exported="true">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.VIEW" />-->
-<!--                <action android:name="android.intent.action.DIAL" />-->
+        <activity
+            android:name="com.maxios.maxcall.ui.dial.activity.DialActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.DIAL" />
 
-<!--                <category android:name="android.intent.category.DEFAULT" />-->
-<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
-<!--                <data android:scheme="tel" />-->
-<!--            </intent-filter>-->
+                <data android:scheme="tel" />
+            </intent-filter>
 
-<!--            <intent-filter>-->
+            <intent-filter>
 
-<!--                <action android:name="android.intent.action.DIAL" />-->
-<!--                <category android:name="android.intent.category.DEFAULT" />-->
+                <action android:name="android.intent.action.DIAL" />
+                <category android:name="android.intent.category.DEFAULT" />
 
-<!--            </intent-filter>-->
-<!--        </activity>-->
+            </intent-filter>
+        </activity>
 
 <!--        <activity-->
 <!--            android:name="com.megaaa.caaall.ui.call.CallActivity"-->

@@ -7,8 +7,11 @@ import com.ironsource.mediationsdk.IronSource
 import com.maxios.maxcall.R
 import com.maxios.maxcall.base.BaseActivity
 import com.maxios.maxcall.databinding.MainActivityBinding
+import com.maxios.maxcall.ui.contact.ContactFragment
+import com.maxios.maxcall.ui.contacts.ContactsFragment
 import com.maxios.maxcall.ui.home.HomeFragment
 import com.maxios.maxcall.ui.settings.SettingsFragment
+import com.maxios.maxcall.ui.theme.ThemeFragment
 import com.maxios.maxcall.utils.IRON_SOURCE_API_KEY
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
@@ -32,6 +35,14 @@ class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
         viewModel.openSettings.observe(this) {
             supportFragmentManager.commit { replace(R.id.homeFragmentContainer, SettingsFragment()) }
         }
+        viewModel.openContacts.observe(this) {
+            viewModel.permissionRepository.askContactsPermission {
+                if (it)
+                    supportFragmentManager.commit { replace(R.id.homeFragmentContainer, ContactsFragment.newInstance(ContactsFragment.Mode.DEFAULT)) }
+                else
+                    viewModel.onHomeClick()
+            }
+        }
     }
 
     override fun onPause() {
@@ -52,12 +63,24 @@ class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
         addToBackStack(null)
     }
 
+    fun addFragmentNoBackStack(f: Fragment) = supportFragmentManager.commit {
+        add(R.id.fragmentContainer, f)
+    }
+
     fun addFragmentRemoveOther(f: Fragment) = supportFragmentManager.commit {
         replace(R.id.fragmentContainer, f)
         supportFragmentManager.fragments.forEach {
             if (it !== f && it !is SupportRequestManagerFragment) remove(it)
         }
         addToBackStack(null)
+    }
+
+    fun removeFragment(f: Fragment) = supportFragmentManager.commit { remove(f) }
+
+    override fun onBackPressed() {
+        supportFragmentManager.fragments.firstOrNull { it is ThemeFragment }?.let(::removeFragment)
+            ?: supportFragmentManager.fragments.firstOrNull { it is ContactFragment }?.let(::removeFragment)
+            ?: super.onBackPressed()
     }
 
     override fun provideViewModel(): MainViewModel = viewModel

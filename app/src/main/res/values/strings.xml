@@ -24,4 +24,9 @@
     <string name="permissionOverlayDescription">Allow display over other app</string>
     <string name="not_now">Not now</string>
     <string name="allow">Allow</string>
+    <string name="contacts">Contacts</string>
+    <string name="apply_to_all">Apply to all</string>
+    <string name="select_contacts">Select contacts</string>
+    <string name="select_a_number">Select a number</string>
+    <string name="edit">Edit</string>
 </resources>

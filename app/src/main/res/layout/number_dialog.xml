@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.maxios.maxcall.ui.custom.ScalableCardView.ScaleType"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="360:772">
+
+            <com.maxios.maxcall.ui.custom.ScalableCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintWidth_percent="0.847222"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                scaleType="@{ScaleType.BY_WIDTH}"
+                scalableCornerRadius="@{0.032786885f}">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dialog_bg"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="247:102"
+                            app:layout_constraintWidth_percent="0.809836"
+                            android:orientation="vertical">
+
+                            <android.widget.Space
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="38"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="22"
+                                android:gravity="center"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="20sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#333333"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="@string/select_a_number"/>
+
+                            <android.widget.Space
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="15"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/contactName"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="18"
+                                android:gravity="center"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="16sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#333333"
+                                android:fontFamily="@font/roboto_bold"/>
+
+                            <android.widget.Space
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="9"/>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="vertical"
+                        android:overScrollMode="never"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="305:38"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </com.maxios.maxcall.ui.custom.ScalableCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
