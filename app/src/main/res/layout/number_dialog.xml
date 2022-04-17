@@ -50,7 +50,7 @@
                             app:layout_constraintWidth_percent="0.809836"
                             android:orientation="vertical">
 
-                            <android.widget.Space
+                            <View
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_weight="38"/>
@@ -67,7 +67,7 @@
                                 android:fontFamily="@font/roboto_regular"
                                 android:text="@string/select_a_number"/>
 
-                            <android.widget.Space
+                            <View
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_weight="15"/>
@@ -84,7 +84,7 @@
                                 android:textColor="#333333"
                                 android:fontFamily="@font/roboto_bold"/>
 
-                            <android.widget.Space
+                            <View
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_weight="9"/>
@@ -103,7 +103,7 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                        <android.widget.Space
+                        <View
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             app:layout_constraintTop_toTopOf="parent"

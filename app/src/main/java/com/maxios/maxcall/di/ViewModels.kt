@@ -2,6 +2,8 @@ package com.maxios.maxcall.di
 
 import com.maxios.maxcall.base.LauncherRegistrator
 import com.maxios.maxcall.model.contact.UserContact
+import com.maxios.maxcall.ui.call.CallActivityViewModel
+import com.maxios.maxcall.ui.call.fragment.CallViewModel
 import com.maxios.maxcall.ui.contact.ContactViewModel
 import com.maxios.maxcall.ui.contacts.ContactsFragment
 import com.maxios.maxcall.ui.contacts.ContactsViewModel
@@ -26,4 +28,6 @@ val viewModels = module {
     viewModel { (lr: LauncherRegistrator) -> DialViewModel(get { parametersOf(lr) }) }
     viewModel { (contact: UserContact, lr: LauncherRegistrator) -> ContactViewModel(contact, get { parametersOf(lr) }, get()) }
     viewModel { (lr: LauncherRegistrator) -> ThemeViewModel(get { parametersOf(lr) }, get(), get { parametersOf(lr) }, get()) }
+    viewModel { (lr: LauncherRegistrator) -> CallActivityViewModel(get(), get(), get(), get { parametersOf(lr) }) }
+    viewModel { (contact: UserContact, lr: LauncherRegistrator) -> CallViewModel(contact, get(), get(), get(), get { parametersOf(lr) }) }
 }

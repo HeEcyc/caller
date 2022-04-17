@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">IOS Call Max</string>
+    <string name="sim_1" translatable="false">SIM 1</string>
+    <string name="sim_2" translatable="false">SIM 2</string>
     <string name="calling">Calling...</string>
     <string name="apply">Apply</string>
     <string name="custom">Custom</string>
@@ -29,4 +31,9 @@
     <string name="select_contacts">Select contacts</string>
     <string name="select_a_number">Select a number</string>
     <string name="edit">Edit</string>
+    <string name="select_a_sim_card">Select a SIM-card</string>
+    <string name="end_to_end_encrypted">End-to-end encrypted</string>
+    <string name="speaker">speaker</string>
+    <string name="keyboard">keyboard</string>
+    <string name="add_call">add call</string>
 </resources>

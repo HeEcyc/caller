@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.maxios.maxcall.ui.custom.ScalableCardView.ScaleType"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="360:772">
+
+            <com.maxios.maxcall.ui.custom.ScalableCardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="305:209"
+                app:layout_constraintWidth_percent="0.847222"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardElevation="0dp"
+                scaleType="@{ScaleType.BY_HEIGHT}"
+                scalableCornerRadius="@{0.0478f}">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dialog_bg">
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="247:209"
+                        android:orientation="vertical">
+
+                        <android.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="38"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="22"
+                            android:gravity="center"
+                            app:autoSizeTextType="uniform"
+                            app:autoSizeMaxTextSize="20sp"
+                            app:autoSizeMinTextSize="1sp"
+                            android:textColor="#333333"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="@string/select_a_sim_card"/>
+
+                        <android.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="20"/>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/buttonSIM1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="34"
+                            android:orientation="vertical">
+
+                            <android.widget.Space
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="14"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="16"
+                                android:gravity="center_vertical"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="14sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#333333"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="@string/sim_1"/>
+
+                            <android.widget.Space
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="3"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:background="#80333333"/>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/buttonSIM2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="34"
+                            android:orientation="vertical">
+
+                            <android.widget.Space
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="14"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="16"
+                                android:gravity="center_vertical"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="14sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#333333"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="@string/sim_2"/>
+
+                            <android.widget.Space
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="3"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:background="#80333333"/>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <android.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="60"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.maxios.maxcall.ui.custom.ScalableCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
