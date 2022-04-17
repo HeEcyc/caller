@@ -1,3 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="calling">sunand...</string>
+    <string name="apply">aplica</string>
+    <string name="custom">Personalizat</string>
+    <string name="popular">Popular</string>
+    <string name="cats">Pisicile</string>
+    <string name="games">Jocuri</string>
+    <string name="movies">Filme</string>
+    <string name="settings">Setări</string>
+    <string name="main">Principal</string>
+    <string name="call_theme">Tema apelului</string>
+    <string name="flash">Flash</string>
+    <string name="accelerometer">Accelerometru</string>
+    <string name="language">Limba</string>
+    <string name="app_language">Limba aplicației</string>
+    <string name="social">Social</string>
+    <string name="share">Acțiune</string>
+    <string name="rate_us">Ne evalua</string>
+    <string name="privacy_policy">Politica de Confidențialitate</string>
+    <string name="permissions">Permisiuni</string>
+    <string name="permissionPhoneDescription">Setați aplicația ca aplicație implicită pentru telefon</string>
+    <string name="permissionContactsDescription">Permite unei aplicații să vă acceseze contactele</string>
+    <string name="permissionOverlayDescription">Permite afișarea peste altă aplicație</string>
+    <string name="not_now">Nu acum</string>
+    <string name="allow">Permite</string>
+    <string name="contacts">Contacte</string>
+    <string name="apply_to_all">Aplica la toate</string>
+    <string name="select_contacts">Selectați contacte</string>
+    <string name="select_a_number">Selectați un număr</string>
+    <string name="edit">Editați | ×</string>
+    <string name="select_a_sim_card">Selectați o cartelă SIM</string>
+    <string name="end_to_end_encrypted">Criptat de la capăt la capăt</string>
+    <string name="speaker">vorbitor</string>
+    <string name="keyboard">tastatură</string>
+    <string name="add_call">adăugați apel</string>
+    <string name="mute">mut</string>
+    <string name="swap_calls">schimba apeluri</string>
 </resources>

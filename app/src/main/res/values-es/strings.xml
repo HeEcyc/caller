@@ -1,3 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="calling">vocación...</string>
+    <string name="apply">Aplicar</string>
+    <string name="custom">Costumbre</string>
+    <string name="popular">Popular</string>
+    <string name="cats">gatos</string>
+    <string name="games">Juegos</string>
+    <string name="movies">Películas</string>
+    <string name="settings">Ajustes</string>
+    <string name="main">Principal</string>
+    <string name="call_theme">tema de llamada</string>
+    <string name="flash">Flash</string>
+    <string name="accelerometer">Acelerómetro</string>
+    <string name="language">Idioma</string>
+    <string name="app_language">Idioma de la aplicación</string>
+    <string name="social">Social</string>
+    <string name="share">Cuota</string>
+    <string name="rate_us">Nos califica</string>
+    <string name="privacy_policy">Política de privacidad</string>
+    <string name="permissions">permisos</string>
+    <string name="permissionPhoneDescription">Establecer la aplicación como su aplicación de teléfono predeterminada</string>
+    <string name="permissionContactsDescription">Permite que una aplicación acceda a tus contactos</string>
+    <string name="permissionOverlayDescription">Permitir visualización sobre otra aplicación</string>
+    <string name="not_now">no ahora</string>
+    <string name="allow">Permitir</string>
+    <string name="contacts">Contactos</string>
+    <string name="apply_to_all">Aplicar a todo</string>
+    <string name="select_contacts">Seleccionar contactos</string>
+    <string name="select_a_number">Seleccione un número</string>
+    <string name="edit">Editar</string>
+    <string name="select_a_sim_card">Seleccione una tarjeta SIM</string>
+    <string name="end_to_end_encrypted">Cifrado de extremo a extremo</string>
+    <string name="speaker">vocero</string>
+    <string name="keyboard">teclado</string>
+    <string name="add_call">agregar llamada</string>
+    <string name="mute">silencio</string>
+    <string name="swap_calls">intercambiar llamadas</string>
 </resources>

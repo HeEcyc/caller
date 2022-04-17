@@ -1,3 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="calling">tumatawag...</string>
+    <string name="apply">Mag-apply</string>
+    <string name="custom">Custom</string>
+    <string name="popular">Sikat</string>
+    <string name="cats">Mga pusa</string>
+    <string name="games">Mga laro</string>
+    <string name="movies">Mga pelikula</string>
+    <string name="settings">Mga setting</string>
+    <string name="main">Pangunahin</string>
+    <string name="call_theme">Tema ng tawag</string>
+    <string name="flash">Flash</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="language">Wika</string>
+    <string name="app_language">Wika ng app</string>
+    <string name="social">Sosyal</string>
+    <string name="share">Ibahagi</string>
+    <string name="rate_us">I-rate kami</string>
+    <string name="privacy_policy">Patakaran sa privacy</string>
+    <string name="permissions">Mga Pahintulot</string>
+    <string name="permissionPhoneDescription">Itakda ang application bilang iyong default na app ng telepono</string>
+    <string name="permissionContactsDescription">Nagbibigay-daan sa isang application na i-access ang iyong mga contact</string>
+    <string name="permissionOverlayDescription">Payagan ang pagpapakita sa iba pang app</string>
+    <string name="not_now">Hindi ngayon</string>
+    <string name="allow">Payagan</string>
+    <string name="contacts">Mga contact</string>
+    <string name="apply_to_all">Mag-apply sa lahat</string>
+    <string name="select_contacts">Pumili ng mga contact</string>
+    <string name="select_a_number">Pumili ng numero</string>
+    <string name="edit">I-edit</string>
+    <string name="select_a_sim_card">Pumili ng SIM-card</string>
+    <string name="end_to_end_encrypted">End-to-end na naka-encrypt</string>
+    <string name="speaker">tagapagsalita</string>
+    <string name="keyboard">keyboard</string>
+    <string name="add_call">magdagdag ng tawag</string>
+    <string name="mute">mudo</string>
+    <string name="swap_calls">trocar chamadas</string>
 </resources>

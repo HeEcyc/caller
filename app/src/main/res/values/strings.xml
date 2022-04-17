@@ -2,7 +2,7 @@
     <string name="app_name" translatable="false">IOS Call Max</string>
     <string name="sim_1" translatable="false">SIM 1</string>
     <string name="sim_2" translatable="false">SIM 2</string>
-    <string name="calling">Calling...</string>
+    <string name="calling">calling...</string>
     <string name="apply">Apply</string>
     <string name="custom">Custom</string>
     <string name="popular">Popular</string>
@@ -21,8 +21,8 @@
     <string name="rate_us">Rate us</string>
     <string name="privacy_policy">Privacy policy</string>
     <string name="permissions">Permissions</string>
-    <string name="permissionPhoneDescription">Set application as your default phone app</string>
-    <string name="permissionContactsDescription">Allows an application to access your contacts</string>
+    <string name="permissionPhoneDescription">Set the application as your default phone app</string>
+    <string name="permissionContactsDescription">Allow the application to access your contacts</string>
     <string name="permissionOverlayDescription">Allow display over other app</string>
     <string name="not_now">Not now</string>
     <string name="allow">Allow</string>
@@ -36,4 +36,6 @@
     <string name="speaker">speaker</string>
     <string name="keyboard">keyboard</string>
     <string name="add_call">add call</string>
+    <string name="mute">mute</string>
+    <string name="swap_calls">swap calls</string>
 </resources>

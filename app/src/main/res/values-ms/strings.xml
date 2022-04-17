@@ -1,3 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="calling">memanggil...</string>
+    <string name="apply">Mohon</string>
+    <string name="custom">Adat</string>
+    <string name="popular">Popular</string>
+    <string name="cats">kucing</string>
+    <string name="games">Permainan</string>
+    <string name="movies">Wayang</string>
+    <string name="settings">tetapan</string>
+    <string name="main">Utama</string>
+    <string name="call_theme">Tema panggilan</string>
+    <string name="flash">Kilat</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="language">Bahasa</string>
+    <string name="app_language">Bahasa apl</string>
+    <string name="social">sosial</string>
+    <string name="share">Kongsi</string>
+    <string name="rate_us">Nilaikan kami</string>
+    <string name="privacy_policy">Dasar privasi</string>
+    <string name="permissions">kebenaran</string>
+    <string name="permissionPhoneDescription">Tetapkan aplikasi sebagai apl telefon lalai anda</string>
+    <string name="permissionContactsDescription">Membenarkan aplikasi mengakses kenalan anda</string>
+    <string name="permissionOverlayDescription">Benarkan paparan di atas apl lain</string>
+    <string name="not_now">Bukan sekarang</string>
+    <string name="allow">benarkan</string>
+    <string name="contacts">Kenalan</string>
+    <string name="apply_to_all">Terpakai kepada semua</string>
+    <string name="select_contacts">Pilih kenalan</string>
+    <string name="select_a_number">Pilih nombor</string>
+    <string name="edit">Sunting</string>
+    <string name="select_a_sim_card">Pilih kad SIM</string>
+    <string name="end_to_end_encrypted">Hujung ke hujung disulitkan</string>
+    <string name="speaker">pembesar suara</string>
+    <string name="keyboard">papan kekunci</string>
+    <string name="add_call">tambah panggilan</string>
+    <string name="mute">bisu</string>
+    <string name="swap_calls">bertukar-tukar panggilan</string>
 </resources>

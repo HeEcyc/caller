@@ -306,7 +306,7 @@
                                 app:autoSizeMinTextSize="1sp"
                                 android:textColor="#80FFFFFF"
                                 android:fontFamily="@font/roboto_regular"
-                                android:text="@string/keyboard"/>
+                                android:text="@string/mute"/>
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -400,7 +400,7 @@
                                 app:autoSizeMinTextSize="1sp"
                                 android:textColor="#80FFFFFF"
                                 android:fontFamily="@font/roboto_regular"
-                                android:text="@string/add_call"/>
+                                android:text="@string/swap_calls"/>
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                         <android.widget.Space

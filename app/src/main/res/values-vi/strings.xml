@@ -1,3 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="calling">đang gọi ...</string>
+    <string name="apply">Nộp đơn</string>
+    <string name="custom">Tập quán</string>
+    <string name="popular">Phổ biến</string>
+    <string name="cats">Những con mèo</string>
+    <string name="games">Trò chơi</string>
+    <string name="movies">Phim</string>
+    <string name="settings">Cài đặt</string>
+    <string name="main">Chủ yếu</string>
+    <string name="call_theme">Chủ đề cuộc gọi</string>
+    <string name="flash">Tốc biến</string>
+    <string name="accelerometer">Gia tốc kế</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="app_language">Ngôn ngữ ứng dụng</string>
+    <string name="social">Xã hội</string>
+    <string name="share">Đăng lại</string>
+    <string name="rate_us">Đánh giá chúng tôi</string>
+    <string name="privacy_policy">Chính sách bảo mật</string>
+    <string name="permissions">Quyền</string>
+    <string name="permissionPhoneDescription">Đặt ứng dụng làm ứng dụng điện thoại mặc định của bạn</string>
+    <string name="permissionContactsDescription">Cho phép ứng dụng truy cập danh bạ của bạn</string>
+    <string name="permissionOverlayDescription">Cho phép hiển thị trên ứng dụng khác</string>
+    <string name="not_now">Không phải bây giờ</string>
+    <string name="allow">Cho phép</string>
+    <string name="contacts">Liên lạc</string>
+    <string name="apply_to_all">Áp dụng cho tất cả</string>
+    <string name="select_contacts">Chọn địa chỉ liên hệ</string>
+    <string name="select_a_number">Chọn một số</string>
+    <string name="edit">Biên tập</string>
+    <string name="select_a_sim_card">Chọn một thẻ SIM</string>
+    <string name="end_to_end_encrypted">Được mã hóa từ đầu đến cuối</string>
+    <string name="speaker">loa</string>
+    <string name="keyboard">bàn phím</string>
+    <string name="add_call">thêm cuộc gọi</string>
+    <string name="mute">người câm</string>
+    <string name="swap_calls">trao đổi cuộc gọi</string>
 </resources>

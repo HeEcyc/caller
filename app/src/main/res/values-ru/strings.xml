@@ -1,3 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="calling">вызов...</string>
+    <string name="apply">Применить</string>
+    <string name="custom">Свои</string>
+    <string name="popular">Популярные</string>
+    <string name="cats">Коты</string>
+    <string name="games">Игры</string>
+    <string name="movies">Кино</string>
+    <string name="settings">Настройки</string>
+    <string name="main">Главное</string>
+    <string name="call_theme">Тема звонка</string>
+    <string name="flash">Вспышка</string>
+    <string name="accelerometer">Акселерометр</string>
+    <string name="language">Язык</string>
+    <string name="app_language">Язык приложения</string>
+    <string name="social">Социальное</string>
+    <string name="share">Поделиться</string>
+    <string name="rate_us">Оцените нас</string>
+    <string name="privacy_policy">Политика конфиценциальности</string>
+    <string name="permissions">Разрешения</string>
+    <string name="permissionPhoneDescription">Сделайте приложение телефонм по умолчанию</string>
+    <string name="permissionContactsDescription">Дайте доступ к контактам</string>
+    <string name="permissionOverlayDescription">Разрешите показ поверх других приложений</string>
+    <string name="not_now">Не сейчас</string>
+    <string name="allow">Разрешить</string>
+    <string name="contacts">Контакты</string>
+    <string name="apply_to_all">Применить ко всем</string>
+    <string name="select_contacts">Выбрать контакты</string>
+    <string name="select_a_number">Выберите номер</string>
+    <string name="edit">Редактировать</string>
+    <string name="select_a_sim_card">Выберите SIM-карту</string>
+    <string name="end_to_end_encrypted">Сквозное шифрование</string>
+    <string name="speaker">динамик</string>
+    <string name="keyboard">клаиши</string>
+    <string name="add_call">добавить звонок</string>
+    <string name="mute">микрофон</string>
+    <string name="swap_calls">перекл. звонки</string>
 </resources>

@@ -1,3 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="calling">داعيا ...</string>
+    <string name="apply">يتقدم</string>
+    <string name="custom">مخصص</string>
+    <string name="popular">جمع</string>
+    <string name="cats">القطط</string>
+    <string name="games">ألعاب</string>
+    <string name="movies">أفلام</string>
+    <string name="settings">إعدادات</string>
+    <string name="main">الأساسية</string>
+    <string name="call_theme">موضوع المكالمة</string>
+    <string name="flash">فلاش</string>
+    <string name="accelerometer">مقياس التسارع</string>
+    <string name="language">لغة</string>
+    <string name="app_language">لغة التطبيق</string>
+    <string name="social">اجتماعي</string>
+    <string name="share">شارك</string>
+    <string name="rate_us">قيمنا</string>
+    <string name="privacy_policy">سياسة خاصة</string>
+    <string name="permissions">أذونات</string>
+    <string name="permissionPhoneDescription">تعيين التطبيق كتطبيق الهاتف الافتراضي الخاص بك</string>
+    <string name="permissionContactsDescription">؛ يسمح للتطبيق بالوصول إلى جهات الاتصال الخاصة بك</string>
+    <string name="permissionOverlayDescription">السماح بالعرض فوق تطبيق آخر</string>
+    <string name="not_now">ليس الآن</string>
+    <string name="allow">السماح</string>
+    <string name="contacts">جهات الاتصال</string>
+    <string name="apply_to_all">تنطبق على الجميع</string>
+    <string name="select_contacts">حدد جهات الاتصال</string>
+    <string name="select_a_number">حدد رقمًا</string>
+    <string name="edit">تعديل</string>
+    <string name="select_a_sim_card">حدد بطاقة SIM</string>
+    <string name="end_to_end_encrypted">مشفر من طرف إلى طرف</string>
+    <string name="speaker">مكبر الصوت</string>
+    <string name="keyboard">لوحة المفاتيح</string>
+    <string name="add_call">إضافة دعوة</string>
+    <string name="mute">كتم الصوت</string>
+    <string name="swap_calls">مبادلة المكالمات</string>
 </resources>
