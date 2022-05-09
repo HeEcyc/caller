@@ -121,7 +121,10 @@ class PermissionRepository(launcherRegistrator: LauncherRegistrator) {
         lifecycleCoroutineScope: LifecycleCoroutineScope,
         onResult: (Boolean) -> Unit
     ) = askMultipleRuntimePermissions(
-        listOf(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE),
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
+            listOf(Manifest.permission.READ_EXTERNAL_STORAGE)
+        else
+            listOf(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE),
         lifecycleCoroutineScope,
         onResult
     )

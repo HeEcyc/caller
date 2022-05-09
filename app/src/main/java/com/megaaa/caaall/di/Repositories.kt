@@ -7,6 +7,7 @@ import android.telecom.TelecomManager
 import android.telephony.SubscriptionManager
 import androidx.room.Room
 import com.megaaa.caaall.App
+import com.megaaa.caaall.base.LauncherRegistrator
 import com.megaaa.caaall.repository.*
 import com.megaaa.caaall.repository.call.AudioManagerRepository
 import com.megaaa.caaall.repository.call.CallRepository
@@ -33,4 +34,6 @@ val repositories = module {
     ) }
     single { VibrationRepository(App.instance.getSystemService(Vibrator::class.java)) }
     single { FlashRepository(App.instance.getSystemService(CameraManager::class.java)) }
+    factory { (lr: LauncherRegistrator) -> PermissionRepository(lr) }
+    factory { (lr: LauncherRegistrator) -> ImagePickerRepository(lr) }
 }
