@@ -30,23 +30,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Caller">
 
-<!--        <activity-->
-<!--            android:name="com.megaaa.caaall.ui.splash.SplashActivity"-->
-<!--            android:exported="true"-->
-<!--            android:screenOrientation="portrait"-->
-<!--            tools:ignore="LockedOrientationActivity">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
-
-<!--        <activity-->
-<!--            android:name="com.megaaa.caaall.ui.main.MainActivity"-->
-<!--            android:screenOrientation="portrait"-->
-<!--            tools:ignore="LockedOrientationActivity"-->
-<!--            android:exported="true"/>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
 <!--        <activity-->
 <!--            android:name="com.megaaa.caaall.ui.dial.DialActivity"-->

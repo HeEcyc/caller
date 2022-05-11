@@ -5,28 +5,30 @@ import com.glass.call.model.theme.ImageTheme
 import com.glass.call.model.theme.Theme
 import com.glass.call.model.theme.VideoTheme
 
-val audioThemesIndexes = listOf<Int>()
-val themesPopular: List<Theme> = List(0) {
+val themesNewVideo: List<Theme> = List(6) {
     VideoTheme(
-        "file:///android_asset/popular/videos/$it.mp4",
-        "file:///android_asset/popular/gifs/$it.gif",
-        it in audioThemesIndexes
+        "file:///android_asset/new/videos/$it.mp4",
+        "file:///android_asset/new/gifs/$it.gif",
+        true
     )
 }
-val themesGames: List<Theme> = List(6) {
-    ImageTheme("file:///android_asset/games/$it.webp")
+val themesNewImage: List<Theme> = List(10) {
+    ImageTheme("file:///android_asset/new/images/$it.jpg")
 }
-val themesCats: List<Theme> = List(6) {
-    ImageTheme("file:///android_asset/cats/$it.webp")
+val themesNew: List<Theme> = listOf(
+    *themesNewVideo.toTypedArray(),
+    *themesNewImage.toTypedArray()
+)
+
+val themesTop: List<Theme> = List(10) {
+    ImageTheme("file:///android_asset/top/$it.jpg")
 }
-val themesMovies: List<Theme> = List(5) {
-    ImageTheme("file:///android_asset/movies/$it.webp")
-}
+
 val presetThemes: List<Theme> = listOf(
-    *themesPopular.toTypedArray(),
-    *themesGames.toTypedArray(),
-    *themesCats.toTypedArray(),
-    *themesMovies.toTypedArray()
+    *themesNew.toTypedArray(),
+    *themesTop.toTypedArray(),
 )
 
 val appLink: String by lazy { "https://play.google.com/store/apps/details?id=" + App.instance.packageName }
+
+const val IRON_SOURCE_APP_KEY = "14bc87699"

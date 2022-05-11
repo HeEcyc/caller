@@ -20,13 +20,6 @@ sealed class Theme(val backgroundFile: String) : Serializable {
 
 }
 
-object NewTheme : Theme("") {
-
-    override val previewFile: String get() = throw NotImplementedError("not needed")
-    override val isCustom: Boolean get() = throw NotImplementedError("not needed")
-
-}
-
 class ImageTheme(pictureFile: String) : Theme(pictureFile) {
 
     override val previewFile: String = backgroundFile

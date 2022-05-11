@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name" translatable="false">GlassCall</string>
+    <string name="preset">Preset</string>
+    <string name="add_yours">Add yours</string>
+    <string name="new_">New</string>
+    <string name="top">Top</string>
+    <string name="all">All</string>
+    <string name="give_permissions_needed_to_show_the_call_screen">Give permissions needed to show the call screen</string>
+    <string name="permissions">Permissions</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="permissionPhoneDescription">Set the application as your default phone app</string>
+    <string name="permissionContactsDescription">Allow the application to access your contacts</string>
+    <string name="permissionOverlayDescription">Allow display over other app</string>
 </resources>
