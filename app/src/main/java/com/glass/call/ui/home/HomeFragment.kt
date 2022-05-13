@@ -6,7 +6,9 @@ import com.glass.call.R
 import com.glass.call.base.BaseFragment
 import com.glass.call.databinding.HomeFragmentBinding
 import com.glass.call.ui.custom.ItemDecorationWithEnds
+import com.glass.call.ui.main.MainActivity
 import com.glass.call.ui.main.PermissionDialog
+import com.glass.call.ui.preview.PreviewFragment
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
@@ -52,7 +54,9 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
             }
         }
         viewModel.onThemeSelected.observe(this) {
-            //todo
+            viewModel.permissionRepository.askContactsPermission { res ->
+                if (res) activityAs<MainActivity>().addFragment(PreviewFragment.newInstance(it))
+            }
         }
         binding.layoutPreset.buttonPermission.setOnClickListener {
             PermissionDialog().show(parentFragmentManager)

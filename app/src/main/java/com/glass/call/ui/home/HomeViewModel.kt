@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.glass.call.App
 import com.glass.call.base.BaseViewModel
+import com.glass.call.model.contact.UserContact
 import com.glass.call.model.theme.Theme
 import com.glass.call.repository.FileRepository
 import com.glass.call.repository.ImagePickerRepository
@@ -96,6 +97,12 @@ class HomeViewModel(
             val fileName =
                 fileRepository.saveToFileAndGetFilePath(fileRepository.getBitmap(it.uri, App.instance))
             viewModelScope.launch(Dispatchers.IO) { themeRepository.saveNewTheme(fileName) }
+        }
+    }
+
+    fun applyThemeToContacts(theme: Theme, contacts: List<UserContact>) {
+        viewModelScope.launch(Dispatchers.IO) {
+            contacts.forEach { themeRepository.setContactTheme(it.contactId, theme.backgroundFile) }
         }
     }
 

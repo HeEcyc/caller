@@ -32,3 +32,5 @@ val presetThemes: List<Theme> = listOf(
 val appLink: String by lazy { "https://play.google.com/store/apps/details?id=" + App.instance.packageName }
 
 const val IRON_SOURCE_APP_KEY = "14bc87699"
+
+const val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ#"

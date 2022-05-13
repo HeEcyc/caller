@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.glass.call.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="android.view.View"/>
+        <import type="com.glass.call.ui.contacts.ContactsFragment.Mode"/>
+        <variable
+            name="viewModel"
+            type="com.glass.call.ui.contacts.ContactsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/screen_bg">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.legacy.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="360:56"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="vertical"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    android:adapter="@{viewModel.adapterContacts}"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.legacy.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="360:57"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topPanel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintDimensionRatio="360:56">
+
+            <View
+                android:id="@+id/buttonKeyboard"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="21.84:21.89"
+                app:layout_constraintHeight_percent="0.39089"
+                app:layout_constraintHorizontal_bias="0.0414"
+                app:layout_constraintVertical_bias="0.8795"
+                android:background="@drawable/ic_keyboard"
+                visibleIf="@{(viewModel.mode == Mode.DEFAULT || viewModel.mode == Mode.INTERLOCUTOR_SELECTOR) &amp;&amp; !viewModel.isSearching}"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="27:19"
+                app:layout_constraintHeight_percent="0.339"
+                app:layout_constraintVertical_bias="0.810810810"
+                app:layout_constraintHorizontal_bias="0.042042042"
+                android:src="@mipmap/ic_back"
+                visibleIf="@{viewModel.mode == Mode.CONTACT_SELECTOR || viewModel.isSearching}"
+                android:onClick="@{(_) -> viewModel.onBackClick()}"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintHeight_percent="0.339"
+                app:layout_constraintHorizontal_bias="0.9589"
+                app:layout_constraintVertical_bias="0.891891891"
+                android:src="@mipmap/ic_search"
+                visibleIf="@{!viewModel.isSearching}"
+                android:onClick="@{(_) -> viewModel.onSearchClick()}"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="250:22"
+                app:layout_constraintHeight_percent="0.392857"
+                app:layout_constraintVertical_bias="0.88235"
+                android:gravity="center"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeMinTextSize="1sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/contacts"
+                visibleIf="@{!viewModel.isSearching}"/>
+
+            <com.glass.call.ui.custom.ScalableCardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="290:32"
+                app:layout_constraintHeight_percent="0.5714"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                scaleType="@{ScaleType.BY_HEIGHT}"
+                scalableCornerRadius="@{0.5f}"
+                visibleIf="@{viewModel.isSearching}">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#80FFFFFF">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="235:16"
+                        app:layout_constraintHeight_percent="0.5"
+                        app:layout_constraintHorizontal_bias="0.272727"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:textCursorDrawable="@drawable/text_cursor"
+                        android:textSize="11sp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/roboto_regular"
+                        android:singleLine="true"
+                        android:inputType="text"
+                        android:text="@={viewModel.searchQuery}"
+                        tools:ignore="Autofill,LabelFor" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintHeight_percent="0.3125"
+                        app:layout_constraintHorizontal_bias="0.9464"
+                        android:src="@mipmap/ic_close"
+                        visibleIf="@{viewModel.searchQuery.length() > 0}"
+                        android:onClick='@{(_) -> viewModel.onClearClick()}'/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.glass.call.ui.custom.ScalableCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomPanel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="360:50"
+            visibleIf="@{viewModel.mode == Mode.CONTACT_SELECTOR}">
+
+            <com.glass.call.ui.custom.ScalableCardView
+                android:id="@+id/buttonApplyToSelected"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="150:40"
+                app:layout_constraintHeight_percent="0.8"
+                app:layout_constraintHorizontal_bias="0.0666666"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardElevation="0dp"
+                scaleType="@{ScaleType.BY_HEIGHT}"
+                scalableCornerRadius="@{0.5f}">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_bg">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="110:32"
+                        app:layout_constraintHeight_percent="0.8"
+                        android:gravity="center"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="14sp"
+                        app:autoSizeMinTextSize="1sp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/apply_to_selected"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.glass.call.ui.custom.ScalableCardView>
+
+            <com.glass.call.ui.custom.ScalableCardView
+                android:id="@+id/buttonApply"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="150:40"
+                app:layout_constraintHeight_percent="0.8"
+                app:layout_constraintHorizontal_bias="0.9333334"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardElevation="0dp"
+                scaleType="@{ScaleType.BY_HEIGHT}"
+                scalableCornerRadius="@{0.5f}">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_bg">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="110:32"
+                        app:layout_constraintHeight_percent="0.8"
+                        android:gravity="center"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="14sp"
+                        app:autoSizeMinTextSize="1sp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/apply_to_all"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.glass.call.ui.custom.ScalableCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -6,6 +6,7 @@ import com.bumptech.glide.manager.SupportRequestManagerFragment
 import com.glass.call.R
 import com.glass.call.base.BaseActivity
 import com.glass.call.databinding.MainActivityBinding
+import com.glass.call.ui.contacts.ContactsFragment
 import com.glass.call.ui.home.HomeFragment
 import com.glass.call.utils.IRON_SOURCE_APP_KEY
 import com.ironsource.mediationsdk.IronSource
@@ -32,12 +33,12 @@ class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
 //            supportFragmentManager.commit { replace(R.id.homeFragmentContainer, SettingsFragment()) }todo
         }
         viewModel.openContacts.observe(this) {
-//            viewModel.permissionRepository.askContactsPermission {
-//                if (it)
-//                    supportFragmentManager.commit { replace(R.id.homeFragmentContainer, ContactsFragment.newInstance(ContactsFragment.Mode.DEFAULT)) }
-//                else
-//                    viewModel.onHomeClick()
-//            }todo
+            viewModel.permissionRepository.askContactsPermission {
+                if (it)
+                    supportFragmentManager.commit { replace(R.id.homeFragmentContainer, ContactsFragment.newInstance(ContactsFragment.Mode.DEFAULT)) }
+                else
+                    viewModel.onHomeClick()
+            }
         }
     }
 

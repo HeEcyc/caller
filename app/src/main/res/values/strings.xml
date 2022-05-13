@@ -12,4 +12,8 @@
     <string name="permissionPhoneDescription">Set the application as your default phone app</string>
     <string name="permissionContactsDescription">Allow the application to access your contacts</string>
     <string name="permissionOverlayDescription">Allow display over other app</string>
+    <string name="apply">Apply</string>
+    <string name="contacts">Contacts</string>
+    <string name="apply_to_selected">Apply to selected</string>
+    <string name="apply_to_all">Apply to all</string>
 </resources>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.glass.call.ui.custom.ScalableCardView.ScaleType"/>
+        <variable
+            name="viewModel"
+            type="com.glass.call.ui.contact.ContactViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/screen_bg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="360:49">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/buttonBack"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="27:19"
+                    app:layout_constraintHeight_percent="0.3877551"
+                    app:layout_constraintHorizontal_bias="0.042042042"
+                    android:src="@mipmap/ic_back"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="360:723">
+
+                <com.glass.call.ui.custom.ScalableCardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="332:643"
+                    app:layout_constraintWidth_percent="0.9222"
+                    app:cardElevation="0dp"
+                    scaleType="@{ScaleType.BY_WIDTH}"
+                    scalableCornerRadius="@{0.06024f}">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/preview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <com.glass.call.ui.custom.ScalableCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="332:198"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardElevation="0dp"
+                            scaleType="@{ScaleType.BY_WIDTH}"
+                            scalableCornerRadius="@{0.06024f}">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#59333333">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/avatar"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintHeight_percent="0.404040"
+                                    app:layout_constraintHorizontal_bias="0.079365"
+                                    app:layout_constraintVertical_bias="0.10169"
+                                    android:src="@mipmap/avatar_placeholder"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintDimensionRatio="192:52"
+                                    app:layout_constraintHeight_percent="0.262626"
+                                    app:layout_constraintVertical_bias="0.178"
+                                    app:layout_constraintHorizontal_bias="0.857"
+                                    app:autoSizeTextType="uniform"
+                                    app:autoSizeMaxTextSize="20sp"
+                                    app:autoSizeMinTextSize="1sp"
+                                    android:textColor="#FFFFFF"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@{viewModel.contact.contactName}"/>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="332:102"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                    android:orientation="vertical"
+                                    android:overScrollMode="never"
+                                    android:scrollbars="none"
+                                    android:adapter="@{viewModel.adapter}"/>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </com.glass.call.ui.custom.ScalableCardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.glass.call.ui.custom.ScalableCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>
