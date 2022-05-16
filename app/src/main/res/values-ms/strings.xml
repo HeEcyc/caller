@@ -1,3 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="preset">Pratetap</string>
+    <string name="add_yours">Tambah milik anda</string>
+    <string name="new_">Baru</string>
+    <string name="top">Atas</string>
+    <string name="all">Semua</string>
+    <string name="give_permissions_needed_to_show_the_call_screen">Berikan kebenaran yang diperlukan untuk menunjukkan skrin panggilan</string>
+    <string name="permissions">kebenaran</string>
+    <string name="cancel">Batal</string>
+    <string name="ok">Okey</string>
+    <string name="permissionPhoneDescription">Tetapkan aplikasi sebagai apl telefon lalai anda</string>
+    <string name="permissionContactsDescription">Benarkan aplikasi mengakses kenalan anda</string>
+    <string name="permissionOverlayDescription">Benarkan paparan di atas apl lain</string>
+    <string name="apply">Mohon</string>
+    <string name="contacts">Kenalan</string>
+    <string name="apply_to_selected">Mohon untuk dipilih</string>
+    <string name="apply_to_all">Terpakai kepada semua</string>
+    <string name="settings">tetapan</string>
+    <string name="call_theme">Tema panggilan</string>
+    <string name="flash">Kilat</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="app_language">Bahasa apl</string>
+    <string name="share">Kongsi</string>
+    <string name="rate_us">Nilaikan kami</string>
+    <string name="privacy_policy">Dasar privasi</string>
+    <string name="language">Bahasa</string>
+    <string name="calling">Memanggil...</string>
+    <string name="end_to_end_encrypted">Hujung ke hujung disulitkan</string>
+    <string name="select_a_phone_number">Pilih nombor telefon</string>
+    <string name="select_a_sim_card">Pilih kad SIM</string>
 </resources>

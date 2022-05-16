@@ -1,3 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="preset">Preestablecido</string>
+    <string name="add_yours">Agrega el tuyo</string>
+    <string name="new_">Nuevo</string>
+    <string name="top">Cima</string>
+    <string name="all">Todos</string>
+    <string name="give_permissions_needed_to_show_the_call_screen">Dar los permisos necesarios para mostrar la pantalla de llamadas</string>
+    <string name="permissions">permisos</string>
+    <string name="cancel">Cancelar</string>
+    <string name="ok">De acuerdo</string>
+    <string name="permissionPhoneDescription">Establezca la aplicación como su aplicación de teléfono predeterminada</string>
+    <string name="permissionContactsDescription">Permita que la aplicación acceda a sus contactos</string>
+    <string name="permissionOverlayDescription">Permitir visualización sobre otra aplicación</string>
+    <string name="apply">Aplicar</string>
+    <string name="contacts">Contactos</string>
+    <string name="apply_to_selected">Aplicar a seleccionado</string>
+    <string name="apply_to_all">Aplicar a todo</string>
+    <string name="settings">Ajustes</string>
+    <string name="call_theme">tema de llamada</string>
+    <string name="flash">Flash</string>
+    <string name="accelerometer">Acelerómetro</string>
+    <string name="app_language">Idioma de la aplicación</string>
+    <string name="share">Cuota</string>
+    <string name="rate_us">Nos califica</string>
+    <string name="privacy_policy">Política de privacidad</string>
+    <string name="language">Idioma</string>
+    <string name="calling">Vocación...</string>
+    <string name="end_to_end_encrypted">Cifrado de extremo a extremo</string>
+    <string name="select_a_phone_number">Seleccione un número de teléfono</string>
+    <string name="select_a_sim_card">Seleccione una tarjeta SIM</string>
 </resources>

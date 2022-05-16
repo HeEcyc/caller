@@ -1,3 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="preset">Готовые</string>
+    <string name="add_yours">Добавте свои</string>
+    <string name="new_">Новые</string>
+    <string name="top">Лучшие</string>
+    <string name="all">Все</string>
+    <string name="give_permissions_needed_to_show_the_call_screen">Дайте разрешения необходимые для показа экрана звонка</string>
+    <string name="permissions">Разрешения</string>
+    <string name="cancel">Отменить</string>
+    <string name="ok">Oк</string>
+    <string name="permissionPhoneDescription">Сделайте приложение телефоно по умолчанию</string>
+    <string name="permissionContactsDescription">Дайте приложение доступ к контактам</string>
+    <string name="permissionOverlayDescription">Разрешите показ поверх других приложений</string>
+    <string name="apply">Применить</string>
+    <string name="contacts">Контакты</string>
+    <string name="apply_to_selected">Приенить к выбранным</string>
+    <string name="apply_to_all">Применить ко всем</string>
+    <string name="settings">Настройки</string>
+    <string name="call_theme">Тема звонка</string>
+    <string name="flash">Вспышка</string>
+    <string name="accelerometer">Акселерометр</string>
+    <string name="app_language">Язык приложения</string>
+    <string name="share">Поделиться</string>
+    <string name="rate_us">Оцените нас</string>
+    <string name="privacy_policy">Политика конфиденциальности</string>
+    <string name="language">Язык</string>
+    <string name="calling">Вызов...</string>
+    <string name="end_to_end_encrypted">Сквозное шифрование</string>
+    <string name="select_a_phone_number">Выберите номер</string>
+    <string name="select_a_sim_card">Выбериете SIM-карту</string>
 </resources>

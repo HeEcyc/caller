@@ -1,3 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="preset">ที่ตั้งไว้ล่วงหน้า</string>
+    <string name="add_yours">เพิ่มของคุณ</string>
+    <string name="new_">ใหม่</string>
+    <string name="top">สูงสุด</string>
+    <string name="all">ทั้งหมด</string>
+    <string name="give_permissions_needed_to_show_the_call_screen">ให้สิทธิ์ที่จำเป็นในการแสดงหน้าจอการโทร</string>
+    <string name="permissions">สิทธิ์</string>
+    <string name="cancel">ยกเลิก</string>
+    <string name="ok">ตกลง</string>
+    <string name="permissionPhoneDescription">ตั้งค่าแอปพลิเคชันเป็นแอปโทรศัพท์เริ่มต้นของคุณ</string>
+    <string name="permissionContactsDescription">อนุญาตให้แอปพลิเคชันเข้าถึงผู้ติดต่อของคุณ</string>
+    <string name="permissionOverlayDescription">อนุญาตให้แสดงทับแอปอื่น</string>
+    <string name="apply">นำมาใช้</string>
+    <string name="contacts">รายชื่อผู้ติดต่อ</string>
+    <string name="apply_to_selected">นำไปใช้กับที่เลือก</string>
+    <string name="apply_to_all">นำไปใช้กับทั้งหมด</string>
+    <string name="settings">การตั้งค่า</string>
+    <string name="call_theme">ธีมการโทร</string>
+    <string name="flash">แฟลช</string>
+    <string name="accelerometer">มาตรความเร่ง</string>
+    <string name="app_language">ภาษาของแอป</string>
+    <string name="share">แบ่งปัน</string>
+    <string name="rate_us">ให้คะแนนเรา</string>
+    <string name="privacy_policy">นโยบายความเป็นส่วนตัว</string>
+    <string name="language">ภาษา</string>
+    <string name="calling">กำลังโทร...</string>
+    <string name="end_to_end_encrypted">เข้ารหัสตั้งแต่ต้นทางถึงปลายทาง</string>
+    <string name="select_a_phone_number">เลือกหมายเลขโทรศัพท์</string>
+    <string name="select_a_sim_card">เลือกซิมการ์ด</string>
 </resources>
