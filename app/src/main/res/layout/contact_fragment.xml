@@ -99,6 +99,7 @@
                                     app:layout_constraintHeight_percent="0.404040"
                                     app:layout_constraintHorizontal_bias="0.079365"
                                     app:layout_constraintVertical_bias="0.10169"
+                                    android:scaleType="centerCrop"
                                     android:src="@mipmap/avatar_placeholder"/>
 
                                 <androidx.appcompat.widget.AppCompatTextView

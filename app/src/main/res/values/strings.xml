@@ -25,4 +25,8 @@
     <string name="rate_us">Rate us</string>
     <string name="privacy_policy">Privacy policy</string>
     <string name="language">Language</string>
+    <string name="calling">Calling...</string>
+    <string name="end_to_end_encrypted">End-to-end encrypted</string>
+    <string name="select_a_phone_number">Select a phone number</string>
+    <string name="select_a_sim_card">Select a SIM-card</string>
 </resources>

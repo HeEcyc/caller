@@ -9,10 +9,12 @@ import com.glass.call.base.BaseFragment
 import com.glass.call.databinding.ContactsFragmentBinding
 import com.glass.call.model.contact.UserContact
 import com.glass.call.model.theme.Theme
+import com.glass.call.ui.call.CallActivity
 import com.glass.call.ui.contact.ContactFragment
+import com.glass.call.ui.contacts.dialog.NumberDialog
+import com.glass.call.ui.dial.fragment.DialFragment
 import com.glass.call.ui.home.HomeFragment
 import com.glass.call.ui.main.MainActivity
-import com.glass.call.utils.setOnClickListener
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
@@ -40,10 +42,10 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentBinding
     override fun setupUI() {
         binding.topPanel.setOnClickListener {}
         binding.bottomPanel.setOnClickListener {}
-//        binding.buttonKeyboard.setOnClickListener {
-//            (requireActivity() as? MainActivity)?.addFragment(DialFragment())
-//            (requireActivity() as? CallActivity)?.addFragment(DialFragment())
-//        }todo
+        binding.buttonKeyboard.setOnClickListener {
+            (requireActivity() as? MainActivity)?.addFragment(DialFragment())
+            (requireActivity() as? CallActivity)?.addFragment(DialFragment())
+        }
         binding.buttonApply.setOnClickListener {
             applyThemeToContacts(viewModel.contactsRepository.contacts)
         }
@@ -55,7 +57,7 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentBinding
         }
         viewModel.addInterlocutor.observe(this, ::addInterlocutor)
         viewModel.selectInterlocutorNumber.observe(this) {
-//            NumberDialog.newInstance(it).show(parentFragmentManager)todo
+            NumberDialog.newInstance(it).show(parentFragmentManager)
         }
         viewModel.closeFragment.observe(this) { onBackPressed() }
         viewModel.hardReloadRV.observe(this) {
@@ -64,15 +66,14 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentBinding
     }
 
     private fun onBackPressed() {
-//        (requireActivity() as? CallActivity)?.removeNoneCallFragment(this) ?:todo
-        requireActivity().onBackPressed()
+        (requireActivity() as? CallActivity)?.removeNoneCallFragment(this) ?: requireActivity().onBackPressed()
     }
 
     fun addInterlocutor(number: String) {
-//        viewModel.permissionRepository.askOutgoingCallPermissions(lifecycleScope) {
-//            if (it) activityAs<BaseActivity<*, *>>().call(number)
-//            if (mode == Mode.INTERLOCUTOR_SELECTOR) activityAs<CallActivity>().removeNoneCallFragment(this)
-//        }todo
+        viewModel.permissionRepository.askOutgoingCallPermissions(lifecycleScope) {
+            if (it) activityAs<BaseActivity<*, *>>().call(number)
+            if (mode == Mode.INTERLOCUTOR_SELECTOR) activityAs<CallActivity>().removeNoneCallFragment(this)
+        }
     }
 
     private fun applyThemeToContacts(contacts: List<UserContact>) {

@@ -34,6 +34,7 @@
                     android:layout_height="match_parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintDimensionRatio="1:1"
+                    android:scaleType="centerCrop"
                     android:src="@mipmap/avatar_placeholder"/>
 
                 <androidx.appcompat.widget.AppCompatTextView

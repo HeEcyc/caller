@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.telecom.Call"/>
+        <variable
+            name="viewModel"
+            type="com.glass.call.ui.call.fragment.CallViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/screen_bg">
+
+        <com.gjiazhe.panoramaimageview.PanoramaImageView
+            android:id="@+id/themeImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:piv_show_scrollbar="false"
+            bind:gyroscopeObserver="@{viewModel.gyroscopeObserver}" />
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/themeVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:use_controller="false" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#54333333"/>
+
+        <include
+            android:id="@+id/layoutRinging"
+            layout="@layout/call_fragment_ringing"
+            android:visibility="gone"
+            bind:viewModel="@{viewModel}"/>
+        <include
+            android:id="@+id/layoutDialing"
+            layout="@layout/call_fragment_dialing"
+            android:visibility="gone"
+            bind:viewModel="@{viewModel}"/>
+        <include
+            android:id="@+id/layoutAccepted"
+            layout="@layout/call_fragment_accepted"
+            android:visibility="gone"
+            bind:viewModel="@{viewModel}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

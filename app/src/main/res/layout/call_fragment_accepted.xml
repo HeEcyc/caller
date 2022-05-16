@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.glass.call.ui.call.fragment.CallViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="360:59">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="47:33"
+                    app:layout_constraintHeight_percent="0.559322"
+                    app:layout_constraintHorizontal_bias="0.0447"
+                    android:src="@mipmap/ic_back"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.2033898"
+                    app:layout_constraintVertical_bias="0.787234">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ic_lock"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/lock_space"
+                        app:layout_constraintDimensionRatio="6:7"
+                        app:layout_constraintHeight_percent="0.58333"
+                        android:src="@mipmap/ic_lock"/>
+                    <android.widget.Space
+                        android:id="@+id/lock_space"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toEndOf="@id/ic_lock"
+                        app:layout_constraintEnd_toStartOf="@id/lock_text"
+                        app:layout_constraintDimensionRatio="2:12"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lock_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toEndOf="@id/lock_space"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:gravity="center"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="10sp"
+                        app:autoSizeMinTextSize="1sp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/roboto_regular"
+                        android:lines="1"
+                        android:text="@string/end_to_end_encrypted"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="360:713">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintVertical_bias="0.08477237"
+                    app:layout_constraintWidth_percent="0.2111"
+                    android:foreground="@drawable/avatar_frame_outer">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/contactPicture"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="@id/frame"
+                        app:layout_constraintBottom_toBottomOf="@id/frame"
+                        app:layout_constraintStart_toStartOf="@id/frame"
+                        app:layout_constraintEnd_toEndOf="@id/frame"
+                        app:layout_constraintDimensionRatio="1:1"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/avatar_placeholder"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/frame"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintWidth_percent="0.847457627"
+                        android:src="@drawable/avatar_frame_inner"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="332:22"
+                    app:layout_constraintWidth_percent="0.9222"
+                    app:layout_constraintVertical_bias="0.23"
+                    android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="1sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/roboto_bold"
+                    android:lines="1"
+                    android:text="@{viewModel.contact.contactName}"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="332:16"
+                    app:layout_constraintWidth_percent="0.9222"
+                    app:layout_constraintVertical_bias="0.2812"
+                    android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="14sp"
+                    app:autoSizeMinTextSize="1sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/calling"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="332:16"
+                    app:layout_constraintWidth_percent="0.9222"
+                    app:layout_constraintVertical_bias="0.34"
+                    android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="14sp"
+                    app:autoSizeMinTextSize="1sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@{viewModel.contact.contactNumber}"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintWidth_percent="0.180555"
+                    app:layout_constraintVertical_bias="0.7993827"
+                    android:src="@mipmap/button_hangup"
+                    android:onClick="@{(_) -> viewModel.cancelCall()}"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="235:140"
+                    app:layout_constraintWidth_percent="0.652777"
+                    app:layout_constraintVertical_bias="0.5724"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="65"
+                        android:orientation="horizontal">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="65"
+                            android:background="@{viewModel.isSpeakerModeOn ? @drawable/call_button_bg_active : @drawable/call_button_bg}"
+                            android:onClick="@{(_) -> viewModel.toggleCallType()}">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="43:37"
+                                app:layout_constraintWidth_percent="0.66"
+                                android:src="@mipmap/ic_speaker"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <android.widget.Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="20"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/buttonKeys"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="65"
+                            android:background="@drawable/call_button_bg">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="37:42"
+                                app:layout_constraintWidth_percent="0.56923"
+                                android:src="@drawable/ic_keyboard"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <android.widget.Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="20"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="65"
+                            android:background="@{viewModel.isMuteOn ? @drawable/call_button_bg_active : @drawable/call_button_bg}"
+                            android:onClick="@{(_) -> viewModel.onMuteClick()}">
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintDimensionRatio="39:41"
+                                    app:layout_constraintWidth_percent="0.6"
+                                    android:src="@mipmap/ic_mute"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <android.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"/>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="65"
+                        android:orientation="horizontal">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="65"
+                            android:background="@drawable/call_button_bg"
+                            android:onClick="@{(_) -> viewModel.onAddClick()}">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintWidth_percent="0.6923"
+                                android:src="@mipmap/ic_add_call"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <android.widget.Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="20"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="65"
+                            android:background="@drawable/call_button_bg"
+                            android:onClick="@{(_) -> viewModel.onSwapClick()}">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="34:45"
+                                app:layout_constraintWidth_percent="0.523"
+                                android:src="@mipmap/ic_swap"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <android.widget.Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="85"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/keyboardTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.253886"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/keyboardTop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/black_gradient"
+                android:visibility="gone">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="360:49">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/buttonCloseKeyboard"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="27:19"
+                                app:layout_constraintHeight_percent="0.3877551"
+                                app:layout_constraintHorizontal_bias="0.042042042"
+                                android:src="@mipmap/ic_back"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="360:527">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="332:28"
+                                app:layout_constraintWidth_percent="0.9222"
+                                app:layout_constraintVertical_bias="0.0396"
+                                android:gravity="center"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="26sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="@font/roboto_regular"
+                                android:lines="1"
+                                android:ellipsize="start"
+                                android:text="@{viewModel.dialCache}"/>
+
+                            <androidx.constraintlayout.widget.Guideline
+                                android:id="@+id/marker"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintGuide_percent="0.13662239"/>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toTopOf="@id/marker"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintWidth_percent="0.708333"
+                                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                                app:spanCount="3"
+                                android:overScrollMode="never"
+                                adapter="@{viewModel.dialAdapter}"
+                                xmlns:tools="http://schemas.android.com/tools"
+                                tools:itemCount="12"
+                                tools:listitem="@layout/item_dial_button"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>
