@@ -1,6 +1,5 @@
 package com.maxios.maxcall.utils
 
-import com.maxios.maxcall.App
 import com.maxios.maxcall.model.theme.ImageTheme
 import com.maxios.maxcall.model.theme.Theme
 import com.maxios.maxcall.model.theme.VideoTheme
@@ -31,7 +30,5 @@ val presetThemes: List<Theme> = listOf(
 )
 
 val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЁЖЗИЙКЛМНОПРСТУВХЦЧШЩЪЫБЭЮЯ#".toList()
-
-val appLink: String by lazy { "https://play.google.com/store/apps/details?id=" + App.instance.packageName }
 
 const val IRON_SOURCE_API_KEY = "145c7bfe9"
