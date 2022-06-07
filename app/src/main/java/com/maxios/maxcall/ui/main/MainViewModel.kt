@@ -5,10 +5,12 @@ import androidx.lifecycle.MutableLiveData
 import com.maxios.maxcall.base.ActivityViewModel
 import com.maxios.maxcall.repository.LocaleRepository
 import com.maxios.maxcall.repository.PermissionRepository
+import com.maxios.maxcall.repository.PreferencesRepository
 
 class MainViewModel(
     localeRepository: LocaleRepository,
-    val permissionRepository: PermissionRepository
+    val permissionRepository: PermissionRepository,
+    val preferencesRepository: PreferencesRepository
 ) : ActivityViewModel(localeRepository) {
 
     val openContacts = MutableLiveData<Unit>()
