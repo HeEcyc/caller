@@ -5,11 +5,13 @@ import androidx.lifecycle.MutableLiveData
 import com.glass.call.base.ActivityViewModel
 import com.glass.call.repository.LocaleRepository
 import com.glass.call.repository.PermissionRepository
+import com.glass.call.repository.PreferencesRepository
 import com.glass.call.utils.VirtualRadioGroup
 
 class MainViewModel(
     localeRepository: LocaleRepository,
-    val permissionRepository: PermissionRepository
+    val permissionRepository: PermissionRepository,
+    val preferencesRepository: PreferencesRepository
 ) : ActivityViewModel(localeRepository) {
 
     val openContacts = MutableLiveData<Unit>()

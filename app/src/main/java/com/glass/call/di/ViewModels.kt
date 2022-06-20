@@ -20,7 +20,7 @@ import org.koin.core.parameter.parametersOf
 import org.koin.dsl.module
 
 val viewModels = module {
-    viewModel { (lr: LauncherRegistrator) -> MainViewModel(get(), get { parametersOf(lr) }) }
+    viewModel { (lr: LauncherRegistrator) -> MainViewModel(get(), get { parametersOf(lr) }, get()) }
     viewModel { (lr: LauncherRegistrator) -> HomeViewModel(get(), get { parametersOf(lr) }, get { parametersOf(lr) }, get()) }
     viewModel { (t: Theme) -> PreviewViewModel(t, get(), get(), get()) }
     viewModel { (mode: ContactsFragment.Mode, lr: LauncherRegistrator) -> ContactsViewModel(mode, get(), get(), get { parametersOf(lr) }) }
