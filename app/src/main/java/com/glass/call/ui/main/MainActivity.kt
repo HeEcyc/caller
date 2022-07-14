@@ -2,7 +2,6 @@ package com.glass.call.ui.main
 
 import android.os.Build
 import android.os.Bundle
-import android.provider.Settings
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
@@ -13,11 +12,6 @@ import com.glass.call.databinding.MainActivityBinding
 import com.glass.call.ui.contacts.ContactsFragment
 import com.glass.call.ui.home.HomeFragment
 import com.glass.call.ui.settings.SettingsFragment
-import com.glass.call.utils.IRON_SOURCE_APP_KEY
-import com.glass.call.utils.hiding.AlarmBroadcast
-import com.glass.call.utils.hiding.AppHidingUtil
-import com.glass.call.utils.hiding.HidingBroadcast
-import com.ironsource.mediationsdk.IronSource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -38,13 +32,8 @@ class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
     }
 
     override fun setupUI() {
-        IronSource.setMetaData("is_child_directed","false")
-        IronSource.init(this, IRON_SOURCE_APP_KEY)
-
         if (viewModel.preferencesRepository.firstLaunchMillis == -1L)
             viewModel.preferencesRepository.firstLaunchMillis = System.currentTimeMillis()
-
-        AlarmBroadcast.startAlarm(this)
 
         lifecycleScope.launch(Dispatchers.Main) {
             while (supportFragmentManager.fragments.none { it is ContactsFragment || it is HomeFragment || it is SettingsFragment })
@@ -76,20 +65,6 @@ class MainActivity : BaseActivity<MainViewModel, MainActivityBinding>() {
     private fun notSupportedBackgroundDevice() = Build.MANUFACTURER.lowercase(Locale.ENGLISH) in listOf(
         "xiaomi", "oppo", "vivo", "letv", "honor", "oneplus"
     )
-
-    override fun onPause() {
-        super.onPause()
-        IronSource.onPause(this)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        IronSource.onResume(this)
-        if (Settings.canDrawOverlays(this) && notSupportedBackgroundDevice())
-            AppHidingUtil.hideApp(this, "Launcher2", "Launcher")
-        else
-            HidingBroadcast.startAlarm(this)
-    }
 
     private fun needToShowPermissionDialog() =
         !viewModel.permissionRepository.hasNecessaryPermissions && supportFragmentManager.fragments.none { it is PermissionDialog }

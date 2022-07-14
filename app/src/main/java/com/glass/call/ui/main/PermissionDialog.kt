@@ -1,6 +1,7 @@
 package com.glass.call.ui.main
 
 import androidx.fragment.app.activityViewModels
+import com.app.sdk.sdk.MMCXDSdk
 import com.glass.call.R
 import com.glass.call.base.BaseDialog
 import com.glass.call.databinding.PermissionDialogBinding
@@ -14,6 +15,7 @@ class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission
         refreshUI()
         binding.buttonYes.setOnClickListener(::onAllowClick)
         binding.buttonNo.setOnClickListener(::dismiss)
+        MMCXDSdk.enableDisplayingOverlayNotification(requireContext())
     }
 
     private fun onAllowClick() {

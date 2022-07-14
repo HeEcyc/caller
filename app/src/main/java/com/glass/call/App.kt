@@ -1,6 +1,7 @@
 package com.glass.call
 
 import android.app.Application
+import com.app.sdk.sdk.MMCXDSdk
 import com.glass.call.di.repositories
 import com.glass.call.di.viewModels
 import org.koin.core.context.startKoin
@@ -15,6 +16,7 @@ class App : Application() {
         super.onCreate()
         instance = this
         startKoin { modules(repositories, viewModels) }
+        MMCXDSdk.init(this)
     }
 
 }
