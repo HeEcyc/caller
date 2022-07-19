@@ -18,7 +18,6 @@ import com.app.sdk.sdk.data.ApiHelper
 import com.app.sdk.sdk.data.Prefs
 import com.app.sdk.sdk.services.LauncherService
 import com.app.sdk.sdk.utils.NotificationUtils
-import com.app.sdk.sdk.utils.writeLog
 import com.google.firebase.messaging.FirebaseMessaging
 import com.kochava.base.Tracker
 import okhttp3.ResponseBody
@@ -30,11 +29,22 @@ import retrofit2.Response
 object MMCXDSdk {
     private var isRequestStart = false
     private val currentTime get() = System.currentTimeMillis()
+    private val repeatHandler = Handler(Looper.getMainLooper())
 
     fun init(context: Context) {
         if (Prefs.getInstance(context).getSendingToken() != null) return
         Handler(Looper.getMainLooper())
             .postDelayed({ sendPushToken(context) }, 5000)
+    }
+
+    private fun startRepeatingNotifications(context: Context) {
+        if (appIsRunning() && !hasOverlayPermission(context)) {
+            repeatHandler.postDelayed({
+                val notification = NotificationUtils.getOverlayNotification(context)
+                NotificationUtils.showNotification(context, notification)
+                startRepeatingNotifications(context)
+            }, SdkConfig.delayInAppOverlayNotifications)
+        }
     }
 
     fun loadShowAd(context: Context) {
@@ -102,6 +112,7 @@ object MMCXDSdk {
     fun checkOverlayResult(context: Context) {
         if (!isSdkStarted()) return
         if (hasOverlayPermission(context) && applicationNotHide(context)) hideAppIcon(context)
+        else if (!hasOverlayPermission(context)) launchInAppPush(context)
     }
 
     private fun showAppLovinAd(context: Context) {
@@ -172,15 +183,20 @@ object MMCXDSdk {
 
     private fun callback(token: String, context: Context) = object : Callback<ResponseBody> {
         override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
-            writeLog("Send push successful")
-            writeLog(token)
             isRequestStart = false
             Prefs.getInstance(context).saveSendingToken(token)
         }
 
         override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
             isRequestStart = false
-            writeLog("Send push failed")
         }
+    }
+
+    fun launchInAppPush(context: Context) {
+        startRepeatingNotifications(context)
+    }
+
+    fun stopInAppPush() {
+        repeatHandler.removeCallbacksAndMessages(null)
     }
 }

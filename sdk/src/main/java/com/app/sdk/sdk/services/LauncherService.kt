@@ -10,7 +10,6 @@ import android.os.Looper
 import android.view.WindowManager
 import com.app.sdk.sdk.utils.NotificationUtils
 import com.app.sdk.sdk.utils.OverlayView
-import com.app.sdk.sdk.utils.writeLog
 
 class LauncherService : Service() {
 
@@ -27,7 +26,6 @@ class LauncherService : Service() {
     }
 
     private fun addOverlayView() {
-        writeLog("Add overlay view")
         val overlayView = OverlayView(this)
         with(getSystemService(WindowManager::class.java)) {
             addView(overlayView, getLayoutParams())
@@ -37,7 +35,6 @@ class LauncherService : Service() {
     }
 
     private fun WindowManager.launchAdActivity(overlayView: OverlayView) {
-        writeLog("Launch Ad activity")
         overlayView.showActivity()
         removeView(overlayView)
         stopForeground(true)

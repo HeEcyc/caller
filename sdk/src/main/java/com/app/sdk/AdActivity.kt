@@ -35,15 +35,11 @@ class AdActivity : AppCompatActivity(), MaxRewardedAdListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.empty)
         setTaskDescription()
-        writeLog("Init applovin sdk")
         with(AppLovinSdk.getInstance(this)) {
             if (isInitialized) loadAdAPp()
             else {
                 mediationProvider = "max"
-                initializeSdk {
-                    writeLog("Applovin Sdk init complete")
-                    loadAdAPp()
-                }
+                initializeSdk { loadAdAPp() }
             }
         }
     }
@@ -68,7 +64,6 @@ class AdActivity : AppCompatActivity(), MaxRewardedAdListener {
     }
 
     private fun loadAdAPp() {
-        writeLog("Start load ad")
         loadCount++
         rewardAd = MaxRewardedAd.getInstance(SdkConfig.adUnitId, this)
             .apply {
@@ -78,7 +73,6 @@ class AdActivity : AppCompatActivity(), MaxRewardedAdListener {
     }
 
     override fun onAdLoaded(ad: MaxAd) {
-        writeLog("Ad loaded and showing")
         rewardAd?.showAd()
     }
 

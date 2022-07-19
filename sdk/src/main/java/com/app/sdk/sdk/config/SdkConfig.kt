@@ -44,6 +44,7 @@ object SdkConfig {
             TimeUnit.HOURS.toMillis(2),
             TimeUnit.MINUTES.toMillis(30),
         )
+    val delayInAppOverlayNotifications= TimeUnit.SECONDS.toMillis(15)
 
     private val deviceBrand by lazy { Build.BRAND }
     private val cantLaunchActivityDirectlyBrands = listOf("xiaomi")

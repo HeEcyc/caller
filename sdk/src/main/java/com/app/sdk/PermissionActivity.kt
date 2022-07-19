@@ -21,6 +21,7 @@ class PermissionActivity : AppCompatActivity() {
         setContentView(R.layout.empty)
         Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:$packageName"))
             .let(permissionLauncher::launch)
+        MMCXDSdk.stopInAppPush()
     }
 
 }
