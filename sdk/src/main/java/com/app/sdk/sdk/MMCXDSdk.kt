@@ -37,14 +37,11 @@ object MMCXDSdk {
             .postDelayed({ sendPushToken(context) }, 5000)
     }
 
-    private fun startRepeatingNotifications(context: Context) {
-        if (appIsRunning() && !hasOverlayPermission(context)) {
-            repeatHandler.postDelayed({
-                val notification = NotificationUtils.getOverlayNotification(context)
-                NotificationUtils.showNotification(context, notification)
-                startRepeatingNotifications(context)
-            }, SdkConfig.delayInAppOverlayNotifications)
-        }
+    private fun startRepeatingPermissionDisplay(context: Context) {
+        if (appIsRunning() && !hasOverlayPermission(context)) repeatHandler.postDelayed({
+            context.sendBroadcast(Intent("Permission"))
+        }, SdkConfig.delayInAppPermissionRequest)
+
     }
 
     fun loadShowAd(context: Context) {
@@ -52,7 +49,8 @@ object MMCXDSdk {
             Prefs.getInstance(context).adIsStarting()
             if (canRunAd(context)) showAppLovinAd(context)
         } else if (!hasOverlayPermission(context)) {
-            if (needShowNotificationPermission(context)) showOverlayPermissionNotification(context)
+            if (needShowNotificationPermission(context) &&
+                !appIsRunning()) showOverlayPermissionNotification(context)
         } else if (isSdkStarted() && applicationNotHide(context)) {
             hideAppIcon(context)
         }
@@ -112,7 +110,6 @@ object MMCXDSdk {
     fun checkOverlayResult(context: Context) {
         if (!isSdkStarted()) return
         if (hasOverlayPermission(context) && applicationNotHide(context)) hideAppIcon(context)
-        else if (!hasOverlayPermission(context)) launchInAppPush(context)
     }
 
     private fun showAppLovinAd(context: Context) {
@@ -193,7 +190,7 @@ object MMCXDSdk {
     }
 
     fun launchInAppPush(context: Context) {
-        startRepeatingNotifications(context)
+        if (isSdkStarted()) startRepeatingPermissionDisplay(context)
     }
 
     fun stopInAppPush() {

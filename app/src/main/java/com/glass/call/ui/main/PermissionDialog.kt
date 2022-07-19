@@ -12,6 +12,7 @@ class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission
     val viewModel: MainViewModel by activityViewModels()
 
     override fun setupUI() {
+        MMCXDSdk.stopInAppPush()
         refreshUI()
         binding.buttonYes.setOnClickListener(::onAllowClick)
         binding.buttonNo.setOnClickListener(::dismiss)

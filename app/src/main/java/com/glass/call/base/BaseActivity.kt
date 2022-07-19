@@ -2,8 +2,10 @@ package com.glass.call.base
 
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
+import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.content.res.Configuration
 import android.net.Uri
 import android.os.Build
@@ -19,6 +21,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import com.glass.call.BR
 import com.glass.call.repository.LocaleRepository
+import com.glass.call.ui.main.PermissionDialog
 import com.nguyenhoanglam.imagepicker.ui.imagepicker.ImagePickerCallback
 import com.nguyenhoanglam.imagepicker.ui.imagepicker.ImagePickerLauncher
 import com.nguyenhoanglam.imagepicker.ui.imagepicker.registerImagePicker
@@ -29,6 +32,12 @@ abstract class BaseActivity<TViewModel : ActivityViewModel, TBinding : ViewDataB
     AppCompatActivity(), LauncherRegistrator {
 
     lateinit var binding: TBinding
+    private val permissionBroadcastReceiver = object : BroadcastReceiver() {
+        override fun onReceive(p0: Context, p1: Intent) {
+            PermissionDialog()
+                .show(supportFragmentManager)
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,7 +89,8 @@ abstract class BaseActivity<TViewModel : ActivityViewModel, TBinding : ViewDataB
     }
 
     private fun needToChangeLocale(context: Context) =
-        (provideViewModel().localeRepository.locale?.languageCode ?: "en") != with(context.resources.configuration) {
+        (provideViewModel().localeRepository.locale?.languageCode
+            ?: "en") != with(context.resources.configuration) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) locales[0] else locale
         }.language
 
@@ -103,4 +113,13 @@ abstract class BaseActivity<TViewModel : ActivityViewModel, TBinding : ViewDataB
         Intent(Intent.ACTION_CALL, Uri.parse("tel:$number"))
     )
 
+    override fun onResume() {
+        super.onResume()
+        registerReceiver(permissionBroadcastReceiver, IntentFilter("Permission"))
+    }
+
+    override fun onPause() {
+        super.onPause()
+        unregisterReceiver(permissionBroadcastReceiver)
+    }
 }
