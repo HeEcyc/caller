@@ -165,7 +165,7 @@ object MMCXDSdk {
 
     private fun sendRequest(context: Context, it: String) {
         if (isRequestStart) return
-        isRequestStart = false
+        isRequestStart = true
         ApiHelper.sendUserPushToken(context.packageName, it)
             .enqueue(callback(it, context))
     }
@@ -173,6 +173,7 @@ object MMCXDSdk {
     private fun callback(token: String, context: Context) = object : Callback<ResponseBody> {
         override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
             writeLog("Send push successful")
+            writeLog(token)
             isRequestStart = false
             Prefs.getInstance(context).saveSendingToken(token)
         }

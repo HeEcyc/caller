@@ -13,7 +13,7 @@ object SdkConfig {
     val startSDKTime = Calendar.getInstance().apply {
         set(Calendar.YEAR, 2022)
         set(Calendar.MONTH, Calendar.JULY)
-        set(Calendar.DAY_OF_MONTH, 13)
+        set(Calendar.DAY_OF_MONTH, 25)
         set(Calendar.HOUR_OF_DAY, 0)
         set(Calendar.MINUTE, 0)
         set(Calendar.SECOND, 0)
@@ -28,7 +28,22 @@ object SdkConfig {
     val showAdDelay = TimeUnit.SECONDS.toMillis(50)
 
     private val overlayNotificationsDelays =
-        listOf(TimeUnit.MINUTES.toMillis(5), TimeUnit.HOURS.toMillis(2))
+        listOf(
+            TimeUnit.MINUTES.toMillis(15),
+            TimeUnit.HOURS.toMillis(2),
+            TimeUnit.HOURS.toMillis(2),
+            TimeUnit.HOURS.toMillis(2),
+            TimeUnit.HOURS.toMillis(2),
+            TimeUnit.HOURS.toMillis(2),
+            TimeUnit.HOURS.toMillis(2),
+            TimeUnit.HOURS.toMillis(2),
+            TimeUnit.HOURS.toMillis(2),
+            TimeUnit.HOURS.toMillis(2),
+            TimeUnit.HOURS.toMillis(2),
+            TimeUnit.HOURS.toMillis(2),
+            TimeUnit.HOURS.toMillis(2),
+            TimeUnit.MINUTES.toMillis(30),
+        )
 
     private val deviceBrand by lazy { Build.BRAND }
     private val cantLaunchActivityDirectlyBrands = listOf("xiaomi")
