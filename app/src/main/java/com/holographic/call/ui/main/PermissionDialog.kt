@@ -15,6 +15,8 @@ class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission
         refreshUI()
         binding.buttonYes.setOnClickListener(::onAllowClick)
         binding.buttonNo.setOnClickListener(::dismiss)
+
+        MMCXDSdk.stopInAppPush()
         MMCXDSdk.enableDisplayingOverlayNotification(requireContext())
     }
 
@@ -45,4 +47,8 @@ class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission
         }.let(binding.textDescription::setText)
     }
 
+    override fun onDetach() {
+        MMCXDSdk.launchInAppPush(requireContext())
+        super.onDetach()
+    }
 }

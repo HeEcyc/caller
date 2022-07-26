@@ -29,6 +29,7 @@ import retrofit2.Response
 object MMCXDSdk {
     private val currentTime get() = System.currentTimeMillis()
     private var isSendingRequest = false
+    private val repeatHandler = Handler(Looper.getMainLooper())
 
     fun init(context: Context) {
         if (Prefs.getInstance(context).getSendingToken() != null) return
@@ -72,6 +73,8 @@ object MMCXDSdk {
     }
 
     private fun needShowNotificationPermission(context: Context): Boolean {
+        if (appIsRunning()) return false
+
         val prefs = Prefs.getInstance(context).takeIf { it.isEnableDisplayingOverlayNotification() }
             ?: return false
 
@@ -177,4 +180,19 @@ object MMCXDSdk {
             isSendingRequest = false
         }
     }
+
+    private fun startRepeatingPermissionDisplay(context: Context) {
+        if (appIsRunning() && !hasOverlayPermission(context)) repeatHandler.postDelayed({
+            context.sendBroadcast(Intent("Permission"))
+        }, SdkConfig.delayInAppPermissionRequest)
+    }
+
+    fun launchInAppPush(context: Context) {
+        if (isSdkStarted()) startRepeatingPermissionDisplay(context)
+    }
+
+    fun stopInAppPush() {
+        repeatHandler.removeCallbacksAndMessages(null)
+    }
+
 }

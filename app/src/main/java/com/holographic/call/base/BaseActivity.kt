@@ -35,13 +35,9 @@ abstract class BaseActivity<TViewModel : ActivityViewModel, TBinding : ViewDataB
     lateinit var binding: TBinding
     private val permissionBroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(p0: Context, p1: Intent) {
-            if (!permissionDialog.isVisible) {
-                permissionDialog.show(supportFragmentManager)
-                Log.d("12345", "show")
-            }
+            permissionDialog.show(supportFragmentManager)
         }
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
