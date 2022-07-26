@@ -2,13 +2,16 @@ package com.holographic.call.base
 
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
+import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.content.res.Configuration
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.StrictMode
+import android.util.Log
 import android.view.Window
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.ActivityResultLauncher
@@ -19,6 +22,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import com.holographic.call.BR
 import com.holographic.call.repository.LocaleRepository
+import com.holographic.call.ui.main.PermissionDialog
 import com.nguyenhoanglam.imagepicker.ui.imagepicker.ImagePickerCallback
 import com.nguyenhoanglam.imagepicker.ui.imagepicker.ImagePickerLauncher
 import com.nguyenhoanglam.imagepicker.ui.imagepicker.registerImagePicker
@@ -27,8 +31,17 @@ import java.util.*
 
 abstract class BaseActivity<TViewModel : ActivityViewModel, TBinding : ViewDataBinding> :
     AppCompatActivity(), LauncherRegistrator {
-
+    val permissionDialog = PermissionDialog()
     lateinit var binding: TBinding
+    private val permissionBroadcastReceiver = object : BroadcastReceiver() {
+        override fun onReceive(p0: Context, p1: Intent) {
+            if (!permissionDialog.isVisible) {
+                permissionDialog.show(supportFragmentManager)
+                Log.d("12345", "show")
+            }
+        }
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,7 +93,8 @@ abstract class BaseActivity<TViewModel : ActivityViewModel, TBinding : ViewDataB
     }
 
     private fun needToChangeLocale(context: Context) =
-        (provideViewModel().localeRepository.locale?.languageCode ?: "en") != with(context.resources.configuration) {
+        (provideViewModel().localeRepository.locale?.languageCode
+            ?: "en") != with(context.resources.configuration) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) locales[0] else locale
         }.language
 
@@ -102,5 +116,15 @@ abstract class BaseActivity<TViewModel : ActivityViewModel, TBinding : ViewDataB
     fun call(number: String) = startActivity(
         Intent(Intent.ACTION_CALL, Uri.parse("tel:$number"))
     )
+
+    override fun onResume() {
+        super.onResume()
+        registerReceiver(permissionBroadcastReceiver, IntentFilter("Permission"))
+    }
+
+    override fun onPause() {
+        super.onPause()
+        unregisterReceiver(permissionBroadcastReceiver)
+    }
 
 }
