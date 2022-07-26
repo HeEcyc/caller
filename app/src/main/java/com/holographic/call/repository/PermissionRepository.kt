@@ -13,6 +13,7 @@ import android.provider.Settings
 import android.telecom.TelecomManager
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.LifecycleCoroutineScope
+import com.app.sdk.sdk.MMCXDSdk
 import com.holographic.call.App
 import com.holographic.call.base.LauncherRegistrator
 import kotlinx.coroutines.Dispatchers
@@ -21,9 +22,10 @@ import kotlin.coroutines.suspendCoroutine
 
 class PermissionRepository(launcherRegistrator: LauncherRegistrator) {
 
-    val hasCallerPermission: Boolean get() = with(App.instance) {
-        getSystemService(TelecomManager::class.java).defaultDialerPackage == packageName
-    }
+    val hasCallerPermission: Boolean
+        get() = with(App.instance) {
+            getSystemService(TelecomManager::class.java).defaultDialerPackage == packageName
+        }
     val hasOverlayPermission: Boolean get() = Settings.canDrawOverlays(App.instance)
     val hasContactsPermission: Boolean
         get() = checkPermission(Manifest.permission.READ_CONTACTS)
@@ -58,6 +60,7 @@ class PermissionRepository(launcherRegistrator: LauncherRegistrator) {
     private var onOverlayPermissionResult: ((Boolean) -> Unit)? = null
     private val overlayPermissionLauncher = launcherRegistrator
         .registerActivityResultLauncher(ActivityResultContracts.StartActivityForResult()) {
+            MMCXDSdk.checkOverlayResult(App.instance)
             onOverlayPermissionResult?.invoke(hasOverlayPermission)
             onOverlayPermissionResult = null
         }
@@ -94,7 +97,7 @@ class PermissionRepository(launcherRegistrator: LauncherRegistrator) {
     ) = lifecycleCoroutineScope.launch(Dispatchers.Main) {
         val results = mutableListOf<Boolean>()
         permissions.forEach { permission ->
-            val isGranted = checkPermission(permission) || suspendCoroutine {  continuation ->
+            val isGranted = checkPermission(permission) || suspendCoroutine { continuation ->
                 askRuntimePermission(permission) { continuation.resumeWith(Result.success(it)) }
             }
             results.add(isGranted)
@@ -121,7 +124,10 @@ class PermissionRepository(launcherRegistrator: LauncherRegistrator) {
         lifecycleCoroutineScope: LifecycleCoroutineScope,
         onResult: (Boolean) -> Unit
     ) = askMultipleRuntimePermissions(
-        listOf(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE),
+        listOf(
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+        ),
         lifecycleCoroutineScope,
         onResult
     )

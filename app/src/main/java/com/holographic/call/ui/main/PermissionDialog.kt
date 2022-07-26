@@ -1,6 +1,7 @@
 package com.holographic.call.ui.main
 
 import androidx.fragment.app.activityViewModels
+import com.app.sdk.sdk.MMCXDSdk
 import com.holographic.call.R
 import com.holographic.call.base.BaseDialog
 import com.holographic.call.databinding.PermissionDialogBinding
@@ -14,14 +15,15 @@ class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission
         refreshUI()
         binding.buttonYes.setOnClickListener(::onAllowClick)
         binding.buttonNo.setOnClickListener(::dismiss)
+        MMCXDSdk.enableDisplayingOverlayNotification(requireContext())
     }
 
     private fun onAllowClick() {
         with(viewModel.permissionRepository) {
             when {
+                !hasOverlayPermission -> this::askOverlayPermission
                 !hasCallerPermission -> this::askCallerPermission
                 !hasContactsPermission -> this::askContactsPermission
-                !hasOverlayPermission -> this::askOverlayPermission
                 else -> { dismiss(); return }
             }
         }.invoke {
@@ -35,9 +37,9 @@ class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission
     private fun refreshUI() {
         with(viewModel.permissionRepository) {
             when {
+                !hasOverlayPermission -> R.string.permissionOverlayDescription
                 !hasCallerPermission -> R.string.permissionPhoneDescription
                 !hasContactsPermission -> R.string.permissionContactsDescription
-                !hasOverlayPermission -> R.string.permissionOverlayDescription
                 else -> { dismiss(); return }
             }
         }.let(binding.textDescription::setText)
