@@ -1,3 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="get_started">Начнём</string>
+    <string name="all">Все</string>
+    <string name="top">Лучшие</string>
+    <string name="s_new">Новые</string>
+    <string name="popular">Популярные</string>
+    <string name="add_yours">Ваши</string>
+    <string name="permissionPhoneDescription">Сделайте приложение телефоном по умолчанию</string>
+    <string name="permissionContactsDescription">Дайти приложению доступ к контактам</string>
+    <string name="permissionOverlayDescription">Разрешите показ поверх других приложений</string>
+    <string name="give_permissions_needed_to_show_the_call_screen">Дайте необходимые разрешения</string>
+    <string name="cancel">Отмена</string>
+    <string name="ok">Ок</string>
+    <string name="settings">Настройки</string>
+    <string name="call_theme">Тема звонка</string>
+    <string name="flash">Вспышка</string>
+    <string name="accelerometer">Акселерометр</string>
+    <string name="application_language">Язык приложения</string>
+    <string name="share">Share</string>
+    <string name="rate_us">Оцените нас</string>
+    <string name="privacy_policy">Политика конфиденциальности</string>
+    <string name="language">Язык</string>
+    <string name="contacts">Контакты</string>
+    <string name="type_something">Напишите  что-нибудь</string>
+    <string name="apply_to_selected">Применить к выбранным</string>
+    <string name="apply_to_all">Применить ко всем</string>
+    <string name="apply">Применить</string>
+    <string name="applied">Применено</string>
+    <string name="choose_a_contact_number">Выберите номер</string>
+    <string name="calling">Звонит...</string>
+    <string name="end_to_end_encryption">Сквозное шифрование</string>
+    <string name="call">Звонок...</string>
+    <string name="choose_a_sim_card">Выберите SIM-карту</string>
 </resources>

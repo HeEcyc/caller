@@ -1,3 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="get_started">Incepe</string>
+    <string name="all">Toate</string>
+    <string name="top">Top</string>
+    <string name="s_new">Nou</string>
+    <string name="popular">Popular</string>
+    <string name="add_yours">Adaugă-l pe al tău</string>
+    <string name="permissionPhoneDescription">Setați aplicația ca aplicație implicită pentru telefon</string>
+    <string name="permissionContactsDescription">Permiteți aplicației să vă acceseze contactele</string>
+    <string name="permissionOverlayDescription">Permite afișarea peste altă aplicație</string>
+    <string name="give_permissions_needed_to_show_the_call_screen">Oferiți permisiunile necesare pentru a afișa ecranul de apel</string>
+    <string name="cancel">Anulare</string>
+    <string name="ok">O.K</string>
+    <string name="settings">Setări</string>
+    <string name="call_theme">Tema apelului</string>
+    <string name="flash">Flash</string>
+    <string name="accelerometer">Accelerometru</string>
+    <string name="application_language">Limba aplicației</string>
+    <string name="share">Acțiune</string>
+    <string name="rate_us">Ne evalua</string>
+    <string name="privacy_policy">Politica de Confidențialitate</string>
+    <string name="language">Limba</string>
+    <string name="contacts">Contacte</string>
+    <string name="type_something">Scrie ceva</string>
+    <string name="apply_to_selected">Aplicați la selectat</string>
+    <string name="apply_to_all">Aplica la toate</string>
+    <string name="apply">aplica</string>
+    <string name="applied">Aplicat</string>
+    <string name="choose_a_contact_number">Alegeți un număr de contact</string>
+    <string name="calling">Apelând...</string>
+    <string name="end_to_end_encryption">Criptare end-to-end</string>
+    <string name="call">Apel...</string>
+    <string name="choose_a_sim_card">Alegeți o cartelă SIM</string>
 </resources>

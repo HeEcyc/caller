@@ -1,3 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="get_started">ចាប់ផ្តើម</string>
+    <string name="all">ទាំងអស់។</string>
+    <string name="top">កំពូល</string>
+    <string name="s_new">ថ្មី។</string>
+    <string name="popular">ពេញនិយម</string>
+    <string name="add_yours">បន្ថែមរបស់អ្នក។</string>
+    <string name="permissionPhoneDescription">កំណត់កម្មវិធីជាកម្មវិធីទូរស័ព្ទលំនាំដើមរបស់អ្នក។</string>
+    <string name="permissionContactsDescription">អនុញ្ញាតឱ្យកម្មវិធីចូលប្រើទំនាក់ទំនងរបស់អ្នក។</string>
+    <string name="permissionOverlayDescription">អនុញ្ញាតឱ្យបង្ហាញនៅលើកម្មវិធីផ្សេងទៀត។</string>
+    <string name="give_permissions_needed_to_show_the_call_screen">ផ្តល់ការអនុញ្ញាតដែលត្រូវការដើម្បីបង្ហាញអេក្រង់ហៅទូរសព្ទ</string>
+    <string name="cancel">បោះបង់</string>
+    <string name="ok">យល់ព្រម</string>
+    <string name="settings">ការកំណត់</string>
+    <string name="call_theme">ហៅប្រធានបទ</string>
+    <string name="flash">ពន្លឺ</string>
+    <string name="accelerometer">ឧបករណ៍វាស់ល្បឿន</string>
+    <string name="application_language">ភាសាកម្មវិធី</string>
+    <string name="share">ចែករំលែក</string>
+    <string name="rate_us">វាយតម្លៃពួកយើង</string>
+    <string name="privacy_policy">គោលការណ៍​ភាព​ឯកជន</string>
+    <string name="language">ភាសា</string>
+    <string name="contacts">ទំនាក់ទំនង</string>
+    <string name="type_something">វាយអ្វីមួយ</string>
+    <string name="apply_to_selected">អនុវត្តទៅដែលបានជ្រើសរើស</string>
+    <string name="apply_to_all">អនុវត្តចំពោះទាំងអស់គ្នា</string>
+    <string name="apply">អនុវត្ត</string>
+    <string name="applied">បានអនុវត្ត</string>
+    <string name="choose_a_contact_number">ជ្រើសរើសលេខទំនាក់ទំនង</string>
+    <string name="calling">កំពុងហៅ...</string>
+    <string name="end_to_end_encryption">ការអ៊ិនគ្រីបពីចុងដល់ចប់</string>
+    <string name="call">ហៅ...</string>
+    <string name="choose_a_sim_card">ជ្រើសរើសស៊ីមកាត</string>
 </resources>

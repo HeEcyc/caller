@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F9C615">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="360:772">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="359:406.42"
+            app:layout_constraintWidth_percent="0.997222"
+            app:layout_constraintVertical_bias="0.2997"
+            android:src="@mipmap/img_greeting"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/button"
+            app:layout_constraintBottom_toBottomOf="@id/button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="209:51"
+            app:layout_constraintWidth_percent="0.580555"
+            android:src="@mipmap/lets_start_shadow"/>
+
+        <com.yellowmood.caller.ui.custom.ScalableCardView
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="229:75"
+            app:layout_constraintWidth_percent="0.636111"
+            app:layout_constraintVertical_bias="0.807"
+            app:scale_by="byHeight"
+            app:scalable_corner_radius="0.5"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="164:32"
+                    app:layout_constraintHeight_percent="0.42666"
+                    android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="30sp"
+                    app:autoSizeMinTextSize="1sp"
+                    android:textColor="#353131"
+                    android:fontFamily="@font/noto_sans_medium"
+                    android:text="@string/get_started"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.yellowmood.caller.ui.custom.ScalableCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

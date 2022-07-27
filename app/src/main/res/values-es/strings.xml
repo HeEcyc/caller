@@ -1,3 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="get_started">Empezar</string>
+    <string name="all">Todos</string>
+    <string name="top">Parte superior</string>
+    <string name="s_new">Nuevo</string>
+    <string name="popular">Popular</string>
+    <string name="add_yours">Agrega el tuyo</string>
+    <string name="permissionPhoneDescription">Establezca la aplicación como su aplicación de teléfono predeterminada</string>
+    <string name="permissionContactsDescription">Permita que la aplicación acceda a sus contactos</string>
+    <string name="permissionOverlayDescription">Permitir visualización sobre otra aplicación</string>
+    <string name="give_permissions_needed_to_show_the_call_screen">Dar los permisos necesarios para mostrar la pantalla de llamadas</string>
+    <string name="cancel">Cancelar</string>
+    <string name="ok">OK</string>
+    <string name="settings">Ajustes</string>
+    <string name="call_theme">tema de llamada</string>
+    <string name="flash">Destello</string>
+    <string name="accelerometer">Acelerómetro</string>
+    <string name="application_language">Idioma de la aplicación</string>
+    <string name="share">Cuota</string>
+    <string name="rate_us">Nos califica</string>
+    <string name="privacy_policy">Política de privacidad</string>
+    <string name="language">Idioma</string>
+    <string name="contacts">Contactos</string>
+    <string name="type_something">Escribe algo</string>
+    <string name="apply_to_selected">Aplicar a seleccionados</string>
+    <string name="apply_to_all">Aplicar a todo</string>
+    <string name="apply">Aplicar</string>
+    <string name="applied">Aplicado</string>
+    <string name="choose_a_contact_number">Elige un número de contacto</string>
+    <string name="calling">Vocación...</string>
+    <string name="end_to_end_encryption">Encriptado de fin a fin</string>
+    <string name="call">Llamar...</string>
+    <string name="choose_a_sim_card">Elige una tarjeta SIM</string>
 </resources>
