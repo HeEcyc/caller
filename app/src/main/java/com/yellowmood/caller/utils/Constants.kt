@@ -5,7 +5,7 @@ import com.yellowmood.caller.model.theme.ImageTheme
 import com.yellowmood.caller.model.theme.Theme
 import com.yellowmood.caller.model.theme.VideoTheme
 
-val videoThemes = List(6) {
+val videoThemes = List(8) {
     VideoTheme(
         "file:///android_asset/top/video/$it.mp4",
         "file:///android_asset/top/gif/$it.gif",
