@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Yellow Mood Caller</string>
+    <string name="app_name" translatable="false">Galaxy Call</string>
     <string name="get_started">Get Started</string>
     <string name="all">All</string>
     <string name="top">Top</string>
@@ -32,4 +32,5 @@
     <string name="end_to_end_encryption">End-to-End Encryption</string>
     <string name="call">Call...</string>
     <string name="choose_a_sim_card">Choose a SIM card</string>
+    <string name="let_s_get_started">Let’s get started!</string>
 </resources>

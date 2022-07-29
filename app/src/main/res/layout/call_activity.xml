@@ -4,7 +4,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.yellowmood.caller.ui.call.activity.CallActivityViewModel" />
+            type="com.galaxy.call.ui.call.activity.CallActivityViewModel" />
     </data>
 
     <androidx.fragment.app.FragmentContainerView

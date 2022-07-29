@@ -15,7 +15,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintDimensionRatio="360:772">
 
-            <com.yellowmood.caller.ui.custom.ScalableCardView
+            <com.galaxy.call.ui.custom.ScalableCardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -152,7 +152,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="44">
 
-                        <com.yellowmood.caller.ui.custom.ScalableCardView
+                        <com.galaxy.call.ui.custom.ScalableCardView
                             android:id="@+id/buttonCancel"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
@@ -187,9 +187,9 @@
                                     android:textAllCaps="true"
                                     android:text="@string/cancel"/>
                             </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.yellowmood.caller.ui.custom.ScalableCardView>
+                        </com.galaxy.call.ui.custom.ScalableCardView>
 
-                        <com.yellowmood.caller.ui.custom.ScalableCardView
+                        <com.galaxy.call.ui.custom.ScalableCardView
                             android:id="@+id/buttonOk"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
@@ -224,7 +224,7 @@
                                     android:textAllCaps="true"
                                     android:text="@string/ok"/>
                             </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.yellowmood.caller.ui.custom.ScalableCardView>
+                        </com.galaxy.call.ui.custom.ScalableCardView>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -234,7 +234,7 @@
                         android:layout_weight="41"/>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
-            </com.yellowmood.caller.ui.custom.ScalableCardView>
+            </com.galaxy.call.ui.custom.ScalableCardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

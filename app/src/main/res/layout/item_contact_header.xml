@@ -5,7 +5,7 @@
     <data>
         <variable
             name="item"
-            type="com.yellowmood.caller.ui.contacts.ContactAdapter.SegmentHeader" />
+            type="com.galaxy.call.ui.contacts.ContactAdapter.SegmentHeader" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

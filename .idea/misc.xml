@@ -20,6 +20,7 @@
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/switch_thumb_unchecked.xml" value="0.254" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/text_cursor.xml" value="0.254" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/applied.xml" value="0.28395820528580207" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/applied_dialog.xml" value="0.36666666666666664" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/call_activity.xml" value="0.36666666666666664" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/call_fragment.xml" value="0.36666666666666664" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/call_fragment_accepted.xml" value="0.33" />
@@ -29,7 +30,7 @@
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/contacts_fragment.xml" value="0.33" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/dial_activity.xml" value="0.36666666666666664" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/dial_fragment.xml" value="0.33" />
-        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/greeting_activity.xml" value="0.27421875" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/greeting_activity.xml" value="0.12" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/home_fragment.xml" value="0.20923913043478262" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/item_contact.xml" value="0.33" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/layout/item_contact_header.xml" value="0.36666666666666664" />

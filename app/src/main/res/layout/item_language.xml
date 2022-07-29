@@ -4,10 +4,10 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.yellowmood.caller.repository.LocaleRepository"/>
+        <import type="com.galaxy.call.repository.LocaleRepository"/>
         <variable
             name="item"
-            type="com.yellowmood.caller.repository.LocaleRepository.Locale" />
+            type="com.galaxy.call.repository.LocaleRepository.Locale" />
         <variable
             name="localeRepository"
             type="LocaleRepository" />

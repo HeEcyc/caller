@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.yellowmood.caller.ui.main.MainViewModel" />
+            type="com.galaxy.call.ui.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:name="com.yellowmood.caller.ui.home.HomeFragment"/>
+                android:name="com.galaxy.call.ui.home.HomeFragment"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintDimensionRatio="360:50"
-                    android:name="com.yellowmood.caller.ui.main.NavigationFragment"/>
+                    android:name="com.galaxy.call.ui.main.NavigationFragment"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
