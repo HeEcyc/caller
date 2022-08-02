@@ -32,4 +32,7 @@
     <string name="end_to_end_encryption">Penyulitan Hujung ke Hujung</string>
     <string name="call">Panggil...</string>
     <string name="choose_a_sim_card">Pilih kad SIM</string>
+    <string name="let_s_get_started">Mari kita mulakan!</string>
+    <string name="your">awak</string>
+    <string name="theme_applied">Tema digunakan!</string>
 </resources>

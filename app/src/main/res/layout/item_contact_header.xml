@@ -18,8 +18,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintWidth_percent="0.8388888888"
-            app:layout_constraintDimensionRatio="302:63"
+            app:layout_constraintWidth_percent="0.8333"
+            app:layout_constraintDimensionRatio="300:71"
             android:orientation="vertical">
 
             <Space
@@ -30,26 +30,31 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="32"
+                android:layout_weight="26"
                 android:gravity="center_vertical"
                 app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="30sp"
+                app:autoSizeMaxTextSize="22sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#353131"
-                android:fontFamily="@font/noto_sans_medium"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/roboto_bold"
                 android:textAllCaps="true"
                 android:text='@{"" + item.c}'/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="#353131"/>
+                android:background="#FFFFFF"/>
 
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="10"/>
+                android:layout_weight="20"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,4 +32,7 @@
     <string name="end_to_end_encryption">Criptare end-to-end</string>
     <string name="call">Apel...</string>
     <string name="choose_a_sim_card">Alegeți o cartelă SIM</string>
+    <string name="let_s_get_started">Să începem!</string>
+    <string name="your">Ta</string>
+    <string name="theme_applied">Tema aplicată!</string>
 </resources>

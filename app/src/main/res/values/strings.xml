@@ -33,4 +33,6 @@
     <string name="call">Call...</string>
     <string name="choose_a_sim_card">Choose a SIM card</string>
     <string name="let_s_get_started">Let’s get started!</string>
+    <string name="your">Your</string>
+    <string name="theme_applied">Theme applied!</string>
 </resources>

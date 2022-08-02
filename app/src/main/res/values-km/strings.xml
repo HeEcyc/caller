@@ -32,4 +32,7 @@
     <string name="end_to_end_encryption">ការអ៊ិនគ្រីបពីចុងដល់ចប់</string>
     <string name="call">ហៅ...</string>
     <string name="choose_a_sim_card">ជ្រើសរើសស៊ីមកាត</string>
+    <string name="let_s_get_started">តោះ​ចាប់ផ្តើម!</string>
+    <string name="your">របស់អ្នក។</string>
+    <string name="theme_applied">បានអនុវត្តប្រធានបទ!</string>
 </resources>

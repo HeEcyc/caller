@@ -32,4 +32,7 @@
     <string name="end_to_end_encryption">Mã hóa đầu cuối</string>
     <string name="call">Cuộc gọi...</string>
     <string name="choose_a_sim_card">Chọn một thẻ SIM</string>
+    <string name="let_s_get_started">Bắt đầu nào!</string>
+    <string name="your">Của bạn</string>
+    <string name="theme_applied">Đã áp dụng chủ đề!</string>
 </resources>

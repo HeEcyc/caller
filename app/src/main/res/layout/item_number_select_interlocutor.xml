@@ -10,13 +10,15 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:clipChildren="false">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="332:40">
+            app:layout_constraintDimensionRatio="325:40"
+            android:clipChildren="false">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="0dp"
@@ -25,15 +27,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="185.27:20"
+                app:layout_constraintDimensionRatio="198.27:20"
                 app:layout_constraintHeight_percent="0.5"
-                app:layout_constraintHorizontal_bias="0.27260955555"
+                app:layout_constraintHorizontal_bias="0.244"
                 android:gravity="center_vertical"
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="18sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#000000"
-                android:fontFamily="@font/noto_sans_regular"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/roboto_regular"
                 android:text="@{item.number}"/>
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -43,10 +45,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintDimensionRatio="26.46:25.26"
-                app:layout_constraintHeight_percent="0.6315"
-                app:layout_constraintHorizontal_bias="0.8682"
-                android:src="@drawable/ic_selected"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintHeight_percent="1.175"
+                app:layout_constraintHorizontal_bias="0.907"
+                android:src="@mipmap/ic_selected"
                 visibleIf="@{item.isSelected}"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

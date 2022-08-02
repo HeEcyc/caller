@@ -21,16 +21,16 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="340:371"
-                app:layout_constraintWidth_percent="0.94444"
+                app:layout_constraintDimensionRatio="325:432"
+                app:layout_constraintWidth_percent="0.9027777777"
                 app:scale_by="byWidth"
-                app:scalable_corner_radius="0.12647"
+                app:scalable_corner_radius="0.1046"
                 app:cardBackgroundColor="@android:color/transparent"
                 app:cardElevation="0dp">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@android:color/white">
+                    android:background="#060C2D">
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="0dp"
@@ -38,10 +38,9 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="1:1"
-                        app:layout_constraintWidth_percent="0.394"
-                        app:layout_constraintVertical_bias="0.075949"
+                        app:layout_constraintDimensionRatio="213:245"
+                        app:layout_constraintWidth_percent="0.6553846"
+                        app:layout_constraintVertical_bias="0.08556"
                         android:src="@mipmap/img_permission"/>
 
                     <androidx.appcompat.widget.AppCompatImageView
@@ -52,10 +51,10 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="13.72:13.71"
-                        app:layout_constraintWidth_percent="0.04035294"
-                        app:layout_constraintVertical_bias="0.0843596"
-                        app:layout_constraintHorizontal_bias="0.9076"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintWidth_percent="0.083"
+                        app:layout_constraintVertical_bias="0.04938"
+                        app:layout_constraintHorizontal_bias="0.9328859"
                         android:src="@drawable/ic_close"/>
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -65,15 +64,16 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="316:44"
-                        app:layout_constraintWidth_percent="0.9294"
-                        app:layout_constraintVertical_bias="0.52599"
-                        android:gravity="center"
+                        app:layout_constraintDimensionRatio="204:78"
+                        app:layout_constraintWidth_percent="0.6276923"
+                        app:layout_constraintVertical_bias="0.474576"
+                        app:layout_constraintHorizontal_bias="0.8842975"
+                        android:gravity="center_vertical|end"
                         app:autoSizeTextType="uniform"
-                        app:autoSizeMaxTextSize="20sp"
+                        app:autoSizeMaxTextSize="22sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#353131"
-                        android:fontFamily="@font/noto_sans_medium"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/roboto_bold"
                         android:text="@string/give_permissions_needed_to_show_the_call_screen"/>
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -84,15 +84,15 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="299:41"
-                        app:layout_constraintWidth_percent="0.83055555"
-                        app:layout_constraintVertical_bias="0.7151515"
-                        android:gravity="center_horizontal"
+                        app:layout_constraintDimensionRatio="307:44"
+                        app:layout_constraintWidth_percent="0.9446"
+                        app:layout_constraintVertical_bias="0.7268"
+                        android:gravity="center_horizontal|top"
                         app:autoSizeTextType="uniform"
-                        app:autoSizeMaxTextSize="18sp"
+                        app:autoSizeMaxTextSize="20sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#353131"
-                        android:fontFamily="@font/noto_sans_regular"/>
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/roboto_regular"/>
 
                     <com.galaxy.call.ui.custom.ScalableCardView
                         android:id="@+id/buttonNo"
@@ -102,18 +102,18 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="100:44"
-                        app:layout_constraintWidth_percent="0.27777777"
-                        app:layout_constraintVertical_bias="0.908"
-                        app:layout_constraintHorizontal_bias="0.175"
+                        app:layout_constraintDimensionRatio="122:48"
+                        app:layout_constraintWidth_percent="0.3753846"
+                        app:layout_constraintVertical_bias="0.8958333"
+                        app:layout_constraintHorizontal_bias="0.137931"
                         app:scale_by="byHeight"
-                        app:scalable_corner_radius="0.5"
+                        app:scalable_corner_radius="0.41666666"
                         app:cardElevation="0dp"
                         app:cardBackgroundColor="@android:color/transparent">
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#F9C615">
+                            android:background="#FFFFFF">
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
@@ -121,15 +121,14 @@
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="68:20"
-                                app:layout_constraintHeight_percent="0.454545"
+                                app:layout_constraintDimensionRatio="82:26"
+                                app:layout_constraintHeight_percent="0.541666666"
                                 android:gravity="center"
                                 app:autoSizeTextType="uniform"
                                 app:autoSizeMaxTextSize="18sp"
                                 app:autoSizeMinTextSize="1sp"
-                                android:textColor="#FFFFFF"
-                                android:fontFamily="@font/noto_sans_medium"
-                                android:textAllCaps="true"
+                                android:textColor="#060C2D"
+                                android:fontFamily="@font/roboto_bold"
                                 android:text="@string/cancel"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </com.galaxy.call.ui.custom.ScalableCardView>
@@ -142,18 +141,18 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="100:44"
-                        app:layout_constraintWidth_percent="0.27777777"
-                        app:layout_constraintVertical_bias="0.908"
-                        app:layout_constraintHorizontal_bias="0.825"
+                        app:layout_constraintDimensionRatio="122:48"
+                        app:layout_constraintWidth_percent="0.3753846"
+                        app:layout_constraintVertical_bias="0.8958333"
+                        app:layout_constraintHorizontal_bias="0.862069"
                         app:scale_by="byHeight"
-                        app:scalable_corner_radius="0.5"
+                        app:scalable_corner_radius="0.41666666"
                         app:cardElevation="0dp"
                         app:cardBackgroundColor="@android:color/transparent">
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#F9C615">
+                            android:background="@android:color/white">
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
@@ -161,14 +160,14 @@
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="68:20"
-                                app:layout_constraintHeight_percent="0.454545"
+                                app:layout_constraintDimensionRatio="82:26"
+                                app:layout_constraintHeight_percent="0.541666666"
                                 android:gravity="center"
                                 app:autoSizeTextType="uniform"
                                 app:autoSizeMaxTextSize="18sp"
                                 app:autoSizeMinTextSize="1sp"
-                                android:textColor="#FFFFFF"
-                                android:fontFamily="@font/noto_sans_medium"
+                                android:textColor="#060C2D"
+                                android:fontFamily="@font/roboto_bold"
                                 android:textAllCaps="true"
                                 android:text="@string/ok"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>

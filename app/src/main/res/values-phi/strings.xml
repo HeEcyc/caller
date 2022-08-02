@@ -32,4 +32,7 @@
     <string name="end_to_end_encryption">End-to-End Encryption</string>
     <string name="call">Tumawag...</string>
     <string name="choose_a_sim_card">Pumili ng SIM card</string>
+    <string name="let_s_get_started">Magsimula na tayo!</string>
+    <string name="your">Iyong</string>
+    <string name="theme_applied">Inilapat ang tema!</string>
 </resources>

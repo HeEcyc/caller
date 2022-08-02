@@ -25,7 +25,8 @@ class NumberDialog : BaseDialog<NumberDialogBinding>(R.layout.number_dialog) {
     }
 
     override fun setupUI() {
-        Glide.with(App.instance).load(contact.photoThumbnailUri).into(binding.avatar)
+        if (contact.photoThumbnailUri !== null)
+            Glide.with(App.instance).load(contact.photoThumbnailUri).into(binding.avatar)
         binding.name.text = contact.contactName
         binding.rv.adapter = NumberAdapter { selected ->
             binding.rv.adapter!!.let { it as NumberAdapter }.getData().forEach {

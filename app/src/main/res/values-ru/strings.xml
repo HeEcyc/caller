@@ -32,4 +32,7 @@
     <string name="end_to_end_encryption">Сквозное шифрование</string>
     <string name="call">Звонок...</string>
     <string name="choose_a_sim_card">Выберите SIM-карту</string>
+    <string name="let_s_get_started">Начнём!</string>
+    <string name="your">Ваши</string>
+    <string name="theme_applied">Тема применена!</string>
 </resources>

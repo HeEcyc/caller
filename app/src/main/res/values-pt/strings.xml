@@ -32,4 +32,7 @@
     <string name="end_to_end_encryption">Criptografia de ponta a ponta</string>
     <string name="call">Ligar...</string>
     <string name="choose_a_sim_card">Escolha um cartão SIM</string>
+    <string name="let_s_get_started">Vamos começar!</string>
+    <string name="your">Sua</string>
+    <string name="theme_applied">Tema aplicado!</string>
 </resources>

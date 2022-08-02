@@ -22,7 +22,7 @@
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="360:65">
+                app:layout_constraintDimensionRatio="360:75">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="0dp"
@@ -31,9 +31,9 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintHeight_percent="0.6923"
-                    app:layout_constraintHorizontal_bias="0.04444"
-                    android:src="@drawable/ic_back"/>
+                    app:layout_constraintHeight_percent="0.64"
+                    app:layout_constraintHorizontal_bias="0.076923"
+                    android:src="@mipmap/ic_back"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
@@ -42,8 +42,8 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="0.246"
-                    app:layout_constraintVertical_bias="0.632653">
+                    app:layout_constraintHeight_percent="0.18666666"
+                    app:layout_constraintVertical_bias="0.704918">
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/ic_lock"
                         android:layout_width="0dp"
@@ -53,7 +53,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/lock_space"
                         app:layout_constraintDimensionRatio="9:12"
-                        app:layout_constraintHeight_percent="0.75"
+                        app:layout_constraintHeight_percent="0.857"
                         android:src="@drawable/ic_lock"/>
                     <android.widget.Space
                         android:id="@+id/lock_space"
@@ -61,7 +61,7 @@
                         android:layout_height="match_parent"
                         app:layout_constraintStart_toEndOf="@id/ic_lock"
                         app:layout_constraintEnd_toStartOf="@id/lock_text"
-                        app:layout_constraintDimensionRatio="3:16"/>
+                        app:layout_constraintDimensionRatio="3:14"/>
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/lock_text"
                         android:layout_width="wrap_content"
@@ -70,10 +70,10 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         android:gravity="center"
                         app:autoSizeTextType="uniform"
-                        app:autoSizeMaxTextSize="14sp"
+                        app:autoSizeMaxTextSize="12sp"
                         app:autoSizeMinTextSize="1sp"
                         android:textColor="#FFFFFF"
-                        android:fontFamily="@font/noto_sans_medium"
+                        android:fontFamily="@font/roboto_bold"
                         android:lines="1"
                         android:text="@string/end_to_end_encryption"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -93,7 +93,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="360:707">
+                app:layout_constraintDimensionRatio="360:697">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="0dp"
@@ -102,9 +102,9 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintWidth_percent="0.258333"
-                    app:layout_constraintVertical_bias="0.052117"
+                    app:layout_constraintDimensionRatio="108:107.93"
+                    app:layout_constraintWidth_percent="0.3"
+                    app:layout_constraintVertical_bias="0.0696"
                     android:background="@drawable/avatar_frame">
                     <com.galaxy.call.ui.custom.ScalableCardView
                         android:layout_width="0dp"
@@ -114,10 +114,10 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintDimensionRatio="1:1"
-                        app:layout_constraintWidth_percent="0.9486"
+                        app:layout_constraintWidth_percent="0.7924"
                         app:cardBackgroundColor="@android:color/transparent"
                         app:cardElevation="0dp"
-                        app:scalable_corner_radius="0.277148">
+                        app:scalable_corner_radius="0.5">
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/contactPicture"
                             android:layout_width="match_parent"
@@ -134,15 +134,15 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="332:28"
+                    app:layout_constraintDimensionRatio="332:42"
                     app:layout_constraintWidth_percent="0.9222"
-                    app:layout_constraintVertical_bias="0.234"
+                    app:layout_constraintVertical_bias="0.25496"
                     android:gravity="center"
                     app:autoSizeTextType="uniform"
-                    app:autoSizeMaxTextSize="26sp"
+                    app:autoSizeMaxTextSize="40sp"
                     app:autoSizeMinTextSize="1sp"
-                    android:textColor="#FFFFFF"
-                    android:fontFamily="@font/noto_sans_bold"
+                    android:textColor="#060C2D"
+                    android:fontFamily="@font/roboto_bold"
                     android:lines="1"
                     android:text="@{viewModel.contact.contactName}"/>
 
@@ -153,15 +153,15 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="332:22"
+                    app:layout_constraintDimensionRatio="332:28"
                     app:layout_constraintWidth_percent="0.9222"
-                    app:layout_constraintVertical_bias="0.29343"
+                    app:layout_constraintVertical_bias="0.3348281"
                     android:gravity="center"
                     app:autoSizeTextType="uniform"
-                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMaxTextSize="26sp"
                     app:autoSizeMinTextSize="1sp"
-                    android:textColor="#FFFFFF"
-                    android:fontFamily="@font/noto_sans_medium"
+                    android:textColor="#060C2D"
+                    android:fontFamily="@font/roboto_bold"
                     android:text="@{viewModel.contact.contactNumber}"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -184,21 +184,21 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="258:162"
-                    app:layout_constraintWidth_percent="0.71666666"
-                    app:layout_constraintVertical_bias="0.50275"
+                    app:layout_constraintDimensionRatio="247.18:159.04"
+                    app:layout_constraintWidth_percent="0.6866111"
+                    app:layout_constraintVertical_bias="0.5575"
                     android:orientation="vertical">
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="66"
+                        android:layout_weight="69.09"
                         android:orientation="horizontal">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="66"
-                            android:background="@{viewModel.isSpeakerModeOn ? @drawable/call_button_bg_active : @drawable/call_button_bg}"
+                            android:layout_weight="69.09"
+                            android:foreground="@{viewModel.isSpeakerModeOn ? @drawable/call_button_bg_active : @drawable/call_button_bg}"
                             android:onClick="@{(_) -> viewModel.toggleCallType()}">
                             <androidx.appcompat.widget.AppCompatImageView
                                 android:layout_width="0dp"
@@ -207,21 +207,21 @@
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="1:1"
-                                app:layout_constraintWidth_percent="0.696969"
+                                app:layout_constraintDimensionRatio="59.85:47.88"
+                                app:layout_constraintWidth_percent="0.86626"
                                 android:src="@drawable/ic_speaker"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <android.widget.Space
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="30"/>
+                            android:layout_weight="20"/>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/buttonKeys"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="66"
+                            android:layout_weight="69.09"
                             android:background="@drawable/call_button_bg">
                             <androidx.appcompat.widget.AppCompatImageView
                                 android:layout_width="0dp"
@@ -230,21 +230,21 @@
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="32.33:44"
-                                app:layout_constraintWidth_percent="0.489848484"
+                                app:layout_constraintDimensionRatio="32.54:44.47"
+                                app:layout_constraintWidth_percent="0.47"
                                 android:src="@drawable/ic_keyboard"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <android.widget.Space
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="30"/>
+                            android:layout_weight="20"/>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="66"
-                            android:background="@{viewModel.isMuteOn ? @drawable/call_button_bg_active : @drawable/call_button_bg}"
+                            android:layout_weight="69.09"
+                            android:foreground="@{viewModel.isMuteOn ? @drawable/call_button_bg_active : @drawable/call_button_bg}"
                             android:onClick="@{(_) -> viewModel.onMuteClick()}">
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:layout_width="0dp"
@@ -254,7 +254,7 @@
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintDimensionRatio="1:1"
-                                    app:layout_constraintWidth_percent="0.636363"
+                                    app:layout_constraintWidth_percent="0.719641"
                                     android:src="@drawable/ic_mute"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -262,17 +262,17 @@
                     <android.widget.Space
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="30"/>
+                        android:layout_weight="20.92"/>
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="66"
+                        android:layout_weight="69.09"
                         android:orientation="horizontal">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="66"
+                            android:layout_weight="69.09"
                             android:background="@drawable/call_button_bg"
                             android:onClick="@{(_) -> viewModel.onAddClick()}">
                             <androidx.appcompat.widget.AppCompatImageView
@@ -282,20 +282,20 @@
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="33:42"
-                                app:layout_constraintWidth_percent="0.5"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintWidth_percent="0.693"
                                 android:src="@drawable/ic_add_call"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <android.widget.Space
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="30"/>
+                            android:layout_weight="20"/>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="66"
+                            android:layout_weight="69.09"
                             android:background="@drawable/call_button_bg"
                             android:onClick="@{(_) -> viewModel.onSwapClick()}">
                             <androidx.appcompat.widget.AppCompatImageView
@@ -306,14 +306,14 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintDimensionRatio="1:1"
-                                app:layout_constraintWidth_percent="0.727272"
+                                app:layout_constraintWidth_percent="0.639745"
                                 android:src="@drawable/ic_swap"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <android.widget.Space
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="96"/>
+                            android:layout_weight="89"/>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -325,7 +325,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.130127"/>
+                app:layout_constraintGuide_percent="0.162"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/keyboard"
@@ -333,7 +333,7 @@
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="@id/keyboardTop"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:background="#BA2C2B2B"
+                android:background="#BD060C2D"
                 android:visibility="gone">
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -348,7 +348,7 @@
                             android:layout_height="0dp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintDimensionRatio="360:56">
+                            app:layout_constraintDimensionRatio="360:45.86226">
                             <androidx.appcompat.widget.AppCompatImageView
                                 android:id="@+id/buttonCloseKeyboard"
                                 android:layout_width="0dp"
@@ -357,9 +357,9 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintDimensionRatio="1:1"
-                                app:layout_constraintHeight_percent="0.80357"
-                                app:layout_constraintHorizontal_bias="0.064"
-                                android:src="@drawable/ic_back"/>
+                                app:layout_constraintHeight_percent="0.64"
+                                app:layout_constraintHorizontal_bias="0.076923"
+                                android:src="@mipmap/ic_back"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -374,7 +374,7 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="360:559">
+                            app:layout_constraintDimensionRatio="360:538.13774">
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="0dp"
@@ -383,15 +383,15 @@
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="332:36"
+                                app:layout_constraintDimensionRatio="332:42"
                                 app:layout_constraintWidth_percent="0.9222"
-                                app:layout_constraintVertical_bias="0.03824"
+                                app:layout_constraintVertical_bias="0.05268"
                                 android:gravity="center"
                                 app:autoSizeTextType="uniform"
-                                app:autoSizeMaxTextSize="34sp"
+                                app:autoSizeMaxTextSize="40sp"
                                 app:autoSizeMinTextSize="1sp"
                                 android:textColor="#FFFFFF"
-                                android:fontFamily="@font/noto_sans_bold"
+                                android:fontFamily="@font/roboto_bold"
                                 android:lines="1"
                                 android:ellipsize="start"
                                 android:text="@{viewModel.dialCache}"/>
@@ -401,7 +401,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                app:layout_constraintGuide_percent="0.1395"/>
+                                app:layout_constraintGuide_percent="0.182365467"/>
 
                             <androidx.recyclerview.widget.RecyclerView
                                 android:layout_width="0dp"
@@ -409,7 +409,7 @@
                                 app:layout_constraintTop_toTopOf="@id/marker"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintWidth_percent="0.71666666"
+                                app:layout_constraintWidth_percent="0.73582"
                                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                                 app:spanCount="3"
                                 android:overScrollMode="never"

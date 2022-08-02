@@ -1,8 +1,6 @@
 package com.galaxy.call.ui.dial.fragment
 
-import android.graphics.Color
 import androidx.databinding.ObservableField
-import com.galaxy.call.R
 import com.galaxy.call.base.BaseViewModel
 import com.galaxy.call.repository.PermissionRepository
 
@@ -11,11 +9,7 @@ class DialViewModel(
 ) : BaseViewModel() {
 
     val text = ObservableField("")
-    val adapter = DialAdapter(
-        ::onButtonClick,
-        R.drawable.dial_button_dial_fragment,
-        Color.parseColor("#353131")
-    )
+    val adapter = DialAdapter(::onButtonClick)
 
     var onButtonClickAdditional: (String) -> Unit = {}
 

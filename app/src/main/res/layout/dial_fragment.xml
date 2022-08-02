@@ -8,23 +8,90 @@
             type="com.galaxy.call.ui.dial.fragment.DialViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/white">
+        android:background="#060C2D"
+        android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="wrap_content">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="360:85">
+                app:layout_constraintDimensionRatio="360:75">
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/buttonBack"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintHeight_percent="0.64"
+                    app:layout_constraintHorizontal_bias="0.076923"
+                    android:src="@mipmap/ic_back"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="360:697">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="332:42"
+                    app:layout_constraintWidth_percent="0.9222"
+                    app:layout_constraintVertical_bias="0.112977"
+                    android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="40sp"
+                    app:autoSizeMinTextSize="1sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/roboto_bold"
+                    android:singleLine="true"
+                    android:lines="1"
+                    android:ellipsize="start"
+                    android:text="@{viewModel.text}"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="360:551">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintWidth_percent="0.6111"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="3"
+                        android:overScrollMode="never"
+                        android:scrollbars="none"
+                        android:adapter="@{viewModel.adapter}"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/buttonCall"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     app:layout_constraintTop_toTopOf="parent"
@@ -32,90 +99,27 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintHeight_percent="0.5294"
-                    app:layout_constraintHorizontal_bias="0.04444"
-                    android:src="@drawable/ic_back"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                    app:layout_constraintWidth_percent="0.1666666"
+                    app:layout_constraintVertical_bias="0.747"
+                    android:src="@drawable/button_call"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="360:772">
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="332:38"
-                app:layout_constraintWidth_percent="0.9222"
-                app:layout_constraintVertical_bias="0.1702997"
-                android:gravity="center"
-                app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="36sp"
-                app:autoSizeMinTextSize="1sp"
-                android:textColor="#353131"
-                android:fontFamily="@font/noto_sans_medium"
-                android:singleLine="true"
-                android:lines="1"
-                android:ellipsize="start"
-                android:text="@{viewModel.text}"/>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="360:569">
-                <androidx.recyclerview.widget.RecyclerView
+                <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintWidth_percent="0.71666666"
-                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                    app:spanCount="3"
-                    android:overScrollMode="never"
-                    android:scrollbars="none"
-                    android:adapter="@{viewModel.adapter}"/>
+                    app:layout_constraintDimensionRatio="36:27"
+                    app:layout_constraintWidth_percent="0.1"
+                    app:layout_constraintHorizontal_bias="0.7469"
+                    app:layout_constraintVertical_bias="0.73582"
+                    android:src="@drawable/ic_backspace"
+                    android:onClick="@{(_) -> viewModel.backspace()}"/>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/buttonCall"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintWidth_percent="0.194444"
-                app:layout_constraintVertical_bias="0.81054"
-                android:src="@drawable/button_call_dial_fragment"/>
-            
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintWidth_percent="0.18333"
-                app:layout_constraintHorizontal_bias="0.792517"
-                app:layout_constraintVertical_bias="0.80878"
-                android:src="@drawable/button_backspace_dial_fragment"
-                android:onClick="@{(_) -> viewModel.backspace()}"/>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </layout>

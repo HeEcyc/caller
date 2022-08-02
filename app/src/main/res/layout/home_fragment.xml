@@ -12,232 +12,207 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:clipChildren="false">
+        android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:clipChildren="false">
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="50:722">
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="360:126"
+                android:scrollbars="none"
+                android:overScrollMode="never">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintDimensionRatio="1:1">
+                    android:orientation="horizontal">
 
-                    <View
-                        android:id="@+id/menuAnchorVertical"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="@id/sideMenu"
-                        app:layout_constraintEnd_toEndOf="@id/sideMenu"
-                        app:layout_constraintDimensionRatio="1:1"/>
-
-                    <View
-                        android:id="@+id/menuAnchorHorizontal"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintDimensionRatio="25:722"/>
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:id="@+id/sideMenu"
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="@id/menuAnchorVertical"
-                        app:layout_constraintBottom_toBottomOf="@id/menuAnchorVertical"
-                        app:layout_constraintStart_toEndOf="@id/menuAnchorHorizontal"
-                        app:layout_constraintEnd_toEndOf="@id/menuAnchorHorizontal"
-                        app:layout_constraintHeight_percent="0.0692520"
-                        android:orientation="horizontal"
-                        android:rotation="270">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <Space
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:onClick="@{(_) -> viewModel.onAllClick()}">
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHeight_percent="0.4"
-                                app:layout_constraintVertical_bias="0.4666666"
-                                android:gravity="center"
-                                app:autoSizeTextType="uniform"
-                                app:autoSizeMaxTextSize="18sp"
-                                app:autoSizeMinTextSize="1sp"
-                                android:textColor="@{viewModel.tabAll ? @color/selected : @color/unselected}"
-                                android:fontFamily="@font/noto_sans_regular"
-                                android:textAllCaps="true"
-                                android:text="@string/all"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="32:126"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="@{(_) -> viewModel.onAllClick()}">
+                        <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
-                            <Space
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="30:50"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.2063492"
+                            android:gravity="center"
+                            app:autoSizeTextType="uniform"
+                            app:autoSizeMaxTextSize="24sp"
+                            app:autoSizeMinTextSize="1sp"
+                            android:textColor="@{viewModel.tabAll ? @color/selected : @color/unselected}"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textAllCaps="true"
+                            android:text="@string/all"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <Space
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:onClick="@{(_) -> viewModel.onTopClick()}">
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHeight_percent="0.4"
-                                app:layout_constraintVertical_bias="0.4666666"
-                                android:gravity="center"
-                                app:autoSizeTextType="uniform"
-                                app:autoSizeMaxTextSize="18sp"
-                                app:autoSizeMinTextSize="1sp"
-                                android:textColor="@{viewModel.tabTop ? @color/selected : @color/unselected}"
-                                android:fontFamily="@font/noto_sans_regular"
-                                android:textAllCaps="true"
-                                android:text="@string/top"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="16:126"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="@{(_) -> viewModel.onYoursClick()}">
+                        <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
-                            <Space
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="30:50"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.2063492"
+                            android:gravity="center"
+                            app:autoSizeTextType="uniform"
+                            app:autoSizeMaxTextSize="24sp"
+                            app:autoSizeMinTextSize="1sp"
+                            android:textColor="@{viewModel.tabYours ? @color/selected : @color/unselected}"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textAllCaps="true"
+                            android:text="@string/your"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <Space
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:onClick="@{(_) -> viewModel.onNewClick()}">
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHeight_percent="0.4"
-                                app:layout_constraintVertical_bias="0.4666666"
-                                android:gravity="center"
-                                app:autoSizeTextType="uniform"
-                                app:autoSizeMaxTextSize="18sp"
-                                app:autoSizeMinTextSize="1sp"
-                                android:textColor="@{viewModel.tabNew ? @color/selected : @color/unselected}"
-                                android:fontFamily="@font/noto_sans_regular"
-                                android:textAllCaps="true"
-                                android:text="@string/s_new"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="17:126"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="@{(_) -> viewModel.onNewClick()}">
+                        <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
-                            <Space
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="30:50"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.2063492"
+                            android:gravity="center"
+                            app:autoSizeTextType="uniform"
+                            app:autoSizeMaxTextSize="24sp"
+                            app:autoSizeMinTextSize="1sp"
+                            android:textColor="@{viewModel.tabNew ? @color/selected : @color/unselected}"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textAllCaps="true"
+                            android:text="@string/s_new"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <Space
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:onClick="@{(_) -> viewModel.onPopularClick()}">
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHeight_percent="0.4"
-                                app:layout_constraintVertical_bias="0.4666666"
-                                android:gravity="center"
-                                app:autoSizeTextType="uniform"
-                                app:autoSizeMaxTextSize="18sp"
-                                app:autoSizeMinTextSize="1sp"
-                                android:textColor="@{viewModel.tabPopular ? @color/selected : @color/unselected}"
-                                android:fontFamily="@font/noto_sans_regular"
-                                android:textAllCaps="true"
-                                android:text="@string/popular"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="20:126"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="@{(_) -> viewModel.onTopClick()}">
+                        <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
-                            <Space
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="30:50"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.2063492"
+                            android:gravity="center"
+                            app:autoSizeTextType="uniform"
+                            app:autoSizeMaxTextSize="24sp"
+                            app:autoSizeMinTextSize="1sp"
+                            android:textColor="@{viewModel.tabTop ? @color/selected : @color/unselected}"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textAllCaps="true"
+                            android:text="@string/top"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <Space
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:onClick="@{(_) -> viewModel.onYoursClick()}">
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHeight_percent="0.4"
-                                app:layout_constraintVertical_bias="0.4666666"
-                                android:gravity="center"
-                                app:autoSizeTextType="uniform"
-                                app:autoSizeMaxTextSize="18sp"
-                                app:autoSizeMinTextSize="1sp"
-                                android:textColor="@{viewModel.tabYours ? @color/selected : @color/unselected}"
-                                android:fontFamily="@font/noto_sans_regular"
-                                android:textAllCaps="true"
-                                android:text="@string/add_yours"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="20:126"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="@{(_) -> viewModel.onPopularClick()}">
+                        <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
-                            <Space
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="50:50"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.2063492"
+                            android:gravity="center"
+                            app:autoSizeTextType="uniform"
+                            app:autoSizeMaxTextSize="24sp"
+                            app:autoSizeMinTextSize="1sp"
+                            android:textColor="@{viewModel.tabPopular ? @color/selected : @color/unselected}"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textAllCaps="true"
+                            android:text="@string/popular"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="32:126"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </HorizontalScrollView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.core.widget.NestedScrollView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:scrollbars="none"
             android:overScrollMode="never">
@@ -266,7 +241,7 @@
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="310:172">
+                        app:layout_constraintDimensionRatio="360:190">
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/buttonAdd"
@@ -275,9 +250,9 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="1:1"
-                            app:layout_constraintHeight_percent="0.7093"
-                            android:src="@drawable/button_add"/>
+                            app:layout_constraintDimensionRatio="160.02:159.99"
+                            app:layout_constraintHeight_percent="0.842"
+                            android:src="@mipmap/button_add"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -292,17 +267,6 @@
                     android:overScrollMode="never"
                     android:scrollbars="none"
                     android:orientation="vertical"/>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="310:42"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.core.widget.NestedScrollView>

@@ -32,4 +32,7 @@
     <string name="end_to_end_encryption">التشفير التام بين الأطراف</string>
     <string name="call">مكالمة...</string>
     <string name="choose_a_sim_card">اختر بطاقة SIM </string>
+    <string name="let_s_get_started">هيا بنا نبدأ!</string>
+    <string name="your">لك</string>
+    <string name="theme_applied">تم تطبيق الموضوع!</string>
 </resources>

@@ -32,4 +32,7 @@
     <string name="end_to_end_encryption">Encriptado de fin a fin</string>
     <string name="call">Llamar...</string>
     <string name="choose_a_sim_card">Elige una tarjeta SIM</string>
+    <string name="let_s_get_started">¡Empecemos!</string>
+    <string name="your">Su</string>
+    <string name="theme_applied">¡Tema aplicado!</string>
 </resources>
