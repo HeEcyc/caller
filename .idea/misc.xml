@@ -5,15 +5,27 @@
       <map>
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/avatar_frame.xml" value="0.254" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/avatar_placeholder.xml" value="0.254" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/button_accept.xml" value="0.254" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/button_add.xml" value="0.254" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/button_backspace_dial_fragment.xml" value="0.254" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/button_call.xml" value="0.254" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/button_call_dial_fragment.xml" value="0.254" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/button_decline.xml" value="0.254" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/button_hangup.xml" value="0.254" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/button_lets_go.xml" value="0.254" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/call_button_bg.xml" value="0.254" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/call_button_bg_active.xml" value="0.254" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/dial_button.xml" value="0.254" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/dial_button_call_fragment.xml" value="0.254" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/dial_button_fragment.xml" value="0.254" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/greeting_bg.xml" value="0.254" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/ic__________.xml" value="0.254" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/ic_add_call.xml" value="0.254" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/ic_back.xml" value="0.254" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/ic_backspace.xml" value="0.254" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/ic_close.xml" value="0.254" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/ic_contacts.xml" value="0.253" />
+        <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/ic_home_selected.xml" value="0.254" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/ic_keyboard.xml" value="0.254" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/ic_launcher_background.xml" value="0.254" />
         <entry key="..\:/Programs/AndroidStudioProjects/megacall/app/src/main/res/drawable/ic_option.xml" value="0.254" />
