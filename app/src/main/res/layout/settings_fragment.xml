@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.galaxy.call.repository.LocaleRepository.Locale"/>
+        <import type="com.fantasy.call.repository.LocaleRepository.Locale"/>
         <variable
             name="viewModel"
-            type="com.galaxy.call.ui.settings.SettingsViewModel" />
+            type="com.fantasy.call.ui.settings.SettingsViewModel" />
     </data>
 
     <ScrollView

@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.galaxy.call.ui.dial.fragment.DialViewModel" />
+            type="com.fantasy.call.ui.dial.fragment.DialViewModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
