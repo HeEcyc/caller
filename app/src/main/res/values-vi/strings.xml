@@ -2,8 +2,6 @@
 <resources>
     <string name="all">Tất cả các</string>
     <string name="top">Đứng đầu</string>
-    <string name="s_new">Mới</string>
-    <string name="popular">Nổi tiếng</string>
     <string name="permissionPhoneDescription">Đặt ứng dụng làm ứng dụng điện thoại mặc định của bạn</string>
     <string name="permissionContactsDescription">Cho phép ứng dụng truy cập danh bạ của bạn</string>
     <string name="permissionOverlayDescription">Cho phép hiển thị trên ứng dụng khác</string>
@@ -20,17 +18,12 @@
     <string name="privacy_policy">Chính sách bảo mật</string>
     <string name="language">Ngôn ngữ</string>
     <string name="contacts">Liên lạc</string>
-    <string name="type_something">Gõ một cái gì đó</string>
     <string name="apply_to_selected">Áp dụng cho Đã chọn</string>
     <string name="apply_to_all">Áp dụng cho tất cả</string>
     <string name="apply">Ứng dụng</string>
     <string name="choose_a_contact_number">Chọn một số liên lạc</string>
     <string name="calling">Đang gọi ...</string>
-    <string name="end_to_end_encryption">Mã hóa đầu cuối</string>
-    <string name="call">Cuộc gọi...</string>
     <string name="choose_a_sim_card">Chọn một thẻ SIM</string>
-    <string name="let_s_get_started">Bắt đầu nào!</string>
-    <string name="your">Của bạn</string>
     <string name="theme_applied">Đã áp dụng chủ đề</string>
     <string name="best_call_themes_for_you">Chủ đề cuộc gọi tốt nhất cho bạn</string>
     <string name="start">Bắt đầu</string>

@@ -2,8 +2,6 @@
 <resources>
     <string name="all">Herşey</string>
     <string name="top">Tepe</string>
-    <string name="s_new">Yeni</string>
-    <string name="popular">Popüler</string>
     <string name="permissionPhoneDescription">Uygulamayı varsayılan telefon uygulamanız olarak ayarlayın</string>
     <string name="permissionContactsDescription">Uygulamanın kişilerinize erişmesine izin verin</string>
     <string name="permissionOverlayDescription">Diğer uygulama üzerinde görüntülemeye izin ver</string>
@@ -20,17 +18,12 @@
     <string name="privacy_policy">Gizlilik Politikası</string>
     <string name="language">Dil</string>
     <string name="contacts">Kişiler</string>
-    <string name="type_something">Birşeyler yaz</string>
     <string name="apply_to_selected">Seçilenlere Uygula</string>
     <string name="apply_to_all">Hepsine başvur</string>
     <string name="apply">Uygulamak</string>
     <string name="choose_a_contact_number">Bir iletişim numarası seçin</string>
     <string name="calling">arıyor...</string>
-    <string name="end_to_end_encryption">Uçtan Uca Şifreleme</string>
-    <string name="call">Telefon etmek...</string>
     <string name="choose_a_sim_card">Bir SIM kart seçin</string>
-    <string name="let_s_get_started">Başlayalım!</string>
-    <string name="your">Senin</string>
     <string name="theme_applied">Tema uygulandı</string>
     <string name="best_call_themes_for_you">Sizin için en iyi çağrı temaları</string>
     <string name="start">Başlama</string>

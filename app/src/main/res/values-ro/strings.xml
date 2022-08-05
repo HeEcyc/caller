@@ -2,8 +2,6 @@
 <resources>
     <string name="all">Toate</string>
     <string name="top">Top</string>
-    <string name="s_new">Nou</string>
-    <string name="popular">Popular</string>
     <string name="permissionPhoneDescription">Setați aplicația ca aplicație implicită pentru telefon</string>
     <string name="permissionContactsDescription">Permiteți aplicației să vă acceseze contactele</string>
     <string name="permissionOverlayDescription">Permite afișarea peste altă aplicație</string>
@@ -20,17 +18,12 @@
     <string name="privacy_policy">Politica de Confidențialitate</string>
     <string name="language">Limba</string>
     <string name="contacts">Contacte</string>
-    <string name="type_something">Scrie ceva</string>
     <string name="apply_to_selected">Aplicați la selectat</string>
     <string name="apply_to_all">Aplica la toate</string>
     <string name="apply">aplica</string>
     <string name="choose_a_contact_number">Alegeți un număr de contact</string>
     <string name="calling">Apelând...</string>
-    <string name="end_to_end_encryption">Criptare end-to-end</string>
-    <string name="call">Apel...</string>
     <string name="choose_a_sim_card">Alegeți o cartelă SIM</string>
-    <string name="let_s_get_started">Să începem!</string>
-    <string name="your">Ta</string>
     <string name="theme_applied">Tema aplicată</string>
     <string name="best_call_themes_for_you">Cele mai bune teme de apel pentru tine</string>
     <string name="start">start</string>

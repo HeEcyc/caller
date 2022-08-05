@@ -2,8 +2,6 @@
 <resources>
     <string name="all">Все</string>
     <string name="top">Лучшие</string>
-    <string name="s_new">Новые</string>
-    <string name="popular">Популярные</string>
     <string name="permissionPhoneDescription">Сделайте приложение телефоном по умолчанию</string>
     <string name="permissionContactsDescription">Дайти приложению доступ к контактам</string>
     <string name="permissionOverlayDescription">Разрешите показ поверх других приложений</string>
@@ -20,17 +18,12 @@
     <string name="privacy_policy">Политика конфиденциальности</string>
     <string name="language">Язык</string>
     <string name="contacts">Контакты</string>
-    <string name="type_something">Напишите  что-нибудь</string>
     <string name="apply_to_selected">Применить к выбранным</string>
     <string name="apply_to_all">Применить ко всем</string>
     <string name="apply">Применить</string>
     <string name="choose_a_contact_number">Выберите номер</string>
     <string name="calling">Звонит...</string>
-    <string name="end_to_end_encryption">Сквозное шифрование</string>
-    <string name="call">Звонок...</string>
     <string name="choose_a_sim_card">Выберите SIM-карту</string>
-    <string name="let_s_get_started">Начнём!</string>
-    <string name="your">Ваши</string>
     <string name="theme_applied">Тема применена</string>
     <string name="best_call_themes_for_you">Лучшие темы для тебя</string>
     <string name="start">Начать</string>
