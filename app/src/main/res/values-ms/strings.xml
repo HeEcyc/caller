@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="get_started">Mulakan</string>
     <string name="all">Semua</string>
     <string name="top">Atas</string>
     <string name="s_new">Baru</string>
     <string name="popular">Popular</string>
-    <string name="add_yours">Tambah Milik Anda</string>
     <string name="permissionPhoneDescription">Tetapkan aplikasi sebagai apl telefon lalai anda</string>
     <string name="permissionContactsDescription">Benarkan aplikasi mengakses kenalan anda</string>
     <string name="permissionOverlayDescription">Benarkan paparan di atas apl lain</string>
@@ -26,7 +24,6 @@
     <string name="apply_to_selected">Mohon kepada Terpilih</string>
     <string name="apply_to_all">Terpakai kepada semua</string>
     <string name="apply">Mohon</string>
-    <string name="applied">Digunakan</string>
     <string name="choose_a_contact_number">Pilih nombor kenalan</string>
     <string name="calling">Memanggil...</string>
     <string name="end_to_end_encryption">Penyulitan Hujung ke Hujung</string>
@@ -34,5 +31,11 @@
     <string name="choose_a_sim_card">Pilih kad SIM</string>
     <string name="let_s_get_started">Mari kita mulakan!</string>
     <string name="your">awak</string>
-    <string name="theme_applied">Tema digunakan!</string>
+    <string name="theme_applied">Tema digunakan</string>
+    <string name="best_call_themes_for_you">Tema panggilan terbaik untuk anda</string>
+    <string name="start">Mulakan</string>
+    <string name="add_yours">Tambah Milik Anda</string>
+    <string name="cute">comel</string>
+    <string name="recommended">Disyorkan</string>
+    <string name="write_there">tulis di sana...</string>
 </resources>

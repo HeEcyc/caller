@@ -5,6 +5,7 @@ import android.telecom.PhoneAccountHandle
 import androidx.databinding.ObservableField
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.fantasy.call.R
 import com.gjiazhe.panoramaimageview.GyroscopeObserver
 import com.fantasy.call.base.BaseViewModel
 import com.fantasy.call.model.contact.UserContact
@@ -80,7 +81,10 @@ class CallViewModel(
 
     val gyroscopeObserver = GyroscopeObserver().apply { setMaxRotateRadian(Math.PI / 2.5) }
 
-    val dialAdapter = DialAdapter(::onDialButtonClick)
+    val dialAdapter = DialAdapter(
+        ::onDialButtonClick,
+        R.drawable.dial_button_call_fragment
+    )
     val dialCache = ObservableField("")
 
     init {

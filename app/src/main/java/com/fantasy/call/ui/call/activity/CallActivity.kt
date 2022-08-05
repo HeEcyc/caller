@@ -8,6 +8,7 @@ import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.lifecycle.MutableLiveData
+import com.bumptech.glide.manager.SupportRequestManagerFragment
 import com.fantasy.call.R
 import com.fantasy.call.base.BaseActivity
 import com.fantasy.call.databinding.CallActivityBinding

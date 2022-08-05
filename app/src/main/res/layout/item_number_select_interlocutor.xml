@@ -17,7 +17,7 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="325:40"
+            app:layout_constraintDimensionRatio="332:39"
             android:clipChildren="false">
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -27,14 +27,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="198.27:20"
-                app:layout_constraintHeight_percent="0.5"
-                app:layout_constraintHorizontal_bias="0.244"
+                app:layout_constraintDimensionRatio="216:22"
+                app:layout_constraintHeight_percent="0.5641"
+                app:layout_constraintHorizontal_bias="0.2729"
                 android:gravity="center_vertical"
                 app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="18sp"
+                app:autoSizeMaxTextSize="20sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#FFFFFF"
+                android:textColor="#0A2825"
                 android:fontFamily="@font/roboto_regular"
                 android:text="@{item.number}"/>
 
@@ -46,9 +46,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintHeight_percent="1.175"
-                app:layout_constraintHorizontal_bias="0.907"
-                android:src="@mipmap/ic_selected"
+                app:layout_constraintHeight_percent="0.8205"
+                app:layout_constraintHorizontal_bias="0.9219"
+                android:src="@drawable/ic_selected"
                 visibleIf="@{item.isSelected}"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

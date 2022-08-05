@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#060C2D">
+        android:background="#FFFFFF">
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -19,79 +19,49 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="360:63"
+            app:layout_constraintDimensionRatio="360:66"
             android:orientation="horizontal">
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="52.99"/>
+                android:layout_weight="25"/>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="63"
-                android:onClick="@{(_) -> viewModel.onContactsClick()}">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintWidth_percent="0.4463492"
-                    android:src="@{viewModel.contactsOpen ? @drawable/ic_contacts_selected : @drawable/ic_contacts}"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_weight="66"
+                android:onClick="@{(_) -> viewModel.onContactsClick()}"
+                android:src="@{viewModel.contactsOpen ? @drawable/ic_contacts_selected : @drawable/ic_contacts}"/>
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="32.51"/>
+                android:layout_weight="56"/>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="63"
-                android:onClick="@{(_) -> viewModel.onHomeClick()}">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="29.45:28.1"
-                    app:layout_constraintWidth_percent="0.46746"
-                    android:src="@{viewModel.homeOpen ? @drawable/ic_home_selected : @drawable/ic_home}"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_weight="66"
+                android:onClick="@{(_) -> viewModel.onHomeClick()}"
+                android:src="@{viewModel.homeOpen ? @drawable/ic_home_selected : @drawable/ic_home}"/>
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="32.51"/>
+                android:layout_weight="56"/>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="63"
-                android:onClick="@{(_) -> viewModel.onSettingsClick()}">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="29.46:25.44"
-                    app:layout_constraintWidth_percent="0.467619"
-                    android:src="@{viewModel.settingsOpen ? @drawable/ic_options_selected : @drawable/ic_options}"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_weight="66"
+                android:onClick="@{(_) -> viewModel.onSettingsClick()}"
+                android:src="@{viewModel.settingsOpen ? @drawable/ic_options_selected : @drawable/ic_options}"/>
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="52.99"/>
+                android:layout_weight="25"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.fantasy.call.ui.dial.fragment
 
 import androidx.databinding.ObservableField
+import com.fantasy.call.R
 import com.fantasy.call.base.BaseViewModel
 import com.fantasy.call.repository.PermissionRepository
 
@@ -9,7 +10,10 @@ class DialViewModel(
 ) : BaseViewModel() {
 
     val text = ObservableField("")
-    val adapter = DialAdapter(::onButtonClick)
+    val adapter = DialAdapter(
+        ::onButtonClick,
+        R.drawable.dial_button_dial_fragment
+    )
 
     var onButtonClickAdditional: (String) -> Unit = {}
 

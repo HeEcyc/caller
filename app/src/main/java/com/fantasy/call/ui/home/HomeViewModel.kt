@@ -26,11 +26,11 @@ class HomeViewModel(
     val onThemeSelected = MutableLiveData<Theme>()
 
     val tabAll = ObservableBoolean(true)
-    val tabTop = ObservableBoolean(false)
-    val tabNew = ObservableBoolean(false)
-    val tabPopular = ObservableBoolean(false)
     val tabYours = ObservableBoolean(false)
-    private val tabs = VirtualRadioGroup(tabAll, tabTop, tabNew, tabPopular, tabYours)
+    val tabTop = ObservableBoolean(false)
+    val tabCute = ObservableBoolean(false)
+    val tabRecommended = ObservableBoolean(false)
+    private val tabs = VirtualRadioGroup(tabAll, tabTop, tabCute, tabRecommended, tabYours)
 
     val adapter = ThemeAdapter(onThemeSelected::postValue)
 
@@ -52,24 +52,6 @@ class HomeViewModel(
         adapter.reloadData(presetThemes.toViewModels())
     }
 
-    fun onTopClick() {
-        if (tabTop.get()) return
-        tabs.toggleTrue(tabTop)
-        adapter.reloadData(themesTop.toViewModels())
-    }
-
-    fun onNewClick() {
-        if (tabNew.get()) return
-        tabs.toggleTrue(tabNew)
-        adapter.reloadData(themesNew.toViewModels())
-    }
-
-    fun onPopularClick() {
-        if (tabPopular.get()) return
-        tabs.toggleTrue(tabPopular)
-        adapter.reloadData(themesPopular.toViewModels())
-    }
-
     fun onYoursClick() {
         if (tabYours.get()) return
         tabs.toggleTrue(tabYours)
@@ -77,6 +59,24 @@ class HomeViewModel(
             val themes: List<Theme> = themeRepository.getCustomThemes()
             launch(Dispatchers.Main) { adapter.reloadData(themes.toViewModels()) }
         }
+    }
+
+    fun onTopClick() {
+        if (tabTop.get()) return
+        tabs.toggleTrue(tabTop)
+        adapter.reloadData(themesTop.toViewModels())
+    }
+
+    fun onCuteClick() {
+        if (tabCute.get()) return
+        tabs.toggleTrue(tabCute)
+        adapter.reloadData(themesCute.toViewModels())
+    }
+
+    fun onRecommendedClick() {
+        if (tabRecommended.get()) return
+        tabs.toggleTrue(tabRecommended)
+        adapter.reloadData(themesRecommended.toViewModels())
     }
 
     fun addNewTheme() {

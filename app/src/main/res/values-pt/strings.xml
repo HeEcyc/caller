@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="get_started">Iniciar</string>
     <string name="all">Tudo</string>
     <string name="top">Topo</string>
     <string name="s_new">Novo</string>
     <string name="popular">Popular</string>
-    <string name="add_yours">Adicione o seu</string>
     <string name="permissionPhoneDescription">Defina o aplicativo como seu aplicativo de telefone padrão</string>
     <string name="permissionContactsDescription">Permitir que o aplicativo acesse seus contatos</string>
     <string name="permissionOverlayDescription">Permitir exibição sobre outro aplicativo</string>
@@ -26,7 +24,6 @@
     <string name="apply_to_selected">Aplicar aos selecionados</string>
     <string name="apply_to_all">Aplicar a todos</string>
     <string name="apply">Aplicar</string>
-    <string name="applied">Aplicado</string>
     <string name="choose_a_contact_number">Escolha um número de contato</string>
     <string name="calling">Ligando...</string>
     <string name="end_to_end_encryption">Criptografia de ponta a ponta</string>
@@ -34,5 +31,11 @@
     <string name="choose_a_sim_card">Escolha um cartão SIM</string>
     <string name="let_s_get_started">Vamos começar!</string>
     <string name="your">Sua</string>
-    <string name="theme_applied">Tema aplicado!</string>
+    <string name="theme_applied">Tema aplicado</string>
+    <string name="best_call_themes_for_you">Melhores temas de chamada para você</string>
+    <string name="start">Começar</string>
+    <string name="add_yours">Adicione o seu</string>
+    <string name="cute">Bonitinho</string>
+    <string name="recommended">Recomendado</string>
+    <string name="write_there">Escreva aí...</string>
 </resources>

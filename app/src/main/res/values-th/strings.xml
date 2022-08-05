@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="get_started">เริ่ม</string>
     <string name="all">ทั้งหมด</string>
     <string name="top">สูงสุด</string>
     <string name="s_new">ใหม่</string>
     <string name="popular">เป็นที่นิยม</string>
-    <string name="add_yours">เพิ่มของคุณ</string>
     <string name="permissionPhoneDescription">ตั้งค่าแอปพลิเคชันเป็นแอปโทรศัพท์เริ่มต้นของคุณ</string>
     <string name="permissionContactsDescription">อนุญาตให้แอปพลิเคชันเข้าถึงผู้ติดต่อของคุณ</string>
     <string name="permissionOverlayDescription">อนุญาตให้แสดงทับแอปอื่น</string>
@@ -26,7 +24,6 @@
     <string name="apply_to_selected">นำไปใช้กับที่เลือก</string>
     <string name="apply_to_all">นำไปใช้กับทั้งหมด</string>
     <string name="apply">นำมาใช้</string>
-    <string name="applied">สมัครแล้ว</string>
     <string name="choose_a_contact_number">เลือกเบอร์ติดต่อ</string>
     <string name="calling">กำลังโทร...</string>
     <string name="end_to_end_encryption">การเข้ารหัสตั้งแต่ต้นทางถึงปลายทาง</string>
@@ -34,5 +31,11 @@
     <string name="choose_a_sim_card">เลือกซิมการ์ด</string>
     <string name="let_s_get_started">มาเริ่มกันเลย!</string>
     <string name="your">ของคุณ</string>
-    <string name="theme_applied">ใช้ธีม!</string>
+    <string name="theme_applied">ใช้ธีม</string>
+    <string name="best_call_themes_for_you">ธีมการโทรที่ดีที่สุดสำหรับคุณ</string>
+    <string name="start">เริ่ม</string>
+    <string name="add_yours">เพิ่มของคุณ</string>
+    <string name="cute">น่ารัก</string>
+    <string name="recommended">ที่แนะนำ</string>
+    <string name="write_there">เขียนที่นั่น...</string>
 </resources>

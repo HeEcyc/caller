@@ -13,109 +13,50 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintDimensionRatio="360:772">
 
-            <com.fantasy.call.ui.custom.ScalableCardView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="325:388"
-                app:layout_constraintWidth_percent="0.9027777777"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:cardElevation="0dp"
-                app:scale_by="byWidth"
-                app:scalable_corner_radius="0.1046">
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#060C2D">
+                app:layout_constraintDimensionRatio="332:425"
+                app:layout_constraintWidth_percent="0.9222"
+                android:background="@drawable/dialog_bg">
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="235:186"
-                        app:layout_constraintWidth_percent="0.723"
-                        app:layout_constraintVertical_bias="0.23267"
-                        android:src="@mipmap/img_applied"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/buttonClose"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintWidth_percent="0.0813253"
+                    app:layout_constraintVertical_bias="0.06648"
+                    app:layout_constraintHorizontal_bias="0.914754"
+                    android:src="@drawable/ic_close"/>
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/buttonClose"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="1:1"
-                        app:layout_constraintWidth_percent="0.083"
-                        app:layout_constraintVertical_bias="0.0554"
-                        app:layout_constraintHorizontal_bias="0.9328859"
-                        android:src="@drawable/ic_close"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="272:34"
+                    app:layout_constraintWidth_percent="0.8192771"
+                    app:layout_constraintVertical_bias="0.87212276"
+                    android:gravity="center_vertical"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="30sp"
+                    app:autoSizeMinTextSize="1sp"
+                    android:textColor="#2A9D8F"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/theme_applied"/>
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="285:26"
-                        app:layout_constraintWidth_percent="0.876923"
-                        app:layout_constraintVertical_bias="0.6464"
-                        android:gravity="center"
-                        app:autoSizeTextType="uniform"
-                        app:autoSizeMaxTextSize="22sp"
-                        app:autoSizeMinTextSize="1sp"
-                        android:textColor="#FFFFFF"
-                        android:fontFamily="@font/roboto_bold"
-                        android:text="@string/theme_applied"/>
-
-                    <com.fantasy.call.ui.custom.ScalableCardView
-                        android:id="@+id/buttonOk"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="122:48"
-                        app:layout_constraintWidth_percent="0.3753846"
-                        app:layout_constraintVertical_bias="0.88235294"
-                        app:scale_by="byHeight"
-                        app:scalable_corner_radius="0.41666666"
-                        app:cardElevation="0dp"
-                        app:cardBackgroundColor="@android:color/transparent">
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@android:color/white">
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="82:26"
-                                app:layout_constraintHeight_percent="0.541666666"
-                                android:gravity="center"
-                                app:autoSizeTextType="uniform"
-                                app:autoSizeMaxTextSize="18sp"
-                                app:autoSizeMinTextSize="1sp"
-                                android:textColor="#060C2D"
-                                android:fontFamily="@font/roboto_bold"
-                                android:textAllCaps="true"
-                                android:text="@string/ok"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.fantasy.call.ui.custom.ScalableCardView>
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.fantasy.call.ui.custom.ScalableCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

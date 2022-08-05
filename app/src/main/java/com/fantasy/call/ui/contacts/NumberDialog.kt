@@ -36,6 +36,7 @@ class NumberDialog : BaseDialog<NumberDialogBinding>(R.layout.number_dialog) {
             reloadData(contact.phoneNumbers.mapIndexed { index, s -> NumberAdapter.NumberViewModel(s, index == 0) })
         }
         binding.buttonCancel.setOnClickListener(::dismiss)
+        binding.buttonClose.setOnClickListener(::dismiss)
         binding.buttonOk.setOnClickListener {
             dismiss()
             activityAs<BaseActivity<*, *>>()

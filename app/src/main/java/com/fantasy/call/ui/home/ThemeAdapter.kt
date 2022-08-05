@@ -22,7 +22,8 @@ class ThemeAdapter(
         object : BaseItem<ThemeViewModel, ItemThemeBinding>(binding) {
             override fun bind(t: ThemeViewModel) {
                 binding.root.setOnClickListener { onItemClick(t.theme) }
-                Glide.with(itemView.context.applicationContext).load(t.theme.previewFile).centerCrop().into(binding.preview)
+                Glide.with(itemView.context.applicationContext).load(t.theme.previewFile).centerCrop().into(binding.preview1)
+                Glide.with(itemView.context.applicationContext).load(t.theme.previewFile).centerCrop().into(binding.preview2)
             }
         }
 

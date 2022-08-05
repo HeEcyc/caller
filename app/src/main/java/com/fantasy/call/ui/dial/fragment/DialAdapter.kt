@@ -7,6 +7,7 @@ import com.fantasy.call.databinding.ItemDialButtonBinding
 
 class DialAdapter(
     private val onButtonClick: (String) -> Unit,
+    private val buttonDrawableId: Int
 ) : BaseAdapter<DialAdapter.DialButtonViewModel, ItemDialButtonBinding>() {
 
     private val buttons = listOf(
@@ -38,6 +39,7 @@ class DialAdapter(
         object : BaseItem<DialButtonViewModel, ItemDialButtonBinding>(binding) {
             override fun bind(t: DialButtonViewModel) {
                 super.bind(t)
+                binding.button.setImageResource(buttonDrawableId)
                 binding.button.setOnClickListener { onButtonClick(t.onClickSymbol) }
                 if (t.longClickable)
                     binding.button.setOnLongClickListener {

@@ -22,46 +22,73 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="325:302"
-                app:layout_constraintWidth_percent="0.9027777777"
+                app:layout_constraintDimensionRatio="332:331"
+                app:layout_constraintWidth_percent="0.9222"
                 app:cardElevation="0dp"
                 app:cardBackgroundColor="@android:color/transparent"
                 app:scale_by="byWidth"
-                app:scalable_corner_radius="0.1046">
+                app:scalable_corner_radius="0.1506">
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:background="#060C2D"
+                    android:background="#FFFFFF"
                     android:clipChildren="false">
 
                     <androidx.legacy.widget.Space
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="50"/>
+                        android:layout_weight="26.46"/>
 
-                    <androidx.appcompat.widget.AppCompatTextView
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="26"
-                        android:gravity="center"
-                        app:autoSizeTextType="uniform"
-                        app:autoSizeMaxTextSize="22sp"
-                        app:autoSizeMinTextSize="1sp"
-                        android:textColor="#FFFFFF"
-                        android:fontFamily="@font/roboto_bold"
-                        android:text="@string/choose_a_sim_card"/>
+                        android:layout_weight="27">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/buttonClose"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintHorizontal_bias="0.914754"
+                            android:src="@drawable/ic_close"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.legacy.widget.Space
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="28"/>
+                        android:layout_weight="6.54"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="68">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="270.86:68"
+                            android:gravity="center_vertical"
+                            app:autoSizeTextType="uniform"
+                            app:autoSizeMaxTextSize="30sp"
+                            app:autoSizeMinTextSize="1sp"
+                            android:textColor="#2A9D8F"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="@string/choose_a_sim_card"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.legacy.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="26.5"/>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/buttonSim1"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="40"
+                        android:layout_weight="39"
                         android:clipChildren="false">
 
                         <androidx.appcompat.widget.AppCompatTextView
@@ -71,14 +98,14 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="81:20"
-                            app:layout_constraintHeight_percent="0.5"
-                            app:layout_constraintHorizontal_bias="0.1195219"
-                            android:gravity="center"
+                            app:layout_constraintDimensionRatio="216:22"
+                            app:layout_constraintHeight_percent="0.5641"
+                            app:layout_constraintHorizontal_bias="0.2729"
+                            android:gravity="center_vertical"
                             app:autoSizeTextType="uniform"
-                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMaxTextSize="20sp"
                             app:autoSizeMinTextSize="1sp"
-                            android:textColor="#FFFFFF"
+                            android:textColor="#0A2825"
                             android:fontFamily="@font/roboto_bold"
                             android:text="SIM card 1"
                             tools:ignore="HardcodedText" />
@@ -92,22 +119,17 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintDimensionRatio="1:1"
-                            app:layout_constraintHeight_percent="1.175"
-                            app:layout_constraintHorizontal_bias="0.907"
-                            android:src="@mipmap/ic_selected"/>
+                            app:layout_constraintHeight_percent="0.8205"
+                            app:layout_constraintHorizontal_bias="0.9219"
+                            android:src="@drawable/ic_selected"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.legacy.widget.Space
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="10"/>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/buttonSim2"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="40"
+                        android:layout_weight="39"
                         android:clipChildren="false">
 
                         <androidx.appcompat.widget.AppCompatTextView
@@ -117,14 +139,14 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="81:20"
-                            app:layout_constraintHeight_percent="0.5"
-                            app:layout_constraintHorizontal_bias="0.1195219"
-                            android:gravity="center"
+                            app:layout_constraintDimensionRatio="216:22"
+                            app:layout_constraintHeight_percent="0.5641"
+                            app:layout_constraintHorizontal_bias="0.2729"
+                            android:gravity="center_vertical"
                             app:autoSizeTextType="uniform"
-                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMaxTextSize="20sp"
                             app:autoSizeMinTextSize="1sp"
-                            android:textColor="#FFFFFF"
+                            android:textColor="#0A2825"
                             android:fontFamily="@font/roboto_bold"
                             android:text="SIM card 2"
                             tools:ignore="HardcodedText" />
@@ -138,9 +160,9 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintDimensionRatio="1:1"
-                            app:layout_constraintHeight_percent="1.175"
-                            app:layout_constraintHorizontal_bias="0.907"
-                            android:src="@mipmap/ic_selected"
+                            app:layout_constraintHeight_percent="0.8205"
+                            app:layout_constraintHorizontal_bias="0.9219"
+                            android:src="@drawable/ic_selected"
                             android:visibility="gone"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -148,12 +170,12 @@
                     <androidx.legacy.widget.Space
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="20"/>
+                        android:layout_weight="21.5"/>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="48">
+                        android:layout_weight="47">
 
                         <com.fantasy.call.ui.custom.ScalableCardView
                             android:id="@+id/buttonCancel"
@@ -161,16 +183,17 @@
                             android:layout_height="match_parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="122:48"
-                            app:layout_constraintHorizontal_bias="0.137931"
+                            app:layout_constraintDimensionRatio="116:47"
+                            app:layout_constraintWidth_percent="0.349397"
+                            app:layout_constraintHorizontal_bias="0.141527777777"
                             app:scale_by="byHeight"
-                            app:scalable_corner_radius="0.41666666"
+                            app:scalable_corner_radius="0.4893617"
                             app:cardElevation="0dp"
                             app:cardBackgroundColor="@android:color/transparent">
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="#FFFFFF">
+                                android:background="#E76F51">
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:layout_width="0dp"
                                     android:layout_height="0dp"
@@ -178,15 +201,16 @@
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintDimensionRatio="82:26"
-                                    app:layout_constraintHeight_percent="0.541666666"
+                                    app:layout_constraintDimensionRatio="92:23"
+                                    app:layout_constraintHeight_percent="0.4893617"
                                     android:gravity="center"
                                     app:autoSizeTextType="uniform"
-                                    app:autoSizeMaxTextSize="18sp"
+                                    app:autoSizeMaxTextSize="20sp"
                                     app:autoSizeMinTextSize="1sp"
-                                    android:textColor="#060C2D"
+                                    android:textColor="#FFFFFF"
                                     android:fontFamily="@font/roboto_bold"
-                                    android:text="@string/cancel"/>
+                                    android:text="@string/cancel"
+                                    tools:ignore="TooDeepLayout" />
                             </androidx.constraintlayout.widget.ConstraintLayout>
                         </com.fantasy.call.ui.custom.ScalableCardView>
 
@@ -196,16 +220,17 @@
                             android:layout_height="match_parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="122:48"
-                            app:layout_constraintHorizontal_bias="0.862069"
+                            app:layout_constraintDimensionRatio="116:47"
+                            app:layout_constraintWidth_percent="0.349397"
+                            app:layout_constraintHorizontal_bias="0.858472222223"
                             app:scale_by="byHeight"
-                            app:scalable_corner_radius="0.41666666"
+                            app:scalable_corner_radius="0.4893617"
                             app:cardElevation="0dp"
                             app:cardBackgroundColor="@android:color/transparent">
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@android:color/white">
+                                android:background="#E76F51">
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:layout_width="0dp"
                                     android:layout_height="0dp"
@@ -213,13 +238,13 @@
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintDimensionRatio="82:26"
-                                    app:layout_constraintHeight_percent="0.541666666"
+                                    app:layout_constraintDimensionRatio="92:23"
+                                    app:layout_constraintHeight_percent="0.4893617"
                                     android:gravity="center"
                                     app:autoSizeTextType="uniform"
-                                    app:autoSizeMaxTextSize="18sp"
+                                    app:autoSizeMaxTextSize="20sp"
                                     app:autoSizeMinTextSize="1sp"
-                                    android:textColor="#060C2D"
+                                    android:textColor="#FFFFFF"
                                     android:fontFamily="@font/roboto_bold"
                                     android:textAllCaps="true"
                                     android:text="@string/ok"/>
@@ -231,7 +256,7 @@
                     <androidx.legacy.widget.Space
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="50"/>
+                        android:layout_weight="30"/>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </com.fantasy.call.ui.custom.ScalableCardView>

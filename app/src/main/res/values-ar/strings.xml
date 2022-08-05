@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="get_started">البدء</string>
     <string name="all">الجميع</string>
     <string name="top">قمة</string>
     <string name="s_new">جديد</string>
     <string name="popular">جمع</string>
-    <string name="add_yours">أضف لك</string>
     <string name="permissionPhoneDescription">قم بتعيين التطبيق كتطبيق هاتفك الافتراضي</string>
     <string name="permissionContactsDescription">اسمح للتطبيق بالوصول إلى جهات الاتصال الخاصة بك</string>
     <string name="permissionOverlayDescription">السماح بالعرض فوق تطبيق آخر</string>
@@ -26,7 +24,6 @@
     <string name="apply_to_selected">تنطبق على المختار</string>
     <string name="apply_to_all">تنطبق على الجميع</string>
     <string name="apply">يتقدم</string>
-    <string name="applied">مُطبَّق</string>
     <string name="choose_a_contact_number">اختر رقم الاتصال</string>
     <string name="calling">جارٍ الاتصال ...</string>
     <string name="end_to_end_encryption">التشفير التام بين الأطراف</string>
@@ -34,5 +31,11 @@
     <string name="choose_a_sim_card">اختر بطاقة SIM </string>
     <string name="let_s_get_started">هيا بنا نبدأ!</string>
     <string name="your">لك</string>
-    <string name="theme_applied">تم تطبيق الموضوع!</string>
+    <string name="theme_applied">تم تطبيق الموضوع</string>
+    <string name="best_call_themes_for_you">أفضل ثيمات دعوة لك</string>
+    <string name="start">بداية</string>
+    <string name="add_yours">أضف لك</string>
+    <string name="cute">جذاب</string>
+    <string name="recommended">مُستَحسَن</string>
+    <string name="write_there">اكتب هناك ...</string>
 </resources>

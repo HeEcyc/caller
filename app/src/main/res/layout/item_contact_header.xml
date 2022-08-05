@@ -18,38 +18,36 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintWidth_percent="0.8333"
-            app:layout_constraintDimensionRatio="300:71"
+            app:layout_constraintWidth_percent="0.88888888"
+            app:layout_constraintDimensionRatio="320:67"
             android:orientation="vertical">
 
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="20"/>
+                android:layout_weight="21"/>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="26"
+                android:layout_weight="25"
                 android:gravity="center_vertical"
                 app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="22sp"
+                app:autoSizeMaxTextSize="20sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#FFFFFF"
+                android:textColor="#2A9D8F"
                 android:fontFamily="@font/roboto_bold"
                 android:textAllCaps="true"
                 android:text='@{"" + item.c}'/>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="4"/>
-
-            <View
+            <com.fantasy.call.ui.custom.ScalableCardView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="#FFFFFF"/>
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#2A9D8F"
+                app:scale_by="byHeight"
+                app:scalable_corner_radius="0.5"/>
 
             <Space
                 android:layout_width="match_parent"
