@@ -4,10 +4,10 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.galaxy.call.repository.LocaleRepository"/>
+        <import type="com.fancy.call.repository.LocaleRepository"/>
         <variable
             name="item"
-            type="com.galaxy.call.repository.LocaleRepository.Locale" />
+            type="com.fancy.call.repository.LocaleRepository.Locale" />
         <variable
             name="localeRepository"
             type="LocaleRepository" />
