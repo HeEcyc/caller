@@ -1,11 +1,8 @@
 <resources>
     <string name="app_name" translatable="false">Fancy Call</string>
-    <string name="get_started">Get Started</string>
     <string name="all">All</string>
     <string name="top">Top</string>
     <string name="s_new">New</string>
-    <string name="popular">Popular</string>
-    <string name="add_yours">Add Yours</string>
     <string name="permissionPhoneDescription">Set the application as your default phone apps</string>
     <string name="permissionContactsDescription">Allow the application to access your contacts</string>
     <string name="permissionOverlayDescription">Allow display over other app</string>
@@ -26,13 +23,11 @@
     <string name="apply_to_selected">Apply to Selected</string>
     <string name="apply_to_all">Apply to all</string>
     <string name="apply">Apply</string>
-    <string name="applied">Applied</string>
     <string name="choose_a_contact_number">Choose a contact number</string>
     <string name="calling">Calling...</string>
     <string name="end_to_end_encryption">End-to-End Encryption</string>
     <string name="call">Call...</string>
     <string name="choose_a_sim_card">Choose a SIM card</string>
-    <string name="let_s_get_started">Let’s get started!</string>
     <string name="your">Your</string>
     <string name="theme_applied">Theme applied!</string>
     <string name="personalize_nyour_call_experience">Personalize\nYour call experience</string>

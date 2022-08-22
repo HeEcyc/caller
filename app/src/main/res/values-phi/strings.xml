@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="get_started">Magsimula</string>
     <string name="all">Lahat</string>
     <string name="top">Nangunguna</string>
     <string name="s_new">Bago</string>
-    <string name="popular">Sikat</string>
-    <string name="add_yours">Idagdag ang Iyo</string>
     <string name="permissionPhoneDescription">Itakda ang application bilang iyong default na app ng telepono</string>
     <string name="permissionContactsDescription">Payagan ang application na i-access ang iyong mga contact</string>
     <string name="permissionOverlayDescription">Payagan ang pagpapakita sa iba pang app</string>
@@ -26,13 +23,11 @@
     <string name="apply_to_selected">Mag-apply sa Napili</string>
     <string name="apply_to_all">Mag-apply sa lahat</string>
     <string name="apply">Mag-apply</string>
-    <string name="applied">Inilapat</string>
     <string name="choose_a_contact_number">Pumili ng contact number</string>
     <string name="calling">Tumatawag...</string>
     <string name="end_to_end_encryption">End-to-End Encryption</string>
     <string name="call">Tumawag...</string>
     <string name="choose_a_sim_card">Pumili ng SIM card</string>
-    <string name="let_s_get_started">Magsimula na tayo!</string>
     <string name="your">Iyong</string>
     <string name="theme_applied">Inilapat ang tema!</string>
 </resources>
