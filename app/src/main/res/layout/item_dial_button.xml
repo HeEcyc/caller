@@ -17,7 +17,7 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="1:1">
+            app:layout_constraintDimensionRatio="99:84">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
@@ -27,13 +27,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintWidth_percent="0.75">
+                app:layout_constraintWidth_percent="0.696969">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/button"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/dial_button"/>
+                    android:layout_height="match_parent"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/label1"
@@ -41,13 +40,12 @@
                     android:layout_height="0dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintDimensionRatio="60:32"
+                    app:layout_constraintDimensionRatio="69:32"
                     android:gravity="center"
                     app:autoSizeTextType="uniform"
                     app:autoSizeMaxTextSize="30sp"
                     app:autoSizeMinTextSize="1sp"
-                    android:textColor="#FFFFFF"
-                    android:fontFamily="@font/roboto_regular"
+                    android:fontFamily="@font/fira_sans_regular"
                     android:text="@{item.onClickSymbol}"
                     android:visibility="@{item.onLongClickSymbol == null ? View.VISIBLE : View.GONE}"/>
 
@@ -62,14 +60,13 @@
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="60:32"
-                        app:layout_constraintVertical_bias="0.2142857"
+                        app:layout_constraintDimensionRatio="69:32"
+                        app:layout_constraintVertical_bias="0.243243243"
                         android:gravity="center"
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="30sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#FFFFFF"
-                        android:fontFamily="@font/roboto_regular"
+                        android:fontFamily="@font/fira_sans_regular"
                         android:text="@{item.onClickSymbol}"/>
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -78,14 +75,13 @@
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="60:16"
-                        app:layout_constraintVertical_bias="0.79545454"
+                        app:layout_constraintDimensionRatio="69:22"
+                        app:layout_constraintVertical_bias="0.74468"
                         android:gravity="center"
                         app:autoSizeTextType="uniform"
-                        app:autoSizeMaxTextSize="14sp"
+                        app:autoSizeMaxTextSize="20sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#FFFFFF"
-                        android:fontFamily="@font/roboto_regular"
+                        android:fontFamily="@font/fira_sans_regular"
                         android:letterSpacing="0.325"
                         android:text="@{item.onLongClickSymbol}"/>
 

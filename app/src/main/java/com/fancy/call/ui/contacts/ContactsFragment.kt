@@ -42,7 +42,7 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentBinding
     override fun setupUI() {
         binding.root.post {
             binding.rv.addItemDecoration(ItemDecorationWithEnds(
-                bottomLast = binding.root.width * 119 / 360,
+                bottomLast = binding.root.width * 125 / 360,
                 lastPredicate = { position, count -> position == count - 1 }
             ))
         }

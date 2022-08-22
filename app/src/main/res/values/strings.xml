@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name" translatable="false">Galaxy Call Screen</string>
+    <string name="app_name" translatable="false">Fancy Call</string>
     <string name="get_started">Get Started</string>
     <string name="all">All</string>
     <string name="top">Top</string>
     <string name="s_new">New</string>
     <string name="popular">Popular</string>
     <string name="add_yours">Add Yours</string>
-    <string name="permissionPhoneDescription">Set the application as your default phone app</string>
+    <string name="permissionPhoneDescription">Set the application as your default phone apps</string>
     <string name="permissionContactsDescription">Allow the application to access your contacts</string>
     <string name="permissionOverlayDescription">Allow display over other app</string>
     <string name="give_permissions_needed_to_show_the_call_screen">Give permissions needed to show the call screen</string>
@@ -35,4 +35,7 @@
     <string name="let_s_get_started">Let’s get started!</string>
     <string name="your">Your</string>
     <string name="theme_applied">Theme applied!</string>
+    <string name="personalize_nyour_call_experience">Personalize\nYour call experience</string>
+    <string name="let_s_start">Let’s start!</string>
+    <string name="recommended">Recommended</string>
 </resources>

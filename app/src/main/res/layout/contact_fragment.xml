@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#060C2D">
+        android:background="@android:color/white">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -22,7 +22,7 @@
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="360:75">
+                app:layout_constraintDimensionRatio="360:71">
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/buttonBack"
                     android:layout_width="0dp"
@@ -31,9 +31,9 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintHeight_percent="0.64"
-                    app:layout_constraintHorizontal_bias="0.076923"
-                    android:src="@mipmap/ic_back"/>
+                    app:layout_constraintHeight_percent="0.56338"
+                    app:layout_constraintHorizontal_bias="0.05"
+                    android:src="@drawable/ic_back"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -48,7 +48,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="360:697">
+                app:layout_constraintDimensionRatio="360:701">
 
                 <com.fancy.call.ui.custom.ScalableCardView
                     android:layout_width="0dp"
@@ -57,10 +57,11 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="341:356"
+                    app:layout_constraintDimensionRatio="341:532"
                     app:layout_constraintWidth_percent="0.947222"
-                    app:layout_constraintVertical_bias="0.2258"
+                    app:layout_constraintVertical_bias="0.2071"
                     app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp"
                     app:scale_by="byWidth"
                     app:scalable_corner_radius="0.058651">
                     <androidx.appcompat.widget.AppCompatImageView
@@ -73,17 +74,15 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:translationZ="10dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="201:200.87"
-                    app:layout_constraintWidth_percent="0.558333"
-                    app:layout_constraintVertical_bias="0.0524"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintWidth_percent="0.4194444"
+                    app:layout_constraintVertical_bias="0.1"
                     android:background="@drawable/avatar_frame">
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/avatar"
+                    <com.fancy.call.ui.custom.ScalableCardView
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
@@ -91,34 +90,28 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintDimensionRatio="1:1"
-                        app:layout_constraintWidth_percent="0.792388"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/avatar_placeholder"/>
+                        app:layout_constraintWidth_percent="0.7688"
+                        app:scalable_corner_radius="0.5">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/avatar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/avatar_placeholder"/>
+                    </com.fancy.call.ui.custom.ScalableCardView>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="332:42"
-                    app:layout_constraintWidth_percent="0.9222"
-                    app:layout_constraintVertical_bias="0.70687"
-                    android:gravity="center"
-                    app:autoSizeTextType="uniform"
-                    app:autoSizeMaxTextSize="40sp"
-                    app:autoSizeMinTextSize="1sp"
-                    android:textColor="#FFFFFF"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="@{viewModel.contact.contactName}"/>
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/marker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.7938659"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintDimensionRatio="360:177"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@id/marker"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     android:orientation="vertical"
                     android:overScrollMode="never"

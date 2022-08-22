@@ -33,7 +33,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#54333333"/>
+            android:background="#A104356A"/>
 
         <include
             android:id="@+id/layoutRinging"

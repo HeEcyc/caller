@@ -8,7 +8,6 @@ import com.fancy.call.base.BaseActivity
 import com.fancy.call.base.BaseDialog
 import com.fancy.call.databinding.NumberDialogBinding
 import com.fancy.call.model.contact.UserContact
-import com.fancy.call.utils.setOnClickListener
 
 class NumberDialog : BaseDialog<NumberDialogBinding>(R.layout.number_dialog) {
 
@@ -35,7 +34,6 @@ class NumberDialog : BaseDialog<NumberDialogBinding>(R.layout.number_dialog) {
         }.apply {
             reloadData(contact.phoneNumbers.mapIndexed { index, s -> NumberAdapter.NumberViewModel(s, index == 0) })
         }
-        binding.buttonCancel.setOnClickListener(::dismiss)
         binding.buttonOk.setOnClickListener {
             dismiss()
             activityAs<BaseActivity<*, *>>()

@@ -28,7 +28,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintHeight_percent="0.77528"
-                app:layout_constraintHorizontal_bias="0.103"
+                app:layout_constraintHorizontal_bias="0.05498"
                 app:cardBackgroundColor="@android:color/transparent"
                 app:cardElevation="0dp"
                 app:scalable_corner_radius="0.5">
@@ -47,36 +47,16 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="160:26"
-                app:layout_constraintHeight_percent="0.292"
-                app:layout_constraintHorizontal_bias="0.57"
-                app:layout_constraintVertical_bias="0.3"
+                app:layout_constraintDimensionRatio="188:16"
+                app:layout_constraintHeight_percent="0.179775"
+                app:layout_constraintHorizontal_bias="0.5872"
                 android:gravity="center_vertical"
                 app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="22sp"
+                app:autoSizeMaxTextSize="14sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#FFFFFF"
-                android:fontFamily="@font/roboto_bold"
+                android:textColor="#124985"
+                android:fontFamily="@font/fira_sans_regular"
                 android:text="@{item.userContact.contactName}"/>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="160:20"
-                app:layout_constraintHeight_percent="0.2247191"
-                app:layout_constraintHorizontal_bias="0.57"
-                app:layout_constraintVertical_bias="0.72463768"
-                android:gravity="center_vertical"
-                app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="18sp"
-                app:autoSizeMinTextSize="1sp"
-                android:textColor="#FFFFFF"
-                android:fontFamily="@font/roboto_regular"
-                android:text="@{item.userContact.contactNumber}"/>
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="0dp"
@@ -86,9 +66,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintHeight_percent="0.528"
-                app:layout_constraintHorizontal_bias="0.92332268"
-                android:src="@mipmap/ic_selected"
+                app:layout_constraintHeight_percent="0.4382"
+                app:layout_constraintHorizontal_bias="0.95"
+                android:src="@drawable/ic_selected"
                 android:visibility="@{item.isSelected ? View.VISIBLE : View.GONE}"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

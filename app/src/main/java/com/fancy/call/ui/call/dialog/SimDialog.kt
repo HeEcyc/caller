@@ -7,7 +7,6 @@ import com.fancy.call.base.BaseDialog
 import com.fancy.call.databinding.SimDialogBinding
 import com.fancy.call.ui.call.activity.CallActivity
 import com.fancy.call.ui.call.fragment.CallFragment
-import com.fancy.call.utils.setOnClickListener
 
 class SimDialog : BaseDialog<SimDialogBinding>(R.layout.sim_dialog) {
 
@@ -26,7 +25,6 @@ class SimDialog : BaseDialog<SimDialogBinding>(R.layout.sim_dialog) {
             binding.selected1.visibility = View.GONE
             binding.selected2.visibility = View.VISIBLE
         }
-        binding.buttonCancel.setOnClickListener(::dismiss)
         binding.buttonOk.setOnClickListener {
             if (simCards.getOrNull(selected) !== null) onSIMSelected(selected)
         }

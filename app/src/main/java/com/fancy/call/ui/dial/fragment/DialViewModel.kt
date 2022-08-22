@@ -1,6 +1,8 @@
 package com.fancy.call.ui.dial.fragment
 
+import android.graphics.Color
 import androidx.databinding.ObservableField
+import com.fancy.call.R
 import com.fancy.call.base.BaseViewModel
 import com.fancy.call.repository.PermissionRepository
 
@@ -9,7 +11,11 @@ class DialViewModel(
 ) : BaseViewModel() {
 
     val text = ObservableField("")
-    val adapter = DialAdapter(::onButtonClick)
+    val adapter = DialAdapter(
+        ::onButtonClick,
+        R.drawable.dial_button_dial_fragment,
+        Color.parseColor("#124985")
+    )
 
     var onButtonClickAdditional: (String) -> Unit = {}
 

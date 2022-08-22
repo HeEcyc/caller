@@ -18,7 +18,7 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
     override fun setupUI() {
         binding.root.post {
             val isLtr = resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_LTR
-            val outerSpace = binding.recyclerView.width * 14 / 360
+            val outerSpace = binding.recyclerView.width * 16 / 360
             val innerSpace = binding.recyclerView.width * 5 / 360
             val verticalSpace = binding.recyclerView.width * 10 / 360
             val itemDecoration = ItemDecorationWithEnds(

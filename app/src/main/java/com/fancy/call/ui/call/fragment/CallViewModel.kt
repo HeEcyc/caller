@@ -1,10 +1,12 @@
 package com.fancy.call.ui.call.fragment
 
+import android.graphics.Color
 import android.telecom.Call
 import android.telecom.PhoneAccountHandle
 import androidx.databinding.ObservableField
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.fancy.call.R
 import com.gjiazhe.panoramaimageview.GyroscopeObserver
 import com.fancy.call.base.BaseViewModel
 import com.fancy.call.model.contact.UserContact
@@ -80,7 +82,11 @@ class CallViewModel(
 
     val gyroscopeObserver = GyroscopeObserver().apply { setMaxRotateRadian(Math.PI / 2.5) }
 
-    val dialAdapter = DialAdapter(::onDialButtonClick)
+    val dialAdapter = DialAdapter(
+        ::onDialButtonClick,
+        R.drawable.dial_button_call_fragment,
+        Color.parseColor("#FFFFFF")
+    )
     val dialCache = ObservableField("")
 
     init {

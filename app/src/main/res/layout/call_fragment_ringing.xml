@@ -22,7 +22,7 @@
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="360:75" />
+                app:layout_constraintDimensionRatio="360:71" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -36,7 +36,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="360:697">
+                app:layout_constraintDimensionRatio="360:701">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="0dp"
@@ -45,9 +45,9 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="241.04:240.88"
-                    app:layout_constraintWidth_percent="0.66955555"
-                    app:layout_constraintVertical_bias="0.0263"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintWidth_percent="0.48055555"
+                    app:layout_constraintVertical_bias="0.0170454545"
                     android:background="@drawable/avatar_frame">
                     <com.fancy.call.ui.custom.ScalableCardView
                         android:layout_width="0dp"
@@ -57,7 +57,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintDimensionRatio="1:1"
-                        app:layout_constraintWidth_percent="0.7923996"
+                        app:layout_constraintWidth_percent="0.768786"
                         app:cardBackgroundColor="@android:color/transparent"
                         app:cardElevation="0dp"
                         app:scalable_corner_radius="0.5">
@@ -77,15 +77,15 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="332:42"
+                    app:layout_constraintDimensionRatio="332:32"
                     app:layout_constraintWidth_percent="0.9222"
-                    app:layout_constraintVertical_bias="0.4122"
+                    app:layout_constraintVertical_bias="0.3557548"
                     android:gravity="center"
                     app:autoSizeTextType="uniform"
-                    app:autoSizeMaxTextSize="40sp"
+                    app:autoSizeMaxTextSize="30sp"
                     app:autoSizeMinTextSize="1sp"
-                    android:textColor="#060C2D"
-                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/fredoka_one_regular"
                     android:text="@{viewModel.contact.contactName}"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -95,15 +95,15 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="332:20"
+                    app:layout_constraintDimensionRatio="332:22"
                     app:layout_constraintWidth_percent="0.9222"
-                    app:layout_constraintVertical_bias="0.4756"
+                    app:layout_constraintVertical_bias="0.4432989"
                     android:gravity="center"
                     app:autoSizeTextType="uniform"
-                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMaxTextSize="20sp"
                     app:autoSizeMinTextSize="1sp"
-                    android:textColor="#060C2D"
-                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/fredoka_one_regular"
                     android:text="@string/calling"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -113,15 +113,15 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="332:28"
+                    app:layout_constraintDimensionRatio="332:22"
                     app:layout_constraintWidth_percent="0.9222"
-                    app:layout_constraintVertical_bias="0.526"
+                    app:layout_constraintVertical_bias="0.5228"
                     android:gravity="center"
                     app:autoSizeTextType="uniform"
-                    app:autoSizeMaxTextSize="26sp"
+                    app:autoSizeMaxTextSize="20sp"
                     app:autoSizeMinTextSize="1sp"
-                    android:textColor="#060C2D"
-                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/fredoka_one_regular"
                     android:text="@{viewModel.contact.contactNumber}"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -132,9 +132,9 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintWidth_percent="0.2694444"
-                    app:layout_constraintHorizontal_bias="0.1863"
-                    app:layout_constraintVertical_bias="0.814814814"
+                    app:layout_constraintWidth_percent="0.27222"
+                    app:layout_constraintHorizontal_bias="0.17939"
+                    app:layout_constraintVertical_bias="0.834"
                     android:src="@drawable/button_decline"
                     android:onClick="@{(_) -> viewModel.cancelCall()}"/>
 
@@ -146,9 +146,9 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintWidth_percent="0.2694444"
-                    app:layout_constraintHorizontal_bias="0.8137"
-                    app:layout_constraintVertical_bias="0.814814814"
+                    app:layout_constraintWidth_percent="0.27222"
+                    app:layout_constraintHorizontal_bias="0.82061"
+                    app:layout_constraintVertical_bias="0.834"
                     android:src="@drawable/button_accept"
                     android:onClick="@{(_) -> viewModel.answerCall()}"/>
 

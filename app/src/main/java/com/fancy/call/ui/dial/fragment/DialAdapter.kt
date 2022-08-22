@@ -7,6 +7,8 @@ import com.fancy.call.databinding.ItemDialButtonBinding
 
 class DialAdapter(
     private val onButtonClick: (String) -> Unit,
+    private val buttonDrawableId: Int,
+    private val fontColor: Int
 ) : BaseAdapter<DialAdapter.DialButtonViewModel, ItemDialButtonBinding>() {
 
     private val buttons = listOf(
@@ -38,6 +40,8 @@ class DialAdapter(
         object : BaseItem<DialButtonViewModel, ItemDialButtonBinding>(binding) {
             override fun bind(t: DialButtonViewModel) {
                 super.bind(t)
+                binding.button.setImageResource(buttonDrawableId)
+                listOf(binding.label1, binding.label2, binding.label3).forEach { it.setTextColor(fontColor) }
                 binding.button.setOnClickListener { onButtonClick(t.onClickSymbol) }
                 if (t.longClickable)
                     binding.button.setOnLongClickListener {

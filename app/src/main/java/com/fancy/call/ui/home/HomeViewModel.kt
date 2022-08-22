@@ -67,7 +67,7 @@ class HomeViewModel(
     fun onPopularClick() {
         if (tabPopular.get()) return
         tabs.toggleTrue(tabPopular)
-        adapter.reloadData(themesPopular.toViewModels())
+        adapter.reloadData(themesRecommended.toViewModels())
     }
 
     fun onYoursClick() {
