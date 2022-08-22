@@ -30,4 +30,7 @@
     <string name="choose_a_sim_card">Выберите SIM-карту</string>
     <string name="your">Ваши</string>
     <string name="theme_applied">Тема применена!</string>
+    <string name="personalize_nyour_call_experience">Персонализируйте свои звонки</string>
+    <string name="let_s_start">Давайте начнем!</string>
+    <string name="recommended">Рекомендуемые</string>
 </resources>

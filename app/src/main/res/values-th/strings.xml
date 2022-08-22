@@ -30,4 +30,7 @@
     <string name="choose_a_sim_card">เลือกซิมการ์ด</string>
     <string name="your">ของคุณ</string>
     <string name="theme_applied">ใช้ธีม!</string>
+    <string name="personalize_nyour_call_experience">ปรับแต่งประสบการณ์การโทรของคุณ</string>
+    <string name="let_s_start">เริ่มกันเลย!</string>
+    <string name="recommended">ที่แนะนำ</string>
 </resources>
