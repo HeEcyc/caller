@@ -59,7 +59,7 @@
             android:fontFamily="@font/fredoka_one_regular"
             android:text="@string/personalize_nyour_call_experience"/>
 
-        <com.fancy.call.ui.custom.ScalableCardView
+        <com.threed.caller.ui.custom.ScalableCardView
             android:id="@+id/button"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -95,7 +95,7 @@
                     android:fontFamily="@font/fira_sans_bold"
                     android:text="@string/let_s_start"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.fancy.call.ui.custom.ScalableCardView>
+        </com.threed.caller.ui.custom.ScalableCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

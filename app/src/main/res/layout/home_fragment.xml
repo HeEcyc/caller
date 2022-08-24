@@ -7,7 +7,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.fancy.call.ui.home.HomeViewModel" />
+            type="com.threed.caller.ui.home.HomeViewModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat

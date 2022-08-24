@@ -4,10 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.fancy.call.repository.LocaleRepository.Locale"/>
+        <import type="com.threed.caller.repository.LocaleRepository.Locale"/>
         <variable
             name="viewModel"
-            type="com.fancy.call.ui.settings.SettingsViewModel" />
+            type="com.threed.caller.ui.settings.SettingsViewModel" />
     </data>
 
     <ScrollView

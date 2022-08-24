@@ -26,7 +26,7 @@
                 app:layout_constraintWidth_percent="0.81666666"
                 android:clipChildren="false">
 
-                <com.fancy.call.ui.custom.ScalableCardView
+                <com.threed.caller.ui.custom.ScalableCardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:scale_by="byWidth"
@@ -74,7 +74,7 @@
                             android:textColor="#124985"
                             android:fontFamily="@font/fira_sans_medium"/>
 
-                        <com.fancy.call.ui.custom.ScalableCardView
+                        <com.threed.caller.ui.custom.ScalableCardView
                             android:id="@+id/buttonNo"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
@@ -111,9 +111,9 @@
                                     android:fontFamily="@font/fira_sans_bold"
                                     android:text="@string/cancel"/>
                             </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.fancy.call.ui.custom.ScalableCardView>
+                        </com.threed.caller.ui.custom.ScalableCardView>
 
-                        <com.fancy.call.ui.custom.ScalableCardView
+                        <com.threed.caller.ui.custom.ScalableCardView
                             android:id="@+id/buttonYes"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
@@ -150,10 +150,10 @@
                                     android:fontFamily="@font/fira_sans_bold"
                                     android:text="@string/ok"/>
                             </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.fancy.call.ui.custom.ScalableCardView>
+                        </com.threed.caller.ui.custom.ScalableCardView>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
-                </com.fancy.call.ui.custom.ScalableCardView>
+                </com.threed.caller.ui.custom.ScalableCardView>
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/marker"

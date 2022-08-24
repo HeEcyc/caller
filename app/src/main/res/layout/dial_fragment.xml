@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.fancy.call.ui.dial.fragment.DialViewModel" />
+            type="com.threed.caller.ui.dial.fragment.DialViewModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat

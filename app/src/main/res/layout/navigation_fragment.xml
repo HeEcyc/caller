@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.fancy.call.ui.main.MainViewModel" />
+            type="com.threed.caller.ui.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

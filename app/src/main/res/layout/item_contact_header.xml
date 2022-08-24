@@ -6,7 +6,7 @@
     <data>
         <variable
             name="item"
-            type="com.fancy.call.ui.contacts.ContactAdapter.SegmentHeader" />
+            type="com.threed.caller.ui.contacts.ContactAdapter.SegmentHeader" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

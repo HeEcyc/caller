@@ -5,7 +5,7 @@
     <data>
         <variable
             name="item"
-            type="com.fancy.call.ui.contacts.NumberAdapter.NumberViewModel" />
+            type="com.threed.caller.ui.contacts.NumberAdapter.NumberViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

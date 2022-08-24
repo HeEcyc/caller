@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.fancy.call.ui.main.MainViewModel" />
+            type="com.threed.caller.ui.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:name="com.fancy.call.ui.home.HomeFragment"/>
+                android:name="com.threed.caller.ui.home.HomeFragment"/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintDimensionRatio="360:70"
-                        android:name="com.fancy.call.ui.main.NavigationFragment"/>
+                        android:name="com.threed.caller.ui.main.NavigationFragment"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 

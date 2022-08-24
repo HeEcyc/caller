@@ -15,7 +15,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintDimensionRatio="360:772">
 
-            <com.fancy.call.ui.custom.ScalableCardView
+            <com.threed.caller.ui.custom.ScalableCardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -148,7 +148,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="55">
 
-                        <com.fancy.call.ui.custom.ScalableCardView
+                        <com.threed.caller.ui.custom.ScalableCardView
                             android:id="@+id/buttonOk"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
@@ -181,7 +181,7 @@
                                     android:text="@string/ok"
                                     tools:ignore="TooDeepLayout" />
                             </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.fancy.call.ui.custom.ScalableCardView>
+                        </com.threed.caller.ui.custom.ScalableCardView>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -191,7 +191,7 @@
                         android:layout_weight="30"/>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
-            </com.fancy.call.ui.custom.ScalableCardView>
+            </com.threed.caller.ui.custom.ScalableCardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
