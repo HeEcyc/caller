@@ -8,6 +8,7 @@ import com.threed.caller.base.BaseActivity
 import com.threed.caller.base.BaseDialog
 import com.threed.caller.databinding.NumberDialogBinding
 import com.threed.caller.model.contact.UserContact
+import com.threed.caller.utils.setOnClickListener
 
 class NumberDialog : BaseDialog<NumberDialogBinding>(R.layout.number_dialog) {
 
@@ -27,6 +28,7 @@ class NumberDialog : BaseDialog<NumberDialogBinding>(R.layout.number_dialog) {
         if (contact.photoThumbnailUri !== null)
             Glide.with(App.instance).load(contact.photoThumbnailUri).into(binding.avatar)
         binding.name.text = contact.contactName
+        binding.textAvatar.name = contact.contactName
         binding.rv.adapter = NumberAdapter { selected ->
             binding.rv.adapter!!.let { it as NumberAdapter }.getData().forEach {
                 it.isSelected.set(it === selected)
@@ -48,6 +50,7 @@ class NumberDialog : BaseDialog<NumberDialogBinding>(R.layout.number_dialog) {
                         .number
                 )
         }
+        binding.buttonClose.setOnClickListener(::dismiss)
     }
 
 }

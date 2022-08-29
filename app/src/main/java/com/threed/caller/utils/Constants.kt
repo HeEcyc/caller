@@ -7,24 +7,24 @@ import com.threed.caller.model.theme.VideoTheme
 
 val videoThemes = List(8) {
     VideoTheme(
-        "file:///android_asset/new/video/$it.mp4",
-        "file:///android_asset/new/gif/$it.gif",
+        "file:///android_asset/top/video/$it.mp4",
+        "file:///android_asset/top/gif/$it.gif",
         true
     )
 }
 val audioThemesIndexes = videoThemes.indices.toList()
-val themesNew = MutableList<Theme>(8) {
-    ImageTheme("file:///android_asset/new/image/$it.png")
+val themesTop = MutableList<Theme>(8) {
+    ImageTheme("file:///android_asset/top/image/$it.png")
 }.apply { addAll(0, videoThemes) }.toList()
-val themesTop = List(8) {
-    ImageTheme("file:///android_asset/top/$it.png")
+val themesNew = List(8) {
+    ImageTheme("file:///android_asset/new/$it.png")
 }
 val themesRecommended: List<Theme> = List(8) {
     ImageTheme("file:///android_asset/recommended/$it.png")
 }
 val presetThemes: List<Theme> = listOf(
-    *themesNew.toTypedArray(),
     *themesTop.toTypedArray(),
+    *themesNew.toTypedArray(),
     *themesRecommended.toTypedArray()
 )
 

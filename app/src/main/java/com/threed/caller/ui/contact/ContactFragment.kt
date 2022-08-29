@@ -39,6 +39,7 @@ class ContactFragment : BaseFragment<ContactViewModel, ContactFragmentBinding>(R
                 if (it) activityAs<BaseActivity<*, *>>().call(number)
             }
         }
+        binding.textAvatar.name = contact.contactName
     }
 
     override fun provideViewModel() = viewModel

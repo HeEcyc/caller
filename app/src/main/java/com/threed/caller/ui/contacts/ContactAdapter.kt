@@ -56,9 +56,10 @@ class ContactAdapter(
         object : BaseItem<ContactViewModel, ViewDataBinding>(binding) {
             override fun bind(t: ContactViewModel) {
                 if (t is Contact) {
+                    (binding as ItemContactBinding).textAvatar.name = t.userContact.contactName
                     val avatar = t.userContact.photoThumbnailUri
                     if (avatar !== null)
-                        Glide.with(App.instance).load(avatar).into((binding as ItemContactBinding).avatar)
+                        Glide.with(App.instance).load(avatar).into(binding.avatar)
                     binding.root.setOnClickListener { onClick(t) }
                 }
             }

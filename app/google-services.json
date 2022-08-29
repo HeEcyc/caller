@@ -442,6 +442,35 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:148696922666:android:dd047a6d31cb018aa92153",
+        "android_client_info": {
+          "package_name": "com.threed.caller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148696922666-v1hlb94da0djtmvfcesck3a88mj8uoj8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxAvg3zEDkMv_7tVVt3NJImo9Ep1t3pfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148696922666-v1hlb94da0djtmvfcesck3a88mj8uoj8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:148696922666:android:e435608918fd92aea92153",
         "android_client_info": {
           "package_name": "com.yellowmood.caller"

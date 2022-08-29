@@ -7,6 +7,7 @@ import com.threed.caller.base.BaseDialog
 import com.threed.caller.databinding.SimDialogBinding
 import com.threed.caller.ui.call.activity.CallActivity
 import com.threed.caller.ui.call.fragment.CallFragment
+import com.threed.caller.utils.setOnClickListener
 
 class SimDialog : BaseDialog<SimDialogBinding>(R.layout.sim_dialog) {
 
@@ -28,6 +29,7 @@ class SimDialog : BaseDialog<SimDialogBinding>(R.layout.sim_dialog) {
         binding.buttonOk.setOnClickListener {
             if (simCards.getOrNull(selected) !== null) onSIMSelected(selected)
         }
+        binding.buttonClose.setOnClickListener(::dismiss)
     }
 
     @SuppressLint("MissingPermission")

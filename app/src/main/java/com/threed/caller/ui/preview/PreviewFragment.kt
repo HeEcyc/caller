@@ -53,6 +53,7 @@ class PreviewFragment : BaseFragment<PreviewViewModel, PreviewFragmentBinding>(R
             AppliedDialog().show(parentFragmentManager)
             requireActivity().onBackPressed()
         }
+        binding.textAvatar.name = "John Doe"
     }
 
     private fun setVideoTheme() {
