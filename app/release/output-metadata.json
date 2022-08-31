@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.fancy.call",
+  "applicationId": "com.threed.caller",
   "variantName": "release",
   "elements": [
     {
