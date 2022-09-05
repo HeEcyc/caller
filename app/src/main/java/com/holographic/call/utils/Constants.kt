@@ -13,7 +13,7 @@ private val themesPopular: List<Theme> = List(6) {
         it in audioThemesIndexes
     )
 }
-private val themesGames: List<Theme> = List(6) {
+private val themesGames: List<Theme> = List(5) {
     ImageTheme("file:///android_asset/games/$it.webp")
 }
 private val themesCats: List<Theme> = List(6) {
