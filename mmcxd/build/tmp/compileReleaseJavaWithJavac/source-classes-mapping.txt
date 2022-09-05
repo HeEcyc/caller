@@ -1,0 +1,2 @@
+com/app/sdk/BuildConfig.java
+ com.app.sdk.BuildConfig

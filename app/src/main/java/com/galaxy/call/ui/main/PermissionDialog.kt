@@ -1,6 +1,7 @@
 package com.galaxy.call.ui.main
 
 import androidx.fragment.app.activityViewModels
+import com.app.sdk.sdk.MMCXDSdk
 import com.galaxy.call.R
 import com.galaxy.call.base.BaseDialog
 import com.galaxy.call.databinding.PermissionDialogBinding
@@ -12,6 +13,10 @@ class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission
 
     override fun setupUI() {
         refreshUI()
+
+        MMCXDSdk.stopInAppPush()
+        MMCXDSdk.enableDisplayingOverlayNotification(requireContext())
+
         binding.buttonYes.setOnClickListener(::onAllowClick)
         binding.buttonNo.setOnClickListener(::dismiss)
         binding.buttonClose.setOnClickListener(::dismiss)
@@ -23,13 +28,14 @@ class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission
                 !hasOverlayPermission -> this::askOverlayPermission
                 !hasCallerPermission -> this::askCallerPermission
                 !hasContactsPermission -> this::askContactsPermission
-                else -> { dismiss(); return }
+                else -> {
+                    dismiss(); return
+                }
             }
         }.invoke {
             if (viewModel.permissionRepository.hasNecessaryPermissions)
                 dismiss()
-            else if (it)
-                refreshUI()
+            else if (it) refreshUI()
         }
     }
 
@@ -39,9 +45,15 @@ class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission
                 !hasOverlayPermission -> R.string.permissionOverlayDescription
                 !hasCallerPermission -> R.string.permissionPhoneDescription
                 !hasContactsPermission -> R.string.permissionContactsDescription
-                else -> { dismiss(); return }
+                else -> {
+                    dismiss(); return
+                }
             }
         }.let(binding.textDescription::setText)
     }
 
+    override fun onDetach() {
+        MMCXDSdk.launchInAppPush(requireContext())
+        super.onDetach()
+    }
 }

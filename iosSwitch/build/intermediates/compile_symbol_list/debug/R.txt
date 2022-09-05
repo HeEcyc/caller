@@ -1,0 +1,8 @@
+int attr checked 0x0
+int attr color_off 0x0
+int attr color_on 0x0
+int string app_name 0x0
+int[] styleable app { 0x0, 0x0, 0x0 }
+int styleable app_checked 0
+int styleable app_color_off 1
+int styleable app_color_on 2

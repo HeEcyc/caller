@@ -1,0 +1,8 @@
+vn/luongvo/widget/iosswitchview/BuildConfig.java
+ vn.luongvo.widget.iosswitchview.BuildConfig
+vn/luongvo/widget/iosswitchview/SwitchView.java
+ vn.luongvo.widget.iosswitchview.SwitchView
+ vn.luongvo.widget.iosswitchview.SwitchView$1
+ vn.luongvo.widget.iosswitchview.SwitchView$OnCheckedChangeListener
+ vn.luongvo.widget.iosswitchview.SwitchView$SavedState
+ vn.luongvo.widget.iosswitchview.SwitchView$SavedState$1

@@ -1,0 +1,7 @@
+R_DEF: Internal format may change without notice
+local
+attr? checked
+attr? color_off
+attr? color_on
+string app_name
+styleable app checked color_on color_off

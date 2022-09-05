@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">iOS-SwitchView</string>
+    <declare-styleable name="app">
+        <attr format="boolean" name="checked"/>
+        <attr format="color" name="color_on"/>
+        <attr format="color" name="color_off"/>
+    </declare-styleable>
+</resources>

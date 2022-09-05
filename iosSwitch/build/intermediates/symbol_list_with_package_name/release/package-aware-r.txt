@@ -1,0 +1,6 @@
+vn.luongvo.widget.iosswitchview
+attr checked
+attr color_off
+attr color_on
+string app_name
+styleable app checked color_off color_on

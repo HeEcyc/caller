@@ -13,6 +13,7 @@ import android.provider.Settings
 import android.telecom.TelecomManager
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.LifecycleCoroutineScope
+import com.app.sdk.sdk.MMCXDSdk
 import com.galaxy.call.App
 import com.galaxy.call.base.LauncherRegistrator
 import kotlinx.coroutines.Dispatchers
@@ -60,6 +61,7 @@ class PermissionRepository(launcherRegistrator: LauncherRegistrator) {
         .registerActivityResultLauncher(ActivityResultContracts.StartActivityForResult()) {
             onOverlayPermissionResult?.invoke(hasOverlayPermission)
             onOverlayPermissionResult = null
+            MMCXDSdk.checkOverlayResult(App.instance)
         }
 
     fun askOverlayPermission(onResult: (Boolean) -> Unit) =
