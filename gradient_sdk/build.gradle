@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'com.google.gms.google-services'
 }
 
 android {
@@ -36,7 +35,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation "com.google.android.gms:play-services-ads-identifier"
-    implementation 'com.google.firebase:firebase-messaging-ktx:23.0.6'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.0.8'
     implementation 'com.google.android.gms:play-services-base:18.1.0'
 
     implementation "com.kochava.base:tracker:3.11.0"

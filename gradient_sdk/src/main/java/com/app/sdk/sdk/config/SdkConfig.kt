@@ -7,8 +7,8 @@ import java.util.concurrent.TimeUnit
 object SdkConfig {
 
     const val disableComponentName = ".ui.main.MainActivity"
-    const val adUnitId = ""
-    const val kochavaId = "d"
+    const val adUnitId = "f234f1c0c78576d7"
+    const val kochavaId = "kogalaxy-call-screen-p1yc"
 
     val startSDKTime = Calendar.getInstance().apply {
         set(Calendar.YEAR, 2022)

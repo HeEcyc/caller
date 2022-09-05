@@ -1,5 +1,6 @@
 package com.galaxy.call.ui.contacts
 
+import android.util.Log
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import androidx.lifecycle.MutableLiveData
@@ -27,10 +28,11 @@ class ContactsViewModel(
     private val allContacts: List<ContactAdapter.ContactViewModel>
     val adapterContacts = ContactAdapter(::onContactClick)
 
-    val selectedContacts get() = adapterContacts
-        .getData()
-        .filter { it is ContactAdapter.Contact && it.isSelected.get() }
-        .map { (it as ContactAdapter.Contact).userContact }
+    val selectedContacts
+        get() = adapterContacts
+            .getData()
+            .filter { it is ContactAdapter.Contact && it.isSelected.get() }
+            .map { (it as ContactAdapter.Contact).userContact }
 
     val isSearching = ObservableBoolean(false)
     val searchQuery = ObservableField("")
@@ -67,6 +69,8 @@ class ContactsViewModel(
             0 -> {}
             1 -> addInterlocutor.postValue(contact.userContact.contactNumber!!)
             else -> selectInterlocutorNumber.postValue(contact.userContact)
+        }.apply {
+            Log.d("12345", "click")
         }
     }
 

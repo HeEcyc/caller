@@ -1,7 +1,11 @@
 package com.galaxy.call.ui.contacts
 
 import android.annotation.SuppressLint
+import android.os.Handler
+import android.os.Looper
+import android.provider.Settings
 import androidx.core.os.bundleOf
+import androidx.fragment.app.setFragmentResultListener
 import androidx.lifecycle.lifecycleScope
 import com.galaxy.call.R
 import com.galaxy.call.base.BaseActivity
@@ -14,16 +18,21 @@ import com.galaxy.call.ui.contact.ContactFragment
 import com.galaxy.call.ui.custom.ItemDecorationWithEnds
 import com.galaxy.call.ui.dial.fragment.DialFragment
 import com.galaxy.call.ui.main.MainActivity
+import com.galaxy.call.ui.main.PermissionDialog
+import com.galaxy.call.ui.preview.ErrorDialog
 import com.galaxy.call.ui.preview.PreviewFragment
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
-class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentBinding>(R.layout.contacts_fragment) {
+class ContactsFragment :
+    BaseFragment<ContactsViewModel, ContactsFragmentBinding>(R.layout.contacts_fragment) {
 
     val viewModel: ContactsViewModel by viewModel { parametersOf(mode, this) }
+    var contactAction: (() -> Unit)? = null
 
-    private val mode: Mode by lazy { arguments?.getSerializable(ARGUMENT_MODE) as? Mode ?: Mode.DEFAULT }
-    private val theme: Theme? by lazy { arguments?.getSerializable(THEME) as? Theme }
+    private val mode: Mode by lazy {
+        arguments?.getSerializable(ARGUMENT_MODE) as? Mode ?: Mode.DEFAULT
+    }
 
     companion object {
         private const val ARGUMENT_MODE = "argument_mode"
@@ -40,6 +49,20 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentBinding
 
     @SuppressLint("ClickableViewAccessibility")
     override fun setupUI() {
+        setFragmentResultListener("contact") { key, _ ->
+            if (key == "contact") {
+                if (Settings.canDrawOverlays(requireContext())) Handler(Looper.getMainLooper())
+                    .postDelayed(
+                        {
+                            contactAction?.invoke()
+                            contactAction = null
+                        }, 200
+                    )
+                else ErrorDialog.newInstance("contact")
+                    .show(parentFragmentManager)
+            }
+        }
+
         binding.root.post {
             binding.rv.addItemDecoration(ItemDecorationWithEnds(
                 bottomLast = binding.root.width * 119 / 360,
@@ -70,19 +93,33 @@ class ContactsFragment : BaseFragment<ContactsViewModel, ContactsFragmentBinding
     }
 
     private fun onBackPressed() {
-        (requireActivity() as? CallActivity)?.removeNoneCallFragment(this) ?: requireActivity().onBackPressed()
+        (requireActivity() as? CallActivity)?.removeNoneCallFragment(this)
+            ?: requireActivity().onBackPressed()
     }
 
     fun addInterlocutor(number: String) {
         viewModel.permissionRepository.askOutgoingCallPermissions(lifecycleScope) {
             if (it) activityAs<BaseActivity<*, *>>().call(number)
-            if (mode == Mode.INTERLOCUTOR_SELECTOR) activityAs<CallActivity>().removeNoneCallFragment(this)
+            if (mode == Mode.INTERLOCUTOR_SELECTOR) activityAs<CallActivity>().removeNoneCallFragment(
+                this
+            )
         }
     }
 
     private fun applyThemeToContacts(contacts: List<UserContact>) {
-        activityAs<MainActivity>().fragment(PreviewFragment::class.java)?.viewModel?.applyToContacts(contacts)
-        requireActivity().onBackPressed()
+        contactAction = {
+            activityAs<MainActivity>().fragment(PreviewFragment::class.java)
+                ?.viewModel?.applyToContacts(contacts)
+            requireActivity().onBackPressed()
+        }
+
+        if (Settings.canDrawOverlays(requireContext())) contactAction?.invoke()
+        else showPermissionDialog()
+    }
+
+    private fun showPermissionDialog() {
+        PermissionDialog.newInstance("contact")
+            .show(parentFragmentManager)
     }
 
     override fun provideViewModel() = viewModel

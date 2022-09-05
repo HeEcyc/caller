@@ -1,7 +1,6 @@
 package com.galaxy.call.ui.main
 
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
@@ -19,7 +18,6 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.koin.android.viewmodel.ext.android.getViewModel
 import org.koin.core.parameter.parametersOf
-import java.util.*
 
 class MainActivity : BaseActivity<MainViewModel, MainActvityBinding>() {
 
@@ -54,22 +52,28 @@ class MainActivity : BaseActivity<MainViewModel, MainActvityBinding>() {
             supportFragmentManager.commit { replace(R.id.homeFragmentContainer, HomeFragment()) }
         }
         viewModel.openSettings.observe(this) {
-            supportFragmentManager.commit { replace(R.id.homeFragmentContainer, SettingsFragment()) }
+            supportFragmentManager.commit {
+                replace(
+                    R.id.homeFragmentContainer,
+                    SettingsFragment()
+                )
+            }
         }
         viewModel.openContacts.observe(this) {
             viewModel.permissionRepository.askContactsPermission {
                 if (it)
-                    supportFragmentManager.commit { replace(R.id.homeFragmentContainer, ContactsFragment.newInstance(ContactsFragment.Mode.DEFAULT)) }
+                    supportFragmentManager.commit {
+                        replace(
+                            R.id.homeFragmentContainer,
+                            ContactsFragment.newInstance(ContactsFragment.Mode.DEFAULT)
+                        )
+                    }
                 else
                     viewModel.onHomeClick()
             }
         }
 
     }
-
-    private fun notSupportedBackgroundDevice() = Build.MANUFACTURER.lowercase(Locale.ENGLISH) in listOf(
-        "xiaomi", "oppo", "vivo", "letv", "honor", "oneplus"
-    )
 
     private fun needToShowPermissionDialog() =
         !viewModel.permissionRepository.hasNecessaryPermissions && supportFragmentManager.fragments.none { it is PermissionDialog }
