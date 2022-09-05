@@ -35,4 +35,6 @@
     <string name="let_s_get_started">มาเริ่มกันเลย!</string>
     <string name="your">ของคุณ</string>
     <string name="theme_applied">ใช้ธีม!</string>
+    <string name="give_permissions">ให้สิทธิ์</string>
+    <string name="error_ncannot_be_applied_without_permission">ข้อผิดพลาด!\\nไม่สามารถสมัครโดยไม่ได้รับอนุญาต</string>
 </resources>

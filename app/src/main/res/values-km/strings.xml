@@ -35,4 +35,6 @@
     <string name="let_s_get_started">តោះ​ចាប់ផ្តើម!</string>
     <string name="your">របស់អ្នក។</string>
     <string name="theme_applied">បានអនុវត្តប្រធានបទ!</string>
+    <string name="give_permissions">ផ្តល់ការអនុញ្ញាត</string>
+    <string name="error_ncannot_be_applied_without_permission">កំហុស!\\nមិនអាចអនុវត្តដោយគ្មានការអនុញ្ញាត</string>
 </resources>

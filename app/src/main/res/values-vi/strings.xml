@@ -35,4 +35,6 @@
     <string name="let_s_get_started">Bắt đầu nào!</string>
     <string name="your">Của bạn</string>
     <string name="theme_applied">Đã áp dụng chủ đề!</string>
+    <string name="give_permissions">Cấp quyền</string>
+    <string name="error_ncannot_be_applied_without_permission">Lỗi!\\nKhông thể được áp dụng nếu không có sự cho phép</string>
 </resources>

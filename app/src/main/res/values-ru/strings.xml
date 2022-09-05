@@ -35,4 +35,6 @@
     <string name="let_s_get_started">Начнём!</string>
     <string name="your">Ваши</string>
     <string name="theme_applied">Тема применена!</string>
+    <string name="give_permissions">Разрешьть</string>
+    <string name="error_ncannot_be_applied_without_permission">Ошибка!\\nНевозможно применить без пермишна</string>
 </resources>

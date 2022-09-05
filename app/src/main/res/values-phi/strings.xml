@@ -35,4 +35,6 @@
     <string name="let_s_get_started">Magsimula na tayo!</string>
     <string name="your">Iyong</string>
     <string name="theme_applied">Inilapat ang tema!</string>
+    <string name="give_permissions">Magbigay ng mga pahintulot</string>
+    <string name="error_ncannot_be_applied_without_permission">Error!\\nHindi maaaring ilapat nang walang pahintulot</string>
 </resources>

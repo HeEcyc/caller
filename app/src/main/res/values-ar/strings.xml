@@ -35,4 +35,6 @@
     <string name="let_s_get_started">هيا بنا نبدأ!</string>
     <string name="your">لك</string>
     <string name="theme_applied">تم تطبيق الموضوع!</string>
+    <string name="error_ncannot_be_applied_without_permission">خطأ! لا يمكن تطبيقه بدون إذن</string>
+    <string name="give_permissions">امنح أذونات</string>
 </resources>

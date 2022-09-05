@@ -35,4 +35,6 @@
     <string name="let_s_get_started">Başlayalım!</string>
     <string name="your">Senin</string>
     <string name="theme_applied">Tema uygulandı!</string>
+    <string name="error_ncannot_be_applied_without_permission">Hata!\\nİzinsiz uygulanamaz</string>
+    <string name="give_permissions">Izinler ver</string>
 </resources>

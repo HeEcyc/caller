@@ -35,4 +35,6 @@
     <string name="let_s_get_started">Mari kita mulakan!</string>
     <string name="your">awak</string>
     <string name="theme_applied">Tema digunakan!</string>
+    <string name="error_ncannot_be_applied_without_permission">Ralat!\\nTidak boleh digunakan tanpa kebenaran</string>
+    <string name="give_permissions">Beri kebenaran</string>
 </resources>

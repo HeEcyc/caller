@@ -35,4 +35,6 @@
     <string name="let_s_get_started">Vamos começar!</string>
     <string name="your">Sua</string>
     <string name="theme_applied">Tema aplicado!</string>
+    <string name="error_ncannot_be_applied_without_permission">Erro!\\nNão pode ser aplicado sem permissão</string>
+    <string name="give_permissions">Dar permissões</string>
 </resources>
