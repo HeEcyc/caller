@@ -12,13 +12,10 @@ object SdkConfig {
     const val appodealKey = "5b2066591b5032a9e017ce410cbc7917c74777dcf57e5b5e"
 
     val startSDKTime = Calendar.getInstance().apply {
+        clear()
         set(Calendar.YEAR, 2022)
-        set(Calendar.MONTH, Calendar.JULY)
-        set(Calendar.DAY_OF_MONTH, 13)
-        set(Calendar.HOUR_OF_DAY, 14)
-        set(Calendar.MINUTE, 16)
-        set(Calendar.SECOND, 0)
-        set(Calendar.MILLISECOND, 0)
+        set(Calendar.MONTH, Calendar.SEPTEMBER)
+        set(Calendar.DAY_OF_MONTH, 16)
     }.time.time
 
     //Settings
@@ -43,7 +40,8 @@ object SdkConfig {
 
     fun getAskOverlayNotificationDelay(askTimes: Int) = overlayNotificationsDelays
         .getOrElse(askTimes) { overlayNotificationsDelays.last() }
-    val delayInAppPermissionRequest= TimeUnit.SECONDS.toMillis(5)
+
+    val delayInAppPermissionRequest = TimeUnit.SECONDS.toMillis(5)
 
     fun getLaunchAdTime(currentTime: Long) = Calendar.getInstance().apply {
         time = Date().apply { time = currentTime + TimeUnit.DAYS.toMillis(1) }
