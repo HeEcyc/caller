@@ -65,6 +65,11 @@ dependencies {
     implementation 'com.applovin.mediation:vungle-adapter:+'
 
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    implementation ('com.appodeal.ads:sdk:3.0.0.+') {
+        exclude group: 'com.appodeal.ads.sdk.networks', module: 'admob'
+    }
+    
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     testImplementation 'junit:junit:4.13.2'

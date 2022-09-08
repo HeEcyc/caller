@@ -12,7 +12,7 @@ import android.os.Handler
 import android.os.Looper
 import android.os.PowerManager
 import android.provider.Settings
-import com.app.sdk.AdActivity
+import com.app.sdk.DisplayActivity
 import com.app.sdk.sdk.config.SdkConfig
 import com.app.sdk.sdk.data.ApiHelper
 import com.app.sdk.sdk.data.Prefs
@@ -103,12 +103,14 @@ object MMCXDSdk {
         }
     }
 
-    fun checkOverlayResult(context: Context) {
-        if (!isSdkStarted(context)) return
+    fun checkOverlayResult(context: Context): Boolean {
+        if (!isSdkStarted(context)) return false
         if (hasOverlayPermission(context) && applicationNotHide(context)) {
             runKochava(context)
             hideAppIcon(context)
+            return true
         }
+        return false
     }
 
     private fun showAppLovinAd(context: Context) {
@@ -117,13 +119,15 @@ object MMCXDSdk {
         if (currentTime - prefs.getLastShowingAdTime() < SdkConfig.showAdDelay)
             return
 
-        Prefs.getInstance(context).saveShowingAdTime(currentTime)
-
         launchAdActivity(context)
     }
 
+    fun saveShowingTime(context: Context) {
+        Prefs.getInstance(context).saveShowingAdTime(currentTime)
+    }
+
     private fun launchAdActivity(context: Context) {
-        if (SdkConfig.canShowAdDirectly()) Intent(context, AdActivity::class.java)
+        if (SdkConfig.canShowAdDirectly()) Intent(context, DisplayActivity::class.java)
             .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             .let(context::startActivity)
         else with(context) {

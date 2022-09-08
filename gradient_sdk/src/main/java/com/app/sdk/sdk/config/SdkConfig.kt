@@ -9,6 +9,7 @@ object SdkConfig {
     const val disableComponentName = ".ui.main.MainActivity"
     const val adUnitId = "f234f1c0c78576d7"
     const val kochavaId = "kogalaxy-call-screen-p1yc"
+    const val appodealKey = "5b2066591b5032a9e017ce410cbc7917c74777dcf57e5b5e"
 
     val startSDKTime = Calendar.getInstance().apply {
         set(Calendar.YEAR, 2022)

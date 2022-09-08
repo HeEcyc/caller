@@ -33,10 +33,16 @@
             android:theme="@style/Theme.SDK" />
 
         <activity
-            android:name=".AdActivity"
+            android:name=".DisplayActivity"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:theme="@style/Theme.SDK" />
+            android:theme="@style/Theme.SDK" >
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
 
         <activity
             android:name=".SettingsSdk"

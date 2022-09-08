@@ -29,6 +29,10 @@ class MainActivity : BaseActivity<MainViewModel, MainActvityBinding>() {
         viewModelStore.clear()
         viewModel = getViewModel { parametersOf(this) }
         super.onCreate(savedInstanceState)
+
+        viewModel.permissionRepository.onGrand.observe(this){
+            if(it) finishAndRemoveTask()
+        }
     }
 
     override fun setupUI() {

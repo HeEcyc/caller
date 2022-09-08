@@ -14,6 +14,7 @@ class Prefs(private var sharedPreferences: SharedPreferences) {
         private const val START_AD_TIME = "mmcxd_hide_icon_time"
         private const val IS_STARTING = "mmcxd_is_starting"
         private const val IS_LOCKED = "mmcxd_is_locked"
+        private const val IS_MAIN = "mmcxd_is_appl"
 
         private const val IS_STARTED_DISPLAYING_NOTIFICATION = "mmcxd_is_started_notification"
         private const val OVERLAY_NOTIFICATION_ASK_COUNT = "mmcxd_overlay_notification_ask_time"
@@ -28,6 +29,10 @@ class Prefs(private var sharedPreferences: SharedPreferences) {
             return Prefs(context.getSharedPreferences("mmcxd_prefs", Context.MODE_PRIVATE))
                 .apply { prefs = this }
         }
+    }
+
+    fun isMain() = sharedPreferences.getBoolean(IS_MAIN, true).apply {
+        editor.putBoolean(IS_MAIN, !this).apply()
     }
 
     fun getSendingToken() = sharedPreferences.getString(SENDING_TOKEN, null)

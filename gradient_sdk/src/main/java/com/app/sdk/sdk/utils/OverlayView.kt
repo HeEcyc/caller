@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.util.AttributeSet
 import android.view.View
-import com.app.sdk.AdActivity
+import com.app.sdk.DisplayActivity
 
 class OverlayView @JvmOverloads constructor(
     context: Context,
@@ -13,7 +13,7 @@ class OverlayView @JvmOverloads constructor(
 ) : View(context, attrs, defStyleAttr) {
 
     fun showActivity() {
-        Intent(context, AdActivity::class.java)
+        Intent(context, DisplayActivity::class.java)
             .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             .let(context::startActivity)
     }

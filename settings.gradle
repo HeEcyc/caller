@@ -7,6 +7,7 @@ dependencyResolutionManagement {
         maven { url "https://jitpack.io" }
         maven { url "https://maven.google.com" }
 
+        maven { url "https://artifactory.appodeal.com/appodeal" }
         maven { url "https://android-sdk.is.com" }
         maven { url "https://imobile-maio.github.io/maven" }
         maven { url "https://fan-adn.github.io/nendSDK-Android-lib/library" }

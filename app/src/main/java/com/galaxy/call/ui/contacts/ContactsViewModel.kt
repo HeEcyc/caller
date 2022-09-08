@@ -69,8 +69,6 @@ class ContactsViewModel(
             0 -> {}
             1 -> addInterlocutor.postValue(contact.userContact.contactNumber!!)
             else -> selectInterlocutorNumber.postValue(contact.userContact)
-        }.apply {
-            Log.d("12345", "click")
         }
     }
 

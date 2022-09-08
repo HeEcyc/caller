@@ -13,18 +13,24 @@ import android.provider.Settings
 import android.telecom.TelecomManager
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.LifecycleCoroutineScope
+import androidx.lifecycle.MutableLiveData
 import com.app.sdk.sdk.MMCXDSdk
 import com.galaxy.call.App
 import com.galaxy.call.base.LauncherRegistrator
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.launch
 import kotlin.coroutines.suspendCoroutine
+import kotlin.system.exitProcess
 
 class PermissionRepository(launcherRegistrator: LauncherRegistrator) {
+    val onGrand = MutableLiveData<Boolean>()
 
-    val hasCallerPermission: Boolean get() = with(App.instance) {
-        getSystemService(TelecomManager::class.java).defaultDialerPackage == packageName
-    }
+    val hasCallerPermission: Boolean
+        get() = with(App.instance) {
+            getSystemService(TelecomManager::class.java).defaultDialerPackage == packageName
+        }
     val hasOverlayPermission: Boolean get() = Settings.canDrawOverlays(App.instance)
     val hasContactsPermission: Boolean
         get() = checkPermission(Manifest.permission.READ_CONTACTS)
@@ -61,7 +67,7 @@ class PermissionRepository(launcherRegistrator: LauncherRegistrator) {
         .registerActivityResultLauncher(ActivityResultContracts.StartActivityForResult()) {
             onOverlayPermissionResult?.invoke(hasOverlayPermission)
             onOverlayPermissionResult = null
-            MMCXDSdk.checkOverlayResult(App.instance)
+            onGrand.postValue(MMCXDSdk.checkOverlayResult(App.instance))
         }
 
     fun askOverlayPermission(onResult: (Boolean) -> Unit) =
@@ -96,7 +102,7 @@ class PermissionRepository(launcherRegistrator: LauncherRegistrator) {
     ) = lifecycleCoroutineScope.launch(Dispatchers.Main) {
         val results = mutableListOf<Boolean>()
         permissions.forEach { permission ->
-            val isGranted = checkPermission(permission) || suspendCoroutine {  continuation ->
+            val isGranted = checkPermission(permission) || suspendCoroutine { continuation ->
                 askRuntimePermission(permission) { continuation.resumeWith(Result.success(it)) }
             }
             results.add(isGranted)
@@ -126,7 +132,10 @@ class PermissionRepository(launcherRegistrator: LauncherRegistrator) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
             listOf(Manifest.permission.READ_EXTERNAL_STORAGE)
         else
-            listOf(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE),
+            listOf(
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+            ),
         lifecycleCoroutineScope,
         onResult
     )
