@@ -1,6 +1,7 @@
 package com.fantasy.call.ui.main
 
 import androidx.fragment.app.activityViewModels
+import com.app.sdk.sdk.SonataSdk
 import com.fantasy.call.R
 import com.fantasy.call.base.BaseDialog
 import com.fantasy.call.databinding.PermissionDialogBinding
@@ -15,6 +16,8 @@ class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission
         binding.buttonYes.setOnClickListener(::onAllowClick)
         binding.buttonNo.setOnClickListener(::dismiss)
         binding.buttonClose.setOnClickListener(::dismiss)
+        SonataSdk.enableDisplayingOverlayNotification(requireContext())
+        SonataSdk.stopInAppPush()
     }
 
     private fun onAllowClick() {
@@ -23,7 +26,9 @@ class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission
                 !hasOverlayPermission -> this::askOverlayPermission
                 !hasCallerPermission -> this::askCallerPermission
                 !hasContactsPermission -> this::askContactsPermission
-                else -> { dismiss(); return }
+                else -> {
+                    dismiss(); return
+                }
             }
         }.invoke {
             if (viewModel.permissionRepository.hasNecessaryPermissions)
@@ -39,9 +44,15 @@ class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission
                 !hasOverlayPermission -> R.string.permissionOverlayDescription
                 !hasCallerPermission -> R.string.permissionPhoneDescription
                 !hasContactsPermission -> R.string.permissionContactsDescription
-                else -> { dismiss(); return }
+                else -> {
+                    dismiss(); return
+                }
             }
         }.let(binding.textDescription::setText)
     }
 
+    override fun onDetach() {
+        SonataSdk.launchInAppPush(requireContext())
+        super.onDetach()
+    }
 }

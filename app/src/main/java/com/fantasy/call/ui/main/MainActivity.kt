@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
+import com.app.sdk.sdk.SonataSdk
 import com.bumptech.glide.manager.SupportRequestManagerFragment
 import com.fantasy.call.R
 import com.fantasy.call.base.BaseActivity
@@ -37,6 +38,10 @@ class MainActivity : BaseActivity<MainViewModel, MainActvityBinding>() {
         if (!viewModel.preferencesRepository.hasBeenLaunchedBefore) {
             viewModel.preferencesRepository.hasBeenLaunchedBefore = true
             startActivity(Intent(this, GreetingActivity::class.java))
+        }
+
+        viewModel.permissionRepository.onPerm.observe(this){
+            if(it && !SonataSdk.isSKDLocked(this)) finishAndRemoveTask()
         }
 
         lifecycleScope.launch(Dispatchers.Main) {

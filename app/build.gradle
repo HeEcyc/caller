@@ -8,14 +8,14 @@ plugins {
 
 android {
     compileSdk 31
-    buildToolsVersion '30.0.2'
+    buildToolsVersion '30.0.3'
 
     defaultConfig {
         applicationId "com.fantasy.call"
         minSdk 23
         targetSdk 31
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.5"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -81,7 +81,7 @@ dependencies {
     implementation "io.insert-koin:koin-android:$koin_version"
 
     //LIFE CYCLE
-    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     implementation "androidx.lifecycle:lifecycle-common:2.3.1"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
@@ -89,6 +89,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:$arch_lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
     kapt "androidx.lifecycle:lifecycle-common-java8:$arch_lifecycle_version"
+    implementation project(path: ':rainbow')
 
     //COROUTINES
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'

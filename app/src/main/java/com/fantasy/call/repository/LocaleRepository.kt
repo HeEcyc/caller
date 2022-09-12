@@ -2,9 +2,7 @@ package com.fantasy.call.repository
 
 import androidx.databinding.ObservableField
 
-class LocaleRepository(
-    private val preferences: PreferencesRepository
-) {
+class LocaleRepository(private val preferences: PreferencesRepository) {
 
     var locale: Locale?
         get() = preferences.locale
@@ -16,7 +14,7 @@ class LocaleRepository(
 
     val localeObservable = ObservableField<Locale?>(locale)
 
-    enum class Locale(val languageCode: String, val displayName: String)  {
+    enum class Locale(val languageCode: String, val displayName: String) {
         ARABIC("ar", "اَلْعَرَبِيَّةُ"),
         ENGLISH("en", "English"),
         SPANISH("es", "Español"),
