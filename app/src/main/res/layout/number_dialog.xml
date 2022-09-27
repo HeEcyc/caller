@@ -15,7 +15,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintDimensionRatio="360:772">
 
-            <com.threed.caller.ui.custom.ScalableCardView
+            <com.sappy.callthemes.ui.custom.ScalableCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
@@ -90,12 +90,12 @@
                                 app:layout_constraintHorizontal_bias="0.1542"
                                 app:layout_constraintVertical_bias="0.9">
 
-                                <com.threed.caller.ui.custom.SingleLetterAvatar
+                                <com.sappy.callthemes.ui.custom.SingleLetterAvatar
                                     android:id="@+id/textAvatar"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"/>
 
-                                <com.threed.caller.ui.custom.ScalableCardView
+                                <com.sappy.callthemes.ui.custom.ScalableCardView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     app:cardBackgroundColor="@android:color/transparent"
@@ -107,7 +107,7 @@
                                         android:layout_height="match_parent"
                                         android:scaleType="centerCrop"
                                         tools:ignore="TooDeepLayout" />
-                                </com.threed.caller.ui.custom.ScalableCardView>
+                                </com.sappy.callthemes.ui.custom.ScalableCardView>
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -190,7 +190,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
-            </com.threed.caller.ui.custom.ScalableCardView>
+            </com.sappy.callthemes.ui.custom.ScalableCardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

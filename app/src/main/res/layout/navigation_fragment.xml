@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.threed.caller.ui.main.MainViewModel" />
+            type="com.sappy.callthemes.ui.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

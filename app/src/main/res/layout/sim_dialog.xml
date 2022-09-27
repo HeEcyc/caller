@@ -15,7 +15,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintDimensionRatio="360:772">
 
-            <com.threed.caller.ui.custom.ScalableCardView
+            <com.sappy.callthemes.ui.custom.ScalableCardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -205,7 +205,7 @@
                         android:layout_weight="32"/>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
-            </com.threed.caller.ui.custom.ScalableCardView>
+            </com.sappy.callthemes.ui.custom.ScalableCardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

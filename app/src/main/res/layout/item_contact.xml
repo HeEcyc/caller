@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="item"
-            type="com.threed.caller.ui.contacts.ContactAdapter.Contact" />
+            type="com.sappy.callthemes.ui.contacts.ContactAdapter.Contact" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -30,12 +30,12 @@
                 app:layout_constraintHeight_percent="0.7333"
                 app:layout_constraintHorizontal_bias="0.06557377">
 
-                <com.threed.caller.ui.custom.SingleLetterAvatar
+                <com.sappy.callthemes.ui.custom.SingleLetterAvatar
                     android:id="@+id/textAvatar"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
 
-                <com.threed.caller.ui.custom.ScalableCardView
+                <com.sappy.callthemes.ui.custom.ScalableCardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:cardBackgroundColor="@android:color/transparent"
@@ -46,7 +46,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"/>
-                </com.threed.caller.ui.custom.ScalableCardView>
+                </com.sappy.callthemes.ui.custom.ScalableCardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
