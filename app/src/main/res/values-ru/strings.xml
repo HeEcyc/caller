@@ -25,13 +25,8 @@
     <string name="apply">Применить</string>
     <string name="choose_a_contact_number">Выберите номер</string>
     <string name="calling">Звонит...</string>
-    <string name="end_to_end_encryption">Сквозное шифрование</string>
     <string name="call">Звонок...</string>
     <string name="choose_a_sim_card">Выберите SIM-карту</string>
-    <string name="your">Ваши</string>
-    <string name="theme_applied">Тема применена!</string>
-    <string name="recommended">Рекомендуемые</string>
-    <string name="start">Начать</string>
     <string name="trending">В тренде</string>
     <string name="your_image">Ваше изображение</string>
 </resources>

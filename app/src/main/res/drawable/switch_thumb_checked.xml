@@ -1,6 +1,0 @@
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-  <item
-    android:drawable="@mipmap/switch_thumb_checked"
-    android:width="27dp"
-    android:height="26dp"/>
-</layer-list>

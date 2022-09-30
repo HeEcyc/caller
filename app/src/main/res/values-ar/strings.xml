@@ -25,13 +25,8 @@
     <string name="apply">يتقدم</string>
     <string name="choose_a_contact_number">اختر رقم الاتصال</string>
     <string name="calling">جارٍ الاتصال ...</string>
-    <string name="end_to_end_encryption">التشفير التام بين الأطراف</string>
     <string name="call">مكالمة...</string>
     <string name="choose_a_sim_card">اختر بطاقة SIM </string>
-    <string name="your">لك</string>
-    <string name="theme_applied">تم تطبيق الموضوع!</string>
-    <string name="recommended">مُستَحسَن</string>
-    <string name="start">بداية</string>
     <string name="trending">الشائع</string>
     <string name="your_image">صورتك</string>
 </resources>

@@ -25,13 +25,8 @@
     <string name="apply">นำมาใช้</string>
     <string name="choose_a_contact_number">เลือกเบอร์ติดต่อ</string>
     <string name="calling">กำลังโทร...</string>
-    <string name="end_to_end_encryption">การเข้ารหัสตั้งแต่ต้นทางถึงปลายทาง</string>
     <string name="call">โทร...</string>
     <string name="choose_a_sim_card">เลือกซิมการ์ด</string>
-    <string name="your">ของคุณ</string>
-    <string name="theme_applied">ใช้ธีม!</string>
-    <string name="recommended">ที่แนะนำ</string>
-    <string name="start">เริ่ม</string>
     <string name="trending">กำลังมาแรง</string>
     <string name="your_image">ภาพของคุณ</string>
 </resources>

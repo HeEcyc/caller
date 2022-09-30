@@ -25,13 +25,8 @@
     <string name="apply">Uygulamak</string>
     <string name="choose_a_contact_number">Bir iletişim numarası seçin</string>
     <string name="calling">arıyor...</string>
-    <string name="end_to_end_encryption">Uçtan Uca Şifreleme</string>
     <string name="call">Telefon etmek...</string>
     <string name="choose_a_sim_card">Bir SIM kart seçin</string>
-    <string name="your">Senin</string>
-    <string name="theme_applied">Tema uygulandı!</string>
-    <string name="recommended">ที่แนะนำ</string>
-    <string name="start">Başlama</string>
     <string name="trending">Trend olan</string>
     <string name="your_image">Senin resim</string>
 </resources>

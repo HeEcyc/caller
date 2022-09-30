@@ -25,13 +25,8 @@
     <string name="apply">Apply</string>
     <string name="choose_a_contact_number">Choose a contact number</string>
     <string name="calling">Calling...</string>
-    <string name="end_to_end_encryption">End-to-End Encryption</string>
     <string name="call">Call...</string>
     <string name="choose_a_sim_card">Choose a SIM card</string>
-    <string name="your">Your</string>
-    <string name="theme_applied">Theme applied!</string>
-    <string name="recommended">Recommended</string>
-    <string name="start">Start</string>
     <string name="trending">Trending</string>
     <string name="your_image">Your Image</string>
 </resources>

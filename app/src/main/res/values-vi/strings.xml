@@ -25,13 +25,8 @@
     <string name="apply">Ứng dụng</string>
     <string name="choose_a_contact_number">Chọn một số liên lạc</string>
     <string name="calling">Đang gọi ...</string>
-    <string name="end_to_end_encryption">Mã hóa đầu cuối</string>
     <string name="call">Cuộc gọi...</string>
     <string name="choose_a_sim_card">Chọn một thẻ SIM</string>
-    <string name="your">Của bạn</string>
-    <string name="theme_applied">Đã áp dụng chủ đề!</string>
-    <string name="recommended">Khuyến khích</string>
-    <string name="start">Bắt đầu</string>
     <string name="trending">Xu hướng</string>
     <string name="your_image">Hình ảnh của bạn</string>
 </resources>
