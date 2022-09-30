@@ -12,55 +12,46 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintWidth_percent="0.908333"
-            app:layout_constraintDimensionRatio="328:75"
+            app:layout_constraintWidth_percent="0.88888888"
+            app:layout_constraintDimensionRatio="320:83"
             android:orientation="vertical">
 
-            <Space
-                android:layout_width="match_parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_weight="10"/>
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintHeight_percent="0.39759">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/letter_frame"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="33:26"
+                    android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeMinTextSize="1sp"
+                    android:textColor="#F3EAD9"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textAllCaps="true"
+                    android:text='@{"" + item.c}'/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="32"
-                android:gravity="center"
-                app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="24sp"
-                app:autoSizeMinTextSize="1sp"
-                android:textColor="#2C4F46"
-                android:fontFamily="@font/ubuntu_bold"
-                android:textAllCaps="true"
-                android:text='@{"" + item.c}'/>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
-
-            <com.sappy.callthemes.ui.custom.ScalableCardView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                app:cardElevation="0dp"
-                app:cardBackgroundColor="#2C4F46"
-                app:scale_by="byHeight"
-                app:scalable_corner_radius="0.5"/>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="30"/>
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

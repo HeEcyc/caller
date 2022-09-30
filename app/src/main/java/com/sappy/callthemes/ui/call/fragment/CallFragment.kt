@@ -111,11 +111,8 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
     }
 
     private fun showContact() {
-        binding.layoutRinging.textAvatar.name = contact.contactName
         loadUserPhotoInto(binding.layoutRinging.contactPicture)
-        binding.layoutDialing.textAvatar.name = contact.contactName
         loadUserPhotoInto(binding.layoutDialing.contactPicture)
-        binding.layoutAccepted.textAvatar.name = contact.contactName
         loadUserPhotoInto(binding.layoutAccepted.contactPicture)
     }
 

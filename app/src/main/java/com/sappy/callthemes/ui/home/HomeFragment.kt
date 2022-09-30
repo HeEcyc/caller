@@ -18,18 +18,23 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
     override fun setupUI() {
         binding.root.post {
             val isLtr = resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_LTR
-            val outerSpace = binding.recyclerView.width * 16 / 360
+            val outerSpace = binding.recyclerView.width * 20 / 360
             val innerSpace = binding.recyclerView.width * 5 / 360
-            val verticalSpace = binding.recyclerView.width * 10 / 360
-            val itemDecoration = ItemDecorationWithEnds(
+            var itemDecoration = ItemDecorationWithEnds(
                 leftFirst = if (isLtr) outerSpace else innerSpace,
                 leftLast = if (isLtr) innerSpace else outerSpace,
                 rightFirst = if (isLtr) innerSpace else outerSpace,
                 rightLast = if (isLtr) outerSpace else innerSpace,
-                bottomFirst = verticalSpace,
-                bottomLast = verticalSpace,
                 firstPredicate = { i -> i % 2 == 0 },
                 lastPredicate = { i, _ -> i % 2 == 1 }
+            )
+            binding.recyclerView.addItemDecoration(itemDecoration)
+            val verticalSpace = binding.recyclerView.width * 10 / 360
+            val verticalSpaceLast = binding.recyclerView.width * 107 / 360
+            itemDecoration = ItemDecorationWithEnds(
+                bottom = verticalSpace,
+                bottomLast = verticalSpaceLast,
+                lastPredicate = { i, c -> if (c % 2 == 0) i in (c-2)..(c-1) else i == c - 1 }
             )
             binding.recyclerView.addItemDecoration(itemDecoration)
         }

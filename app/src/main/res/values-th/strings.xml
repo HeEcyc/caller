@@ -32,4 +32,6 @@
     <string name="theme_applied">ใช้ธีม!</string>
     <string name="recommended">ที่แนะนำ</string>
     <string name="start">เริ่ม</string>
+    <string name="trending">กำลังมาแรง</string>
+    <string name="your_image">ภาพของคุณ</string>
 </resources>

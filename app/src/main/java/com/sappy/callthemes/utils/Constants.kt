@@ -7,25 +7,25 @@ import com.sappy.callthemes.model.theme.VideoTheme
 
 val videoThemes = List(8) {
     VideoTheme(
-        "file:///android_asset/top/video/$it.mp4",
-        "file:///android_asset/top/gif/$it.gif",
+        "file:///android_asset/new/video/$it.mp4",
+        "file:///android_asset/new/gif/$it.gif",
         true
     )
 }
 val audioThemesIndexes = videoThemes.indices.toList()
-val themesTop = MutableList<Theme>(8) {
-    ImageTheme("file:///android_asset/top/image/$it.png")
+val themesNew = MutableList<Theme>(8) {
+    ImageTheme("file:///android_asset/new/image/$it.png")
 }.apply { addAll(0, videoThemes) }.toList()
-val themesNew = List(8) {
-    ImageTheme("file:///android_asset/new/$it.png")
+val themesTop = List(8) {
+    ImageTheme("file:///android_asset/top/$it.png")
 }
-val themesRecommended: List<Theme> = List(8) {
-    ImageTheme("file:///android_asset/recommended/$it.png")
+val themesTrending: List<Theme> = List(8) {
+    ImageTheme("file:///android_asset/trending/$it.png")
 }
 val presetThemes: List<Theme> = listOf(
-    *themesTop.toTypedArray(),
     *themesNew.toTypedArray(),
-    *themesRecommended.toTypedArray()
+    *themesTop.toTypedArray(),
+    *themesTrending.toTypedArray()
 )
 
 val appLink: String by lazy { "https://play.google.com/store/apps/details?id=" + App.instance.packageName }

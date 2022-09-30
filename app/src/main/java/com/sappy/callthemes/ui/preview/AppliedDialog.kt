@@ -9,6 +9,7 @@ class AppliedDialog : BaseDialog<AppliedDialogBinding>(R.layout.applied_dialog) 
 
     override fun setupUI() {
         binding.buttonOk.setOnClickListener(::dismiss)
+        binding.buttonClose.setOnClickListener(::dismiss)
     }
 
 }

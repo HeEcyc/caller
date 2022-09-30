@@ -1,7 +1,12 @@
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="70dp"
-    android:height="70dp"
-    android:viewportWidth="70"
-    android:viewportHeight="70">
-  <item android:drawable="@mipmap/ic_contacts"/>
-</layer-list>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="97dp"
+    android:viewportWidth="64"
+    android:viewportHeight="97">
+  <path
+      android:pathData="M26.092,44.913C24.58,43.403 23.749,41.648 23.749,39.348C23.749,34.737 27.507,31 32.142,31C36.778,31 40.535,34.737 40.535,39.348C40.535,43.958 37.647,47 32.142,47C24.009,47 15.986,52.426 17.105,63H47.879C48.838,56.043 43.927,49.087 39.381,48.391"
+      android:strokeWidth="2.0339"
+      android:fillColor="#00000000"
+      android:strokeColor="#F3EAD9"
+      android:strokeLineCap="round"/>
+</vector>

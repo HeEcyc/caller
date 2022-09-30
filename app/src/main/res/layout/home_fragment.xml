@@ -17,14 +17,13 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#D49655">
+            android:layout_height="wrap_content">
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="360:70"
+                app:layout_constraintDimensionRatio="3600:955"
                 android:scrollbars="none"
                 android:overScrollMode="never">
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -40,33 +39,77 @@
                             android:layout_height="match_parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="45:70"/>
+                            app:layout_constraintDimensionRatio="235:955"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:onClick="@{(_) -> viewModel.onAllClick()}">
-                        <androidx.appcompat.widget.AppCompatTextView
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.492"
+                            android:orientation="horizontal"
+                            visibleIf="@{viewModel.tabAll}"
+                            android:background="@drawable/tab_bg">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintDimensionRatio="215:470"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <com.sappy.callthemes.ui.custom.TrueAutoSizeTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.55319"
+                                    android:gravity="center"
+                                    app:font_to_text_ratio="0.923"
+                                    android:textColor="#D2E23D"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:textAllCaps="true"
+                                    android:text="@string/all"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintDimensionRatio="215:470"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <com.sappy.callthemes.ui.custom.TrueAutoSizeTextView
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.457"
+                            app:layout_constraintHeight_percent="0.2722513"
+                            app:layout_constraintVertical_bias="0.84892"
                             android:gravity="center"
-                            app:autoSizeTextType="uniform"
-                            app:autoSizeMaxTextSize="14sp"
-                            app:autoSizeMinTextSize="1sp"
-                            android:textColor="@{viewModel.tabAll ? @color/selected : @color/unselected}"
-                            android:fontFamily="@font/ubuntu_bold"
-                            android:textAllCaps="true"
-                            android:text="@string/all"
-                            android:shadowColor="#80000000"
-                            android:shadowRadius="3"
-                            android:shadowDx="1"
-                            android:shadowDy="1"/>
+                            app:font_to_text_ratio="0.923"
+                            android:textColor="#F3EAD9"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            visibleIf="@{!viewModel.tabAll}"
+                            android:text="@string/all"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -77,33 +120,77 @@
                             android:layout_height="match_parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="50:70"/>
+                            app:layout_constraintDimensionRatio="185:955"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:onClick="@{(_) -> viewModel.onYoursClick()}">
-                        <androidx.appcompat.widget.AppCompatTextView
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.492"
+                            android:orientation="horizontal"
+                            visibleIf="@{viewModel.tabYours}"
+                            android:background="@drawable/tab_bg">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintDimensionRatio="215:470"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <com.sappy.callthemes.ui.custom.TrueAutoSizeTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.55319"
+                                    android:gravity="center"
+                                    app:font_to_text_ratio="0.923"
+                                    android:textColor="#D2E23D"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:textAllCaps="true"
+                                    android:text="@string/your_image"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintDimensionRatio="215:470"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <com.sappy.callthemes.ui.custom.TrueAutoSizeTextView
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.457"
+                            app:layout_constraintHeight_percent="0.2722513"
+                            app:layout_constraintVertical_bias="0.84892"
                             android:gravity="center"
-                            app:autoSizeTextType="uniform"
-                            app:autoSizeMaxTextSize="14sp"
-                            app:autoSizeMinTextSize="1sp"
-                            android:textColor="@{viewModel.tabYours ? @color/selected : @color/unselected}"
-                            android:fontFamily="@font/ubuntu_bold"
-                            android:textAllCaps="true"
-                            android:text="@string/your"
-                            android:shadowColor="#80000000"
-                            android:shadowRadius="3"
-                            android:shadowDx="1"
-                            android:shadowDy="1"/>
+                            app:font_to_text_ratio="0.923"
+                            android:textColor="#F3EAD9"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            visibleIf="@{!viewModel.tabYours}"
+                            android:text="@string/your_image"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -114,70 +201,77 @@
                             android:layout_height="match_parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="50:70"/>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:onClick="@{(_) -> viewModel.onTopClick()}">
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.457"
-                            android:gravity="center"
-                            app:autoSizeTextType="uniform"
-                            app:autoSizeMaxTextSize="14sp"
-                            app:autoSizeMinTextSize="1sp"
-                            android:textColor="@{viewModel.tabTop ? @color/selected : @color/unselected}"
-                            android:fontFamily="@font/ubuntu_bold"
-                            android:textAllCaps="true"
-                            android:text="@string/top"
-                            android:shadowColor="#80000000"
-                            android:shadowRadius="3"
-                            android:shadowDx="1"
-                            android:shadowDy="1"/>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
-                        <Space
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="50:70"/>
+                            app:layout_constraintDimensionRatio="185:955"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:onClick="@{(_) -> viewModel.onNewClick()}">
-                        <androidx.appcompat.widget.AppCompatTextView
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.492"
+                            android:orientation="horizontal"
+                            visibleIf="@{viewModel.tabNew}"
+                            android:background="@drawable/tab_bg">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintDimensionRatio="215:470"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <com.sappy.callthemes.ui.custom.TrueAutoSizeTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.55319"
+                                    android:gravity="center"
+                                    app:font_to_text_ratio="0.923"
+                                    android:textColor="#D2E23D"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:textAllCaps="true"
+                                    android:text="@string/s_new"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintDimensionRatio="215:470"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <com.sappy.callthemes.ui.custom.TrueAutoSizeTextView
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.457"
+                            app:layout_constraintHeight_percent="0.2722513"
+                            app:layout_constraintVertical_bias="0.84892"
                             android:gravity="center"
-                            app:autoSizeTextType="uniform"
-                            app:autoSizeMaxTextSize="14sp"
-                            app:autoSizeMinTextSize="1sp"
-                            android:textColor="@{viewModel.tabNew ? @color/selected : @color/unselected}"
-                            android:fontFamily="@font/ubuntu_bold"
-                            android:textAllCaps="true"
-                            android:text="@string/s_new"
-                            android:shadowColor="#80000000"
-                            android:shadowRadius="3"
-                            android:shadowDx="1"
-                            android:shadowDy="1"/>
+                            app:font_to_text_ratio="0.923"
+                            android:textColor="#F3EAD9"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            visibleIf="@{!viewModel.tabNew}"
+                            android:text="@string/s_new"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -188,33 +282,77 @@
                             android:layout_height="match_parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="50:70"/>
+                            app:layout_constraintDimensionRatio="185:955"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:onClick="@{(_) -> viewModel.onPopularClick()}">
-                        <androidx.appcompat.widget.AppCompatTextView
+                        android:onClick="@{(_) -> viewModel.onTopClick()}">
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.492"
+                            android:orientation="horizontal"
+                            visibleIf="@{viewModel.tabTop}"
+                            android:background="@drawable/tab_bg">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintDimensionRatio="215:470"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <com.sappy.callthemes.ui.custom.TrueAutoSizeTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.55319"
+                                    android:gravity="center"
+                                    app:font_to_text_ratio="0.923"
+                                    android:textColor="#D2E23D"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:textAllCaps="true"
+                                    android:text="@string/top"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintDimensionRatio="215:470"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <com.sappy.callthemes.ui.custom.TrueAutoSizeTextView
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.457"
+                            app:layout_constraintHeight_percent="0.2722513"
+                            app:layout_constraintVertical_bias="0.84892"
                             android:gravity="center"
-                            app:autoSizeTextType="uniform"
-                            app:autoSizeMaxTextSize="14sp"
-                            app:autoSizeMinTextSize="1sp"
-                            android:textColor="@{viewModel.tabPopular ? @color/selected : @color/unselected}"
-                            android:fontFamily="@font/ubuntu_bold"
-                            android:textAllCaps="true"
-                            android:text="@string/recommended"
-                            android:shadowColor="#80000000"
-                            android:shadowRadius="3"
-                            android:shadowDx="1"
-                            android:shadowDy="1"/>
+                            app:font_to_text_ratio="0.923"
+                            android:textColor="#F3EAD9"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            visibleIf="@{!viewModel.tabTop}"
+                            android:text="@string/top"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -225,7 +363,88 @@
                             android:layout_height="match_parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="45:70"/>
+                            app:layout_constraintDimensionRatio="185:955"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="@{(_) -> viewModel.onTrendingClick()}">
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.492"
+                            android:orientation="horizontal"
+                            visibleIf="@{viewModel.tabTrending}"
+                            android:background="@drawable/tab_bg">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintDimensionRatio="215:470"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <com.sappy.callthemes.ui.custom.TrueAutoSizeTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.55319"
+                                    android:gravity="center"
+                                    app:font_to_text_ratio="0.923"
+                                    android:textColor="#D2E23D"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:textAllCaps="true"
+                                    android:text="@string/trending"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintDimensionRatio="215:470"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <com.sappy.callthemes.ui.custom.TrueAutoSizeTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.2722513"
+                            app:layout_constraintVertical_bias="0.84892"
+                            android:gravity="center"
+                            app:font_to_text_ratio="0.923"
+                            android:textColor="#F3EAD9"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            visibleIf="@{!viewModel.tabTrending}"
+                            android:text="@string/trending"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="235:955"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -251,7 +470,7 @@
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="360:49"/>
+                        app:layout_constraintDimensionRatio="3600:405"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -263,7 +482,7 @@
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="360:215">
+                        app:layout_constraintDimensionRatio="360:131">
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/buttonAdd"
@@ -273,8 +492,8 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintDimensionRatio="1:1"
-                            app:layout_constraintHeight_percent="0.772"
-                            android:src="@mipmap/button_add"/>
+                            app:layout_constraintHeight_percent="0.67"
+                            android:src="@drawable/button_add"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>

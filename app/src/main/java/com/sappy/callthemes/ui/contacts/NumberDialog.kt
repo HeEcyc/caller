@@ -28,7 +28,6 @@ class NumberDialog : BaseDialog<NumberDialogBinding>(R.layout.number_dialog) {
         if (contact.photoThumbnailUri !== null)
             Glide.with(App.instance).load(contact.photoThumbnailUri).into(binding.avatar)
         binding.name.text = contact.contactName
-        binding.textAvatar.name = contact.contactName
         binding.rv.adapter = NumberAdapter { selected ->
             binding.rv.adapter!!.let { it as NumberAdapter }.getData().forEach {
                 it.isSelected.set(it === selected)

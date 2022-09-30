@@ -17,9 +17,9 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="360:75">
+            app:layout_constraintDimensionRatio="360:84">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <com.sappy.callthemes.ui.custom.ScalableCardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -27,28 +27,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintHeight_percent="0.7333"
-                app:layout_constraintHorizontal_bias="0.06557377">
-
-                <com.sappy.callthemes.ui.custom.SingleLetterAvatar
-                    android:id="@+id/textAvatar"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-
-                <com.sappy.callthemes.ui.custom.ScalableCardView
+                app:layout_constraintHeight_percent="0.7619"
+                app:layout_constraintHorizontal_bias="0.0675675675"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardElevation="0dp"
+                app:scalable_corner_radius="0.5">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/avatar"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardElevation="0dp"
-                    app:scalable_corner_radius="0.5">
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/avatar"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"/>
-                </com.sappy.callthemes.ui.custom.ScalableCardView>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar_placeholder"/>
+            </com.sappy.callthemes.ui.custom.ScalableCardView>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="0dp"
@@ -57,16 +47,16 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="196:18"
-                app:layout_constraintHeight_percent="0.24"
+                app:layout_constraintDimensionRatio="1805:260"
+                app:layout_constraintHeight_percent="0.3095"
                 app:layout_constraintHorizontal_bias="0.579"
-                app:layout_constraintVertical_bias="0.2456"
+                app:layout_constraintVertical_bias="0.275862"
                 android:gravity="center_vertical"
                 app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="16sp"
+                app:autoSizeMaxTextSize="24sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#2D211E"
-                android:fontFamily="@font/ubuntu_bold"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/sf_pro_display_bold"
                 android:text="@{item.userContact.contactName}"/>
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -76,16 +66,16 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="196:18"
-                app:layout_constraintHeight_percent="0.24"
+                app:layout_constraintDimensionRatio="1805:220"
+                app:layout_constraintHeight_percent="0.2619"
                 app:layout_constraintHorizontal_bias="0.579"
-                app:layout_constraintVertical_bias="0.7368421"
+                app:layout_constraintVertical_bias="0.7419"
                 android:gravity="center_vertical"
                 app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="16sp"
+                app:autoSizeMaxTextSize="20sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#2D211E"
-                android:fontFamily="@font/ubuntu_regular"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/sf_pro_display_regular"
                 android:text="@{item.userContact.contactNumber}"/>
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -96,9 +86,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintHeight_percent="0.42666666"
-                app:layout_constraintHorizontal_bias="0.94817"
-                android:src="@mipmap/ic_selected"
+                app:layout_constraintHeight_percent="0.44"
+                app:layout_constraintHorizontal_bias="0.9427"
+                android:src="@drawable/ic_selected"
                 android:visibility="@{item.isSelected ? View.VISIBLE : View.GONE}"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

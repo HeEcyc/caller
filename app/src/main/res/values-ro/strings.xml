@@ -32,4 +32,6 @@
     <string name="theme_applied">Tema aplicată!</string>
     <string name="recommended">Recomandat</string>
     <string name="start">start</string>
+    <string name="trending">Trending</string>
+    <string name="your_image">Imaginea ta</string>
 </resources>
