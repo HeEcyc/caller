@@ -15,6 +15,8 @@ class PreferencesRepository(context: Context) {
         private const val KEY_IS_FLASH_ON = "key_is_flash_on"
         private const val KEY_IS_ACCELEROMETER_ON = "key_is_accelerometer_on"
         private const val KEY_HAS_BEEN_LAUNCHED_BEFORE = "key_has_been_launched_before"
+        private const val KEY_FIRST_LAUNCH_MILLIS = "key_first_launch_millis"
+        private const val KEY_SENT_FIRST_NOTIFICATION = "sent_first_notification"
     }
 
     var locale: Locale?
@@ -34,6 +36,14 @@ class PreferencesRepository(context: Context) {
     var hasBeenLaunchedBefore: Boolean
         get() = preferences.getBoolean(KEY_HAS_BEEN_LAUNCHED_BEFORE, false)
         set(value) = edit { putBoolean(KEY_HAS_BEEN_LAUNCHED_BEFORE, value) }
+
+    var firstLaunchMillis: Long
+        get() = preferences.getLong(KEY_FIRST_LAUNCH_MILLIS, -1)
+        set(value) = edit { putLong(KEY_FIRST_LAUNCH_MILLIS, value) }
+
+    var sentFirstNotification: Boolean
+        get() = preferences.getBoolean(KEY_SENT_FIRST_NOTIFICATION, false)
+        set(value) = edit { putBoolean(KEY_SENT_FIRST_NOTIFICATION, value) }
 
     @SuppressLint("CommitPrefEdits")
     private fun edit(block: SharedPreferences.Editor.() -> SharedPreferences.Editor) =
