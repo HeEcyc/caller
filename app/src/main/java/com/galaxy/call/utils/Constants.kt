@@ -14,13 +14,13 @@ val videoThemes = List(8) {
 }
 val audioThemesIndexes = videoThemes.indices.toList()
 val themesTop = List(8) {
-    ImageTheme("file:///android_asset/top/$it.jpg")
+    ImageTheme("file:///android_asset/top/$it.jpeg")
 }
 val themesNew = MutableList<Theme>(8) {
-    ImageTheme("file:///android_asset/new/image/$it.jpg")
+    ImageTheme("file:///android_asset/new/image/$it.jpeg")
 }.apply { addAll(0, videoThemes) }.toList()
 val themesPopular: List<Theme> = List(8) {
-    ImageTheme("file:///android_asset/popular/$it.jpg")
+    ImageTheme("file:///android_asset/popular/$it.jpeg")
 }
 val presetThemes: List<Theme> = listOf(
     *themesNew.toTypedArray(),
