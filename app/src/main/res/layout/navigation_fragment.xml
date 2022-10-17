@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.galaxy.call.ui.main.GMainGViewGModelG" />
+            type="com.galala.lalaxy.ui.main.GMainGViewGModelG" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

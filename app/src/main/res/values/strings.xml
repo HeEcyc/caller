@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Galaxy Call Screen</string>
+    <string name="app_name" translatable="false">Galaxy Caller</string>
     <string name="get_started">Get Started</string>
     <string name="all">All</string>
     <string name="top">Top</string>

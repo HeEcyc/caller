@@ -4,10 +4,10 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.galaxy.call.repository.GLocaleGRepositoryG"/>
+        <import type="com.galala.lalaxy.repository.GLocaleGRepositoryG"/>
         <variable
             name="item"
-            type="com.galaxy.call.repository.GLocaleGRepositoryG.Locale" />
+            type="com.galala.lalaxy.repository.GLocaleGRepositoryG.Locale" />
         <variable
             name="localeRepository"
             type="GLocaleGRepositoryG" />

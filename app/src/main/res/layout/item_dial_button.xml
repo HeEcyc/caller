@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="item"
-            type="com.galaxy.call.ui.dial.fragment.GDialGAdapterG.DialButtonViewModel" />
+            type="com.galala.lalaxy.ui.dial.fragment.GDialGAdapterG.DialButtonViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
