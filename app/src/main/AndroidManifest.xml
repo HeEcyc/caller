@@ -23,7 +23,7 @@
 
     <application
         android:allowBackup="true"
-        android:name="com.galaxy.call.App"
+        android:name="com.galaxy.call.GAppG"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -31,7 +31,7 @@
         android:theme="@style/Theme.Caller">
 
         <activity
-            android:name="com.galaxy.call.ui.main.MainActivity"
+            android:name="com.galaxy.call.ui.main.GMainGActivityG"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
@@ -43,13 +43,13 @@
         </activity>
 
         <activity
-            android:name="com.galaxy.call.ui.greeting.GreetingActivity"
+            android:name="com.galaxy.call.ui.greeting.GGreetingGActivityG"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"
             android:exported="true"/>
 
         <activity
-            android:name="com.galaxy.call.ui.dial.activity.DialActivity"
+            android:name="com.galaxy.call.ui.dial.activity.GDialGActivityG"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"
             android:exported="true">
@@ -72,14 +72,14 @@
         </activity>
 
         <activity
-            android:name="com.galaxy.call.ui.call.activity.CallActivity"
+            android:name="com.galaxy.call.ui.call.activity.GCallGActivityG"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"
             android:exported="true"
             android:launchMode="singleTask"/>
 
         <service
-            android:name="com.galaxy.call.CallService"
+            android:name="com.galaxy.call.GCallGServiceG"
             android:permission="android.permission.BIND_INCALL_SERVICE"
             android:exported="true">
             <meta-data

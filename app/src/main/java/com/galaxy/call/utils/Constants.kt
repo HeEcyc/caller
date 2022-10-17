@@ -1,6 +1,6 @@
 package com.galaxy.call.utils
 
-import com.galaxy.call.App
+import com.galaxy.call.GAppG
 import com.galaxy.call.model.theme.ImageTheme
 import com.galaxy.call.model.theme.Theme
 import com.galaxy.call.model.theme.VideoTheme
@@ -28,6 +28,6 @@ val presetThemes: List<Theme> = listOf(
     *themesPopular.toTypedArray()
 )
 
-val appLink: String by lazy { "https://play.google.com/store/apps/details?id=" + App.instance.packageName }
+val appLink: String by lazy { "https://play.google.com/store/apps/details?id=" + GAppG.instance.packageName }
 
 const val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ#"

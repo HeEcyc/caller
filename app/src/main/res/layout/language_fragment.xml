@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.galaxy.call.ui.language.LanguageViewModel" />
+            type="com.galaxy.call.ui.language.GLanguageGViewGModelG" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
