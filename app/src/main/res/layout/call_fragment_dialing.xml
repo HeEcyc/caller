@@ -72,7 +72,7 @@
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="12sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#DDD9D9"
                         android:fontFamily="@font/roboto_bold"
                         android:lines="1"
                         android:text="@string/end_to_end_encryption"/>

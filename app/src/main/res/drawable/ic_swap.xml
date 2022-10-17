@@ -16,27 +16,31 @@
         android:strokeWidth="3.68302"
         android:fillColor="#00000000"
         android:strokeColor="#ffffff"
-        android:strokeLineCap="round"/>
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.75"/>
     <path
         android:pathData="M35.936,26.649L41.461,32.174L35.936,37.698"
         android:strokeLineJoin="round"
         android:strokeWidth="3.68302"
         android:fillColor="#00000000"
         android:strokeColor="#ffffff"
-        android:strokeLineCap="round"/>
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.75"/>
     <path
         android:pathData="M4.63,13.759H41.461"
         android:strokeLineJoin="round"
         android:strokeWidth="3.68302"
         android:fillColor="#00000000"
         android:strokeColor="#ffffff"
-        android:strokeLineCap="round"/>
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.75"/>
     <path
         android:pathData="M4.63,32.174H41.461"
         android:strokeLineJoin="round"
         android:strokeWidth="3.68302"
         android:fillColor="#00000000"
         android:strokeColor="#ffffff"
-        android:strokeLineCap="round"/>
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.75"/>
   </group>
 </vector>
