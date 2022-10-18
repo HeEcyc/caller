@@ -5,15 +5,15 @@
     android:viewportHeight="25">
   <path
       android:pathData="M10,0H43V25H10C10,25 10,17.382 10,12.5C10,7.618 10,0 10,0Z"
-      android:fillColor="#0A2825"
+      android:fillColor="#2E3938"
       android:fillAlpha="0.49"/>
   <path
       android:pathData="M10,0L0,12.5H10V0Z"
-      android:fillColor="#0A2825"
+      android:fillColor="#2E3938"
       android:fillAlpha="0.49"/>
   <path
       android:pathData="M0,12.5L10,25V12.5H0Z"
-      android:fillColor="#0A2825"
+      android:fillColor="#2E3938"
       android:fillAlpha="0.49"/>
   <group>
     <clip-path

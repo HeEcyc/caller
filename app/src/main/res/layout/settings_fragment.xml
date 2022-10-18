@@ -45,7 +45,7 @@
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="20sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#2A9D8F"
+                        android:textColor="#0FBAA5"
                         android:fontFamily="@font/roboto_bold"
                         android:text="@string/settings"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -75,7 +75,7 @@
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="18sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#0A2825"
+                        android:textColor="#2E3938"
                         android:fontFamily="@font/roboto_bold"
                         android:text="@string/call_theme"/>
 
@@ -117,7 +117,7 @@
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="18sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#0A2825"
+                        android:textColor="#2E3938"
                         android:fontFamily="@font/roboto_bold"
                         android:text="@string/flash"/>
 
@@ -159,7 +159,7 @@
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="18sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#0A2825"
+                        android:textColor="#2E3938"
                         android:fontFamily="@font/roboto_bold"
                         android:text="@string/accelerometer"/>
 
@@ -206,7 +206,7 @@
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="18sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#0A2825"
+                        android:textColor="#2E3938"
                         android:fontFamily="@font/roboto_bold"
                         android:text="@string/application_language"/>
 
@@ -279,7 +279,7 @@
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="18sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#0A2825"
+                        android:textColor="#2E3938"
                         android:fontFamily="@font/roboto_bold"
                         android:text="@string/share"/>
 
@@ -317,7 +317,7 @@
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="18sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#0A2825"
+                        android:textColor="#2E3938"
                         android:fontFamily="@font/roboto_bold"
                         android:text="@string/rate_us"/>
 
@@ -355,7 +355,7 @@
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="18sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#0A2825"
+                        android:textColor="#2E3938"
                         android:fontFamily="@font/roboto_bold"
                         android:text="@string/privacy_policy"/>
 

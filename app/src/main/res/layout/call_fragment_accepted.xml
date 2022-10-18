@@ -135,7 +135,8 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintDimensionRatio="54:44"
                             app:layout_constraintWidth_percent="0.6923"
-                            android:src="@drawable/ic_speaker"/>
+                            android:src="@drawable/ic_speaker"
+                            android:tint="@{viewModel.isSpeakerModeOn ? 0x143C3799 : 0xFFFFFF}"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <android.widget.Space
@@ -181,7 +182,8 @@
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintDimensionRatio="38:47"
                                 app:layout_constraintWidth_percent="0.487"
-                                android:src="@drawable/ic_mute"/>
+                                android:src="@drawable/ic_mute"
+                                android:tint="@{viewModel.isMuteOn ? 0x143C3799 : 0xFFFFFF}"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>

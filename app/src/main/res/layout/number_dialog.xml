@@ -60,7 +60,7 @@
                                 app:autoSizeTextType="uniform"
                                 app:autoSizeMaxTextSize="30sp"
                                 app:autoSizeMinTextSize="1sp"
-                                android:textColor="#2A9D8F"
+                                android:textColor="#0FBAA5"
                                 android:fontFamily="@font/roboto_bold"
                                 android:text="@string/choose_a_contact_number"/>
 
@@ -116,7 +116,7 @@
                                 app:autoSizeTextType="uniform"
                                 app:autoSizeMinTextSize="1sp"
                                 app:autoSizeMaxTextSize="20sp"
-                                android:textColor="#0A2825"
+                                android:textColor="#2E3938"
                                 android:fontFamily="@font/roboto_bold"/>
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -164,7 +164,7 @@
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="#E76F51">
+                                    android:background="#F84A1F">
                                     <androidx.appcompat.widget.AppCompatTextView
                                         android:layout_width="0dp"
                                         android:layout_height="0dp"
@@ -204,7 +204,7 @@
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="#E76F51">
+                                    android:background="#F84A1F">
                                     <androidx.appcompat.widget.AppCompatTextView
                                         android:layout_width="0dp"
                                         android:layout_height="0dp"

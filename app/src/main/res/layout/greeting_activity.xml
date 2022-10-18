@@ -55,7 +55,7 @@
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="30sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#E76F51"
+                android:textColor="#F16643"
                 android:fontFamily="@font/roboto_bold"
                 android:text="@string/best_call_themes_for_you"/>
 
@@ -78,7 +78,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#E76F51">
+                    android:background="#F84A1F">
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="0dp"
                         android:layout_height="0dp"
@@ -92,7 +92,7 @@
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="30sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#FEFAE0"
+                        android:textColor="#F1FAEE"
                         android:fontFamily="@font/roboto_bold"
                         android:text="@string/start"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -55,7 +55,7 @@
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="16sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#0A2825"
+                android:textColor="#2E3938"
                 android:fontFamily="@font/roboto_bold"
                 android:text="@{item.userContact.contactName}"/>
 
@@ -74,7 +74,7 @@
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="14sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#0A2825"
+                android:textColor="#2E3938"
                 android:fontFamily="@font/roboto_regular"
                 android:text="@{item.userContact.contactNumber}"/>
 

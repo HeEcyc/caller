@@ -52,7 +52,7 @@
                     app:autoSizeTextType="uniform"
                     app:autoSizeMaxTextSize="30sp"
                     app:autoSizeMinTextSize="1sp"
-                    android:textColor="#2A9D8F"
+                    android:textColor="#0FBAA5"
                     android:fontFamily="@font/roboto_bold"
                     android:text="@string/theme_applied"/>
 

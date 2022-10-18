@@ -56,7 +56,7 @@
                             app:layout_constraintHeight_percent="0.18333"
                             android:gravity="center"
                             android:textSize="20sp"
-                            android:textColor="#2A9D8F"
+                            android:textColor="#0FBAA5"
                             android:fontFamily="@font/roboto_bold"
                             android:textAllCaps="true"
                             android:visibility="invisible"
@@ -73,7 +73,7 @@
                             app:autoSizeTextType="uniform"
                             app:autoSizeMaxTextSize="20sp"
                             app:autoSizeMinTextSize="1sp"
-                            android:textColor="#2A9D8F"
+                            android:textColor="#0FBAA5"
                             android:fontFamily="@font/roboto_bold"
                             android:textAllCaps="true"
                             android:text="@string/all"/>
@@ -92,7 +92,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:orientation="horizontal"
-                                android:background="#2A9D8F">
+                                android:background="#0FBAA5">
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent">
@@ -117,7 +117,7 @@
                                         app:layout_constraintHeight_percent="0.6153846"
                                         android:gravity="center"
                                         android:textSize="30sp"
-                                        android:textColor="#FEFAE0"
+                                        android:textColor="#F1FAEE"
                                         android:fontFamily="@font/roboto_bold"
                                         android:lines="1"
                                         android:textAllCaps="true"
@@ -135,7 +135,7 @@
                                         app:autoSizeTextType="uniform"
                                         app:autoSizeMaxTextSize="30sp"
                                         app:autoSizeMinTextSize="1sp"
-                                        android:textColor="#FEFAE0"
+                                        android:textColor="#F1FAEE"
                                         android:fontFamily="@font/roboto_bold"
                                         android:lines="1"
                                         android:textAllCaps="true"
@@ -181,7 +181,7 @@
                             app:layout_constraintHeight_percent="0.18333"
                             android:gravity="center"
                             android:textSize="20sp"
-                            android:textColor="#2A9D8F"
+                            android:textColor="#0FBAA5"
                             android:fontFamily="@font/roboto_bold"
                             android:textAllCaps="true"
                             android:visibility="invisible"
@@ -198,7 +198,7 @@
                             app:autoSizeTextType="uniform"
                             app:autoSizeMaxTextSize="20sp"
                             app:autoSizeMinTextSize="1sp"
-                            android:textColor="#2A9D8F"
+                            android:textColor="#0FBAA5"
                             android:fontFamily="@font/roboto_bold"
                             android:textAllCaps="true"
                             android:text="@string/add_yours"/>
@@ -217,7 +217,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:orientation="horizontal"
-                                android:background="#2A9D8F">
+                                android:background="#0FBAA5">
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent">
@@ -242,7 +242,7 @@
                                         app:layout_constraintHeight_percent="0.6153846"
                                         android:gravity="center"
                                         android:textSize="30sp"
-                                        android:textColor="#FEFAE0"
+                                        android:textColor="#F1FAEE"
                                         android:fontFamily="@font/roboto_bold"
                                         android:lines="1"
                                         android:textAllCaps="true"
@@ -260,7 +260,7 @@
                                         app:autoSizeTextType="uniform"
                                         app:autoSizeMaxTextSize="30sp"
                                         app:autoSizeMinTextSize="1sp"
-                                        android:textColor="#FEFAE0"
+                                        android:textColor="#F1FAEE"
                                         android:fontFamily="@font/roboto_bold"
                                         android:lines="1"
                                         android:textAllCaps="true"
@@ -306,7 +306,7 @@
                             app:layout_constraintHeight_percent="0.18333"
                             android:gravity="center"
                             android:textSize="20sp"
-                            android:textColor="#2A9D8F"
+                            android:textColor="#0FBAA5"
                             android:fontFamily="@font/roboto_bold"
                             android:textAllCaps="true"
                             android:visibility="invisible"
@@ -323,7 +323,7 @@
                             app:autoSizeTextType="uniform"
                             app:autoSizeMaxTextSize="20sp"
                             app:autoSizeMinTextSize="1sp"
-                            android:textColor="#2A9D8F"
+                            android:textColor="#0FBAA5"
                             android:fontFamily="@font/roboto_bold"
                             android:textAllCaps="true"
                             android:text="@string/top"/>
@@ -342,7 +342,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:orientation="horizontal"
-                                android:background="#2A9D8F">
+                                android:background="#0FBAA5">
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent">
@@ -367,7 +367,7 @@
                                         app:layout_constraintHeight_percent="0.6153846"
                                         android:gravity="center"
                                         android:textSize="30sp"
-                                        android:textColor="#FEFAE0"
+                                        android:textColor="#F1FAEE"
                                         android:fontFamily="@font/roboto_bold"
                                         android:lines="1"
                                         android:textAllCaps="true"
@@ -385,7 +385,7 @@
                                         app:autoSizeTextType="uniform"
                                         app:autoSizeMaxTextSize="30sp"
                                         app:autoSizeMinTextSize="1sp"
-                                        android:textColor="#FEFAE0"
+                                        android:textColor="#F1FAEE"
                                         android:fontFamily="@font/roboto_bold"
                                         android:lines="1"
                                         android:textAllCaps="true"
@@ -431,7 +431,7 @@
                             app:layout_constraintHeight_percent="0.18333"
                             android:gravity="center"
                             android:textSize="20sp"
-                            android:textColor="#2A9D8F"
+                            android:textColor="#0FBAA5"
                             android:fontFamily="@font/roboto_bold"
                             android:textAllCaps="true"
                             android:visibility="invisible"
@@ -448,7 +448,7 @@
                             app:autoSizeTextType="uniform"
                             app:autoSizeMaxTextSize="20sp"
                             app:autoSizeMinTextSize="1sp"
-                            android:textColor="#2A9D8F"
+                            android:textColor="#0FBAA5"
                             android:fontFamily="@font/roboto_bold"
                             android:textAllCaps="true"
                             android:text="@string/cute"/>
@@ -467,7 +467,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:orientation="horizontal"
-                                android:background="#2A9D8F">
+                                android:background="#F1FAEE">
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent">
@@ -492,7 +492,7 @@
                                         app:layout_constraintHeight_percent="0.6153846"
                                         android:gravity="center"
                                         android:textSize="30sp"
-                                        android:textColor="#FEFAE0"
+                                        android:textColor="#F1FAEE"
                                         android:fontFamily="@font/roboto_bold"
                                         android:lines="1"
                                         android:textAllCaps="true"
@@ -510,7 +510,7 @@
                                         app:autoSizeTextType="uniform"
                                         app:autoSizeMaxTextSize="30sp"
                                         app:autoSizeMinTextSize="1sp"
-                                        android:textColor="#FEFAE0"
+                                        android:textColor="#F1FAEE"
                                         android:fontFamily="@font/roboto_bold"
                                         android:lines="1"
                                         android:textAllCaps="true"
@@ -556,7 +556,7 @@
                             app:layout_constraintHeight_percent="0.18333"
                             android:gravity="center"
                             android:textSize="20sp"
-                            android:textColor="#2A9D8F"
+                            android:textColor="#0FBAA5"
                             android:fontFamily="@font/roboto_bold"
                             android:textAllCaps="true"
                             android:visibility="invisible"
@@ -573,7 +573,7 @@
                             app:autoSizeTextType="uniform"
                             app:autoSizeMaxTextSize="20sp"
                             app:autoSizeMinTextSize="1sp"
-                            android:textColor="#2A9D8F"
+                            android:textColor="#0FBAA5"
                             android:fontFamily="@font/roboto_bold"
                             android:textAllCaps="true"
                             android:text="@string/recommended"/>
@@ -592,7 +592,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:orientation="horizontal"
-                                android:background="#2A9D8F">
+                                android:background="#0FBAA5">
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent">
@@ -617,7 +617,7 @@
                                         app:layout_constraintHeight_percent="0.6153846"
                                         android:gravity="center"
                                         android:textSize="30sp"
-                                        android:textColor="#FEFAE0"
+                                        android:textColor="#F1FAEE"
                                         android:fontFamily="@font/roboto_bold"
                                         android:lines="1"
                                         android:textAllCaps="true"
@@ -635,7 +635,7 @@
                                         app:autoSizeTextType="uniform"
                                         app:autoSizeMaxTextSize="30sp"
                                         app:autoSizeMinTextSize="1sp"
-                                        android:textColor="#FEFAE0"
+                                        android:textColor="#F1FAEE"
                                         android:fontFamily="@font/roboto_bold"
                                         android:lines="1"
                                         android:textAllCaps="true"

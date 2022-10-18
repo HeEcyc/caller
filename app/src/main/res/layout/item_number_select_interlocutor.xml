@@ -34,7 +34,7 @@
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="20sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#0A2825"
+                android:textColor="#2E3938"
                 android:fontFamily="@font/roboto_regular"
                 android:text="@{item.number}"/>
 
