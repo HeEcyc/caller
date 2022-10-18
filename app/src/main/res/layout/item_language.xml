@@ -4,10 +4,10 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.fantasy.call.repository.LocaleRepository"/>
+        <import type="com.fantasia.telecaller.repository.LocaleRepository"/>
         <variable
             name="item"
-            type="com.fantasy.call.repository.LocaleRepository.Locale" />
+            type="com.fantasia.telecaller.repository.LocaleRepository.Locale" />
         <variable
             name="localeRepository"
             type="LocaleRepository" />

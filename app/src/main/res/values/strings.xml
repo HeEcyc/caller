@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Fantasy Call Screen</string>
+    <string name="app_name" translatable="false">FantasyCaller</string>
     <string name="all">All</string>
     <string name="top">Top</string>
     <string name="permissionPhoneDescription">Set the application as your default phone app</string>

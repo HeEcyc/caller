@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.fantasy.call.ui.contact.ContactViewModel" />
+            type="com.fantasia.telecaller.ui.contact.ContactViewModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -50,7 +50,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="360:694">
 
-                <com.fantasy.call.ui.custom.ScalableCardView
+                <com.fantasia.telecaller.ui.custom.ScalableCardView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     app:layout_constraintTop_toTopOf="parent"
@@ -69,7 +69,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"/>
-                </com.fantasy.call.ui.custom.ScalableCardView>
+                </com.fantasia.telecaller.ui.custom.ScalableCardView>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="0dp"
@@ -83,7 +83,7 @@
                     app:layout_constraintVertical_bias="0.431599"
                     app:layout_constraintHorizontal_bias="0.108108108"
                     android:background="@drawable/avatar_frame">
-                    <com.fantasy.call.ui.custom.ScalableCardView
+                    <com.fantasia.telecaller.ui.custom.ScalableCardView
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
@@ -101,7 +101,7 @@
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
                             android:src="@drawable/avatar_placeholder"/>
-                    </com.fantasy.call.ui.custom.ScalableCardView>
+                    </com.fantasia.telecaller.ui.custom.ScalableCardView>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.appcompat.widget.AppCompatTextView

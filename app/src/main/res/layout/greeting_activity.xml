@@ -59,7 +59,7 @@
                 android:fontFamily="@font/roboto_bold"
                 android:text="@string/best_call_themes_for_you"/>
 
-            <com.fantasy.call.ui.custom.ScalableCardView
+            <com.fantasia.telecaller.ui.custom.ScalableCardView
                 android:id="@+id/button"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -96,7 +96,7 @@
                         android:fontFamily="@font/roboto_bold"
                         android:text="@string/start"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.fantasy.call.ui.custom.ScalableCardView>
+            </com.fantasia.telecaller.ui.custom.ScalableCardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

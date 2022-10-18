@@ -15,7 +15,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintDimensionRatio="360:772">
 
-            <com.fantasy.call.ui.custom.ScalableCardView
+            <com.fantasia.telecaller.ui.custom.ScalableCardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -177,7 +177,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="47">
 
-                        <com.fantasy.call.ui.custom.ScalableCardView
+                        <com.fantasia.telecaller.ui.custom.ScalableCardView
                             android:id="@+id/buttonCancel"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
@@ -212,9 +212,9 @@
                                     android:text="@string/cancel"
                                     tools:ignore="TooDeepLayout" />
                             </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.fantasy.call.ui.custom.ScalableCardView>
+                        </com.fantasia.telecaller.ui.custom.ScalableCardView>
 
-                        <com.fantasy.call.ui.custom.ScalableCardView
+                        <com.fantasia.telecaller.ui.custom.ScalableCardView
                             android:id="@+id/buttonOk"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
@@ -249,7 +249,7 @@
                                     android:textAllCaps="true"
                                     android:text="@string/ok"/>
                             </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.fantasy.call.ui.custom.ScalableCardView>
+                        </com.fantasia.telecaller.ui.custom.ScalableCardView>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -259,7 +259,7 @@
                         android:layout_weight="30"/>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
-            </com.fantasy.call.ui.custom.ScalableCardView>
+            </com.fantasia.telecaller.ui.custom.ScalableCardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

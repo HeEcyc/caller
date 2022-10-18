@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.fantasy.call.ui.language.LanguageViewModel" />
+            type="com.fantasia.telecaller.ui.language.LanguageViewModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat

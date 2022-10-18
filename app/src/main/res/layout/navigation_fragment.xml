@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.fantasy.call.ui.main.MainViewModel" />
+            type="com.fantasia.telecaller.ui.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

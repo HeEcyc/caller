@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.fantasy.call.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="com.fantasia.telecaller.ui.custom.ScalableCardView.ScaleType"/>
         <import type="android.view.View"/>
-        <import type="com.fantasy.call.ui.contacts.ContactsFragment.Mode"/>
+        <import type="com.fantasia.telecaller.ui.contacts.ContactsFragment.Mode"/>
         <variable
             name="viewModel"
-            type="com.fantasy.call.ui.contacts.ContactsViewModel" />
+            type="com.fantasia.telecaller.ui.contacts.ContactsViewModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -88,7 +88,7 @@
                     android:text="@string/contacts"
                     visibleIf="@{!viewModel.isSearching}"/>
 
-                <com.fantasy.call.ui.custom.ScalableCardView
+                <com.fantasia.telecaller.ui.custom.ScalableCardView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -106,7 +106,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#2A9D8F">
-                        <com.fantasy.call.ui.custom.ScalableCardView
+                        <com.fantasia.telecaller.ui.custom.ScalableCardView
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             app:layout_constraintTop_toTopOf="parent"
@@ -162,9 +162,9 @@
                                     android:onClick='@{(_) -> viewModel.onClearClick()}'/>
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.fantasy.call.ui.custom.ScalableCardView>
+                        </com.fantasia.telecaller.ui.custom.ScalableCardView>
                     </androidx.constraintlayout.widget.ConstraintLayout>
-                </com.fantasy.call.ui.custom.ScalableCardView>
+                </com.fantasia.telecaller.ui.custom.ScalableCardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -191,7 +191,7 @@
                 app:layout_constraintDimensionRatio="360:83"
                 visibleIf="@{viewModel.mode == Mode.CONTACT_SELECTOR}">
 
-                <com.fantasy.call.ui.custom.ScalableCardView
+                <com.fantasia.telecaller.ui.custom.ScalableCardView
                     android:id="@+id/buttonApplyToSelected"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -226,9 +226,9 @@
                             android:fontFamily="@font/roboto_bold"
                             android:text="@string/apply_to_selected"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
-                </com.fantasy.call.ui.custom.ScalableCardView>
+                </com.fantasia.telecaller.ui.custom.ScalableCardView>
 
-                <com.fantasy.call.ui.custom.ScalableCardView
+                <com.fantasia.telecaller.ui.custom.ScalableCardView
                     android:id="@+id/buttonApply"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -263,7 +263,7 @@
                             android:fontFamily="@font/roboto_bold"
                             android:text="@string/apply_to_all"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
-                </com.fantasy.call.ui.custom.ScalableCardView>
+                </com.fantasia.telecaller.ui.custom.ScalableCardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

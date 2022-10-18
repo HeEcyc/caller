@@ -4,13 +4,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.fantasy.call.ui.dial.activity.DialActivityViewModel" />
+            type="com.fantasia.telecaller.ui.dial.activity.DialActivityViewModel" />
     </data>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.fantasy.call.ui.dial.fragment.DialFragment"/>
+        android:name="com.fantasia.telecaller.ui.dial.fragment.DialFragment"/>
 
 </layout>

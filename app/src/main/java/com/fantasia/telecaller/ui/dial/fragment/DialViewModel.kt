@@ -1,0 +1,29 @@
+package com.fantasia.telecaller.ui.dial.fragment
+
+import androidx.databinding.ObservableField
+import com.fantasia.telecaller.R
+import com.fantasia.telecaller.base.BaseViewModel
+import com.fantasia.telecaller.repository.PermissionRepository
+
+class DialViewModel(
+    val permissionRepository: PermissionRepository
+) : BaseViewModel() {
+
+    val text = ObservableField("")
+    val adapter = DialAdapter(
+        ::onButtonClick,
+        R.drawable.dial_button_dial_fragment
+    )
+
+    var onButtonClickAdditional: (String) -> Unit = {}
+
+    private fun onButtonClick(s: String) {
+        text.set(text.get() + s)
+        onButtonClickAdditional(s)
+    }
+
+    fun backspace() {
+        text.set(text.get()!!.dropLast(1))
+    }
+
+}
