@@ -23,7 +23,7 @@
 
     <application
         android:allowBackup="true"
-        android:name="com.fantasia.telecaller.App"
+        android:name="com.fantasia.telecaller.FAppF"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -31,7 +31,7 @@
         android:theme="@style/Theme.Caller">
 
         <activity
-            android:name="com.fantasia.telecaller.ui.main.MainActivity"
+            android:name="com.fantasia.telecaller.ui.main.FMainFActivityF"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
@@ -43,13 +43,13 @@
         </activity>
 
         <activity
-            android:name="com.fantasia.telecaller.ui.greeting.GreetingActivity"
+            android:name="com.fantasia.telecaller.ui.greeting.FGreetingFActivityF"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"
             android:exported="true"/>
 
         <activity
-            android:name="com.fantasia.telecaller.ui.dial.activity.DialActivity"
+            android:name="com.fantasia.telecaller.ui.dial.activity.FDialFActivityF"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"
             android:exported="true">
@@ -72,14 +72,14 @@
         </activity>
 
         <activity
-            android:name="com.fantasia.telecaller.ui.call.activity.CallActivity"
+            android:name="com.fantasia.telecaller.ui.call.activity.FCallFActivityF"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"
             android:exported="true"
             android:launchMode="singleTask"/>
 
         <service
-            android:name="com.fantasia.telecaller.CallService"
+            android:name="com.fantasia.telecaller.FCallFServiceF"
             android:permission="android.permission.BIND_INCALL_SERVICE"
             android:exported="true">
             <meta-data

@@ -4,7 +4,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.fantasia.telecaller.ui.call.activity.CallActivityViewModel" />
+            type="com.fantasia.telecaller.ui.call.activity.FCallFActivityFViewFModelF" />
     </data>
 
     <androidx.fragment.app.FragmentContainerView

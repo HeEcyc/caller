@@ -4,13 +4,13 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.fantasia.telecaller.repository.LocaleRepository"/>
+        <import type="com.fantasia.telecaller.repository.FLocaleFRepositoryF"/>
         <variable
             name="item"
-            type="com.fantasia.telecaller.repository.LocaleRepository.Locale" />
+            type="com.fantasia.telecaller.repository.FLocaleFRepositoryF.Locale" />
         <variable
             name="localeRepository"
-            type="LocaleRepository" />
+            type="FLocaleFRepositoryF" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -56,7 +56,7 @@
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintHeight_percent="0.8421"
                     android:src="@drawable/ic_selected"
-                    android:visibility="@{item == (localeRepository.localeObservable ?? LocaleRepository.Locale.ENGLISH) ? View.VISIBLE : View.GONE}"/>
+                    android:visibility="@{item == (localeRepository.localeObservable ?? FLocaleFRepositoryF.Locale.ENGLISH) ? View.VISIBLE : View.GONE}"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

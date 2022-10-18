@@ -5,7 +5,7 @@
     <data>
         <variable
             name="item"
-            type="com.fantasia.telecaller.ui.contacts.ContactAdapter.SegmentHeader" />
+            type="com.fantasia.telecaller.ui.contacts.FContactFAdapterF.SegmentHeader" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -40,7 +40,7 @@
                 android:textAllCaps="true"
                 android:text='@{"" + item.c}'/>
 
-            <com.fantasia.telecaller.ui.custom.ScalableCardView
+            <com.fantasia.telecaller.ui.custom.FScalableFCardFViewF
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"

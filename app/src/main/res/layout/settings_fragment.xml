@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.fantasia.telecaller.repository.LocaleRepository.Locale"/>
+        <import type="com.fantasia.telecaller.repository.FLocaleFRepositoryF.Locale"/>
         <variable
             name="viewModel"
-            type="com.fantasia.telecaller.ui.settings.SettingsViewModel" />
+            type="com.fantasia.telecaller.ui.settings.FSettingsFViewFModelF" />
     </data>
 
     <ScrollView

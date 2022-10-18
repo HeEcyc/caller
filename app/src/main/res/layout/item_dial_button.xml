@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="item"
-            type="com.fantasia.telecaller.ui.dial.fragment.DialAdapter.DialButtonViewModel" />
+            type="com.fantasia.telecaller.ui.dial.fragment.FDialFAdapterF.DialButtonViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

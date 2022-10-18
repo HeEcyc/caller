@@ -5,7 +5,7 @@
     <data>
         <variable
             name="item"
-            type="com.fantasia.telecaller.ui.contacts.NumberAdapter.NumberViewModel" />
+            type="com.fantasia.telecaller.ui.contacts.FNumberFAdapterF.NumberViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

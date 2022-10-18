@@ -7,22 +7,22 @@ import android.telecom.Call
 import android.telecom.TelecomManager
 import android.telephony.SubscriptionManager
 import androidx.databinding.ObservableBoolean
-import com.fantasia.telecaller.base.BaseCallService
+import com.fantasia.telecaller.base.FBaseFCallFServiceF
 import com.fantasia.telecaller.model.contact.UserContact
-import com.fantasia.telecaller.repository.FlashRepository
-import com.fantasia.telecaller.repository.VibrationRepository
+import com.fantasia.telecaller.repository.FFlashFRepositoryF
+import com.fantasia.telecaller.repository.FVibrationFRepositoryF
 
 class CallRepository(
     val audioManagerRepository: AudioManagerRepository,
-    val vibrationRepository: VibrationRepository,
-    val flashRepository: FlashRepository,
+    val vibrationRepository: FVibrationFRepositoryF,
+    val flashRepository: FFlashFRepositoryF,
     val subscriptionManager: SubscriptionManager,
     val telecomManager: TelecomManager
 ) {
 
     private val calls = mutableListOf<Call>()
 
-    var callService: BaseCallService? = null
+    var callService: FBaseFCallFServiceF? = null
 
     val hasCall get() = calls.isNotEmpty()
     val hasAcceptedCall get() = calls.any { it.state == Call.STATE_ACTIVE }

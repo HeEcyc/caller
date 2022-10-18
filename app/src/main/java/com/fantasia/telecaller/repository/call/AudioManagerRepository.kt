@@ -2,7 +2,7 @@ package com.fantasia.telecaller.repository.call
 
 import android.media.AudioDeviceInfo
 import android.media.AudioManager
-import com.fantasia.telecaller.base.BaseCallService
+import com.fantasia.telecaller.base.FBaseFCallFServiceF
 import com.fantasia.telecaller.repository.call.AudioManagerRepository.CallType.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -38,21 +38,21 @@ class AudioManagerRepository(private val audioManager: AudioManager) {
         audioManager.isMicrophoneMute = false
     }
 
-    fun setPhoneCallType(callService: BaseCallService?) {
+    fun setPhoneCallType(callService: FBaseFCallFServiceF?) {
         audioManager.isBluetoothScoOn = false
         audioManager.isSpeakerphoneOn = false
         callService?.setDeviceMode()
         onCallTypeChanged(PHONE)
     }
 
-    fun setBluetoothCallType(callService: BaseCallService?) {
+    fun setBluetoothCallType(callService: FBaseFCallFServiceF?) {
         audioManager.isBluetoothScoOn = true
         audioManager.isSpeakerphoneOn = false
         callService?.setBluetoothMode()
         onCallTypeChanged(BLUETOOTH)
     }
 
-    fun setSpeakerModeOn(callService: BaseCallService?) {
+    fun setSpeakerModeOn(callService: FBaseFCallFServiceF?) {
         callService?.setSpeakerMode()
         audioManager.isSpeakerphoneOn = true
         audioManager.isBluetoothScoOn = false

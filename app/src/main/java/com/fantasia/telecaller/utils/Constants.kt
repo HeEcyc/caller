@@ -1,6 +1,6 @@
 package com.fantasia.telecaller.utils
 
-import com.fantasia.telecaller.App
+import com.fantasia.telecaller.FAppF
 import com.fantasia.telecaller.model.theme.ImageTheme
 import com.fantasia.telecaller.model.theme.Theme
 import com.fantasia.telecaller.model.theme.VideoTheme
@@ -28,6 +28,6 @@ val presetThemes: List<Theme> = listOf(
     *themesRecommended.toTypedArray()
 )
 
-val appLink: String by lazy { "https://play.google.com/store/apps/details?id=" + App.instance.packageName }
+val appLink: String by lazy { "https://play.google.com/store/apps/details?id=" + FAppF.instance.packageName }
 
 const val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ#"
