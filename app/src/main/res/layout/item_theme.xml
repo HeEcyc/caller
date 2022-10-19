@@ -25,8 +25,18 @@
             scalableCornerRadius="@{0.125786f}">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#00F1FF">
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/preview3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#6124EFFB"/>
 
                 <com.glasserino.caller.ui.custom.ScalableCardView
                     android:layout_width="0dp"
@@ -41,11 +51,21 @@
                     app:cardElevation="0dp"
                     scaleType="@{ScaleType.BY_WIDTH}"
                     scalableCornerRadius="@{0.10596f}">
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/preview2"
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"/>
+                        android:layout_height="match_parent">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/preview2"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="159:282"
+                            app:layout_constraintWidth_percent="1.05298"
+                            android:scaleType="centerCrop"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </com.glasserino.caller.ui.custom.ScalableCardView>
 
                 <androidx.appcompat.widget.AppCompatImageView

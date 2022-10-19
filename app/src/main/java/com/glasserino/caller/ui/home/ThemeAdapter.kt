@@ -24,6 +24,7 @@ class ThemeAdapter(
                 binding.root.setOnClickListener { onItemClick(t.theme) }
                 Glide.with(itemView.context.applicationContext).load(t.theme.previewFile).centerCrop().into(binding.preview1)
                 Glide.with(itemView.context.applicationContext).load(t.theme.previewFile).centerCrop().into(binding.preview2)
+                Glide.with(itemView.context.applicationContext).load(t.theme.previewFile).centerCrop().into(binding.preview3)
             }
         }
 

@@ -81,7 +81,7 @@
                 app:layout_constraintHeight_percent="0.39089"
                 app:layout_constraintHorizontal_bias="0.0414"
                 app:layout_constraintVertical_bias="0.8795"
-                android:background="@drawable/ic_keyboard"
+                android:background="@mipmap/ic_keyboard"
                 visibleIf="@{(viewModel.mode == Mode.DEFAULT || viewModel.mode == Mode.INTERLOCUTOR_SELECTOR) &amp;&amp; !viewModel.isSearching}"/>
 
             <androidx.appcompat.widget.AppCompatImageView
