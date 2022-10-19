@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.glass.call.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="com.glasserino.caller.ui.custom.ScalableCardView.ScaleType"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,7 +31,7 @@
                 app:layout_constraintWidth_percent="0.86111"
                 android:clipChildren="false">
 
-                <com.glass.call.ui.custom.ScalableCardView
+                <com.glasserino.caller.ui.custom.ScalableCardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:cardBackgroundColor="@android:color/transparent"
@@ -91,7 +91,7 @@
                                 android:textColor="#FFFFFF"
                                 android:fontFamily="@font/roboto_regular"/>
 
-                            <com.glass.call.ui.custom.ScalableCardView
+                            <com.glasserino.caller.ui.custom.ScalableCardView
                                 android:id="@+id/buttonNo"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
@@ -129,9 +129,9 @@
                                         android:text="@string/cancel"
                                         tools:ignore="TooDeepLayout" />
                                 </androidx.constraintlayout.widget.ConstraintLayout>
-                            </com.glass.call.ui.custom.ScalableCardView>
+                            </com.glasserino.caller.ui.custom.ScalableCardView>
 
-                            <com.glass.call.ui.custom.ScalableCardView
+                            <com.glasserino.caller.ui.custom.ScalableCardView
                                 android:id="@+id/buttonYes"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
@@ -168,12 +168,12 @@
                                         android:fontFamily="@font/roboto_bold"
                                         android:text="@string/ok" />
                                 </androidx.constraintlayout.widget.ConstraintLayout>
-                            </com.glass.call.ui.custom.ScalableCardView>
+                            </com.glasserino.caller.ui.custom.ScalableCardView>
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
-                </com.glass.call.ui.custom.ScalableCardView>
+                </com.glasserino.caller.ui.custom.ScalableCardView>
 
                 <View
                     android:id="@+id/markerVertical"

@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.glass.call.ui.language.LanguageViewModel" />
+            type="com.glasserino.caller.ui.language.LanguageViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

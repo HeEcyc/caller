@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">GlassCall</string>
+    <string name="app_name" translatable="false">Glass Caller</string>
     <string name="preset">Preset</string>
     <string name="add_yours">Add yours</string>
     <string name="new_">New</string>

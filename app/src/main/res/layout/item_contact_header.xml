@@ -5,7 +5,7 @@
     <data>
         <variable
             name="item"
-            type="com.glass.call.ui.contacts.ContactAdapter.SegmentHeader" />
+            type="com.glasserino.caller.ui.contacts.ContactAdapter.SegmentHeader" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -4,10 +4,10 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.glass.call.repository.LocaleRepository"/>
+        <import type="com.glasserino.caller.repository.LocaleRepository"/>
         <variable
             name="item"
-            type="com.glass.call.repository.LocaleRepository.Locale" />
+            type="com.glasserino.caller.repository.LocaleRepository.Locale" />
         <variable
             name="localeRepository"
             type="LocaleRepository" />

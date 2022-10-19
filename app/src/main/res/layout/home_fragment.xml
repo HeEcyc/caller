@@ -5,11 +5,11 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.glass.call.ui.custom.ScalableCardView.ScaleType"/>
-        <import type="com.glass.call.R"/>
+        <import type="com.glasserino.caller.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="com.glasserino.caller.R"/>
         <variable
             name="viewModel"
-            type="com.glass.call.ui.home.HomeViewModel" />
+            type="com.glasserino.caller.ui.home.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -35,7 +35,7 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintDimensionRatio="360:84">
-            <com.glass.call.ui.custom.ScalableCardView
+            <com.glasserino.caller.ui.custom.ScalableCardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -126,7 +126,7 @@
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.glass.call.ui.custom.ScalableCardView>
+            </com.glasserino.caller.ui.custom.ScalableCardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.glass.call.ui.call.fragment.CallViewModel" />
+            type="com.glasserino.caller.ui.call.fragment.CallViewModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat

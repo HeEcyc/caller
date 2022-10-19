@@ -4,13 +4,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.glass.call.ui.dial.activity.DialActivityViewModel" />
+            type="com.glasserino.caller.ui.dial.activity.DialActivityViewModel" />
     </data>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.glass.call.ui.dial.fragment.DialFragment"/>
+        android:name="com.glasserino.caller.ui.dial.fragment.DialFragment"/>
 
 </layout>
