@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.glass.call",
+  "applicationId": "com.glasserino.caller",
   "variantName": "release",
   "elements": [
     {
