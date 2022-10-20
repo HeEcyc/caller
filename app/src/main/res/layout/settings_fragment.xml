@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.glasserino.caller.repository.LocaleRepository.Locale"/>
+        <import type="com.glasserino.caller.repository.GlLocaleGlRepositoryGl.Locale"/>
         <variable
             name="viewModel"
-            type="com.glasserino.caller.ui.settings.SettingsViewModel" />
+            type="com.glasserino.caller.ui.settings.GlSettingsGlViewGlModelGl" />
     </data>
 
     <ScrollView

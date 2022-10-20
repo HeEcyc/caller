@@ -4,13 +4,13 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.glasserino.caller.repository.LocaleRepository"/>
+        <import type="com.glasserino.caller.repository.GlLocaleGlRepositoryGl"/>
         <variable
             name="item"
-            type="com.glasserino.caller.repository.LocaleRepository.Locale" />
+            type="com.glasserino.caller.repository.GlLocaleGlRepositoryGl.Locale" />
         <variable
             name="localeRepository"
-            type="LocaleRepository" />
+            type="GlLocaleGlRepositoryGl" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -53,7 +53,7 @@
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintHeight_percent="0.5588"
                     android:src="@mipmap/ic_selected"
-                    android:visibility="@{item == (localeRepository.localeObservable ?? LocaleRepository.Locale.ENGLISH) ? View.VISIBLE : View.GONE}"/>
+                    android:visibility="@{item == (localeRepository.localeObservable ?? GlLocaleGlRepositoryGl.Locale.ENGLISH) ? View.VISIBLE : View.GONE}"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

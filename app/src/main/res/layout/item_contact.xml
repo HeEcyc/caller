@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="item"
-            type="com.glasserino.caller.ui.contacts.ContactAdapter.Contact" />
+            type="com.glasserino.caller.ui.contacts.GlContactGlAdapterGL.Contact" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

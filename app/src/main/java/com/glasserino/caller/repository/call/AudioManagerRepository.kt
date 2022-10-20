@@ -2,7 +2,7 @@ package com.glasserino.caller.repository.call
 
 import android.media.AudioDeviceInfo
 import android.media.AudioManager
-import com.glasserino.caller.base.BaseCallService
+import com.glasserino.caller.base.GlBaseGlCallGlServiceGl
 import com.glasserino.caller.repository.call.AudioManagerRepository.CallType.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -38,21 +38,21 @@ class AudioManagerRepository(private val audioManager: AudioManager) {
         audioManager.isMicrophoneMute = false
     }
 
-    fun setPhoneCallType(callService: BaseCallService?) {
+    fun setPhoneCallType(callService: GlBaseGlCallGlServiceGl?) {
         audioManager.isBluetoothScoOn = false
         audioManager.isSpeakerphoneOn = false
         callService?.setDeviceMode()
         onCallTypeChanged(PHONE)
     }
 
-    fun setBluetoothCallType(callService: BaseCallService?) {
+    fun setBluetoothCallType(callService: GlBaseGlCallGlServiceGl?) {
         audioManager.isBluetoothScoOn = true
         audioManager.isSpeakerphoneOn = false
         callService?.setBluetoothMode()
         onCallTypeChanged(BLUETOOTH)
     }
 
-    fun setSpeakerModeOn(callService: BaseCallService?) {
+    fun setSpeakerModeOn(callService: GlBaseGlCallGlServiceGl?) {
         callService?.setSpeakerMode()
         audioManager.isSpeakerphoneOn = true
         audioManager.isBluetoothScoOn = false

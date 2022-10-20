@@ -4,12 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.glasserino.caller.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl.ScaleType"/>
         <import type="android.view.View"/>
-        <import type="com.glasserino.caller.ui.contacts.ContactsFragment.Mode"/>
+        <import type="com.glasserino.caller.ui.contacts.GlContactsGlFragmentGl.Mode"/>
         <variable
             name="viewModel"
-            type="com.glasserino.caller.ui.contacts.ContactsViewModel" />
+            type="com.glasserino.caller.ui.contacts.GlContactsGlViewGlModelGl" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -133,7 +133,7 @@
                 android:text="@string/contacts"
                 visibleIf="@{!viewModel.isSearching}"/>
 
-            <com.glasserino.caller.ui.custom.ScalableCardView
+            <com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -188,7 +188,7 @@
                         android:onClick='@{(_) -> viewModel.onClearClick()}'/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.glasserino.caller.ui.custom.ScalableCardView>
+            </com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -200,7 +200,7 @@
             app:layout_constraintDimensionRatio="360:50"
             visibleIf="@{viewModel.mode == Mode.CONTACT_SELECTOR}">
 
-            <com.glasserino.caller.ui.custom.ScalableCardView
+            <com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl
                 android:id="@+id/buttonApplyToSelected"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -235,9 +235,9 @@
                         android:fontFamily="@font/roboto_bold"
                         android:text="@string/apply_to_selected"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.glasserino.caller.ui.custom.ScalableCardView>
+            </com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl>
 
-            <com.glasserino.caller.ui.custom.ScalableCardView
+            <com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl
                 android:id="@+id/buttonApply"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -272,7 +272,7 @@
                         android:fontFamily="@font/roboto_bold"
                         android:text="@string/apply_to_all"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.glasserino.caller.ui.custom.ScalableCardView>
+            </com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

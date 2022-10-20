@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.glasserino.caller.ui.dial.fragment.DialViewModel" />
+            type="com.glasserino.caller.ui.dial.fragment.GlDialGLViewGLModelGL" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat

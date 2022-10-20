@@ -7,7 +7,7 @@
         <import type="android.telecom.Call"/>
         <variable
             name="viewModel"
-            type="com.glasserino.caller.ui.call.fragment.CallViewModel" />
+            type="com.glasserino.caller.ui.call.fragment.GlCallGlViewGlModelGl" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.glasserino.caller.ui.main.MainViewModel" />
+            type="com.glasserino.caller.ui.main.GlMainGlViewGlModelGl" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,7 +16,7 @@
             android:id="@+id/homeFragmentContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.glasserino.caller.ui.home.HomeFragment"/>
+            android:name="com.glasserino.caller.ui.home.GlHomeGlFragmentGl"/>
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/navigationFragment"
@@ -24,7 +24,7 @@
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="360:57"
-            android:name="com.glasserino.caller.ui.main.NavigationFragment"/>
+            android:name="com.glasserino.caller.ui.main.GlNavigationGlFragmentGl"/>
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainer"

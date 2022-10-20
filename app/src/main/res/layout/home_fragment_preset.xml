@@ -5,11 +5,11 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.glasserino.caller.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl.ScaleType"/>
         <import type="com.glasserino.caller.R"/>
         <variable
             name="viewModel"
-            type="com.glasserino.caller.ui.home.HomeViewModel" />
+            type="com.glasserino.caller.ui.home.GlHomeGlViewGlModelGl" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -85,7 +85,7 @@
                                 app:layout_constraintDimensionRatio="159:127"
                                 android:clipChildren="false">
 
-                                <com.glasserino.caller.ui.custom.ScalableCardView
+                                <com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl
                                     android:id="@+id/buttonPermission"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
@@ -137,7 +137,7 @@
                                             android:text="@string/give_permissions_needed_to_show_the_call_screen"/>
 
                                     </androidx.constraintlayout.widget.ConstraintLayout>
-                                </com.glasserino.caller.ui.custom.ScalableCardView>
+                                </com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl>
 
                                 <androidx.constraintlayout.widget.Guideline
                                     android:id="@+id/marker"
@@ -200,7 +200,7 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintDimensionRatio="360:165">
-            <com.glasserino.caller.ui.custom.ScalableCardView
+            <com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -321,7 +321,7 @@
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.glasserino.caller.ui.custom.ScalableCardView>
+            </com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

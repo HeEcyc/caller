@@ -4,7 +4,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.glasserino.caller.ui.call.CallActivityViewModel" />
+            type="com.glasserino.caller.ui.call.GlCallGlActivityGlViewGlModelGL" />
     </data>
 
     <androidx.fragment.app.FragmentContainerView

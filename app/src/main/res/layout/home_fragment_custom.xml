@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.glasserino.caller.ui.home.HomeViewModel" />
+            type="com.glasserino.caller.ui.home.GlHomeGlViewGlModelGl" />
     </data>
 
     <androidx.core.widget.NestedScrollView

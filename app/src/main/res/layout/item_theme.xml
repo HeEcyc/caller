@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.glasserino.caller.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl.ScaleType"/>
         <import type="android.view.View"/>
         <variable
             name="item"
-            type="com.glasserino.caller.ui.home.ThemeAdapter.ThemeViewModel" />
+            type="com.glasserino.caller.ui.home.GlThemeGlAdapterGl.ThemeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.glasserino.caller.ui.custom.ScalableCardView
+        <com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
@@ -38,7 +38,7 @@
                     android:layout_height="match_parent"
                     android:background="#6124EFFB"/>
 
-                <com.glasserino.caller.ui.custom.ScalableCardView
+                <com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     app:layout_constraintTop_toTopOf="parent"
@@ -66,7 +66,7 @@
                             app:layout_constraintWidth_percent="1.05298"
                             android:scaleType="centerCrop"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
-                </com.glasserino.caller.ui.custom.ScalableCardView>
+                </com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/preview1"
@@ -76,7 +76,7 @@
                     android:visibility="@{item.isDemo ? View.GONE : View.VISIBLE}"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.glasserino.caller.ui.custom.ScalableCardView>
+        </com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

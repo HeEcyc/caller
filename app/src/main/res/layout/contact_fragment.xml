@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.glasserino.caller.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl.ScaleType"/>
         <variable
             name="viewModel"
-            type="com.glasserino.caller.ui.contact.ContactViewModel" />
+            type="com.glasserino.caller.ui.contact.GlContactGlViewGLModelGL" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -51,7 +51,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="360:723">
 
-                <com.glasserino.caller.ui.custom.ScalableCardView
+                <com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     app:layout_constraintTop_toTopOf="parent"
@@ -73,7 +73,7 @@
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"/>
 
-                        <com.glasserino.caller.ui.custom.ScalableCardView
+                        <com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -132,10 +132,10 @@
                                     android:adapter="@{viewModel.adapter}"/>
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.glasserino.caller.ui.custom.ScalableCardView>
+                        </com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
-                </com.glasserino.caller.ui.custom.ScalableCardView>
+                </com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

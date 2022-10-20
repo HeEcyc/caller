@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.glasserino.caller.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl.ScaleType"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +19,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintDimensionRatio="360:772">
 
-            <com.glasserino.caller.ui.custom.ScalableCardView
+            <com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
@@ -136,7 +136,7 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintDimensionRatio="310:98">
 
-                            <com.glasserino.caller.ui.custom.ScalableCardView
+                            <com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl
                                 android:id="@+id/buttonCancel"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
@@ -174,9 +174,9 @@
                                         android:text="@string/cancel"
                                         tools:ignore="TooDeepLayout" />
                                 </androidx.constraintlayout.widget.ConstraintLayout>
-                            </com.glasserino.caller.ui.custom.ScalableCardView>
+                            </com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl>
 
-                            <com.glasserino.caller.ui.custom.ScalableCardView
+                            <com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl
                                 android:id="@+id/buttonSelect"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
@@ -213,13 +213,13 @@
                                         android:fontFamily="@font/roboto_bold"
                                         android:text="@string/ok" />
                                 </androidx.constraintlayout.widget.ConstraintLayout>
-                            </com.glasserino.caller.ui.custom.ScalableCardView>
+                            </com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl>
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
-            </com.glasserino.caller.ui.custom.ScalableCardView>
+            </com.glasserino.caller.ui.custom.GlScalableGlCardGlViewGl>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

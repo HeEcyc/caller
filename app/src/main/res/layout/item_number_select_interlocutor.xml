@@ -5,7 +5,7 @@
     <data>
         <variable
             name="item"
-            type="com.glasserino.caller.ui.contacts.dialog.NumberAdapter.NumberViewModel" />
+            type="com.glasserino.caller.ui.contacts.dialog.GlNumberGlAdapterGl.NumberViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

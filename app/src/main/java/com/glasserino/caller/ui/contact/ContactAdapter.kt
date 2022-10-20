@@ -2,12 +2,12 @@ package com.glasserino.caller.ui.contact
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.glasserino.caller.base.BaseAdapter
+import com.glasserino.caller.base.GlBaseGlAdapterGl
 import com.glasserino.caller.databinding.ItemNumberContactFragmentBinding
 
-class NumberAdapter(
+class GlNumberGlAdapterGl(
     onClick: (String) -> Unit
-) : BaseAdapter<String, ItemNumberContactFragmentBinding>(onClick) {
+) : GlBaseGlAdapterGl<String, ItemNumberContactFragmentBinding>(onClick) {
 
     override fun getViewBinding(
         inflater: LayoutInflater,
