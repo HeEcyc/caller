@@ -4,12 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.sappy.callthemes.ui.custom.ScalableCardView.ScaleType"/>
-        <import type="com.sappy.callthemes.model.theme.VideoTheme"/>
+        <import type="com.stacky.caller.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="com.stacky.caller.model.theme.VideoTheme"/>
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.sappy.callthemes.ui.preview.PreviewViewModel" />
+            type="com.stacky.caller.ui.preview.PreviewViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

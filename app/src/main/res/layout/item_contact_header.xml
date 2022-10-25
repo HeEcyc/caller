@@ -6,7 +6,7 @@
     <data>
         <variable
             name="item"
-            type="com.sappy.callthemes.ui.contacts.ContactAdapter.SegmentHeader" />
+            type="com.stacky.caller.ui.contacts.ContactAdapter.SegmentHeader" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

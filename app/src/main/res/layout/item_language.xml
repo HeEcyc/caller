@@ -4,10 +4,10 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.sappy.callthemes.repository.LocaleRepository"/>
+        <import type="com.stacky.caller.repository.LocaleRepository"/>
         <variable
             name="item"
-            type="com.sappy.callthemes.repository.LocaleRepository.Locale" />
+            type="com.stacky.caller.repository.LocaleRepository.Locale" />
         <variable
             name="localeRepository"
             type="LocaleRepository" />

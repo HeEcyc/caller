@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.sappy.callthemes.ui.call.fragment.CallViewModel" />
+            type="com.stacky.caller.ui.call.fragment.CallViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +22,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintDimensionRatio="360:772">
 
-            <com.sappy.callthemes.ui.custom.ScalableCardView
+            <com.stacky.caller.ui.custom.ScalableCardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -40,7 +40,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"/>
-            </com.sappy.callthemes.ui.custom.ScalableCardView>
+            </com.stacky.caller.ui.custom.ScalableCardView>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="0dp"

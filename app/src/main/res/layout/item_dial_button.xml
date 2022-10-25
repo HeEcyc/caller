@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="item"
-            type="com.sappy.callthemes.ui.dial.fragment.DialAdapter.DialButtonViewModel" />
+            type="com.stacky.caller.ui.dial.fragment.DialAdapter.DialButtonViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
