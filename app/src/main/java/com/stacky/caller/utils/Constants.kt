@@ -5,7 +5,7 @@ import com.stacky.caller.model.theme.ImageTheme
 import com.stacky.caller.model.theme.Theme
 import com.stacky.caller.model.theme.VideoTheme
 
-val videoThemes = List(8) {
+val videoThemes = List(6) {
     VideoTheme(
         "file:///android_asset/popular/video/$it.mp4",
         "file:///android_asset/popular/gif/$it.gif",
