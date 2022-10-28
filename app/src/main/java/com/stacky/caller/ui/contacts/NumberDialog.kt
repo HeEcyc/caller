@@ -49,6 +49,7 @@ class NumberDialog : BaseDialog<NumberDialogBinding>(R.layout.number_dialog) {
                         .number
                 )
         }
+        binding.buttonCancel.setOnClickListener(::dismiss)
         binding.buttonClose.setOnClickListener(::dismiss)
     }
 

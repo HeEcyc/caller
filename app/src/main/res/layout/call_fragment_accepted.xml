@@ -22,7 +22,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintDimensionRatio="360:772">
 
-            <com.stacky.caller.ui.custom.ScalableCardView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -30,17 +30,34 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintWidth_percent="0.2627222"
-                app:layout_constraintVertical_bias="0.134"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:cardElevation="0dp"
-                app:scalable_corner_radius="0.5">
+                app:layout_constraintWidth_percent="0.37222"
+                app:layout_constraintVertical_bias="0.1567">
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/contactPicture"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"/>
-            </com.stacky.caller.ui.custom.ScalableCardView>
+                    android:src="@drawable/avatar_background"/>
+                <com.stacky.caller.ui.custom.ScalableCardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintWidth_percent="0.861"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp"
+                    app:scalable_corner_radius="0.5">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/contactPicture"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/avatar_placeholder"
+                        android:scaleX="1.1"
+                        android:scaleY="1.1"/>
+                </com.stacky.caller.ui.custom.ScalableCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="0dp"
@@ -51,13 +68,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="332:26"
                 app:layout_constraintWidth_percent="0.9222"
-                app:layout_constraintVertical_bias="0.3"
+                app:layout_constraintVertical_bias="0.327"
                 android:gravity="center"
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="24sp"
                 app:autoSizeMinTextSize="1sp"
                 android:textColor="#FFFFFF"
-                android:fontFamily="@font/sf_pro_display_bold"
+                android:fontFamily="@font/sf_pro_display_700"
                 android:text="@{viewModel.contact.contactName}"/>
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -69,13 +86,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="332:26"
                 app:layout_constraintWidth_percent="0.9222"
-                app:layout_constraintVertical_bias="0.35"
+                app:layout_constraintVertical_bias="0.375"
                 android:gravity="center"
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="24sp"
                 app:autoSizeMinTextSize="1sp"
                 android:textColor="#FFFFFF"
-                android:fontFamily="@font/sf_pro_display_bold"
+                android:fontFamily="@font/sf_pro_display_700"
                 android:text="@{viewModel.contact.contactNumber}"/>
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -86,8 +103,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintWidth_percent="0.2694444"
-                app:layout_constraintVertical_bias="0.87"
+                app:layout_constraintWidth_percent="0.225"
+                app:layout_constraintVertical_bias="0.7829"
                 android:src="@drawable/button_decline"
                 android:onClick="@{(_) -> viewModel.cancelCall()}"/>
 
@@ -98,20 +115,20 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="300:180"
-                app:layout_constraintWidth_percent="0.8333"
-                app:layout_constraintVertical_bias="0.589527"
+                app:layout_constraintDimensionRatio="303:177"
+                app:layout_constraintWidth_percent="0.841666666"
+                app:layout_constraintVertical_bias="0.5815"
                 android:orientation="vertical">
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="80"
+                    android:layout_weight="81"
                     android:orientation="horizontal">
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="80"
+                        android:layout_weight="81"
                         android:src="@{viewModel.isSpeakerModeOn ? @drawable/button_speaker_on : @drawable/button_speaker}"
                         android:onClick="@{(_) -> viewModel.toggleCallType()}"/>
 
@@ -124,7 +141,7 @@
                         android:id="@+id/buttonKeys"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="80"
+                        android:layout_weight="81"
                         android:src="@drawable/button_keyboard"/>
 
                     <android.widget.Space
@@ -135,7 +152,7 @@
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="80"
+                        android:layout_weight="81"
                         android:src="@{viewModel.isMuteOn ? @drawable/button_mute_on : @drawable/button_mute}"
                         android:onClick="@{(_) -> viewModel.onMuteClick()}"/>
 
@@ -143,17 +160,17 @@
                 <android.widget.Space
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="20"/>
+                    android:layout_weight="15"/>
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="80"
+                    android:layout_weight="81"
                     android:orientation="horizontal">
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="80"
+                        android:layout_weight="81"
                         android:src="@drawable/button_add_call"
                         android:onClick="@{(_) -> viewModel.onAddClick()}">
                     </androidx.appcompat.widget.AppCompatImageView>
@@ -166,34 +183,27 @@
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="80"
+                        android:layout_weight="81"
                         android:src="@drawable/button_swap"
                         android:onClick="@{(_) -> viewModel.onSwapClick()}"/>
 
                     <android.widget.Space
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="110"/>
+                        android:layout_weight="111"/>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/keyboardTop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.23575"/>
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/keyboard"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="@id/keyboardTop"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:background="#BA1D1D1D"
+            android:background="#CF1D1921"
             android:visibility="gone">
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -208,18 +218,25 @@
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="3600:655">
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/buttonCloseKeyboard"
-                            android:layout_width="0dp"
+                        app:layout_constraintDimensionRatio="3600:772">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
                             android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="1:1"
-                            app:layout_constraintHeight_percent="0.56488"
-                            app:layout_constraintHorizontal_bias="0.0727"
-                            android:src="@drawable/ic_back"/>
+                            app:layout_constraintDimensionRatio="360:79">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/buttonCloseKeyboard"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintHeight_percent="0.4177"
+                                app:layout_constraintHorizontal_bias="0.09"
+                                android:src="@drawable/ic_back"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -234,7 +251,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="3600:5245">
+                        app:layout_constraintDimensionRatio="360:693">
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="0dp"
@@ -243,15 +260,15 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="332:26"
+                            app:layout_constraintDimensionRatio="332:42"
                             app:layout_constraintWidth_percent="0.9222"
-                            app:layout_constraintVertical_bias="0.037"
+                            app:layout_constraintVertical_bias="0.129"
                             android:gravity="center"
                             app:autoSizeTextType="uniform"
-                            app:autoSizeMaxTextSize="24sp"
+                            app:autoSizeMaxTextSize="36sp"
                             app:autoSizeMinTextSize="1sp"
                             android:textColor="#FFFFFF"
-                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:fontFamily="@font/sf_pro_display_700"
                             android:lines="1"
                             android:ellipsize="start"
                             android:text="@{viewModel.dialCache}"/>
@@ -261,7 +278,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
-                            app:layout_constraintGuide_percent="0.12297"/>
+                            app:layout_constraintGuide_percent="0.2355"/>
 
                         <androidx.recyclerview.widget.RecyclerView
                             android:layout_width="0dp"
@@ -269,7 +286,7 @@
                             app:layout_constraintTop_toTopOf="@id/marker"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintWidth_percent="0.7333"
+                            app:layout_constraintWidth_percent="0.9222"
                             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                             app:spanCount="3"
                             android:overScrollMode="never"

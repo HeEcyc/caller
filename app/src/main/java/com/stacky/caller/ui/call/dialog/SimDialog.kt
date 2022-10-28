@@ -29,6 +29,7 @@ class SimDialog : BaseDialog<SimDialogBinding>(R.layout.sim_dialog) {
         binding.buttonOk.setOnClickListener {
             if (simCards.getOrNull(selected) !== null) onSIMSelected(selected)
         }
+        binding.buttonCancel.setOnClickListener(::dismiss)
         binding.buttonClose.setOnClickListener(::dismiss)
     }
 

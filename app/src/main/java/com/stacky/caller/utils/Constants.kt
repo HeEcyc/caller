@@ -7,25 +7,25 @@ import com.stacky.caller.model.theme.VideoTheme
 
 val videoThemes = List(8) {
     VideoTheme(
-        "file:///android_asset/new/video/$it.mp4",
-        "file:///android_asset/new/gif/$it.gif",
+        "file:///android_asset/popular/video/$it.mp4",
+        "file:///android_asset/popular/gif/$it.gif",
         true
     )
 }
 val audioThemesIndexes = videoThemes.indices.toList()
-val themesNew = MutableList<Theme>(8) {
-    ImageTheme("file:///android_asset/new/image/$it.png")
-}.apply { addAll(0, videoThemes) }.toList()
+val themesNew = List(8) {
+    ImageTheme("file:///android_asset/new/$it.png")
+}
 val themesTop = List(8) {
     ImageTheme("file:///android_asset/top/$it.png")
 }
-val themesTrending: List<Theme> = List(8) {
-    ImageTheme("file:///android_asset/trending/$it.png")
-}
+val themesPopular: List<Theme> = MutableList<Theme>(8) {
+    ImageTheme("file:///android_asset/popular/image/$it.png")
+}.apply { addAll(0, videoThemes) }.toList()
 val presetThemes: List<Theme> = listOf(
-    *themesNew.toTypedArray(),
+    *themesPopular.toTypedArray(),
     *themesTop.toTypedArray(),
-    *themesTrending.toTypedArray()
+    *themesNew.toTypedArray()
 )
 
 val appLink: String by lazy { "https://play.google.com/store/apps/details?id=" + App.instance.packageName }

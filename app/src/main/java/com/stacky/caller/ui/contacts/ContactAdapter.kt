@@ -3,42 +3,19 @@ package com.stacky.caller.ui.contacts
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.ObservableBoolean
-import androidx.databinding.ViewDataBinding
 import com.bumptech.glide.Glide
 import com.stacky.caller.App
 import com.stacky.caller.base.BaseAdapter
 import com.stacky.caller.databinding.ItemContactBinding
-import com.stacky.caller.databinding.ItemContactHeaderBinding
 import com.stacky.caller.model.contact.UserContact
-import com.stacky.caller.utils.alphabet
 
 class ContactAdapter(
     private val onClick: (Contact) -> Unit
-) : BaseAdapter<ContactAdapter.ContactViewModel, ViewDataBinding>() {
+) : BaseAdapter<ContactAdapter.Contact, ItemContactBinding>() {
 
     companion object {
 
-        fun getFormattedItemsWithHeaders(contacts: List<UserContact>): List<ContactViewModel> {
-            val res = mutableListOf<ContactViewModel>()
-            for (c in alphabet.dropLast(1)) {
-                val tmp = contacts
-                    .filter { it.contactName?.trim()?.getOrNull(0)?.uppercaseChar() == c }
-                    .map { Contact(it) }
-                if (tmp.isNotEmpty()) {
-                    res.add(SegmentHeader(c))
-                    res.addAll(tmp)
-                }
-            }
-            val addedContacts = res.flatMap { if (it is Contact) listOf(it.userContact) else listOf() }
-            val tmp = contacts.filterNot { it in addedContacts }.map { Contact(it) }
-            if (tmp.isNotEmpty()) {
-                res.add(SegmentHeader(alphabet.last()))
-                res.addAll(tmp)
-            }
-            return res
-        }
-
-        fun getFormattedItemsWithoutHeaders(contacts: List<UserContact>): List<ContactViewModel> =
+        fun getFormattedItems(contacts: List<UserContact>): List<Contact> =
             contacts.map { Contact(it) }
 
     }
@@ -47,28 +24,19 @@ class ContactAdapter(
         inflater: LayoutInflater,
         viewGroup: ViewGroup,
         item: Int
-    ) = if (getData()[item] is Contact)
-        ItemContactBinding.inflate(inflater, viewGroup, false)
-    else
-        ItemContactHeaderBinding.inflate(inflater, viewGroup, false)
+    ) = ItemContactBinding.inflate(inflater, viewGroup, false)
 
-    override fun createHolder(binding: ViewDataBinding) =
-        object : BaseItem<ContactViewModel, ViewDataBinding>(binding) {
-            override fun bind(t: ContactViewModel) {
-                if (t is Contact) {
-                    val avatar = t.userContact.photoThumbnailUri
-                    if (avatar !== null)
-                        Glide.with(App.instance).load(avatar).into(binding.let { it as ItemContactBinding }.avatar)
-                    binding.root.setOnClickListener { onClick(t) }
-                }
+    override fun createHolder(binding: ItemContactBinding) =
+        object : BaseItem<Contact, ItemContactBinding>(binding) {
+            override fun bind(t: Contact) {
+                val avatar = t.userContact.photoThumbnailUri
+                if (avatar !== null)
+                    Glide.with(App.instance).load(avatar).into(binding.avatar)
+                binding.root.setOnClickListener { onClick(t) }
             }
         }
 
-    sealed class ContactViewModel
-
-    data class SegmentHeader(val c: Char) : ContactViewModel()
-
-    data class Contact(val userContact: UserContact) : ContactViewModel() {
+    data class Contact(val userContact: UserContact) {
         val isSelected = ObservableBoolean(false)
     }
 

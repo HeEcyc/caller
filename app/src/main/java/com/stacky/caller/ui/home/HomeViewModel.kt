@@ -28,9 +28,9 @@ class HomeViewModel(
     val tabAll = ObservableBoolean(true)
     val tabTop = ObservableBoolean(false)
     val tabNew = ObservableBoolean(false)
-    val tabTrending = ObservableBoolean(false)
+    val tabPopular = ObservableBoolean(false)
     val tabYours = ObservableBoolean(false)
-    private val tabs = VirtualRadioGroup(tabAll, tabTop, tabNew, tabTrending, tabYours)
+    private val tabs = VirtualRadioGroup(tabAll, tabTop, tabNew, tabPopular, tabYours)
 
     val adapter = ThemeAdapter(onThemeSelected::postValue)
 
@@ -64,10 +64,10 @@ class HomeViewModel(
         adapter.reloadData(themesNew.toViewModels())
     }
 
-    fun onTrendingClick() {
-        if (tabTrending.get()) return
-        tabs.toggleTrue(tabTrending)
-        adapter.reloadData(themesTrending.toViewModels())
+    fun onPopularClick() {
+        if (tabPopular.get()) return
+        tabs.toggleTrue(tabPopular)
+        adapter.reloadData(themesPopular.toViewModels())
     }
 
     fun onYoursClick() {

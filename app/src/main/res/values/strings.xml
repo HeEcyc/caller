@@ -23,10 +23,18 @@
     <string name="apply_to_selected">Apply to Selected</string>
     <string name="apply_to_all">Apply to all</string>
     <string name="apply">Apply</string>
-    <string name="choose_a_contact_number">Choose a contact number</string>
+    <string name="choose_a_contact_number">Choose A Contact Number</string>
     <string name="calling">Calling...</string>
     <string name="call">Call...</string>
     <string name="choose_a_sim_card">Choose a SIM card</string>
     <string name="trending">Trending</string>
     <string name="your_image">Your Image</string>
+    <string name="welcome">Welcome</string>
+    <string name="express_your_uniqueness">Express Your Uniqueness</string>
+    <string name="popular">Popular</string>
+    <string name="let_s_start">Let\'s Start</string>
+    <string name="searching_for_your_phone_s_call_screen">Searching For Your Phone\'s Call Screen</string>
+    <string name="theme_applied">Theme applied!</string>
+    <string name="your_contacts">Your Contacts</string>
+    <string name="write_here">Write Here...</string>
 </resources>

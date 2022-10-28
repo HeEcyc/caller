@@ -16,21 +16,19 @@ class ContactsViewModel(
     val permissionRepository: PermissionRepository
 ) : BaseViewModel() {
 
-    private val locale = localeRepository.locale ?: LocaleRepository.Locale.ENGLISH
-
     val openContact = MutableLiveData<UserContact>()
     val addInterlocutor = MutableLiveData<String>()
     val selectInterlocutorNumber = MutableLiveData<UserContact>()
     val closeFragment = MutableLiveData<Unit>()
     val hardReloadRV = MutableLiveData<Unit>()
 
-    private val allContacts: List<ContactAdapter.ContactViewModel>
+    private val allContacts: List<ContactAdapter.Contact>
     val adapterContacts = ContactAdapter(::onContactClick)
 
     val selectedContacts get() = adapterContacts
         .getData()
-        .filter { it is ContactAdapter.Contact && it.isSelected.get() }
-        .map { (it as ContactAdapter.Contact).userContact }
+        .filter { it.isSelected.get() }
+        .map { it.userContact }
 
     val isSearching = ObservableBoolean(false)
     val searchQuery = ObservableField("")
@@ -45,9 +43,8 @@ class ContactsViewModel(
                 allContacts
             else {
                 allContacts.filter {
-                    it is ContactAdapter.Contact &&
-                            (it.userContact.contactName ?: it.userContact.contactNumber ?: "")
-                                .contains(searchQuery.get() ?: "", true)
+                    (it.userContact.contactName ?: it.userContact.contactNumber ?: "")
+                        .contains(searchQuery.get() ?: "", true)
                 }
             }.let(adapterContacts.getData()::addAll)
             hardReloadRV.postValue(Unit)
@@ -55,10 +52,7 @@ class ContactsViewModel(
     }
 
     private fun getFormattedItems(contacts: List<UserContact>) =
-        if (locale == LocaleRepository.Locale.ENGLISH || locale == LocaleRepository.Locale.RUSSIAN)
-            ContactAdapter.getFormattedItemsWithHeaders(contacts)
-        else
-            ContactAdapter.getFormattedItemsWithoutHeaders(contacts)
+            ContactAdapter.getFormattedItems(contacts)
 
     private fun onContactClick(contact: ContactAdapter.Contact) = when (mode) {
         ContactsFragment.Mode.DEFAULT -> openContact.postValue(contact.userContact)
