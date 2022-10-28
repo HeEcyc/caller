@@ -18,15 +18,11 @@
     <string name="rate_us">Ne evalua</string>
     <string name="privacy_policy">Politica de Confidențialitate</string>
     <string name="language">Limba</string>
-    <string name="contacts">Contacte</string>
-    <string name="type_something">Scrie ceva</string>
     <string name="apply_to_selected">Aplicați la selectat</string>
     <string name="apply_to_all">Aplica la toate</string>
     <string name="apply">aplica</string>
     <string name="choose_a_contact_number">Alegeți un număr de contact</string>
     <string name="calling">Apelând...</string>
-    <string name="call">Apel...</string>
     <string name="choose_a_sim_card">Alegeți o cartelă SIM</string>
-    <string name="trending">Trending</string>
     <string name="your_image">Imaginea ta</string>
 </resources>

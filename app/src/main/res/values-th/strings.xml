@@ -18,15 +18,11 @@
     <string name="rate_us">ให้คะแนนเรา</string>
     <string name="privacy_policy">นโยบายความเป็นส่วนตัว</string>
     <string name="language">ภาษา</string>
-    <string name="contacts">ติดต่อ</string>
-    <string name="type_something">พิมพ์บางอย่าง</string>
     <string name="apply_to_selected">นำไปใช้กับที่เลือก</string>
     <string name="apply_to_all">นำไปใช้กับทั้งหมด</string>
     <string name="apply">นำมาใช้</string>
     <string name="choose_a_contact_number">เลือกเบอร์ติดต่อ</string>
     <string name="calling">กำลังโทร...</string>
-    <string name="call">โทร...</string>
     <string name="choose_a_sim_card">เลือกซิมการ์ด</string>
-    <string name="trending">กำลังมาแรง</string>
     <string name="your_image">ภาพของคุณ</string>
 </resources>

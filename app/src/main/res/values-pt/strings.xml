@@ -18,15 +18,11 @@
     <string name="rate_us">Nos avalie</string>
     <string name="privacy_policy">Política de Privacidade</string>
     <string name="language">Linguagem</string>
-    <string name="contacts">Contatos</string>
-    <string name="type_something">Digite algo</string>
     <string name="apply_to_selected">Aplicar aos selecionados</string>
     <string name="apply_to_all">Aplicar a todos</string>
     <string name="apply">Aplicar</string>
     <string name="choose_a_contact_number">Escolha um número de contato</string>
     <string name="calling">Ligando...</string>
-    <string name="call">Ligar...</string>
     <string name="choose_a_sim_card">Escolha um cartão SIM</string>
-    <string name="trending">Tendendo</string>
     <string name="your_image">Sua imagem</string>
 </resources>

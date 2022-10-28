@@ -18,15 +18,11 @@
     <string name="rate_us">វាយតម្លៃពួកយើង</string>
     <string name="privacy_policy">គោលការណ៍​ភាព​ឯកជន</string>
     <string name="language">ភាសា</string>
-    <string name="contacts">ទំនាក់ទំនង</string>
-    <string name="type_something">វាយអ្វីមួយ</string>
     <string name="apply_to_selected">អនុវត្តទៅដែលបានជ្រើសរើស</string>
     <string name="apply_to_all">អនុវត្តចំពោះទាំងអស់គ្នា</string>
     <string name="apply">អនុវត្ត</string>
     <string name="choose_a_contact_number">ជ្រើសរើសលេខទំនាក់ទំនង</string>
     <string name="calling">កំពុងហៅ...</string>
-    <string name="call">ហៅ...</string>
     <string name="choose_a_sim_card">ជ្រើសរើសស៊ីមកាត</string>
-    <string name="trending">និន្នាការ</string>
     <string name="your_image">រូបភាពរបស់អ្នក។</string>
 </resources>

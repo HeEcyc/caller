@@ -18,15 +18,11 @@
     <string name="rate_us">قيمنا</string>
     <string name="privacy_policy">سياسة الخصوصية</string>
     <string name="language">لغة</string>
-    <string name="contacts">جهات الاتصال</string>
-    <string name="type_something">اطبع شيئا</string>
     <string name="apply_to_selected">تنطبق على المختار</string>
     <string name="apply_to_all">تنطبق على الجميع</string>
     <string name="apply">يتقدم</string>
     <string name="choose_a_contact_number">اختر رقم الاتصال</string>
     <string name="calling">جارٍ الاتصال ...</string>
-    <string name="call">مكالمة...</string>
     <string name="choose_a_sim_card">اختر بطاقة SIM </string>
-    <string name="trending">الشائع</string>
     <string name="your_image">صورتك</string>
 </resources>

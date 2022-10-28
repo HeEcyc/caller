@@ -18,15 +18,11 @@
     <string name="rate_us">Оцените нас</string>
     <string name="privacy_policy">Политика конфиденциальности</string>
     <string name="language">Язык</string>
-    <string name="contacts">Контакты</string>
-    <string name="type_something">Напишите  что-нибудь</string>
     <string name="apply_to_selected">Применить к выбранным</string>
     <string name="apply_to_all">Применить ко всем</string>
     <string name="apply">Применить</string>
     <string name="choose_a_contact_number">Выберите номер</string>
     <string name="calling">Звонит...</string>
-    <string name="call">Звонок...</string>
     <string name="choose_a_sim_card">Выберите SIM-карту</string>
-    <string name="trending">В тренде</string>
     <string name="your_image">Ваше изображение</string>
 </resources>

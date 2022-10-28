@@ -18,15 +18,11 @@
     <string name="rate_us">Nilaikan kami</string>
     <string name="privacy_policy">Dasar privasi</string>
     <string name="language">Bahasa</string>
-    <string name="contacts">Kenalan</string>
-    <string name="type_something">Taip sesuatu</string>
     <string name="apply_to_selected">Mohon kepada Terpilih</string>
     <string name="apply_to_all">Terpakai kepada semua</string>
     <string name="apply">Mohon</string>
     <string name="choose_a_contact_number">Pilih nombor kenalan</string>
     <string name="calling">Memanggil...</string>
-    <string name="call">Panggil...</string>
     <string name="choose_a_sim_card">Pilih kad SIM</string>
-    <string name="trending">Trending</string>
     <string name="your_image">Imej Anda</string>
 </resources>

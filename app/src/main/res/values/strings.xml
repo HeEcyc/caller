@@ -18,16 +18,12 @@
     <string name="rate_us">Rate us</string>
     <string name="privacy_policy">Privacy policy</string>
     <string name="language">Language</string>
-    <string name="contacts">Contacts</string>
-    <string name="type_something">Type something</string>
     <string name="apply_to_selected">Apply to Selected</string>
     <string name="apply_to_all">Apply to all</string>
     <string name="apply">Apply</string>
     <string name="choose_a_contact_number">Choose A Contact Number</string>
     <string name="calling">Calling...</string>
-    <string name="call">Call...</string>
     <string name="choose_a_sim_card">Choose a SIM card</string>
-    <string name="trending">Trending</string>
     <string name="your_image">Your Image</string>
     <string name="welcome">Welcome</string>
     <string name="express_your_uniqueness">Express Your Uniqueness</string>
