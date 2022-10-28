@@ -25,4 +25,12 @@
     <string name="calling">Apelând...</string>
     <string name="choose_a_sim_card">Alegeți o cartelă SIM</string>
     <string name="your_image">Imaginea ta</string>
+    <string name="welcome">Bine ati venit</string>
+    <string name="express_your_uniqueness">Exprimați-vă unicitatea</string>
+    <string name="popular">Popular</string>
+    <string name="let_s_start">Să începem</string>
+    <string name="searching_for_your_phone_s_call_screen">Căutarea ecranului de apeluri al telefonului dvs</string>
+    <string name="theme_applied">Tema aplicată!</string>
+    <string name="your_contacts">Persoanele dvs. de contact</string>
+    <string name="write_here">Scrie aici...</string>
 </resources>

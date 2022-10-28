@@ -25,4 +25,12 @@
     <string name="calling">Tumatawag...</string>
     <string name="choose_a_sim_card">Pumili ng SIM card</string>
     <string name="your_image">Ang iyong larawan</string>
+    <string name="welcome">Maligayang pagdating</string>
+    <string name="express_your_uniqueness">Ipahayag ang Iyong Pagkakakaiba</string>
+    <string name="popular">Sikat</string>
+    <string name="let_s_start">Simulan Natin</string>
+    <string name="searching_for_your_phone_s_call_screen">Hinahanap ang Call Screen ng Iyong Telepono</string>
+    <string name="theme_applied">Inilapat ang tema!</string>
+    <string name="your_contacts">Iyong Mga Contact</string>
+    <string name="write_here">Magsulat dito...</string>
 </resources>

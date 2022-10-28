@@ -25,4 +25,12 @@
     <string name="calling">កំពុងហៅ...</string>
     <string name="choose_a_sim_card">ជ្រើសរើសស៊ីមកាត</string>
     <string name="your_image">រូបភាពរបស់អ្នក។</string>
+    <string name="welcome">សូមស្វាគមន៍</string>
+    <string name="express_your_uniqueness">បង្ហាញពីភាពប្លែករបស់អ្នក។</string>
+    <string name="popular">ពេញនិយម</string>
+    <string name="let_s_start">តោះ​ចាប់​ផ្ដើម</string>
+    <string name="searching_for_your_phone_s_call_screen">កំពុងស្វែងរកអេក្រង់ហៅទូរសព្ទរបស់អ្នក។</string>
+    <string name="theme_applied">បានអនុវត្តប្រធានបទ!</string>
+    <string name="your_contacts">ទំនាក់ទំនងរបស់អ្នក។</string>
+    <string name="write_here">សរសេរនៅទីនេះ...</string>
 </resources>

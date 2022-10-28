@@ -25,4 +25,12 @@
     <string name="calling">جارٍ الاتصال ...</string>
     <string name="choose_a_sim_card">اختر بطاقة SIM </string>
     <string name="your_image">صورتك</string>
+    <string name="welcome">أهلا وسهلا</string>
+    <string name="express_your_uniqueness">عبر عن تفردك</string>
+    <string name="popular">جمع</string>
+    <string name="let_s_start">لنبدأ</string>
+    <string name="searching_for_your_phone_s_call_screen">البحث عن شاشة الاتصال بهاتفك</string>
+    <string name="theme_applied">تم تطبيق الموضوع!</string>
+    <string name="your_contacts">جهات الاتصال الخاصة بك</string>
+    <string name="write_here">اكتب هنا...</string>
 </resources>

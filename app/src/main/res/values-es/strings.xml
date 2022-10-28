@@ -25,4 +25,12 @@
     <string name="calling">Vocación...</string>
     <string name="choose_a_sim_card">Elige una tarjeta SIM</string>
     <string name="your_image">Tu imagen</string>
+    <string name="welcome">Bienvenidos</string>
+    <string name="express_your_uniqueness">Expresa tu singularidad</string>
+    <string name="popular">Popular</string>
+    <string name="let_s_start">Empecemos</string>
+    <string name="searching_for_your_phone_s_call_screen">Búsqueda de la pantalla de llamadas de su teléfono</string>
+    <string name="theme_applied">¡Tema aplicado!</string>
+    <string name="your_contacts">Sus contactos</string>
+    <string name="write_here">Escribe aquí...</string>
 </resources>

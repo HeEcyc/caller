@@ -25,4 +25,12 @@
     <string name="calling">กำลังโทร...</string>
     <string name="choose_a_sim_card">เลือกซิมการ์ด</string>
     <string name="your_image">ภาพของคุณ</string>
+    <string name="welcome">ยินดีต้อนรับ</string>
+    <string name="express_your_uniqueness">แสดงความเป็นเอกลักษณ์ของคุณ</string>
+    <string name="popular">เป็นที่นิยม</string>
+    <string name="let_s_start">เริ่มกันเลย</string>
+    <string name="searching_for_your_phone_s_call_screen">กำลังค้นหาหน้าจอการโทรในโทรศัพท์ของคุณ</string>
+    <string name="theme_applied">ใช้ธีม!</string>
+    <string name="your_contacts">ผู้ติดต่อของคุณ</string>
+    <string name="write_here">เขียนที่นี่...</string>
 </resources>

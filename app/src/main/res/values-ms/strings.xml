@@ -25,4 +25,12 @@
     <string name="calling">Memanggil...</string>
     <string name="choose_a_sim_card">Pilih kad SIM</string>
     <string name="your_image">Imej Anda</string>
+    <string name="welcome">Selamat datang</string>
+    <string name="express_your_uniqueness">Nyatakan Keunikan Anda</string>
+    <string name="popular">Popular</string>
+    <string name="let_s_start">Mari mulakan</string>
+    <string name="searching_for_your_phone_s_call_screen">Mencari Skrin Panggilan Telefon Anda</string>
+    <string name="theme_applied">Tema digunakan!</string>
+    <string name="your_contacts">Kenalan Anda</string>
+    <string name="write_here">Tulis di sini...</string>
 </resources>

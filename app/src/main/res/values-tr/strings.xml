@@ -25,4 +25,12 @@
     <string name="calling">arıyor...</string>
     <string name="choose_a_sim_card">Bir SIM kart seçin</string>
     <string name="your_image">Senin resim</string>
+    <string name="welcome">Hoş geldin</string>
+    <string name="express_your_uniqueness">Benzersizliğinizi İfade Edin</string>
+    <string name="popular">Popüler</string>
+    <string name="let_s_start">Hadi başlayalım</string>
+    <string name="searching_for_your_phone_s_call_screen">Telefonunuzun Çağrı Ekranını Arama</string>
+    <string name="theme_applied">Tema uygulandı!</string>
+    <string name="your_contacts">Rehberiniz</string>
+    <string name="write_here">Buraya yaz...</string>
 </resources>

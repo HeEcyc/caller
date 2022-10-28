@@ -25,4 +25,12 @@
     <string name="calling">Звонит...</string>
     <string name="choose_a_sim_card">Выберите SIM-карту</string>
     <string name="your_image">Ваше изображение</string>
+    <string name="welcome">Добро пожаловать</string>
+    <string name="express_your_uniqueness">Выразите свою уникальность</string>
+    <string name="popular">Популярные</string>
+    <string name="let_s_start">Давайте начнем</string>
+    <string name="searching_for_your_phone_s_call_screen">Поиск экрана вызова вашего телефона</string>
+    <string name="theme_applied">Тема применена!</string>
+    <string name="your_contacts">Ваши контакты</string>
+    <string name="write_here">Напишите здесь...</string>
 </resources>
