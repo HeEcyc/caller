@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.stacky.caller.ui.language.LanguageViewModel" />
+            type="com.roobcall.themes.ui.language.LanguageViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

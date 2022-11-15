@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.stacky.caller.ui.dial.fragment.DialViewModel" />
+            type="com.roobcall.themes.ui.dial.fragment.DialViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

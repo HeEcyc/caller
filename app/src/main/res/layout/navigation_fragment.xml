@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.stacky.caller.ui.main.MainViewModel" />
+            type="com.roobcall.themes.ui.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
