@@ -1,6 +1,5 @@
 package com.roobcall.themes.ui.main
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
@@ -10,7 +9,6 @@ import com.roobcall.themes.R
 import com.roobcall.themes.base.BaseActivity
 import com.roobcall.themes.databinding.MainActvityBinding
 import com.roobcall.themes.ui.contacts.ContactsFragment
-import com.roobcall.themes.ui.greeting.GreetingActivity
 import com.roobcall.themes.ui.home.HomeFragment
 import com.roobcall.themes.ui.settings.SettingsFragment
 import kotlinx.coroutines.Dispatchers
@@ -32,11 +30,6 @@ class MainActivity : BaseActivity<MainViewModel, MainActvityBinding>() {
     }
 
     override fun setupUI() {
-        if (!viewModel.preferencesRepository.hasBeenLaunchedBefore) {
-            viewModel.preferencesRepository.hasBeenLaunchedBefore = true
-            startActivity(Intent(this, GreetingActivity::class.java))
-        }
-
         lifecycleScope.launch(Dispatchers.Main) {
             while (supportFragmentManager.fragments.none { it is ContactsFragment || it is HomeFragment || it is SettingsFragment })
                 delay(100)

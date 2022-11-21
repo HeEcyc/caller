@@ -1,5 +1,6 @@
 package com.roobcall.themes.ui.main
 
+import android.view.View
 import androidx.fragment.app.activityViewModels
 import com.roobcall.themes.R
 import com.roobcall.themes.base.BaseDialog
@@ -12,9 +13,33 @@ class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission
 
     override fun setupUI() {
         refreshUI()
+        if (viewModel.preferencesRepository.hasBeenLaunchedBefore)
+            showPermission()
+        else {
+            isCancelable = false
+            showGreeting()
+            viewModel.preferencesRepository.hasBeenLaunchedBefore = true
+        }
+        binding.buttonStart.setOnClickListener {
+            isCancelable = true
+            showPermission()
+        }
         binding.buttonYes.setOnClickListener(::onAllowClick)
         binding.buttonNo.setOnClickListener(::dismiss)
-        binding.buttonClose.setOnClickListener(::dismiss)
+    }
+
+    private fun showGreeting() {
+        binding.contentPermission.visibility = View.GONE
+        binding.image.setImageResource(R.mipmap.img_greeting)
+        binding.background.setImageResource(R.mipmap.bg_greeting)
+        binding.contentGreeting.visibility = View.VISIBLE
+    }
+
+    private fun showPermission() {
+        binding.contentGreeting.visibility= View.GONE
+        binding.image.setImageResource(R.mipmap.img_permission)
+        binding.background.setImageResource(R.mipmap.bg_permission)
+        binding.contentPermission.visibility = View.VISIBLE
     }
 
     private fun onAllowClick() {

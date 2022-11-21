@@ -7,25 +7,25 @@ import com.roobcall.themes.model.theme.VideoTheme
 
 val videoThemes = List(6) {
     VideoTheme(
-        "file:///android_asset/popular/video/$it.mp4",
-        "file:///android_asset/popular/gif/$it.gif",
+        "file:///android_asset/top/video/$it.mp4",
+        "file:///android_asset/top/gif/$it.gif",
         true
     )
 }
 val audioThemesIndexes = videoThemes.indices.toList()
-val themesNew = List(8) {
+val themesNew: List<Theme> = MutableList<Theme>(8) {
     ImageTheme("file:///android_asset/new/$it.png")
 }
-val themesTop = List(8) {
-    ImageTheme("file:///android_asset/top/$it.png")
-}
-val themesPopular: List<Theme> = MutableList<Theme>(8) {
-    ImageTheme("file:///android_asset/popular/image/$it.png")
+val themesTop: List<Theme> = MutableList<Theme>(8) {
+    ImageTheme("file:///android_asset/top/image/$it.png")
 }.apply { addAll(0, videoThemes) }.toList()
+val themesPopular = List(8) {
+    ImageTheme("file:///android_asset/popular/$it.png")
+}
 val presetThemes: List<Theme> = listOf(
-    *themesPopular.toTypedArray(),
     *themesTop.toTypedArray(),
-    *themesNew.toTypedArray()
+    *themesNew.toTypedArray(),
+    *themesPopular.toTypedArray()
 )
 
 val appLink: String by lazy { "https://play.google.com/store/apps/details?id=" + App.instance.packageName }

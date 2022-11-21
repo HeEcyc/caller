@@ -26,28 +26,26 @@
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="360:216"
+                app:layout_constraintDimensionRatio="360:163"
                 android:clipChildren="false">
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintDimensionRatio="360:322"
-                    android:src="@drawable/main_bg"/>
-
-                <androidx.appcompat.widget.AppCompatImageView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="30:28"
-                    app:layout_constraintHeight_percent="0.1296296296"
-                    app:layout_constraintHorizontal_bias="0.6272727"
-                    app:layout_constraintVertical_bias="0.377"
-                    android:src="@mipmap/ic_smile"/>
+                    app:layout_constraintDimensionRatio="300:26"
+                    app:layout_constraintWidth_percent="0.8333"
+                    app:layout_constraintVertical_bias="0.3138686"
+                    android:gravity="center_vertical"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeMinTextSize="1sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/product_sans_700"
+                    android:text="@string/hello"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="0dp"
@@ -56,41 +54,22 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="167:42"
-                    app:layout_constraintHeight_percent="0.194444"
-                    app:layout_constraintVertical_bias="0.37356"
-                    app:layout_constraintHorizontal_bias="0.15"
+                    app:layout_constraintDimensionRatio="300:26"
+                    app:layout_constraintWidth_percent="0.8333"
+                    app:layout_constraintVertical_bias="0.518"
                     android:gravity="center_vertical"
                     app:autoSizeTextType="uniform"
-                    app:autoSizeMaxTextSize="36sp"
+                    app:autoSizeMaxTextSize="24sp"
                     app:autoSizeMinTextSize="1sp"
-                    android:textColor="#291C33"
-                    android:fontFamily="@font/sf_pro_display_700"
-                    android:text="@string/let_s_start"/>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="298:22"
-                    app:layout_constraintHeight_percent="0.10185185185"
-                    app:layout_constraintVertical_bias="0.603"
-                    android:gravity="center_vertical"
-                    app:autoSizeTextType="uniform"
-                    app:autoSizeMaxTextSize="18sp"
-                    app:autoSizeMinTextSize="1sp"
-                    android:textColor="#291C33"
-                    android:fontFamily="@font/sf_pro_display_200"
-                    android:text="@string/searching_for_your_phone_s_call_screen"/>
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/product_sans_700"
+                    android:text="@string/find_what_you_want"/>
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintDimensionRatio="360:37"
+                    app:layout_constraintDimensionRatio="360:26"
                     android:scrollbars="none"
                     android:overScrollMode="never">
                     <androidx.appcompat.widget.LinearLayoutCompat
@@ -106,37 +85,19 @@
                                 android:layout_height="match_parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="31:37"/>
+                                app:layout_constraintDimensionRatio="30:26"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
+                        <com.roobcall.themes.ui.custom.TrueAutoSizeTextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:onClick="@{(_) -> viewModel.onAllClick()}">
-                            <com.roobcall.themes.ui.custom.TrueAutoSizeTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHeight_percent="0.702702702"
-                                android:gravity="center"
-                                fontToHeightRatio="@{0.7f}"
-                                android:textColor="@{viewModel.tabAll ? @color/selected : @color/unselected}"
-                                font="@{viewModel.tabAll ? R.font.sf_pro_display_700 : R.font.sf_pro_display_400}"
-                                android:text="@string/all"
-                                android:alpha="1"/>
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="1:1"
-                                app:layout_constraintHeight_percent="0.162162162"
-                                android:src="@drawable/ic_selected"
-                                visibleIf="@{viewModel.tabAll}"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            android:gravity="center"
+                            fontToHeightRatio="@{0.7f}"
+                            android:textColor="#EFAAAF"
+                            android:fontFamily="@font/product_sans_700"
+                            android:alpha="@{viewModel.tabAll ? 1f : 0.3f}"
+                            android:onClick="@{(_) -> viewModel.onAllClick()}"
+                            android:text="@string/all"/>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
@@ -146,36 +107,19 @@
                                 android:layout_height="match_parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="20:37"/>
+                                app:layout_constraintDimensionRatio="20:26"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
+                        <com.roobcall.themes.ui.custom.TrueAutoSizeTextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:onClick="@{(_) -> viewModel.onYoursClick()}">
-                            <com.roobcall.themes.ui.custom.TrueAutoSizeTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHeight_percent="0.702702702"
-                                android:gravity="center"
-                                fontToHeightRatio="@{0.7f}"
-                                android:textColor="@{viewModel.tabYours ? @color/selected : @color/unselected}"
-                                font="@{viewModel.tabYours ? R.font.sf_pro_display_700 : R.font.sf_pro_display_400}"
-                                android:text="@string/your_image"/>
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="1:1"
-                                app:layout_constraintHeight_percent="0.162162162"
-                                android:src="@drawable/ic_selected"
-                                visibleIf="@{viewModel.tabYours}"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            android:gravity="center"
+                            fontToHeightRatio="@{0.7f}"
+                            android:textColor="#EFAAAF"
+                            android:fontFamily="@font/product_sans_700"
+                            android:alpha="@{viewModel.tabYours ? 1f : 0.3f}"
+                            android:onClick="@{(_) -> viewModel.onYoursClick()}"
+                            android:text="@string/your_image"/>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
@@ -185,36 +129,19 @@
                                 android:layout_height="match_parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="20:37"/>
+                                app:layout_constraintDimensionRatio="20:26"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
+                        <com.roobcall.themes.ui.custom.TrueAutoSizeTextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:onClick="@{(_) -> viewModel.onPopularClick()}">
-                            <com.roobcall.themes.ui.custom.TrueAutoSizeTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHeight_percent="0.702702702"
-                                android:gravity="center"
-                                fontToHeightRatio="@{0.7f}"
-                                android:textColor="@{viewModel.tabPopular ? @color/selected : @color/unselected}"
-                                font="@{viewModel.tabPopular ? R.font.sf_pro_display_700 : R.font.sf_pro_display_400}"
-                                android:text="@string/popular"/>
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="1:1"
-                                app:layout_constraintHeight_percent="0.162162162"
-                                android:src="@drawable/ic_selected"
-                                visibleIf="@{viewModel.tabPopular}"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            android:gravity="center"
+                            fontToHeightRatio="@{0.7f}"
+                            android:textColor="#EFAAAF"
+                            android:fontFamily="@font/product_sans_700"
+                            android:alpha="@{viewModel.tabTop ? 1f : 0.3f}"
+                            android:onClick="@{(_) -> viewModel.onTopClick()}"
+                            android:text="@string/top"/>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
@@ -224,36 +151,19 @@
                                 android:layout_height="match_parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="20:37"/>
+                                app:layout_constraintDimensionRatio="20:26"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
+                        <com.roobcall.themes.ui.custom.TrueAutoSizeTextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:onClick="@{(_) -> viewModel.onTopClick()}">
-                            <com.roobcall.themes.ui.custom.TrueAutoSizeTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHeight_percent="0.702702702"
-                                android:gravity="center"
-                                fontToHeightRatio="@{0.7f}"
-                                android:textColor="@{viewModel.tabTop ? @color/selected : @color/unselected}"
-                                font="@{viewModel.tabTop ? R.font.sf_pro_display_700 : R.font.sf_pro_display_400}"
-                                android:text="@string/top"/>
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="1:1"
-                                app:layout_constraintHeight_percent="0.162162162"
-                                android:src="@drawable/ic_selected"
-                                visibleIf="@{viewModel.tabTop}"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            android:gravity="center"
+                            fontToHeightRatio="@{0.7f}"
+                            android:textColor="#EFAAAF"
+                            android:fontFamily="@font/product_sans_700"
+                            android:alpha="@{viewModel.tabNew ? 1f : 0.3f}"
+                            android:onClick="@{(_) -> viewModel.onNewClick()}"
+                            android:text="@string/s_new"/>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
@@ -263,36 +173,19 @@
                                 android:layout_height="match_parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="20:37"/>
+                                app:layout_constraintDimensionRatio="20:26"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
+                        <com.roobcall.themes.ui.custom.TrueAutoSizeTextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:onClick="@{(_) -> viewModel.onNewClick()}">
-                            <com.roobcall.themes.ui.custom.TrueAutoSizeTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHeight_percent="0.702702702"
-                                android:gravity="center"
-                                fontToHeightRatio="@{0.7f}"
-                                android:textColor="@{viewModel.tabNew ? @color/selected : @color/unselected}"
-                                font="@{viewModel.tabNew ? R.font.sf_pro_display_700 : R.font.sf_pro_display_400}"
-                                android:text="@string/s_new"/>
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="1:1"
-                                app:layout_constraintHeight_percent="0.162162162"
-                                android:src="@drawable/ic_selected"
-                                visibleIf="@{viewModel.tabNew}"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            android:gravity="center"
+                            fontToHeightRatio="@{0.7f}"
+                            android:textColor="#EFAAAF"
+                            android:fontFamily="@font/product_sans_700"
+                            android:alpha="@{viewModel.tabPopular ? 1f : 0.3f}"
+                            android:onClick="@{(_) -> viewModel.onPopularClick()}"
+                            android:text="@string/popular"/>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
@@ -302,7 +195,7 @@
                                 android:layout_height="match_parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintDimensionRatio="31:37"/>
+                                app:layout_constraintDimensionRatio="30:26"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -335,7 +228,7 @@
                             android:layout_height="0dp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintDimensionRatio="3600:405"/>
+                            app:layout_constraintDimensionRatio="360:40"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -347,7 +240,7 @@
                             android:layout_height="0dp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintDimensionRatio="360:131">
+                            app:layout_constraintDimensionRatio="360:139">
 
                             <androidx.appcompat.widget.AppCompatImageView
                                 android:id="@+id/buttonAdd"
@@ -357,8 +250,8 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintDimensionRatio="1:1"
-                                app:layout_constraintHeight_percent="0.67"
-                                android:src="@drawable/button_add"/>
+                                app:layout_constraintHeight_percent="0.784"
+                                android:src="@mipmap/button_add"/>
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>

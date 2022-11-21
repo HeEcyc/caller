@@ -19,7 +19,7 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
         binding.root.post {
             val isLtr = resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_LTR
             val outerSpace = binding.recyclerView.width * 30 / 360
-            val innerSpace = binding.recyclerView.width.times(7.5).div(360).toInt()
+            val innerSpace = binding.recyclerView.width * 10 / 360
             var itemDecoration = ItemDecorationWithEnds(
                 leftFirst = if (isLtr) outerSpace else innerSpace,
                 leftLast = if (isLtr) innerSpace else outerSpace,

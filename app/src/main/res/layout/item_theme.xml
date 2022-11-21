@@ -19,35 +19,20 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="142:197"
+            app:layout_constraintDimensionRatio="140:212"
             app:cardElevation="0dp"
             app:cardBackgroundColor="@android:color/transparent"
             scaleType="@{ScaleType.BY_WIDTH}"
             scalableCornerRadius="@{0.07f}">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#7415BE">
+                android:layout_height="match_parent">
 
-                <com.roobcall.themes.ui.custom.ScalableCardView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="136:191"
-                    app:layout_constraintWidth_percent="0.9577"
-                    app:cardElevation="0dp"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    scaleType="@{ScaleType.BY_WIDTH}"
-                    scalableCornerRadius="@{0.05f}">
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/preview2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"/>
-                </com.roobcall.themes.ui.custom.ScalableCardView>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="0dp"
@@ -57,17 +42,11 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintWidth_percent="0.1"
-                    app:layout_constraintHorizontal_bias="0.88"
-                    app:layout_constraintVertical_bias="0.08"
-                    android:src="@drawable/ic_selected"/>
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/preview1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    visibleIf="@{!item.isDemo}"/>
+                    app:layout_constraintWidth_percent="0.24"
+                    app:layout_constraintHorizontal_bias="0.915"
+                    app:layout_constraintVertical_bias="0.05"
+                    android:src="@mipmap/ic_selected"
+                    visibleIf="@{item.isDemo}"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.roobcall.themes.ui.custom.ScalableCardView>

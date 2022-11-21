@@ -19,9 +19,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="360:772">
+            app:layout_constraintDimensionRatio="360:772"
+            android:clipChildren="false">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <com.roobcall.themes.ui.custom.ScalableCardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -29,34 +30,35 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintWidth_percent="0.5222"
-                app:layout_constraintVertical_bias="0.23">
-                <androidx.appcompat.widget.AppCompatImageView
+                app:layout_constraintWidth_percent="0.31666666"
+                app:layout_constraintVertical_bias="0.1717"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardElevation="0dp"
+                app:scalable_corner_radius="0.5">
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/avatar_background"/>
-                <com.roobcall.themes.ui.custom.ScalableCardView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintWidth_percent="0.861"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardElevation="0dp"
-                    app:scalable_corner_radius="0.5">
+                    android:background="@drawable/avatar_placeholder_bg">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHeight_percent="0.553"
+                        android:gravity="center"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="100sp"
+                        app:autoSizeMinTextSize="1sp"
+                        android:textColor="#EFAAAF"
+                        android:fontFamily="@font/product_sans_700"
+                        android:text='@{viewModel.contact.contactName != null ? "" + viewModel.contact.contactName.charAt(0) : null}' />
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/contactPicture"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/avatar_placeholder"
-                        android:scaleX="1.1"
-                        android:scaleY="1.1"/>
-                </com.roobcall.themes.ui.custom.ScalableCardView>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                        android:scaleType="centerCrop"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.roobcall.themes.ui.custom.ScalableCardView>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="0dp"
@@ -67,14 +69,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="332:26"
                 app:layout_constraintWidth_percent="0.9222"
-                app:layout_constraintVertical_bias="0.473"
+                app:layout_constraintVertical_bias="0.33512"
                 android:gravity="center"
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="24sp"
                 app:autoSizeMinTextSize="1sp"
                 android:textColor="#FFFFFF"
-                android:fontFamily="@font/sf_pro_display_700"
-                android:text="@{viewModel.contact.contactName}"/>
+                android:fontFamily="@font/product_sans_700"
+                android:text="@{viewModel.contact.contactName}" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="0dp"
@@ -83,15 +85,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="332:22"
+                app:layout_constraintDimensionRatio="332:16"
                 app:layout_constraintWidth_percent="0.9222"
-                app:layout_constraintVertical_bias="0.51333"
+                app:layout_constraintVertical_bias="0.39"
                 android:gravity="center"
                 app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="18sp"
+                app:autoSizeMaxTextSize="14sp"
                 app:autoSizeMinTextSize="1sp"
                 android:textColor="#FFFFFF"
-                android:fontFamily="@font/sf_pro_display_200"
+                android:fontFamily="@font/product_sans_400"
                 android:text="@string/calling" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -101,16 +103,16 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="332:26"
+                app:layout_constraintDimensionRatio="332:20"
                 app:layout_constraintWidth_percent="0.9222"
-                app:layout_constraintVertical_bias="0.5536"
+                app:layout_constraintVertical_bias="0.44"
                 android:gravity="center"
                 app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="24sp"
+                app:autoSizeMaxTextSize="18sp"
                 app:autoSizeMinTextSize="1sp"
                 android:textColor="#FFFFFF"
-                android:fontFamily="@font/sf_pro_display_700"
-                android:text="@{viewModel.contact.contactNumber}"/>
+                android:fontFamily="@font/product_sans_700"
+                android:text="@{viewModel.contact.contactNumber}" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="0dp"
@@ -120,9 +122,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintWidth_percent="0.225"
-                app:layout_constraintVertical_bias="0.7829"
-                android:src="@drawable/button_decline"
+                app:layout_constraintWidth_percent="0.286111"
+                app:layout_constraintVertical_bias="0.83557"
+                android:src="@mipmap/button_decline"
                 android:onClick="@{(_) -> viewModel.cancelCall()}"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,7 +14,7 @@ class DialViewModel(
     val adapter = DialAdapter(
         ::onButtonClick,
         R.drawable.dial_button_dial_fragment,
-        Color.parseColor("#291C33")
+        Color.parseColor("#FFFFFF")
     )
 
     var onButtonClickAdditional: (String) -> Unit = {}

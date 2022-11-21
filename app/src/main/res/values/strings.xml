@@ -33,4 +33,10 @@
     <string name="theme_applied">Theme applied!</string>
     <string name="your_contacts">Your Contacts</string>
     <string name="write_here">Write Here...</string>
+    <string name="transform_your_call_screen_with_roob">Transform your Call Screen with Roob</string>
+    <string name="you_will_get_a_collection_of_new_themes_or_you_can_choose_your_favorite_photos">You will get a collection of new themes, or you can choose your favorite photos</string>
+    <string name="get_started">Get Started</string>
+    <string name="hello">Hello!</string>
+    <string name="find_what_you_want">Find what you want</string>
+    <string name="contacts">Contacts</string>
 </resources>

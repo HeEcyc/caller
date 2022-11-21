@@ -17,7 +17,7 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="110:154">
+            app:layout_constraintDimensionRatio="360:62">
 
             <com.roobcall.themes.ui.custom.ScalableCardView
                 android:layout_width="0dp"
@@ -27,35 +27,56 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintWidth_percent="0.727272"
-                app:layout_constraintVertical_bias="0.135135135"
+                app:layout_constraintHeight_percent="0.758"
+                app:layout_constraintHorizontal_bias="0.0958"
                 app:cardBackgroundColor="@android:color/transparent"
                 app:cardElevation="0dp"
-                app:scalable_corner_radius="0.35">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/avatar"
+                app:scalable_corner_radius="0.3617">
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/avatar_placeholder"/>
+                    android:layout_height="match_parent">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/avatar_placeholder_bg"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textAvatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHeight_percent="0.553"
+                        android:gravity="center"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="100sp"
+                        app:autoSizeMinTextSize="1sp"
+                        android:textColor="#EFAAAF"
+                        android:fontFamily="@font/product_sans_700" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </com.roobcall.themes.ui.custom.ScalableCardView>
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="110:49"
-                app:layout_constraintVertical_bias="0.9"
+                app:layout_constraintDimensionRatio="181:20"
+                app:layout_constraintHeight_percent="0.32258"
+                app:layout_constraintHorizontal_bias="0.54"
                 android:gravity="center"
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="18sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#000000"
-                android:fontFamily="@font/sf_pro_display_200"
-                android:text="@{item.userContact.contactName}"/>
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/product_sans_700"
+                android:text="@{item.userContact.contactName ?? item.userContact.contactNumber}"/>
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="0dp"
@@ -65,10 +86,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintWidth_percent="0.1363636"
-                app:layout_constraintHorizontal_bias="0.789"
-                app:layout_constraintVertical_bias="0.1079"
-                android:src="@drawable/ic_selected"
+                app:layout_constraintHeight_percent="0.548"
+                app:layout_constraintHorizontal_bias="0.911"
+                android:src="@mipmap/ic_selected"
                 android:visibility="@{item.isSelected ? View.VISIBLE : View.GONE}"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF"
+        android:background="#474C72"
         android:clipChildren="false">
 
         <androidx.fragment.app.FragmentContainerView
@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="36:9"
+            app:layout_constraintDimensionRatio="360:107"
             android:name="com.roobcall.themes.ui.main.NavigationFragment"
             tools:layout="@layout/navigation_fragment" />
 

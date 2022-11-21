@@ -6,8 +6,8 @@ import android.telecom.PhoneAccountHandle
 import androidx.databinding.ObservableField
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.roobcall.themes.R
 import com.gjiazhe.panoramaimageview.GyroscopeObserver
+import com.roobcall.themes.R
 import com.roobcall.themes.base.BaseViewModel
 import com.roobcall.themes.model.contact.UserContact
 import com.roobcall.themes.model.theme.VideoTheme
@@ -84,7 +84,7 @@ class CallViewModel(
 
     val dialAdapter = DialAdapter(
         ::onDialButtonClick,
-        R.drawable.dial_button_call_fragment,
+        R.drawable.dial_button_dial_fragment,
         Color.parseColor("#FFFFFF")
     )
     val dialCache = ObservableField("")
