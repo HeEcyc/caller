@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.stacky.caller.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="com.vefercal.ler.ui.custom.ScalableCardView.ScaleType"/>
         <variable
             name="item"
-            type="com.stacky.caller.ui.home.ThemeAdapter.ThemeViewModel" />
+            type="com.vefercal.ler.ui.home.ThemeAdapter.ThemeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:clipChildren="false">
 
-        <com.stacky.caller.ui.custom.ScalableCardView
+        <com.vefercal.ler.ui.custom.ScalableCardView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
@@ -29,7 +29,7 @@
                 android:layout_height="match_parent"
                 android:background="#7415BE">
 
-                <com.stacky.caller.ui.custom.ScalableCardView
+                <com.vefercal.ler.ui.custom.ScalableCardView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     app:layout_constraintTop_toTopOf="parent"
@@ -47,7 +47,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"/>
-                </com.stacky.caller.ui.custom.ScalableCardView>
+                </com.vefercal.ler.ui.custom.ScalableCardView>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="0dp"
@@ -70,7 +70,7 @@
                     visibleIf="@{!item.isDemo}"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.stacky.caller.ui.custom.ScalableCardView>
+        </com.vefercal.ler.ui.custom.ScalableCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

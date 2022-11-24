@@ -4,10 +4,10 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.stacky.caller.repository.LocaleRepository"/>
+        <import type="com.vefercal.ler.repository.LocaleRepository"/>
         <variable
             name="item"
-            type="com.stacky.caller.repository.LocaleRepository.Locale" />
+            type="com.vefercal.ler.repository.LocaleRepository.Locale" />
         <variable
             name="localeRepository"
             type="LocaleRepository" />

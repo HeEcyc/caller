@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.stacky.caller.ui.main.MainViewModel" />
+            type="com.vefercal.ler.ui.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +19,7 @@
             android:id="@+id/homeFragmentContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.stacky.caller.ui.home.HomeFragment"
+            android:name="com.vefercal.ler.ui.home.HomeFragment"
             tools:layout="@layout/home_fragment" />
 
         <androidx.fragment.app.FragmentContainerView
@@ -28,7 +28,7 @@
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="36:9"
-            android:name="com.stacky.caller.ui.main.NavigationFragment"
+            android:name="com.vefercal.ler.ui.main.NavigationFragment"
             tools:layout="@layout/navigation_fragment" />
 
         <androidx.fragment.app.FragmentContainerView

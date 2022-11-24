@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.stacky.caller.ui.call.fragment.CallViewModel" />
+            type="com.vefercal.ler.ui.call.fragment.CallViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -35,7 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/avatar_background"/>
-                <com.stacky.caller.ui.custom.ScalableCardView
+                <com.vefercal.ler.ui.custom.ScalableCardView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     app:layout_constraintTop_toTopOf="parent"
@@ -55,7 +55,7 @@
                         android:src="@drawable/avatar_placeholder"
                         android:scaleX="1.1"
                         android:scaleY="1.1"/>
-                </com.stacky.caller.ui.custom.ScalableCardView>
+                </com.vefercal.ler.ui.custom.ScalableCardView>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.appcompat.widget.AppCompatTextView
