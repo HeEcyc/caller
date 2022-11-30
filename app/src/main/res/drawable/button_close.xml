@@ -1,28 +1,28 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt"
-    android:width="17dp"
-    android:height="17dp"
-    android:viewportWidth="17"
-    android:viewportHeight="17">
+    android:width="38dp"
+    android:height="30dp"
+    android:viewportWidth="38"
+    android:viewportHeight="30">
   <path
-      android:pathData="M1,1L16,16M16,1L1,16"
+      android:pathData="M2,28L19,13.508L36,28M2,16.066L19,2L36,16.066"
       android:strokeLineJoin="round"
-      android:strokeWidth="2"
+      android:strokeWidth="3"
       android:fillColor="#00000000"
       android:strokeColor="#FE6608"
       android:strokeLineCap="round"/>
   <path
-      android:pathData="M1,1L16,16M16,1L1,16"
+      android:pathData="M2,28L19,13.508L36,28M2,16.066L19,2L36,16.066"
       android:strokeLineJoin="round"
-      android:strokeWidth="2"
+      android:strokeWidth="3"
       android:fillColor="#00000000"
       android:strokeLineCap="round">
     <aapt:attr name="android:strokeColor">
       <gradient 
-          android:startX="13.537"
-          android:startY="14.522"
-          android:endX="1"
-          android:endY="2.478"
+          android:startX="30.416"
+          android:startY="4.562"
+          android:endX="9.223"
+          android:endY="31.187"
           android:type="linear">
         <item android:offset="0" android:color="#FFFC3E17"/>
         <item android:offset="1" android:color="#FFFEA017"/>
@@ -30,16 +30,16 @@
     </aapt:attr>
   </path>
   <path
-      android:pathData="M1,1L16,16M16,1L1,16"
+      android:pathData="M2,28L19,13.508L36,28M2,16.066L19,2L36,16.066"
       android:strokeLineJoin="round"
-      android:strokeWidth="2"
+      android:strokeWidth="3"
       android:fillColor="#00000000"
       android:strokeLineCap="round">
     <aapt:attr name="android:strokeColor">
       <gradient 
-          android:centerX="3.573"
-          android:centerY="3.956"
-          android:gradientRadius="9.218"
+          android:centerX="7.832"
+          android:centerY="22.876"
+          android:gradientRadius="18.763"
           android:type="radial">
         <item android:offset="0" android:color="#8EFFFFFF"/>
         <item android:offset="1" android:color="#00FFFFFF"/>

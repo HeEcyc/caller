@@ -1,17 +1,17 @@
 package com.vefercal.ler.ui.home
 
-import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.vefercal.ler.App
 import com.vefercal.ler.base.BaseViewModel
 import com.vefercal.ler.model.contact.UserContact
+import com.vefercal.ler.model.theme.NewTheme
 import com.vefercal.ler.model.theme.Theme
 import com.vefercal.ler.repository.FileRepository
 import com.vefercal.ler.repository.ImagePickerRepository
 import com.vefercal.ler.repository.PermissionRepository
 import com.vefercal.ler.repository.ThemeRepository
-import com.vefercal.ler.utils.*
+import com.vefercal.ler.utils.presetThemes
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -23,60 +23,33 @@ class HomeViewModel(
     private val fileRepository: FileRepository
 ) : BaseViewModel() {
 
-    val onThemeSelected = MutableLiveData<Theme>()
+    val onThemeSelected = MutableLiveData<Int>()
 
-    val tabAll = ObservableBoolean(true)
-    val tabTop = ObservableBoolean(false)
-    val tabNew = ObservableBoolean(false)
-    val tabPopular = ObservableBoolean(false)
-    val tabYours = ObservableBoolean(false)
-    private val tabs = VirtualRadioGroup(tabAll, tabTop, tabNew, tabPopular, tabYours)
-
-    val adapter = ThemeAdapter(onThemeSelected::postValue)
+    val adapterVP = ThemeAdapterVP()
+    val adapterRV = ThemeAdapterRV(::onThemeClick)
 
     init {
-        adapter.reloadData(presetThemes.toViewModels())
+        viewModelScope.launch(Dispatchers.IO) {
+            val themes = listOf(
+                NewTheme,
+                *themeRepository.getCustomThemes().toTypedArray(),
+                *presetThemes.toTypedArray()
+            )
+            launch(Dispatchers.Main) {
+                adapterRV.reloadData(themes.drop(1))
+                adapterVP.reloadData(themes)
+            }
+        }
         viewModelScope.launch(Dispatchers.Main) {
             themeRepository.newThemes.collect {
-                if (tabYours.get()) {
-                    adapter.getData().firstOrNull()?.isDemo?.set(false)
-                    adapter.addItem(ThemeAdapter.ThemeViewModel(it, true), 0)
-                }
+                adapterRV.addItem(it, 0)
+                adapterVP.addItem(it, 1)
             }
         }
     }
 
-    fun onAllClick() {
-        if (tabAll.get()) return
-        tabs.toggleTrue(tabAll)
-        adapter.reloadData(presetThemes.toViewModels())
-    }
-
-    fun onTopClick() {
-        if (tabTop.get()) return
-        tabs.toggleTrue(tabTop)
-        adapter.reloadData(themesTop.toViewModels())
-    }
-
-    fun onNewClick() {
-        if (tabNew.get()) return
-        tabs.toggleTrue(tabNew)
-        adapter.reloadData(themesNew.toViewModels())
-    }
-
-    fun onPopularClick() {
-        if (tabPopular.get()) return
-        tabs.toggleTrue(tabPopular)
-        adapter.reloadData(themesPopular.toViewModels())
-    }
-
-    fun onYoursClick() {
-        if (tabYours.get()) return
-        tabs.toggleTrue(tabYours)
-        viewModelScope.launch(Dispatchers.IO) {
-            val themes: List<Theme> = themeRepository.getCustomThemes()
-            launch(Dispatchers.Main) { adapter.reloadData(themes.toViewModels()) }
-        }
+    private fun onThemeClick(theme: Theme) {
+        onThemeSelected.postValue(adapterRV.getData().indexOfFirst { it === theme } + 1)
     }
 
     fun addNewTheme() {
@@ -91,10 +64,6 @@ class HomeViewModel(
         viewModelScope.launch(Dispatchers.IO) {
             contacts.forEach { themeRepository.setContactTheme(it.contactId, theme.backgroundFile) }
         }
-    }
-
-    private fun List<Theme>.toViewModels() = mapIndexed { index, theme ->
-        ThemeAdapter.ThemeViewModel(theme, index == 0)
     }
 
 }

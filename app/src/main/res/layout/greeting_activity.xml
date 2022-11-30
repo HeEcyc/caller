@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#7415BE"
+    android:background="#8200FF"
     android:clipChildren="false">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,17 +17,13 @@
         android:clipChildren="false">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="685:1189"
-            app:layout_constraintWidth_percent="1.9027777777"
-            app:layout_constraintHorizontal_bias="0.7046"
-            app:layout_constraintVertical_bias="0.2254"
-            android:src="@mipmap/greeting_bg"/>
+            app:layout_constraintDimensionRatio="360:359"
+            app:layout_constraintVertical_bias="0.12348"
+            android:src="@mipmap/img_greeting"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="0dp"
@@ -36,17 +32,16 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="153:42"
-            app:layout_constraintWidth_percent="0.425"
-            app:layout_constraintVertical_bias="0.09178"
-            app:layout_constraintHorizontal_bias="0.1449"
-            android:gravity="center_vertical"
+            app:layout_constraintDimensionRatio="330:72"
+            app:layout_constraintWidth_percent="0.91666666"
+            app:layout_constraintVertical_bias="0.614"
+            android:gravity="center"
             app:autoSizeTextType="uniform"
-            app:autoSizeMaxTextSize="36sp"
+            app:autoSizeMaxTextSize="24sp"
             app:autoSizeMinTextSize="1sp"
-            android:textColor="#FFFFFF"
-            android:fontFamily="@font/sf_pro_display_700"
-            android:text="@string/welcome"/>
+            android:textColor="#EFEFEF"
+            android:fontFamily="@font/poppins_500"
+            android:text="@string/take_your_time_amp_enjoy_new_incredible_call_screen_themes"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="0dp"
@@ -55,17 +50,16 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="181:22"
-            app:layout_constraintWidth_percent="0.5027777777"
-            app:layout_constraintVertical_bias="0.158666666"
-            app:layout_constraintHorizontal_bias="0.167597765"
-            android:gravity="center_vertical"
+            app:layout_constraintDimensionRatio="330:32"
+            app:layout_constraintWidth_percent="0.91666666"
+            app:layout_constraintVertical_bias="0.69"
+            android:gravity="center"
             app:autoSizeTextType="uniform"
-            app:autoSizeMaxTextSize="18sp"
+            app:autoSizeMaxTextSize="14sp"
             app:autoSizeMinTextSize="1sp"
-            android:textColor="#FFFFFF"
-            android:fontFamily="@font/sf_pro_display_200"
-            android:text="@string/express_your_uniqueness"/>
+            android:textColor="#EFEFEF"
+            android:fontFamily="@font/poppins_400"
+            android:text="@string/the_best_way_to_diversify_your_phone_call_screen"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/button"
@@ -76,10 +70,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintDimensionRatio="1:1"
-            app:layout_constraintWidth_percent="0.2111"
-            app:layout_constraintVertical_bias="0.87"
-            app:layout_constraintHorizontal_bias="0.89"
-            android:src="@drawable/button_start"/>
+            app:layout_constraintWidth_percent="0.365333"
+            app:layout_constraintVertical_bias="0.8915"
+            android:src="@mipmap/button_start"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
