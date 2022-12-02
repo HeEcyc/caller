@@ -1,5 +1,6 @@
 package com.vefercal.ler.ui.home
 
+import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.vefercal.ler.App
@@ -7,10 +8,7 @@ import com.vefercal.ler.base.BaseViewModel
 import com.vefercal.ler.model.contact.UserContact
 import com.vefercal.ler.model.theme.NewTheme
 import com.vefercal.ler.model.theme.Theme
-import com.vefercal.ler.repository.FileRepository
-import com.vefercal.ler.repository.ImagePickerRepository
-import com.vefercal.ler.repository.PermissionRepository
-import com.vefercal.ler.repository.ThemeRepository
+import com.vefercal.ler.repository.*
 import com.vefercal.ler.utils.presetThemes
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
@@ -20,13 +18,20 @@ class HomeViewModel(
     private val themeRepository: ThemeRepository,
     private val imagePickerRepository: ImagePickerRepository,
     val permissionRepository: PermissionRepository,
-    private val fileRepository: FileRepository
+    private val fileRepository: FileRepository,
+    private val contactsRepository: ContactsRepository,
+    private val preferencesRepository: PreferencesRepository,
+    val localeRepository: LocaleRepository
 ) : BaseViewModel() {
 
     val onThemeSelected = MutableLiveData<Int>()
 
     val adapterVP = ThemeAdapterVP()
     val adapterRV = ThemeAdapterRV(::onThemeClick)
+
+    val adapterLanguage = LanguageAdapter(localeRepository) {
+        localeRepository.locale = it
+    }
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
@@ -46,6 +51,7 @@ class HomeViewModel(
                 adapterVP.addItem(it, 1)
             }
         }
+        adapterLanguage.reloadData(LocaleRepository.Locale.values().toList())
     }
 
     private fun onThemeClick(theme: Theme) {
@@ -64,6 +70,25 @@ class HomeViewModel(
         viewModelScope.launch(Dispatchers.IO) {
             contacts.forEach { themeRepository.setContactTheme(it.contactId, theme.backgroundFile) }
         }
+    }
+
+    fun applyToAll(theme: Theme) {
+        viewModelScope.launch(Dispatchers.IO) {
+            contactsRepository.contacts.forEach { themeRepository.setContactTheme(it.contactId, theme.backgroundFile) }
+        }
+    }
+
+    val isFlashOn = ObservableBoolean(preferencesRepository.isFlashOn)
+    val isAccelerometerOn = ObservableBoolean(preferencesRepository.isAccelerometerOn)
+
+    fun onFlashClick() {
+        preferencesRepository.isFlashOn = !preferencesRepository.isFlashOn
+        isFlashOn.set(preferencesRepository.isFlashOn)
+    }
+
+    fun onAccelerometerClick() {
+        preferencesRepository.isAccelerometerOn = !preferencesRepository.isAccelerometerOn
+        isAccelerometerOn.set(preferencesRepository.isAccelerometerOn)
     }
 
 }

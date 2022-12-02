@@ -33,4 +33,14 @@
     <string name="theme_applied">تم تطبيق الموضوع!</string>
     <string name="your_contacts">جهات الاتصال الخاصة بك</string>
     <string name="write_here">اكتب هنا...</string>
+    <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">خذ وقتك واستمتع بمواضيع شاشة اتصال جديدة لا تصدق</string>
+    <string name="the_best_way_to_diversify_your_phone_call_screen">أفضل طريقة لتنويع شاشة مكالماتك الهاتفية</string>
+    <string name="select_contacts_to_apply">حدد جهات الاتصال المراد تطبيقها</string>
+    <string name="write_here_to_search">اكتب هنا للبحث ...</string>
+    <string name="call">مكالمة...</string>
+    <string name="mute">صامت</string>
+    <string name="keypad">لوحة المفاتيح</string>
+    <string name="speaker">مكبر الصوت</string>
+    <string name="add_call">أضف مكالمة</string>
+    <string name="switch_call">تبديل المكالمة</string>
 </resources>

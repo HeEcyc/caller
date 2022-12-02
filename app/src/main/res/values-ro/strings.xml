@@ -33,4 +33,14 @@
     <string name="theme_applied">Tema aplicată!</string>
     <string name="your_contacts">Persoanele dvs. de contact</string>
     <string name="write_here">Scrie aici...</string>
+    <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">Fă-ți timp și bucură-te de noi teme incredibile pentru ecranul de apeluri</string>
+    <string name="the_best_way_to_diversify_your_phone_call_screen">Cel mai bun mod de a vă diversifica ecranul pentru apeluri telefonice</string>
+    <string name="select_contacts_to_apply">Selectați contactele de aplicat</string>
+    <string name="write_here_to_search">Scrie aici pentru a căuta...</string>
+    <string name="call">Apel...</string>
+    <string name="mute">Mut</string>
+    <string name="keypad">Tastatura</string>
+    <string name="speaker">Difuzor</string>
+    <string name="add_call">Adăugați apel</string>
+    <string name="switch_call">Comutați apelul</string>
 </resources>

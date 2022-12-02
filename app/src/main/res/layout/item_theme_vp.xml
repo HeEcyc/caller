@@ -55,6 +55,38 @@
                 android:src="@drawable/button_add"
                 visibleIf="@{item instanceof NewTheme}"/>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/overlay"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="260:95"
+                app:layout_constraintVertical_bias="0.9315"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="70:95"
+                    app:layout_constraintHorizontal_bias="0.13"
+                    android:src="@drawable/button_decline"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="70:95"
+                    app:layout_constraintHorizontal_bias="0.87"
+                    android:src="@drawable/button_accept"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

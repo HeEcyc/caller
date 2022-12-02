@@ -33,4 +33,14 @@
     <string name="theme_applied">ใช้ธีม!</string>
     <string name="your_contacts">ผู้ติดต่อของคุณ</string>
     <string name="write_here">เขียนที่นี่...</string>
+    <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">ใช้เวลาของคุณและเพลิดเพลินไปกับธีมหน้าจอการโทรใหม่ที่เหลือเชื่อ</string>
+    <string name="the_best_way_to_diversify_your_phone_call_screen">วิธีที่ดีที่สุดในการกระจายหน้าจอการโทรของคุณ</string>
+    <string name="select_contacts_to_apply">เลือกผู้ติดต่อที่จะสมัคร</string>
+    <string name="write_here_to_search">เขียนที่นี่เพื่อค้นหา...</string>
+    <string name="call">โทร...</string>
+    <string name="mute">ปิดเสียง</string>
+    <string name="keypad">ปุ่มกด</string>
+    <string name="speaker">วิทยากร</string>
+    <string name="add_call">เพิ่มการโทร</string>
+    <string name="switch_call">เปลี่ยนสาย</string>
 </resources>

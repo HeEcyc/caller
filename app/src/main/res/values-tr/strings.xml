@@ -33,4 +33,14 @@
     <string name="theme_applied">Tema uygulandı!</string>
     <string name="your_contacts">Rehberiniz</string>
     <string name="write_here">Buraya yaz...</string>
+    <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">Acele etmeyin ve yeni inanılmaz arama ekranı temalarının keyfini çıkarın</string>
+    <string name="the_best_way_to_diversify_your_phone_call_screen">Telefon görüşmesi ekranınızı çeşitlendirmenin en iyi yolu</string>
+    <string name="select_contacts_to_apply">Uygulanacak kişileri seçin</string>
+    <string name="write_here_to_search">Aramak için buraya yazın...</string>
+    <string name="call">Telefon etmek...</string>
+    <string name="mute">Sesini kapatmak</string>
+    <string name="keypad">Klavye</string>
+    <string name="speaker">Konuşmacı</string>
+    <string name="add_call">Çağrı ekle</string>
+    <string name="switch_call">Aramayı değiştir</string>
 </resources>

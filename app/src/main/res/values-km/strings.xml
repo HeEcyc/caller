@@ -33,4 +33,14 @@
     <string name="theme_applied">បានអនុវត្តប្រធានបទ!</string>
     <string name="your_contacts">ទំនាក់ទំនងរបស់អ្នក។</string>
     <string name="write_here">សរសេរនៅទីនេះ...</string>
+    <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">ចំណាយពេលរបស់អ្នក និងរីករាយជាមួយរូបរាងអេក្រង់ហៅទូរសព្ទថ្មីដែលមិនគួរឱ្យជឿ</string>
+    <string name="the_best_way_to_diversify_your_phone_call_screen">វិធីល្អបំផុតដើម្បីធ្វើពិពិធកម្មអេក្រង់ហៅទូរស័ព្ទរបស់អ្នក។</string>
+    <string name="select_contacts_to_apply">ជ្រើសរើសទំនាក់ទំនងដើម្បីអនុវត្ត</string>
+    <string name="write_here_to_search">សរសេរនៅទីនេះដើម្បីស្វែងរក...</string>
+    <string name="call">ហៅ...</string>
+    <string name="mute">បិទសំឡេង</string>
+    <string name="keypad">ក្ដារចុច</string>
+    <string name="speaker">វាគ្មិន</string>
+    <string name="add_call">បន្ថែមការហៅទូរសព្ទ</string>
+    <string name="switch_call">ប្តូរការហៅទូរសព្ទ</string>
 </resources>

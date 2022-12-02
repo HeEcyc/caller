@@ -14,14 +14,11 @@ class DialViewModel(
     val adapter = DialAdapter(
         ::onButtonClick,
         R.drawable.dial_button_dial_fragment,
-        Color.parseColor("#291C33")
+        Color.parseColor("#FFFFFF")
     )
-
-    var onButtonClickAdditional: (String) -> Unit = {}
 
     private fun onButtonClick(s: String) {
         text.set(text.get() + s)
-        onButtonClickAdditional(s)
     }
 
     fun backspace() {

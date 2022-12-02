@@ -7,7 +7,6 @@ import android.media.MediaMetadataRetriever
 import android.net.Uri
 import android.telecom.Call
 import android.view.View
-import android.widget.ImageView
 import androidx.core.os.bundleOf
 import androidx.lifecycle.MutableLiveData
 import com.bumptech.glide.Glide
@@ -27,7 +26,7 @@ import com.vefercal.ler.model.contact.UserContact
 import com.vefercal.ler.model.theme.VideoTheme
 import com.vefercal.ler.ui.call.activity.CallActivity
 import com.vefercal.ler.ui.call.dialog.SimDialog
-import com.vefercal.ler.ui.contacts.ContactsFragment
+import com.vefercal.ler.ui.contacts.ContactsActivity
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
@@ -40,8 +39,6 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
     }
 
     val onCallActive = MutableLiveData<CallFragment>()
-
-    private var isChronometerStarted = false
 
     companion object {
         private const val ARGUMENT_CONTACT = "argument_contact"
@@ -66,14 +63,12 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
         }
         viewModel.callRepository.hasMultipleCalls.set(viewModel.callRepository.callAmount > 1)
 
-        showContact()
-
         binding.themeImage.setEnablePanoramaMode(viewModel.preferencesRepository.isAccelerometerOn)
 
         viewModel.callState.observeForever { handleCallState(it) }
 
         viewModel.onAddCallEvents.observe(this) {
-            activityAs<CallActivity>().addFragment(ContactsFragment.newInstance(ContactsFragment.Mode.INTERLOCUTOR_SELECTOR))
+            startActivity(ContactsActivity.newIntent(requireContext(), ContactsActivity.Mode.INTERLOCUTOR_SELECTOR))
         }
         viewModel.onSwapClickEvents.observe(this) {
             with(activityAs<CallActivity>()) {
@@ -108,17 +103,6 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
         val bitmap = retriever.getFrameAtTime(2)
         binding.themeImage.setImageBitmap(bitmap)
         binding.themeImage.visibility = View.VISIBLE
-    }
-
-    private fun showContact() {
-        loadUserPhotoInto(binding.layoutRinging.contactPicture)
-        loadUserPhotoInto(binding.layoutDialing.contactPicture)
-        loadUserPhotoInto(binding.layoutAccepted.contactPicture)
-    }
-
-    private fun loadUserPhotoInto(iv: ImageView) {
-        contact.photoThumbnailUri ?: return
-        Glide.with(App.instance).load(contact.photoThumbnailUri).into(iv)
     }
 
     private fun setTheme() {

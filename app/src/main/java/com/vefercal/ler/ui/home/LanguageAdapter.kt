@@ -1,4 +1,4 @@
-package com.vefercal.ler.ui.language
+package com.vefercal.ler.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

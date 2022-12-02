@@ -6,6 +6,7 @@
     <data>
         <import type="android.view.View"/>
         <import type="com.vefercal.ler.R"/>
+        <import type="com.vefercal.ler.repository.LocaleRepository"/>
         <variable
             name="viewModel"
             type="com.vefercal.ler.ui.home.HomeViewModel" />
@@ -51,6 +52,7 @@
                 android:src="@drawable/button_open"/>
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/buttonSettings"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -149,6 +151,432 @@
                     android:fontFamily="@font/poppins_500"
                     android:text="@string/apply"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#C91C1B1B"
+            android:visibility="gone">
+            <View
+                android:id="@+id/marker"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="310:772"
+                app:layout_constraintHorizontal_bias="1"/>
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="@id/marker"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:background="#8200FF">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/menuSettings"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintDimensionRatio="310:489"
+                        android:orientation="vertical">
+
+                        <androidx.legacy.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="50"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="34.57">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/buttonBackSettings"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="3400:3457"
+                                app:layout_constraintHorizontal_bias="0.054"
+                                android:src="@drawable/ic_back"/>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="182:26"
+                                app:layout_constraintHeight_percent="0.752"
+                                android:gravity="center"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="24sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="@font/poppins_500"
+                                android:text="@string/settings"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.legacy.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="36.43"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/buttonPower"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="27">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="211:20"
+                                app:layout_constraintHeight_percent="0.74"
+                                app:layout_constraintHorizontal_bias="0.15"
+                                android:gravity="center_vertical"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="18sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="@font/poppins_500"
+                                android:text="@string/call_theme"/>
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/switchPower"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="2:1"
+                                app:layout_constraintHorizontal_bias="0.9414"
+                                android:thumb="@drawable/switch_thumb"
+                                app:track="@drawable/switch_track"
+                                android:clickable="false"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.legacy.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="20"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="27"
+                            android:onClick="@{(_) -> viewModel.onFlashClick()}">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="211:20"
+                                app:layout_constraintHeight_percent="0.74"
+                                app:layout_constraintHorizontal_bias="0.15"
+                                android:gravity="center_vertical"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="18sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="@font/poppins_500"
+                                android:text="@string/flash"/>
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="2:1"
+                                app:layout_constraintHorizontal_bias="0.9414"
+                                android:thumb="@drawable/switch_thumb"
+                                app:track="@drawable/switch_track"
+                                android:clickable="false"
+                                android:checked="@{viewModel.isFlashOn}"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.legacy.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="20"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="27"
+                            android:onClick="@{(_) -> viewModel.onAccelerometerClick()}">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="211:20"
+                                app:layout_constraintHeight_percent="0.74"
+                                app:layout_constraintHorizontal_bias="0.15"
+                                android:gravity="center_vertical"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="18sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="@font/poppins_500"
+                                android:text="@string/accelerometer"/>
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="2:1"
+                                app:layout_constraintHorizontal_bias="0.9414"
+                                android:thumb="@drawable/switch_thumb"
+                                app:track="@drawable/switch_track"
+                                android:clickable="false"
+                                android:checked="@{viewModel.isAccelerometerOn}"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.legacy.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="34"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/buttonLanguage"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="20">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="211:20"
+                                app:layout_constraintHorizontal_bias="0.15"
+                                android:gravity="center_vertical"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="18sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="@font/poppins_500"
+                                android:text="@string/application_language"/>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="211:16"
+                                app:layout_constraintHeight_percent="0.8"
+                                app:layout_constraintHorizontal_bias="0.7777777"
+                                android:gravity="center_vertical|end"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="14sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#80FFFFFF"
+                                android:fontFamily="@font/poppins_500"
+                                android:text="@{viewModel.localeRepository.localeObservable.displayName ?? LocaleRepository.Locale.ENGLISH.displayName}"/>
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="8:15"
+                                app:layout_constraintHeight_percent="0.75"
+                                app:layout_constraintHorizontal_bias="0.95"
+                                android:src="@drawable/ic_next"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.legacy.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/buttonShare"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="30">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="3513:3000"
+                                app:layout_constraintHorizontal_bias="0.05457"
+                                android:src="@drawable/ic_share"/>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="231:20"
+                                app:layout_constraintWidth_percent="0.745"
+                                app:layout_constraintHorizontal_bias="0.81"
+                                android:gravity="center_vertical"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="18sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="@font/poppins_500"
+                                android:text="@string/share"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.legacy.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/buttonRateUs"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="36">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintHorizontal_bias="0.051"
+                                android:src="@drawable/ic_rate_us"/>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="231:20"
+                                app:layout_constraintWidth_percent="0.745"
+                                app:layout_constraintHorizontal_bias="0.81"
+                                android:gravity="center_vertical"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="18sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="@font/poppins_500"
+                                android:text="@string/rate_us"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.legacy.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/buttonPrivacyPolicy"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="37">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="2864:3700"
+                                app:layout_constraintHorizontal_bias="0.06433"
+                                android:src="@drawable/ic_privacy"/>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="231:20"
+                                app:layout_constraintWidth_percent="0.745"
+                                app:layout_constraintHorizontal_bias="0.81"
+                                android:gravity="center_vertical"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="18sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="@font/poppins_500"
+                                android:text="@string/privacy_policy"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/menuLanguage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="310:116">
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/buttonBackLanguage"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintDimensionRatio="3400:3457"
+                                    app:layout_constraintWidth_percent="0.109"
+                                    app:layout_constraintHorizontal_bias="0.054"
+                                    app:layout_constraintVertical_bias="0.614"
+                                    android:src="@drawable/ic_back"/>
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintDimensionRatio="182:26"
+                                    app:layout_constraintHeight_percent="0.224"
+                                    app:layout_constraintVertical_bias="0.6222"
+                                    android:gravity="center"
+                                    app:autoSizeTextType="uniform"
+                                    app:autoSizeMaxTextSize="24sp"
+                                    app:autoSizeMinTextSize="1sp"
+                                    android:textColor="#FFFFFF"
+                                    android:fontFamily="@font/poppins_500"
+                                    android:text="@string/language"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            android:orientation="vertical"
+                            android:overScrollMode="never"
+                            android:scrollbars="none"
+                            android:adapter="@{viewModel.adapterLanguage}"/>
+                        
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

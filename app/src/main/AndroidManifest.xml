@@ -78,6 +78,13 @@
             android:exported="true"
             android:launchMode="singleTask"/>
 
+        <activity
+            android:name="com.vefercal.ler.ui.contacts.ContactsActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true"
+            android:launchMode="singleTask"/>
+
         <service
             android:name="com.vefercal.ler.CallService"
             android:permission="android.permission.BIND_INCALL_SERVICE"

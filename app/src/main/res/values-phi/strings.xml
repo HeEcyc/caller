@@ -33,4 +33,14 @@
     <string name="theme_applied">Inilapat ang tema!</string>
     <string name="your_contacts">Iyong Mga Contact</string>
     <string name="write_here">Magsulat dito...</string>
+    <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">Maglaan ng oras at Mag-enjoy sa mga bagong hindi kapani-paniwalang tema ng screen ng tawag</string>
+    <string name="the_best_way_to_diversify_your_phone_call_screen">Ang pinakamahusay na paraan upang pag-iba-ibahin ang screen ng iyong tawag sa telepono</string>
+    <string name="select_contacts_to_apply">Pumili ng mga contact na ilalapat</string>
+    <string name="write_here_to_search">Sumulat dito upang maghanap...</string>
+    <string name="call">Tumawag...</string>
+    <string name="mute">I-mute</string>
+    <string name="keypad">Keypad</string>
+    <string name="speaker">Tagapagsalita</string>
+    <string name="add_call">Magdagdag ng tawag</string>
+    <string name="switch_call">Lumipat ng tawag</string>
 </resources>
