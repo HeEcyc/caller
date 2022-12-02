@@ -45,13 +45,6 @@ class AudioManagerRepository(private val audioManager: AudioManager) {
         onCallTypeChanged(PHONE)
     }
 
-    fun setBluetoothCallType(callService: BaseCallService?) {
-        audioManager.isBluetoothScoOn = true
-        audioManager.isSpeakerphoneOn = false
-        callService?.setBluetoothMode()
-        onCallTypeChanged(BLUETOOTH)
-    }
-
     fun setSpeakerModeOn(callService: BaseCallService?) {
         callService?.setSpeakerMode()
         audioManager.isSpeakerphoneOn = true

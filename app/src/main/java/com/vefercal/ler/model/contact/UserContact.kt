@@ -2,7 +2,6 @@ package com.vefercal.ler.model.contact
 
 import android.os.Parcel
 import android.os.Parcelable
-import androidx.databinding.ObservableBoolean
 import java.io.Serializable
 
 data class UserContact(
@@ -25,7 +24,7 @@ data class UserContact(
     }
 
     companion object CREATOR: Parcelable.Creator<UserContact?> {
-        override fun createFromParcel(`in`: Parcel): UserContact? {
+        override fun createFromParcel(`in`: Parcel): UserContact {
             return UserContact(
                 `in`.readLong(),
                 `in`.readString(),
@@ -39,8 +38,4 @@ data class UserContact(
             return arrayOfNulls(size)
         }
     }
-}
-
-class UserContactViewModel(val contact: UserContact) {
-    val isSelected = ObservableBoolean(false)
 }

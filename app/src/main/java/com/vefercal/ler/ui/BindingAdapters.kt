@@ -10,11 +10,6 @@ fun View.visibleIf(b: Boolean) {
     visibility = if (b) View.VISIBLE else View.GONE
 }
 
-@BindingAdapter("goneIf")
-fun View.goneIf(b: Boolean) {
-    visibility = if (b) View.GONE else View.VISIBLE
-}
-
 @BindingAdapter("font")
 fun TextView.font(res: Int) {
     typeface = ResourcesCompat.getFont(context, res)

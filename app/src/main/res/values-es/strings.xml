@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="all">Todos</string>
-    <string name="top">Parte superior</string>
-    <string name="s_new">Nuevo</string>
     <string name="permissionPhoneDescription">Establezca la aplicación como su aplicación de teléfono predeterminada</string>
     <string name="permissionContactsDescription">Permita que la aplicación acceda a sus contactos</string>
     <string name="permissionOverlayDescription">Permitir visualización sobre otra aplicación</string>
@@ -21,18 +18,9 @@
     <string name="apply_to_selected">Aplicar a seleccionados</string>
     <string name="apply_to_all">Aplicar a todo</string>
     <string name="apply">Aplicar</string>
-    <string name="choose_a_contact_number">Elige un número de contacto</string>
     <string name="calling">Vocación...</string>
     <string name="choose_a_sim_card">Elige una tarjeta SIM</string>
-    <string name="your_image">Tu imagen</string>
-    <string name="welcome">Bienvenidos</string>
-    <string name="express_your_uniqueness">Expresa tu singularidad</string>
-    <string name="popular">Popular</string>
-    <string name="let_s_start">Empecemos</string>
-    <string name="searching_for_your_phone_s_call_screen">Búsqueda de la pantalla de llamadas de su teléfono</string>
     <string name="theme_applied">¡Tema aplicado!</string>
-    <string name="your_contacts">Sus contactos</string>
-    <string name="write_here">Escribe aquí...</string>
     <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">Tómese su tiempo y disfrute de nuevos e increíbles temas de pantalla de llamadas</string>
     <string name="the_best_way_to_diversify_your_phone_call_screen">La mejor manera de diversificar la pantalla de llamadas telefónicas</string>
     <string name="select_contacts_to_apply">Seleccionar contactos para aplicar</string>

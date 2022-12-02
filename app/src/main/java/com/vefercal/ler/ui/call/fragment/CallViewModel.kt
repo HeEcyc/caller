@@ -154,11 +154,11 @@ class CallViewModel(
         isMuteOn.set(!isMuteOn.get()!!)
     }
 
-    fun setSpeakerCallType() {
+    private fun setSpeakerCallType() {
         callRepository.audioManagerRepository.setPhoneCallType(callRepository.callService)
     }
 
-    fun setSpeakerType() {
+    private fun setSpeakerType() {
         callRepository.audioManagerRepository.setSpeakerModeOn(callRepository.callService)
     }
 
@@ -181,14 +181,7 @@ class CallViewModel(
 
     fun onSwapClick() = onSwapClickEvents.postValue(Unit)
 
-    fun onSwapOrAddClick() {
-        if (callRepository.hasMultipleCalls.get())
-            onSwapClick()
-        else
-            onAddClick()
-    }
-
-    fun onDialButtonClick(symbol: String) {
+    private fun onDialButtonClick(symbol: String) {
         dialCache.set(dialCache.get() + symbol)
         GlobalScope.launch(Dispatchers.IO) {
             call.get()?.playDtmfTone(symbol.first())

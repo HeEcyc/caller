@@ -10,7 +10,7 @@ import com.vefercal.ler.BR
 abstract class BaseAdapter<T, V : ViewDataBinding>(private val onItemClick: ((T) -> Unit)? = null) :
     RecyclerView.Adapter<BaseAdapter.BaseItem<T, out ViewDataBinding>>() {
 
-    protected var items: MutableList<T> = mutableListOf()
+    private var items: MutableList<T> = mutableListOf()
 
     override fun onCreateViewHolder(@NonNull viewGroup: ViewGroup, i: Int): BaseItem<T, V> =
         createHolder(getViewBinding(LayoutInflater.from(viewGroup.context), viewGroup, i))
@@ -22,11 +22,6 @@ abstract class BaseAdapter<T, V : ViewDataBinding>(private val onItemClick: ((T)
             items.clear()
             notifyDataSetChanged()
         }
-    }
-
-    open fun addItem(item: T) {
-        items.add(item)
-        notifyItemInserted(items.size - 1)
     }
 
     open fun addItem(item: T, index: Int) {

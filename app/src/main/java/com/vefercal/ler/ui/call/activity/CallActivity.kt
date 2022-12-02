@@ -60,7 +60,7 @@ class CallActivity : BaseActivity<CallActivityViewModel, CallActivityBinding>() 
         })
     }
 
-    fun addFragment(fragment: Fragment) {
+    private fun addFragment(fragment: Fragment) {
         supportFragmentManager.commit { add(R.id.fragmentContainer, fragment) }
         onCallAmountChanged()
     }
@@ -82,7 +82,7 @@ class CallActivity : BaseActivity<CallActivityViewModel, CallActivityBinding>() 
         else
             finishAndRemoveTask()
 
-    fun focusOnFragment(fragment: Fragment) {
+    private fun focusOnFragment(fragment: Fragment) {
         supportFragmentManager.commit {
             fragments.forEach {
                 if (it === fragment && it.isHidden) show(it)

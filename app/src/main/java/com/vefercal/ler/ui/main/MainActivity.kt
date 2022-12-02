@@ -2,9 +2,6 @@ package com.vefercal.ler.ui.main
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.commit
-import com.bumptech.glide.manager.SupportRequestManagerFragment
 import com.vefercal.ler.R
 import com.vefercal.ler.base.BaseActivity
 import com.vefercal.ler.databinding.MainActvityBinding
@@ -37,25 +34,6 @@ class MainActivity : BaseActivity<MainViewModel, MainActvityBinding>() {
 
     private fun needToShowPermissionDialog() =
         !viewModel.permissionRepository.hasNecessaryPermissions && supportFragmentManager.fragments.none { it is PermissionDialog }
-
-    fun addFragment(f: Fragment) = supportFragmentManager.commit {
-        add(R.id.fragmentContainer, f)
-        addToBackStack(null)
-    }
-
-    fun addFragmentNoBackStack(f: Fragment) = supportFragmentManager.commit {
-        add(R.id.fragmentContainer, f)
-    }
-
-    fun addFragmentRemoveOther(f: Fragment) = supportFragmentManager.commit {
-        replace(R.id.fragmentContainer, f)
-        supportFragmentManager.fragments.forEach {
-            if (it !== f && it !is SupportRequestManagerFragment) remove(it)
-        }
-        addToBackStack(null)
-    }
-
-    fun removeFragment(f: Fragment) = supportFragmentManager.commit { remove(f) }
 
     override fun provideViewModel() = viewModel
 

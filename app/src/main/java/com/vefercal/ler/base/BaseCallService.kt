@@ -42,10 +42,6 @@ abstract class BaseCallService : InCallService() {
         .setData(call.details.handle)
         .let(::startActivity)
 
-    fun setBluetoothMode() {
-        setAudioRoute(CallAudioState.ROUTE_BLUETOOTH)
-    }
-
     fun setSpeakerMode() {
         setAudioRoute(CallAudioState.ROUTE_SPEAKER)
     }

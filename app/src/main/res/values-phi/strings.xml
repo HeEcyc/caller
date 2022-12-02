@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="all">Lahat</string>
-    <string name="top">Nangunguna</string>
-    <string name="s_new">Bago</string>
     <string name="permissionPhoneDescription">Itakda ang application bilang iyong default na app ng telepono</string>
     <string name="permissionContactsDescription">Payagan ang application na i-access ang iyong mga contact</string>
     <string name="permissionOverlayDescription">Payagan ang pagpapakita sa iba pang app</string>
@@ -21,18 +18,9 @@
     <string name="apply_to_selected">Mag-apply sa Napili</string>
     <string name="apply_to_all">Mag-apply sa lahat</string>
     <string name="apply">Mag-apply</string>
-    <string name="choose_a_contact_number">Pumili ng contact number</string>
     <string name="calling">Tumatawag...</string>
     <string name="choose_a_sim_card">Pumili ng SIM card</string>
-    <string name="your_image">Ang iyong larawan</string>
-    <string name="welcome">Maligayang pagdating</string>
-    <string name="express_your_uniqueness">Ipahayag ang Iyong Pagkakakaiba</string>
-    <string name="popular">Sikat</string>
-    <string name="let_s_start">Simulan Natin</string>
-    <string name="searching_for_your_phone_s_call_screen">Hinahanap ang Call Screen ng Iyong Telepono</string>
     <string name="theme_applied">Inilapat ang tema!</string>
-    <string name="your_contacts">Iyong Mga Contact</string>
-    <string name="write_here">Magsulat dito...</string>
     <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">Maglaan ng oras at Mag-enjoy sa mga bagong hindi kapani-paniwalang tema ng screen ng tawag</string>
     <string name="the_best_way_to_diversify_your_phone_call_screen">Ang pinakamahusay na paraan upang pag-iba-ibahin ang screen ng iyong tawag sa telepono</string>
     <string name="select_contacts_to_apply">Pumili ng mga contact na ilalapat</string>

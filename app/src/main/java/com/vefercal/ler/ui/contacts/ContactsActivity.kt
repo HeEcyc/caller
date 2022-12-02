@@ -52,7 +52,7 @@ class ContactsActivity : BaseActivity<ContactsViewModel, ContactsActivityBinding
         }
     }
 
-    fun addInterlocutor(number: String) {
+    private fun addInterlocutor(number: String) {
         viewModel.permissionRepository.askOutgoingCallPermissions(lifecycleScope) {
             if (it) call(number)
             if (mode == Mode.INTERLOCUTOR_SELECTOR) finish()

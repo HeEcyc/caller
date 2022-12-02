@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="all">Tất cả các</string>
-    <string name="top">Đứng đầu</string>
-    <string name="s_new">Mới</string>
     <string name="permissionPhoneDescription">Đặt ứng dụng làm ứng dụng điện thoại mặc định của bạn</string>
     <string name="permissionContactsDescription">Cho phép ứng dụng truy cập danh bạ của bạn</string>
     <string name="permissionOverlayDescription">Cho phép hiển thị trên ứng dụng khác</string>
@@ -21,18 +18,9 @@
     <string name="apply_to_selected">Áp dụng cho Đã chọn</string>
     <string name="apply_to_all">Áp dụng cho tất cả</string>
     <string name="apply">Ứng dụng</string>
-    <string name="choose_a_contact_number">Chọn một số liên lạc</string>
     <string name="calling">Đang gọi ...</string>
     <string name="choose_a_sim_card">Chọn một thẻ SIM</string>
-    <string name="your_image">Hình ảnh của bạn</string>
-    <string name="welcome">Chào mừng</string>
-    <string name="express_your_uniqueness">Thể hiện sự độc đáo của bạn</string>
-    <string name="popular">Nổi tiếng</string>
-    <string name="let_s_start">Hãy bắt đầu</string>
-    <string name="searching_for_your_phone_s_call_screen">Tìm kiếm màn hình cuộc gọi trên điện thoại của bạn</string>
     <string name="theme_applied">Đã áp dụng chủ đề!</string>
-    <string name="your_contacts">Liên hệ của bạn</string>
-    <string name="write_here">Viết ở đây...</string>
     <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">Dành thời gian của bạn và tận hưởng các chủ đề màn hình cuộc gọi đáng kinh ngạc mới</string>
     <string name="the_best_way_to_diversify_your_phone_call_screen">Cách tốt nhất để đa dạng hóa màn hình cuộc gọi điện thoại của bạn</string>
     <string name="select_contacts_to_apply">Chọn địa chỉ liên hệ để áp dụng</string>

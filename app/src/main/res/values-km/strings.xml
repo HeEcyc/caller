@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="all">ទាំងអស់។</string>
-    <string name="top">កំពូល</string>
-    <string name="s_new">ថ្មី។</string>
     <string name="permissionPhoneDescription">កំណត់កម្មវិធីជាកម្មវិធីទូរស័ព្ទលំនាំដើមរបស់អ្នក។</string>
     <string name="permissionContactsDescription">អនុញ្ញាតឱ្យកម្មវិធីចូលប្រើទំនាក់ទំនងរបស់អ្នក។</string>
     <string name="permissionOverlayDescription">អនុញ្ញាតឱ្យបង្ហាញនៅលើកម្មវិធីផ្សេងទៀត។</string>
@@ -21,18 +18,9 @@
     <string name="apply_to_selected">អនុវត្តទៅដែលបានជ្រើសរើស</string>
     <string name="apply_to_all">អនុវត្តចំពោះទាំងអស់គ្នា</string>
     <string name="apply">អនុវត្ត</string>
-    <string name="choose_a_contact_number">ជ្រើសរើសលេខទំនាក់ទំនង</string>
     <string name="calling">កំពុងហៅ...</string>
     <string name="choose_a_sim_card">ជ្រើសរើសស៊ីមកាត</string>
-    <string name="your_image">រូបភាពរបស់អ្នក។</string>
-    <string name="welcome">សូមស្វាគមន៍</string>
-    <string name="express_your_uniqueness">បង្ហាញពីភាពប្លែករបស់អ្នក។</string>
-    <string name="popular">ពេញនិយម</string>
-    <string name="let_s_start">តោះ​ចាប់​ផ្ដើម</string>
-    <string name="searching_for_your_phone_s_call_screen">កំពុងស្វែងរកអេក្រង់ហៅទូរសព្ទរបស់អ្នក។</string>
     <string name="theme_applied">បានអនុវត្តប្រធានបទ!</string>
-    <string name="your_contacts">ទំនាក់ទំនងរបស់អ្នក។</string>
-    <string name="write_here">សរសេរនៅទីនេះ...</string>
     <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">ចំណាយពេលរបស់អ្នក និងរីករាយជាមួយរូបរាងអេក្រង់ហៅទូរសព្ទថ្មីដែលមិនគួរឱ្យជឿ</string>
     <string name="the_best_way_to_diversify_your_phone_call_screen">វិធីល្អបំផុតដើម្បីធ្វើពិពិធកម្មអេក្រង់ហៅទូរស័ព្ទរបស់អ្នក។</string>
     <string name="select_contacts_to_apply">ជ្រើសរើសទំនាក់ទំនងដើម្បីអនុវត្ត</string>

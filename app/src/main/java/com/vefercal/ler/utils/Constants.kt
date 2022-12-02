@@ -12,7 +12,6 @@ val videoThemes = List(6) {
         true
     )
 }
-val audioThemesIndexes = videoThemes.indices.toList()
 val themesNew = List(8) {
     ImageTheme("file:///android_asset/new/$it.png")
 }
@@ -29,5 +28,3 @@ val presetThemes: List<Theme> = listOf(
 )
 
 val appLink: String by lazy { "https://play.google.com/store/apps/details?id=" + App.instance.packageName }
-
-const val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ#"
