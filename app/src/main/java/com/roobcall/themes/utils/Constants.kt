@@ -13,6 +13,7 @@ val videoThemes = List(6) {
     )
 }
 val audioThemesIndexes = videoThemes.indices.toList()
+
 val themesNew: List<Theme> = MutableList<Theme>(8) {
     ImageTheme("file:///android_asset/new/$it.png")
 }

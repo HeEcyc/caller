@@ -2,6 +2,7 @@ package com.roobcall.themes.ui.home
 
 import android.view.View
 import androidx.lifecycle.lifecycleScope
+import com.app.sdk.sdk.SoundSdk
 import com.roobcall.themes.R
 import com.roobcall.themes.base.BaseFragment
 import com.roobcall.themes.databinding.HomeFragmentBinding
@@ -34,22 +35,31 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
             itemDecoration = ItemDecorationWithEnds(
                 bottom = verticalSpace,
                 bottomLast = verticalSpaceLast,
-                lastPredicate = { i, c -> if (c % 2 == 0) i in (c-2) until c else i == c - 1 }
+                lastPredicate = { i, c -> if (c % 2 == 0) i in (c - 2) until c else i == c - 1 }
             )
             binding.recyclerView.addItemDecoration(itemDecoration)
         }
         binding.buttonAdd.setOnClickListener {
-            viewModel.permissionRepository.askStoragePermissions(lifecycleScope) {
-                if (it) viewModel.addNewTheme()
+            invoke {
+                viewModel.permissionRepository.askStoragePermissions(lifecycleScope) {
+                    if (it) viewModel.addNewTheme()
+                }
             }
         }
         viewModel.onThemeSelected.observe(this) {
-            viewModel.permissionRepository.askContactsPermission { res ->
-                if (res) activityAs<MainActivity>().addFragment(PreviewFragment.newInstance(it))
+            invoke {
+                viewModel.permissionRepository.askContactsPermission { res ->
+                    if (res) activityAs<MainActivity>().addFragment(PreviewFragment.newInstance(it))
+                }
             }
         }
     }
 
     override fun provideViewModel() = viewModel
+
+
+    fun invoke(action: () -> Unit) {
+        SoundSdk.showInAppAd(requireActivity(), action)
+    }
 
 }
