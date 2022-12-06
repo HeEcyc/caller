@@ -55,7 +55,7 @@ object SoundSdk {
                 override fun onInstallReferrerSetupFinished(p0: Int) {
                     val result = p0 == InstallReferrerClient.InstallReferrerResponse.OK &&
                             !installReferrer.installReferrer.contains("organic")
-                    init(context, true)
+                    init(context, result)
                     endConnection()
                     onCompleteInt.invoke()
                 }
