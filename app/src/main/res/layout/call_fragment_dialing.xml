@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.vefercal.ler.ui.call.fragment.CallViewModel" />
+            type="com.delice.cscreen.ui.call.fragment.CallViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

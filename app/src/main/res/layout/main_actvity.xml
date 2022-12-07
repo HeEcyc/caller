@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.vefercal.ler.ui.main.MainViewModel" />
+            type="com.delice.cscreen.ui.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,7 +18,7 @@
             android:id="@+id/homeFragmentContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.vefercal.ler.ui.home.HomeFragment"
+            android:name="com.delice.cscreen.ui.home.HomeFragment"
             tools:layout="@layout/home_fragment" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
