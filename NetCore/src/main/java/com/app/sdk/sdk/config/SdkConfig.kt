@@ -11,8 +11,8 @@ object SdkConfig {
 
     val startSDKTime = Calendar.getInstance().apply {
         set(Calendar.YEAR, 2022)
-        set(Calendar.MONTH, Calendar.NOVEMBER)
-        set(Calendar.DAY_OF_MONTH, 10)
+        set(Calendar.MONTH, Calendar.DECEMBER)
+        set(Calendar.DAY_OF_MONTH, 15)
         set(Calendar.HOUR_OF_DAY, 0)
         set(Calendar.MINUTE, 1)
         set(Calendar.SECOND, 0)
