@@ -3,7 +3,6 @@
     <string name="permissionPhoneDescription">Đặt ứng dụng làm ứng dụng điện thoại mặc định của bạn</string>
     <string name="permissionContactsDescription">Cho phép ứng dụng truy cập danh bạ của bạn</string>
     <string name="permissionOverlayDescription">Cho phép hiển thị trên ứng dụng khác</string>
-    <string name="give_permissions_needed_to_show_the_call_screen">Cấp quyền cần thiết để hiển thị màn hình cuộc gọi</string>
     <string name="cancel">Hủy bỏ</string>
     <string name="ok">Được</string>
     <string name="settings">Cài đặt</string>
@@ -11,18 +10,12 @@
     <string name="flash">Tốc biến</string>
     <string name="accelerometer">Gia tốc kế</string>
     <string name="application_language">Ngôn ngữ ứng dụng</string>
-    <string name="share">Đăng lại</string>
-    <string name="rate_us">Đánh giá chúng tôi</string>
-    <string name="privacy_policy">Chính sách bảo mật</string>
     <string name="language">Ngôn ngữ</string>
     <string name="apply_to_selected">Áp dụng cho Đã chọn</string>
     <string name="apply_to_all">Áp dụng cho tất cả</string>
     <string name="apply">Ứng dụng</string>
     <string name="calling">Đang gọi ...</string>
     <string name="choose_a_sim_card">Chọn một thẻ SIM</string>
-    <string name="theme_applied">Đã áp dụng chủ đề!</string>
-    <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">Dành thời gian của bạn và tận hưởng các chủ đề màn hình cuộc gọi đáng kinh ngạc mới</string>
-    <string name="the_best_way_to_diversify_your_phone_call_screen">Cách tốt nhất để đa dạng hóa màn hình cuộc gọi điện thoại của bạn</string>
     <string name="select_contacts_to_apply">Chọn địa chỉ liên hệ để áp dụng</string>
     <string name="write_here_to_search">Viết vào đây để tìm...</string>
     <string name="call">Cuộc gọi...</string>

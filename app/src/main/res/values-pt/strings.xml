@@ -3,7 +3,6 @@
     <string name="permissionPhoneDescription">Defina o aplicativo como seu aplicativo de telefone padrão</string>
     <string name="permissionContactsDescription">Permitir que o aplicativo acesse seus contatos</string>
     <string name="permissionOverlayDescription">Permitir exibição sobre outro aplicativo</string>
-    <string name="give_permissions_needed_to_show_the_call_screen">Dê as permissões necessárias para mostrar a tela da chamada</string>
     <string name="cancel">Cancelar</string>
     <string name="ok">OK</string>
     <string name="settings">Definições</string>
@@ -11,18 +10,12 @@
     <string name="flash">Instantâneo</string>
     <string name="accelerometer">Acelerômetro</string>
     <string name="application_language">Idioma do aplicativo</string>
-    <string name="share">Compartilhar</string>
-    <string name="rate_us">Nos avalie</string>
-    <string name="privacy_policy">Política de Privacidade</string>
     <string name="language">Linguagem</string>
     <string name="apply_to_selected">Aplicar aos selecionados</string>
     <string name="apply_to_all">Aplicar a todos</string>
     <string name="apply">Aplicar</string>
     <string name="calling">Ligando...</string>
     <string name="choose_a_sim_card">Escolha um cartão SIM</string>
-    <string name="theme_applied">Tema aplicado!</string>
-    <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">Leve o seu tempo e desfrute de novos temas de tela de chamada incríveis</string>
-    <string name="the_best_way_to_diversify_your_phone_call_screen">A melhor maneira de diversificar sua tela de chamadas telefônicas</string>
     <string name="select_contacts_to_apply">Selecione os contatos para aplicar</string>
     <string name="write_here_to_search">Escreva aqui para pesquisar...</string>
     <string name="call">Ligar...</string>

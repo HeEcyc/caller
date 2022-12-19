@@ -14,5 +14,3 @@ val videoThemes = List(8) {
 val presetThemes: List<Theme> = listOf(
     *videoThemes.toTypedArray()
 )
-
-val appLink: String by lazy { "https://play.google.com/store/apps/details?id=" + App.instance.packageName }

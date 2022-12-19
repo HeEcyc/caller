@@ -3,7 +3,6 @@
     <string name="permissionPhoneDescription">قم بتعيين التطبيق كتطبيق هاتفك الافتراضي</string>
     <string name="permissionContactsDescription">اسمح للتطبيق بالوصول إلى جهات الاتصال الخاصة بك</string>
     <string name="permissionOverlayDescription">السماح بالعرض فوق تطبيق آخر</string>
-    <string name="give_permissions_needed_to_show_the_call_screen">امنح الأذونات اللازمة لإظهار شاشة الاتصال</string>
     <string name="cancel">يلغي</string>
     <string name="ok">موافق</string>
     <string name="settings">إعدادات</string>
@@ -11,18 +10,12 @@
     <string name="flash">فلاش</string>
     <string name="accelerometer">مقياس التسارع</string>
     <string name="application_language">لغة التطبيق</string>
-    <string name="share">يشارك</string>
-    <string name="rate_us">قيمنا</string>
-    <string name="privacy_policy">سياسة الخصوصية</string>
     <string name="language">لغة</string>
     <string name="apply_to_selected">تنطبق على المختار</string>
     <string name="apply_to_all">تنطبق على الجميع</string>
     <string name="apply">يتقدم</string>
     <string name="calling">جارٍ الاتصال ...</string>
     <string name="choose_a_sim_card">اختر بطاقة SIM </string>
-    <string name="theme_applied">تم تطبيق الموضوع!</string>
-    <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">خذ وقتك واستمتع بمواضيع شاشة اتصال جديدة لا تصدق</string>
-    <string name="the_best_way_to_diversify_your_phone_call_screen">أفضل طريقة لتنويع شاشة مكالماتك الهاتفية</string>
     <string name="select_contacts_to_apply">حدد جهات الاتصال المراد تطبيقها</string>
     <string name="write_here_to_search">اكتب هنا للبحث ...</string>
     <string name="call">مكالمة...</string>

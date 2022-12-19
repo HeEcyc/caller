@@ -3,7 +3,6 @@
     <string name="permissionPhoneDescription">Set the application as your default phone apps</string>
     <string name="permissionContactsDescription">Allow the application to access your contacts</string>
     <string name="permissionOverlayDescription">Allow display over other app</string>
-    <string name="give_permissions_needed_to_show_the_call_screen">Give permissions needed to show the call screen</string>
     <string name="cancel">Cancel</string>
     <string name="ok">Ok</string>
     <string name="settings">Settings</string>
@@ -11,18 +10,12 @@
     <string name="flash">Flash</string>
     <string name="accelerometer">Accelerometer</string>
     <string name="application_language">Application language</string>
-    <string name="share">Share</string>
-    <string name="rate_us">Rate us</string>
-    <string name="privacy_policy">Privacy policy</string>
     <string name="language">Language</string>
     <string name="apply_to_selected">Apply to Selected</string>
     <string name="apply_to_all">Apply To All Contacts</string>
     <string name="apply">Apply</string>
     <string name="calling">Calling...</string>
     <string name="choose_a_sim_card">Choose a SIM card</string>
-    <string name="theme_applied">Theme applied!</string>
-    <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">Take your time and Enjoy new incredible call screen themes</string>
-    <string name="the_best_way_to_diversify_your_phone_call_screen">The best way to diversify your phone call screen</string>
     <string name="select_contacts_to_apply">Select Contacts To Apply</string>
     <string name="write_here_to_search">Type here...</string>
     <string name="call">Call...</string>

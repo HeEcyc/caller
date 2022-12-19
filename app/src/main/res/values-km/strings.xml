@@ -3,7 +3,6 @@
     <string name="permissionPhoneDescription">កំណត់កម្មវិធីជាកម្មវិធីទូរស័ព្ទលំនាំដើមរបស់អ្នក។</string>
     <string name="permissionContactsDescription">អនុញ្ញាតឱ្យកម្មវិធីចូលប្រើទំនាក់ទំនងរបស់អ្នក។</string>
     <string name="permissionOverlayDescription">អនុញ្ញាតឱ្យបង្ហាញនៅលើកម្មវិធីផ្សេងទៀត។</string>
-    <string name="give_permissions_needed_to_show_the_call_screen">ផ្តល់ការអនុញ្ញាតដែលត្រូវការដើម្បីបង្ហាញអេក្រង់ហៅទូរសព្ទ</string>
     <string name="cancel">បោះបង់</string>
     <string name="ok">យល់ព្រម</string>
     <string name="settings">ការកំណត់</string>
@@ -11,18 +10,12 @@
     <string name="flash">ពន្លឺ</string>
     <string name="accelerometer">ឧបករណ៍វាស់ល្បឿន</string>
     <string name="application_language">ភាសាកម្មវិធី</string>
-    <string name="share">ចែករំលែក</string>
-    <string name="rate_us">វាយតម្លៃពួកយើង</string>
-    <string name="privacy_policy">គោលការណ៍​ភាព​ឯកជន</string>
     <string name="language">ភាសា</string>
     <string name="apply_to_selected">អនុវត្តទៅដែលបានជ្រើសរើស</string>
     <string name="apply_to_all">អនុវត្តចំពោះទាំងអស់គ្នា</string>
     <string name="apply">អនុវត្ត</string>
     <string name="calling">កំពុងហៅ...</string>
     <string name="choose_a_sim_card">ជ្រើសរើសស៊ីមកាត</string>
-    <string name="theme_applied">បានអនុវត្តប្រធានបទ!</string>
-    <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">ចំណាយពេលរបស់អ្នក និងរីករាយជាមួយរូបរាងអេក្រង់ហៅទូរសព្ទថ្មីដែលមិនគួរឱ្យជឿ</string>
-    <string name="the_best_way_to_diversify_your_phone_call_screen">វិធីល្អបំផុតដើម្បីធ្វើពិពិធកម្មអេក្រង់ហៅទូរស័ព្ទរបស់អ្នក។</string>
     <string name="select_contacts_to_apply">ជ្រើសរើសទំនាក់ទំនងដើម្បីអនុវត្ត</string>
     <string name="write_here_to_search">សរសេរនៅទីនេះដើម្បីស្វែងរក...</string>
     <string name="call">ហៅ...</string>

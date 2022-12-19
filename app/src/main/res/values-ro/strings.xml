@@ -3,7 +3,6 @@
     <string name="permissionPhoneDescription">Setați aplicația ca aplicație implicită pentru telefon</string>
     <string name="permissionContactsDescription">Permiteți aplicației să vă acceseze contactele</string>
     <string name="permissionOverlayDescription">Permite afișarea peste altă aplicație</string>
-    <string name="give_permissions_needed_to_show_the_call_screen">Oferiți permisiunile necesare pentru a afișa ecranul de apel</string>
     <string name="cancel">Anulare</string>
     <string name="ok">O.K</string>
     <string name="settings">Setări</string>
@@ -11,18 +10,12 @@
     <string name="flash">Flash</string>
     <string name="accelerometer">Accelerometru</string>
     <string name="application_language">Limba aplicației</string>
-    <string name="share">Acțiune</string>
-    <string name="rate_us">Ne evalua</string>
-    <string name="privacy_policy">Politica de Confidențialitate</string>
     <string name="language">Limba</string>
     <string name="apply_to_selected">Aplicați la selectat</string>
     <string name="apply_to_all">Aplica la toate</string>
     <string name="apply">aplica</string>
     <string name="calling">Apelând...</string>
     <string name="choose_a_sim_card">Alegeți o cartelă SIM</string>
-    <string name="theme_applied">Tema aplicată!</string>
-    <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">Fă-ți timp și bucură-te de noi teme incredibile pentru ecranul de apeluri</string>
-    <string name="the_best_way_to_diversify_your_phone_call_screen">Cel mai bun mod de a vă diversifica ecranul pentru apeluri telefonice</string>
     <string name="select_contacts_to_apply">Selectați contactele de aplicat</string>
     <string name="write_here_to_search">Scrie aici pentru a căuta...</string>
     <string name="call">Apel...</string>

@@ -3,7 +3,6 @@
     <string name="permissionPhoneDescription">Tetapkan aplikasi sebagai apl telefon lalai anda</string>
     <string name="permissionContactsDescription">Benarkan aplikasi mengakses kenalan anda</string>
     <string name="permissionOverlayDescription">Benarkan paparan di atas apl lain</string>
-    <string name="give_permissions_needed_to_show_the_call_screen">Berikan kebenaran yang diperlukan untuk menunjukkan skrin panggilan</string>
     <string name="cancel">Batal</string>
     <string name="ok">Okey</string>
     <string name="settings">tetapan</string>
@@ -11,18 +10,12 @@
     <string name="flash">Kilat</string>
     <string name="accelerometer">Accelerometer</string>
     <string name="application_language">Bahasa aplikasi</string>
-    <string name="share">Kongsi</string>
-    <string name="rate_us">Nilaikan kami</string>
-    <string name="privacy_policy">Dasar privasi</string>
     <string name="language">Bahasa</string>
     <string name="apply_to_selected">Mohon kepada Terpilih</string>
     <string name="apply_to_all">Terpakai kepada semua</string>
     <string name="apply">Mohon</string>
     <string name="calling">Memanggil...</string>
     <string name="choose_a_sim_card">Pilih kad SIM</string>
-    <string name="theme_applied">Tema digunakan!</string>
-    <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">Luangkan masa anda dan Nikmati tema skrin panggilan baharu yang luar biasa</string>
-    <string name="the_best_way_to_diversify_your_phone_call_screen">Cara terbaik untuk mempelbagaikan skrin panggilan telefon anda</string>
     <string name="select_contacts_to_apply">Pilih kenalan untuk memohon</string>
     <string name="write_here_to_search">Tulis di sini untuk mencari...</string>
     <string name="call">Panggil...</string>

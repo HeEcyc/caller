@@ -3,7 +3,6 @@
     <string name="permissionPhoneDescription">Itakda ang application bilang iyong default na app ng telepono</string>
     <string name="permissionContactsDescription">Payagan ang application na i-access ang iyong mga contact</string>
     <string name="permissionOverlayDescription">Payagan ang pagpapakita sa iba pang app</string>
-    <string name="give_permissions_needed_to_show_the_call_screen">Magbigay ng mga pahintulot na kailangan para ipakita ang screen ng tawag</string>
     <string name="cancel">Kanselahin</string>
     <string name="ok">Ok</string>
     <string name="settings">Mga setting</string>
@@ -11,18 +10,12 @@
     <string name="flash">Flash</string>
     <string name="accelerometer">Accelerometer</string>
     <string name="application_language">Wika ng aplikasyon</string>
-    <string name="share">Ibahagi</string>
-    <string name="rate_us">I-rate kami</string>
-    <string name="privacy_policy">Patakaran sa privacy</string>
     <string name="language">Wika</string>
     <string name="apply_to_selected">Mag-apply sa Napili</string>
     <string name="apply_to_all">Mag-apply sa lahat</string>
     <string name="apply">Mag-apply</string>
     <string name="calling">Tumatawag...</string>
     <string name="choose_a_sim_card">Pumili ng SIM card</string>
-    <string name="theme_applied">Inilapat ang tema!</string>
-    <string name="take_your_time_amp_enjoy_new_incredible_call_screen_themes">Maglaan ng oras at Mag-enjoy sa mga bagong hindi kapani-paniwalang tema ng screen ng tawag</string>
-    <string name="the_best_way_to_diversify_your_phone_call_screen">Ang pinakamahusay na paraan upang pag-iba-ibahin ang screen ng iyong tawag sa telepono</string>
     <string name="select_contacts_to_apply">Pumili ng mga contact na ilalapat</string>
     <string name="write_here_to_search">Sumulat dito upang maghanap...</string>
     <string name="call">Tumawag...</string>
