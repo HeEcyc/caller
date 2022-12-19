@@ -37,7 +37,7 @@ class ContactsActivity : BaseActivity<ContactsViewModel, ContactsActivityBinding
     override fun setupUI() {
         binding.root.post {
             binding.rv.addItemDecoration(ItemDecorationWithEnds(
-                bottomLast = binding.root.width * 127 / 360,
+                bottomLast = binding.root.width * 107 / 360,
                 lastPredicate = { position, count -> position == count - 1 }
             ))
         }

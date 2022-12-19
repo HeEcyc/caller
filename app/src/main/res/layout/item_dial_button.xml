@@ -17,7 +17,7 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="115:90">
+            app:layout_constraintDimensionRatio="110:90">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
@@ -40,12 +40,12 @@
                     android:layout_height="0dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintDimensionRatio="70:20"
+                    app:layout_constraintDimensionRatio="70:28"
                     android:gravity="center"
                     app:autoSizeTextType="uniform"
-                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMaxTextSize="26sp"
                     app:autoSizeMinTextSize="1sp"
-                    android:fontFamily="@font/poppins_500"
+                    android:fontFamily="@font/comfortaa_700"
                     android:text="@{item.onClickSymbol}"
                     android:visibility="@{item.onLongClickSymbol == null ? View.VISIBLE : View.GONE}"/>
 
@@ -60,13 +60,13 @@
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="70:20"
-                        app:layout_constraintVertical_bias="0.28"
+                        app:layout_constraintDimensionRatio="70:28"
+                        app:layout_constraintVertical_bias="0.3095"
                         android:gravity="center"
                         app:autoSizeTextType="uniform"
-                        app:autoSizeMaxTextSize="18sp"
+                        app:autoSizeMaxTextSize="26sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:fontFamily="@font/poppins_500"
+                        android:fontFamily="@font/comfortaa_700"
                         android:text="@{item.onClickSymbol}"/>
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -75,13 +75,13 @@
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="70:16"
-                        app:layout_constraintVertical_bias="0.7222"
+                        app:layout_constraintDimensionRatio="70:15"
+                        app:layout_constraintVertical_bias="0.836"
                         android:gravity="center"
                         app:autoSizeTextType="uniform"
-                        app:autoSizeMaxTextSize="14sp"
+                        app:autoSizeMaxTextSize="10sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:fontFamily="@font/poppins_400"
+                        android:fontFamily="@font/comfortaa_700"
                         android:letterSpacing="0.325"
                         android:text="@{item.onLongClickSymbol}"/>
 

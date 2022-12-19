@@ -31,4 +31,8 @@
     <string name="speaker">Konuşmacı</string>
     <string name="add_call">Çağrı ekle</string>
     <string name="switch_call">Aramayı değiştir</string>
+    <string name="the_best_call_screen_themes">En İyi Çağrı Ekranı Temaları</string>
+    <string name="start_now">Şimdi başla</string>
+    <string name="allow_the_necessary_permissions_to_turn_on_the_call_screen">Arama Ekranını Açmak İçin Gerekli İzinleri Verin</string>
+    <string name="choose_contacts">Kişileri seçin</string>
 </resources>
