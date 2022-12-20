@@ -4,10 +4,10 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.delice.cscreen.repository.LocaleRepository"/>
+        <import type="com.pecall.poscreen.repository.LocaleRepository"/>
         <variable
             name="item"
-            type="com.delice.cscreen.repository.LocaleRepository.Locale" />
+            type="com.pecall.poscreen.repository.LocaleRepository.Locale" />
         <variable
             name="localeRepository"
             type="LocaleRepository" />

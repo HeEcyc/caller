@@ -5,11 +5,11 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.delice.cscreen.R"/>
-        <import type="com.delice.cscreen.repository.LocaleRepository"/>
+        <import type="com.pecall.poscreen.R"/>
+        <import type="com.pecall.poscreen.repository.LocaleRepository"/>
         <variable
             name="viewModel"
-            type="com.delice.cscreen.ui.home.HomeViewModel" />
+            type="com.pecall.poscreen.ui.home.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

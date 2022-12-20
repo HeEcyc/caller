@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.delice.cscreen.ui.custom.ScalableCardView.ScaleType"/>
-        <import type="com.delice.cscreen.model.theme.NewTheme"/>
+        <import type="com.pecall.poscreen.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="com.pecall.poscreen.model.theme.NewTheme"/>
         <variable
             name="item"
-            type="com.delice.cscreen.model.theme.Theme" />
+            type="com.pecall.poscreen.model.theme.Theme" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,7 +24,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintDimensionRatio="260:420">
 
-            <com.delice.cscreen.ui.custom.ScalableCardView
+            <com.pecall.poscreen.ui.custom.ScalableCardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:cardElevation="0dp"
@@ -42,7 +42,7 @@
                         android:scaleType="centerCrop"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.delice.cscreen.ui.custom.ScalableCardView>
+            </com.pecall.poscreen.ui.custom.ScalableCardView>
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/icAdd"
