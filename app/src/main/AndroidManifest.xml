@@ -22,8 +22,8 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
-        android:allowBackup="true"
         android:name="com.vefercal.ler.App"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -34,25 +34,27 @@
             android:name="com.vefercal.ler.ui.main.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name="com.vefercal.ler.ui.greeting.StartActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
         <activity
-            android:name="com.vefercal.ler.ui.greeting.GreetingActivity"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
-            android:exported="true"/>
-
-        <activity
             android:name="com.vefercal.ler.ui.dial.activity.DialActivity"
+            android:exported="true"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
-            android:exported="true">
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.DIAL" />
@@ -73,22 +75,22 @@
 
         <activity
             android:name="com.vefercal.ler.ui.call.activity.CallActivity"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
             android:exported="true"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
 
         <activity
             android:name="com.vefercal.ler.ui.contacts.ContactsActivity"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
             android:exported="true"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
 
         <service
             android:name="com.vefercal.ler.CallService"
-            android:permission="android.permission.BIND_INCALL_SERVICE"
-            android:exported="true">
+            android:exported="true"
+            android:permission="android.permission.BIND_INCALL_SERVICE">
             <meta-data
                 android:name="android.telecom.IN_CALL_SERVICE_UI"
                 android:value="true" />

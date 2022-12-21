@@ -5,29 +5,31 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="parent"
+            android:clipChildren="false"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintDimensionRatio="360:772"
-            android:clipChildren="false">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.vefercal.ler.ui.custom.ScalableCardView
+                scalableCornerRadius="@{0.1222f}"
+                scaleType="@{com.vefercal.ler.ui.custom.ScalableCardView.ScaleType.BY_WIDTH}"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="309:467"
-                app:layout_constraintWidth_percent="0.858333"
                 app:cardBackgroundColor="@android:color/transparent"
                 app:cardElevation="0dp"
-                scaleType="@{com.vefercal.ler.ui.custom.ScalableCardView.ScaleType.BY_WIDTH}"
-                scalableCornerRadius="@{0.1222f}">
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="309:467"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.858333">
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -36,131 +38,134 @@
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
+                        android:src="@mipmap/img_permission"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintWidth_percent="0.406"
                         app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.1091"
-                        android:src="@mipmap/img_permission"/>
+                        app:layout_constraintWidth_percent="0.406" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/buttonClose"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
+                        android:src="@drawable/ic_close"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintDimensionRatio="1:1"
-                        app:layout_constraintWidth_percent="0.055"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.9349"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.04222"
-                        android:src="@drawable/ic_close"/>
+                        app:layout_constraintWidth_percent="0.055" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="286:72"
-                        app:layout_constraintWidth_percent="0.925566"
-                        app:layout_constraintVertical_bias="0.53"
+                        android:fontFamily="@font/poppins_500"
                         android:gravity="center"
-                        app:autoSizeTextType="uniform"
+                        android:text="@string/give_permissions_needed_to_show_the_call_screen"
+                        android:textColor="#FFFFFF"
                         app:autoSizeMaxTextSize="24sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#FFFFFF"
-                        android:fontFamily="@font/poppins_500"
-                        android:text="@string/give_permissions_needed_to_show_the_call_screen"/>
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="286:72"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.53"
+                        app:layout_constraintWidth_percent="0.925566" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/textDescription"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="286:48"
-                        app:layout_constraintWidth_percent="0.925566"
-                        app:layout_constraintVertical_bias="0.72"
+                        android:fontFamily="@font/poppins_400"
                         android:gravity="center_horizontal"
-                        app:autoSizeTextType="uniform"
+                        android:textColor="#FFFFFF"
                         app:autoSizeMaxTextSize="14sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#FFFFFF"
-                        android:fontFamily="@font/poppins_400"/>
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="286:48"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.72"
+                        app:layout_constraintWidth_percent="0.925566" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/buttonYes"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintDimensionRatio="126:60"
-                        app:layout_constraintWidth_percent="0.4077"
+                        app:layout_constraintEnd_toStartOf="@id/buttonNo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.8796"
-                        app:layout_constraintHorizontal_bias="0.109">
+                        app:layout_constraintWidth_percent="0.4077">
+
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@mipmap/button_bg_126x60"/>
+                            android:src="@mipmap/button_bg_126x60" />
+
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="126:24"
-                            app:layout_constraintHeight_percent="0.415"
+                            android:fontFamily="@font/poppins_500"
                             android:gravity="center"
-                            app:autoSizeTextType="uniform"
+                            android:text="@string/ok"
+                            android:textColor="#FFFFFF"
                             app:autoSizeMaxTextSize="18sp"
                             app:autoSizeMinTextSize="1sp"
-                            android:textColor="#FFFFFF"
-                            android:fontFamily="@font/poppins_500"
-                            android:text="@string/ok"/>
+                            app:autoSizeTextType="uniform"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="126:24"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.415"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/buttonNo"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintDimensionRatio="126:60"
-                        app:layout_constraintWidth_percent="0.4077"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.891"
+                        app:layout_constraintStart_toEndOf="@id/buttonYes"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.8796"
-                        app:layout_constraintHorizontal_bias="0.891">
+                        app:layout_constraintWidth_percent="0.4077">
+
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@mipmap/button_bg_126x60"/>
+                            android:src="@mipmap/button_bg_126x60" />
+
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="126:24"
-                            app:layout_constraintHeight_percent="0.415"
+                            android:fontFamily="@font/poppins_500"
                             android:gravity="center"
-                            app:autoSizeTextType="uniform"
+                            android:text="@string/cancel"
+                            android:textColor="#FFFFFF"
                             app:autoSizeMaxTextSize="18sp"
                             app:autoSizeMinTextSize="1sp"
-                            android:textColor="#FFFFFF"
-                            android:fontFamily="@font/poppins_500"
-                            android:text="@string/cancel"/>
+                            app:autoSizeTextType="uniform"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="126:24"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.415"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

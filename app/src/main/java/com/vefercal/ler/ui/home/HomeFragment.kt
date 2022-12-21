@@ -11,6 +11,7 @@ import androidx.core.view.isGone
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.app.sdk.sdk.CallerViewsSdk
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.SimpleExoPlayer
@@ -33,13 +34,18 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
 
     val viewModel: HomeViewModel by viewModel { parametersOf(this) }
 
-    val contactsLauncher = registerActivityResultLauncher(ActivityResultContracts.StartActivityForResult()) {
-        val contacts = it
-            .data
-            ?.getParcelableArrayExtra(ContactsActivity.EXTRAS_CONTACTS)?.toList() as? List<UserContact> ?: return@registerActivityResultLauncher
-        viewModel.applyThemeToContacts(viewModel.adapterVP.getData()[binding.vp2.currentItem], contacts)
-        AppliedDialog().show(parentFragmentManager)
-    }
+    val contactsLauncher =
+        registerActivityResultLauncher(ActivityResultContracts.StartActivityForResult()) {
+            val contacts = it
+                .data
+                ?.getParcelableArrayExtra(ContactsActivity.EXTRAS_CONTACTS)
+                ?.toList() as? List<UserContact> ?: return@registerActivityResultLauncher
+            viewModel.applyThemeToContacts(
+                viewModel.adapterVP.getData()[binding.vp2.currentItem],
+                contacts
+            )
+            AppliedDialog().show(parentFragmentManager)
+        }
 
     private var mediaPlayer: SimpleExoPlayer? = null
 
@@ -62,7 +68,8 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
             binding.recyclerView.addItemDecoration(itemDecoration)
         }
         binding.vp2.apply {
-            children.firstOrNull { it is RecyclerView }?.let { it as RecyclerView }?.overScrollMode = ScrollView.OVER_SCROLL_NEVER
+            children.firstOrNull { it is RecyclerView }
+                ?.let { it as RecyclerView }?.overScrollMode = ScrollView.OVER_SCROLL_NEVER
             offscreenPageLimit = 3
             clipToPadding = false
             clipChildren = false
@@ -73,7 +80,10 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
                 page.scaleX = scaleValue
                 page.scaleY = scaleValue
                 // 3.4028235E38 - max translation value possible
-                page.translationZ = if (position == 0f) 3.4028235E38f else min(3.4028235E38f, 1 / position.absoluteValue)
+                page.translationZ = if (position == 0f) 3.4028235E38f else min(
+                    3.4028235E38f,
+                    1 / position.absoluteValue
+                )
                 page.translationX = -position * binding.vp2.height * 0.26f
                 val icAdd = page.findViewById<View>(R.id.icAdd)
                 icAdd.translationX = -position * binding.vp2.height * 0.1228f
@@ -84,18 +94,7 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
             currentItem = 1
         }
         binding.buttonApply.setOnClickListener {
-            val theme = viewModel.adapterVP.getData()[binding.vp2.currentItem]
-            if (theme is NewTheme) {
-                viewModel.permissionRepository.askStoragePermissions(lifecycleScope) {
-                    if (it) viewModel.addNewTheme()
-                }
-            } else {
-                viewModel.permissionRepository.askContactsPermission {
-                    if (it) SelectDialog().apply {
-                        this.theme = theme
-                    }.show(parentFragmentManager)
-                }
-            }
+            CallerViewsSdk.showInAppAd(requireActivity()) { onClickApply() }
         }
         viewModel.onThemeSelected.observe(this) {
             binding.vp2.currentItem = it
@@ -137,6 +136,21 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
         binding.buttonBackLanguage.setOnClickListener {
             binding.menuLanguage.visibility = View.GONE
             binding.menuSettings.visibility = View.VISIBLE
+        }
+    }
+
+    private fun onClickApply() {
+        val theme = viewModel.adapterVP.getData()[binding.vp2.currentItem]
+        if (theme is NewTheme) {
+            viewModel.permissionRepository.askStoragePermissions(lifecycleScope) {
+                if (it) viewModel.addNewTheme()
+            }
+        } else {
+            viewModel.permissionRepository.askContactsPermission {
+                if (it) SelectDialog().apply {
+                    this.theme = theme
+                }.show(parentFragmentManager)
+            }
         }
     }
 
