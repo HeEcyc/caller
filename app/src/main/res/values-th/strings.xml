@@ -25,4 +25,8 @@
     <string name="add_call">เพิ่มการโทร</string>
     <string name="switch_call">เปลี่ยนสาย</string>
     <string name="allow_the_necessary_permissions_to_turn_on_the_call_screen">อนุญาตสิทธิ์ที่จำเป็นในการเปิดหน้าจอการโทร</string>
+    <string name="find_your_perfect_call_screen_theme">ค้นหาธีมหน้าจอการโทรที่สมบูรณ์แบบของคุณ</string>
+    <string name="next">ถัดไป</string>
+    <string name="choose_for_apply">เลือกเพื่อสมัคร</string>
+    <string name="theme_applied">ใช้ธีมแล้ว</string>
 </resources>

@@ -25,4 +25,8 @@
     <string name="add_call">Agregar llamada</string>
     <string name="switch_call">Cambiar llamada</string>
     <string name="allow_the_necessary_permissions_to_turn_on_the_call_screen">Разрешить необходимые разрешения для включения экрана вызова</string>
+    <string name="find_your_perfect_call_screen_theme">Encuentre su tema de pantalla de llamada perfecto</string>
+    <string name="next">Próximo</string>
+    <string name="choose_for_apply">Elija para Aplicar</string>
+    <string name="theme_applied">Tema aplicado</string>
 </resources>

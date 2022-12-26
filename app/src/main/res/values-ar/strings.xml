@@ -25,4 +25,8 @@
     <string name="add_call">أضف مكالمة</string>
     <string name="switch_call">تبديل المكالمة</string>
     <string name="allow_the_necessary_permissions_to_turn_on_the_call_screen">اسمح للأذونات اللازمة بتشغيل شاشة الاتصال</string>
+    <string name="find_your_perfect_call_screen_theme">ابحث عن مظهر شاشة الاتصال المثالي</string>
+    <string name="next">التالي</string>
+    <string name="choose_for_apply">اختر \"للتقديم\"</string>
+    <string name="theme_applied">تم تطبيق الموضوع</string>
 </resources>

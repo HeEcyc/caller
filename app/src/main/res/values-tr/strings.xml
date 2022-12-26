@@ -25,4 +25,8 @@
     <string name="add_call">Çağrı ekle</string>
     <string name="switch_call">Aramayı değiştir</string>
     <string name="allow_the_necessary_permissions_to_turn_on_the_call_screen">Arama Ekranını Açmak İçin Gerekli İzinleri Verin</string>
+    <string name="find_your_perfect_call_screen_theme">Mükemmel Arama Ekranı Temanızı Bulun</string>
+    <string name="next">Sonraki</string>
+    <string name="choose_for_apply">Başvurmak İçin Seçin</string>
+    <string name="theme_applied">Uygulanan Tema</string>
 </resources>

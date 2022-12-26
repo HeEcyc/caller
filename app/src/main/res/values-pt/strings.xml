@@ -25,4 +25,8 @@
     <string name="add_call">Adicionar chamada</string>
     <string name="switch_call">Alternar chamada</string>
     <string name="allow_the_necessary_permissions_to_turn_on_the_call_screen">Payagan Ang Mga Kinakailangang Pahintulot Upang I-on ang Call Screen</string>
+    <string name="find_your_perfect_call_screen_theme">Encontre o seu tema de tela de chamada perfeito</string>
+    <string name="next">Próximo</string>
+    <string name="choose_for_apply">Escolha para aplicar</string>
+    <string name="theme_applied">Tema Aplicado</string>
 </resources>
