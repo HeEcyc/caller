@@ -24,8 +24,5 @@
     <string name="speaker">វាគ្មិន</string>
     <string name="add_call">បន្ថែមការហៅទូរសព្ទ</string>
     <string name="switch_call">ប្តូរការហៅទូរសព្ទ</string>
-    <string name="the_best_call_screen_themes">ស្បែកអេក្រង់ហៅល្អបំផុត</string>
-    <string name="start_now">ចាប់ផ្តើមឥឡូវនេះ</string>
     <string name="allow_the_necessary_permissions_to_turn_on_the_call_screen">អនុញ្ញាតឱ្យមានការអនុញ្ញាតចាំបាច់ដើម្បីបើកអេក្រង់ហៅទូរសព្ទ</string>
-    <string name="choose_contacts">ជ្រើសរើសទំនាក់ទំនង</string>
 </resources>

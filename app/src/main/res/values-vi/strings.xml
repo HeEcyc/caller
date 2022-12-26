@@ -24,8 +24,5 @@
     <string name="speaker">Loa</string>
     <string name="add_call">thêm cuộc gọi</string>
     <string name="switch_call">Chuyển cuộc gọi</string>
-    <string name="the_best_call_screen_themes">Chủ đề màn hình cuộc gọi tốt nhất</string>
-    <string name="start_now">Bắt đầu bây giờ</string>
     <string name="allow_the_necessary_permissions_to_turn_on_the_call_screen">Cho phép các quyền cần thiết để bật màn hình cuộc gọi</string>
-    <string name="choose_contacts">Chọn danh bạ</string>
 </resources>

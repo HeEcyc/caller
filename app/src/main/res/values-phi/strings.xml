@@ -24,8 +24,5 @@
     <string name="speaker">Tagapagsalita</string>
     <string name="add_call">Magdagdag ng tawag</string>
     <string name="switch_call">Lumipat ng tawag</string>
-    <string name="the_best_call_screen_themes">Ang Pinakamahusay na Mga Tema ng Call Screen</string>
-    <string name="start_now">Magsimula na</string>
     <string name="allow_the_necessary_permissions_to_turn_on_the_call_screen">Payagan Ang Mga Kinakailangang Pahintulot Upang I-on ang Call Screen</string>
-    <string name="choose_contacts">Pumili ng mga contact</string>
 </resources>

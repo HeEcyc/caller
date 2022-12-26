@@ -24,8 +24,5 @@
     <string name="speaker">วิทยากร</string>
     <string name="add_call">เพิ่มการโทร</string>
     <string name="switch_call">เปลี่ยนสาย</string>
-    <string name="the_best_call_screen_themes">ธีมหน้าจอการโทรที่ดีที่สุด</string>
-    <string name="start_now">เริ่มเลย</string>
     <string name="allow_the_necessary_permissions_to_turn_on_the_call_screen">อนุญาตสิทธิ์ที่จำเป็นในการเปิดหน้าจอการโทร</string>
-    <string name="choose_contacts">เลือกผู้ติดต่อ</string>
 </resources>
