@@ -8,7 +8,6 @@ import com.pecall.poscreen.R
 import com.pecall.poscreen.base.BaseActivity
 import com.pecall.poscreen.databinding.ContactsActivityBinding
 import com.pecall.poscreen.model.contact.UserContact
-import com.pecall.poscreen.ui.custom.ItemDecorationWithEnds
 import com.pecall.poscreen.utils.setOnClickListener
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
@@ -35,12 +34,6 @@ class ContactsActivity : BaseActivity<ContactsViewModel, ContactsActivityBinding
 
     @SuppressLint("ClickableViewAccessibility")
     override fun setupUI() {
-        binding.root.post {
-            binding.rv.addItemDecoration(ItemDecorationWithEnds(
-                bottomLast = binding.root.width * 107 / 360,
-                lastPredicate = { position, count -> position == count - 1 }
-            ))
-        }
         binding.buttonApply.setOnClickListener {
             applyThemeToContacts(viewModel.selectedContacts)
         }

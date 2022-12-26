@@ -85,7 +85,7 @@ class CallViewModel(
     val dialAdapter = DialAdapter(
         ::onDialButtonClick,
         R.drawable.dial_button_call_fragment,
-        Color.parseColor("#FFFFFF")
+        Color.parseColor("#243C68")
     )
     val dialCache = ObservableField("")
 

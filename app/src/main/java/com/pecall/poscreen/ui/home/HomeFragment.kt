@@ -41,16 +41,8 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
 
     override fun setupUI() {
         binding.selector.setOnClickListener {}
-        binding.buttonOpen.setOnClickListener {
-            binding.selector.visibility = View.VISIBLE
-            binding.vp2.invalidate()
-        }
-        binding.buttonClose.setOnClickListener {
-            binding.selector.visibility = View.GONE
-            binding.vp2.invalidate()
-        }
         binding.root.post {
-            val space = binding.root.width * 5 / 360
+            val space = binding.root.width.times(2.5).div(360).toInt()
             val itemDecoration = ItemDecorationWithEnds(
                 left = space,
                 right = space
@@ -64,13 +56,14 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
             clipChildren = false
             orientation = ViewPager2.ORIENTATION_HORIZONTAL
             setPageTransformer { page, position ->
-                // [0.7846;1] 1 - selected; 0.7846 - not selected
-                val scaleValue = 0.7846f + 0.2154f * (1 - min(1f, position.absoluteValue))
+                // [0.78;1] 1 - selected; 0.78 - not selected
+                val scaleValue = 0.78f + 0.22f * (1 - min(1f, position.absoluteValue))
                 page.scaleX = scaleValue
                 page.scaleY = scaleValue
                 // 3.4028235E38 - max translation value possible
+                Float.MAX_VALUE
                 page.translationZ = if (position == 0f) 3.4028235E38f else min(3.4028235E38f, 1 / position.absoluteValue)
-                page.translationX = -position * binding.vp2.height * 0.295f
+                page.translationX = -position * binding.vp2.height * 0.313f
                 val icAdd = page.findViewById<View>(R.id.icAdd)
                 icAdd.translationX = -position * binding.vp2.height * 0.19f
                 page.findViewById<View>(R.id.overlay).visibility =

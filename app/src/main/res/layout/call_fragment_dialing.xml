@@ -28,15 +28,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="332:28"
+                app:layout_constraintDimensionRatio="332:56"
                 app:layout_constraintWidth_percent="0.9222"
-                app:layout_constraintVertical_bias="0.163978"
+                app:layout_constraintVertical_bias="0.17"
                 android:gravity="center"
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="26sp"
                 app:autoSizeMinTextSize="1sp"
                 android:textColor="#FFFFFF"
-                android:fontFamily="@font/comfortaa_700"
+                android:fontFamily="@font/roboto_700"
                 android:text="@{viewModel.contact.contactName}"/>
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -48,13 +48,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="332:16"
                 app:layout_constraintWidth_percent="0.9222"
-                app:layout_constraintVertical_bias="0.2248"
+                app:layout_constraintVertical_bias="0.242"
                 android:gravity="center"
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="14sp"
                 app:autoSizeMinTextSize="1sp"
                 android:textColor="#FFFFFF"
-                android:fontFamily="@font/comfortaa_700"
+                android:fontFamily="@font/roboto_400"
                 android:text="@string/call" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -64,15 +64,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="332:22"
+                app:layout_constraintDimensionRatio="332:24"
                 app:layout_constraintWidth_percent="0.9222"
-                app:layout_constraintVertical_bias="0.274666666"
+                app:layout_constraintVertical_bias="0.272727"
                 android:gravity="center"
                 app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeMaxTextSize="22sp"
                 app:autoSizeMinTextSize="1sp"
                 android:textColor="#FFFFFF"
-                android:fontFamily="@font/comfortaa_700"
+                android:fontFamily="@font/roboto_700"
                 android:text="@{viewModel.contact.contactNumber}"/>
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -82,9 +82,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="70:95"
+                app:layout_constraintDimensionRatio="70:96"
                 app:layout_constraintWidth_percent="0.194444"
-                app:layout_constraintVertical_bias="0.778"
+                app:layout_constraintVertical_bias="0.74852"
                 android:src="@drawable/button_hangup"
                 android:onClick="@{(_) -> viewModel.cancelCall()}"/>
 
