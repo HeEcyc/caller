@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.delice.cscreen",
+  "applicationId": "com.pecall.poscreen",
   "variantName": "release",
   "elements": [
     {
