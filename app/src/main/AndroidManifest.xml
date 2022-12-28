@@ -30,6 +30,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Caller">
 
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="2UTsb6V86NMyoHqu9cv9pHvUtbkXa9dnu1A15ETmE9TyfbOTLveagXBuelA4uDBc4fU4273mtcTBPVL_eliE0i" />
+
         <activity
             android:name="com.fantasia.telecaller.ui.main.FMainFActivityF"
             android:exported="true"

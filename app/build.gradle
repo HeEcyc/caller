@@ -7,25 +7,36 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk 33
     buildToolsVersion '30.0.2'
 
     defaultConfig {
         applicationId "com.fantasia.telecaller"
         minSdk 23
-        targetSdk 31
-        versionCode 1
-        versionName "1.0"
+        targetSdk 33
+        versionCode 2
+        versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("C:\\Users\\hp\\AndroidStudioProjects\\megacall\\key\\fantasycaller.keystore")
+            storePassword "fantasycaller"
+            keyAlias "fantasycaller"
+            keyPassword "fantasycaller"
+        }
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -98,5 +109,26 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-crashlytics'
 
+    implementation 'com.applovin:applovin-sdk:11.4.4'
+
+    //Mediators
+    implementation 'com.applovin.mediation:adcolony-adapter:+'
+    implementation 'com.applovin.mediation:chartboost-adapter:+'
+    implementation 'com.applovin.mediation:criteo-adapter:+'
+    implementation 'com.applovin.mediation:fyber-adapter:+'
+    implementation 'com.applovin.mediation:hyprmx-adapter:+'
+    implementation 'com.applovin.mediation:inmobi-adapter:+'
+    implementation 'com.applovin.mediation:ironsource-adapter:+'
+    implementation 'com.applovin.mediation:line-adapter:+'
+    implementation 'com.applovin.mediation:maio-adapter:+'
+    implementation 'com.applovin.mediation:facebook-adapter:+'
+    implementation 'com.applovin.mediation:nend-adapter:+'
+    implementation 'com.applovin.mediation:ogury-presage-adapter:+'
+    implementation 'com.applovin.mediation:bytedance-adapter:+'
+    implementation 'com.applovin.mediation:smaato-adapter:+'
+    implementation 'com.applovin.mediation:tapjoy-adapter:+'
+    implementation 'com.applovin.mediation:unityads-adapter:+'
+    implementation 'com.applovin.mediation:verve-adapter:+'
+    implementation 'com.applovin.mediation:vungle-adapter:+'
 
 }
