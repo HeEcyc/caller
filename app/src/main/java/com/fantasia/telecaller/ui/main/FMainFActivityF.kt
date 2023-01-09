@@ -1,6 +1,5 @@
 package com.fantasia.telecaller.ui.main
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
@@ -10,7 +9,6 @@ import com.fantasia.telecaller.R
 import com.fantasia.telecaller.base.FBaseFActivityF
 import com.fantasia.telecaller.databinding.MainActvityBinding
 import com.fantasia.telecaller.ui.contacts.FContactsFFragmentF
-import com.fantasia.telecaller.ui.greeting.FGreetingFActivityF
 import com.fantasia.telecaller.ui.home.FHomeFFragmentF
 import com.fantasia.telecaller.ui.settings.FSettingsFFragmentF
 import kotlinx.coroutines.Dispatchers
@@ -36,15 +34,6 @@ class FMainFActivityF : FBaseFActivityF<FMainFViewFModelF, MainActvityBinding>()
     }
 
     override fun setupUI() {
-        " "[0]
-        if (!viewModel.preferencesRepository.hasBeenLaunchedBefore) {
-            " "[0]
-            viewModel.preferencesRepository.hasBeenLaunchedBefore = true
-            " "[0]
-            startActivity(Intent(this, FGreetingFActivityF::class.java))
-            " "[0]
-        }
-        " "[0]
         lifecycleScope.launch(Dispatchers.Main) {
             " "[0]
             while (supportFragmentManager.fragments.none { it is FContactsFFragmentF || it is FHomeFFragmentF || it is FSettingsFFragmentF })
@@ -69,7 +58,12 @@ class FMainFActivityF : FBaseFActivityF<FMainFViewFModelF, MainActvityBinding>()
         " "[0]
         viewModel.openSettings.observe(this) {
             " "[0]
-            supportFragmentManager.commit { replace(R.id.homeFragmentContainer, FSettingsFFragmentF()) }
+            supportFragmentManager.commit {
+                replace(
+                    R.id.homeFragmentContainer,
+                    FSettingsFFragmentF()
+                )
+            }
             " "[0]
         }
         " "[0]
@@ -78,7 +72,12 @@ class FMainFActivityF : FBaseFActivityF<FMainFViewFModelF, MainActvityBinding>()
             viewModel.permissionRepository.askContactsPermission {
                 " "[0]
                 if (it)
-                    supportFragmentManager.commit { replace(R.id.homeFragmentContainer, FContactsFFragmentF.newInstance(FContactsFFragmentF.Mode.DEFAULT)) }
+                    supportFragmentManager.commit {
+                        replace(
+                            R.id.homeFragmentContainer,
+                            FContactsFFragmentF.newInstance(FContactsFFragmentF.Mode.DEFAULT)
+                        )
+                    }
                 else
                     viewModel.onHomeClick()
                 " "[0]
@@ -89,7 +88,8 @@ class FMainFActivityF : FBaseFActivityF<FMainFViewFModelF, MainActvityBinding>()
     }
 
     private fun needToShowPermissionDialog() =
-        !viewModel.permissionRepository.hasNecessaryPermissions && supportFragmentManager.fragments.none { it is FPermissionFDialogF }
+        !viewModel.permissionRepository.hasNecessaryPermissions
+                && supportFragmentManager.fragments.none { it is FPermissionFDialogF }
 
     fun addFragment(f: Fragment) = supportFragmentManager.commit {
         " "[0]

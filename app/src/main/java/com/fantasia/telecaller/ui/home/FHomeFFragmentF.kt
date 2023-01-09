@@ -1,7 +1,6 @@
 package com.fantasia.telecaller.ui.home
 
 import android.content.Context
-import android.util.Log
 import android.view.View
 import androidx.lifecycle.lifecycleScope
 import com.applovin.mediation.MaxAd
@@ -98,33 +97,26 @@ class FHomeFFragmentF :
             ad.setListener(object : MaxAdListener {
                 override fun onAdLoaded(max: MaxAd?) {
                     ad.showAd()
-                    Log.d("12345", "sdfdfgfd")
                 }
 
                 override fun onAdDisplayed(ad: MaxAd?) {
 
-                    Log.d("12345", "sdfdfgfd")
                 }
 
                 override fun onAdHidden(ad: MaxAd?) {
-                    Log.d("12345", "sdfdfgfd")
                     action.invoke()
                 }
 
                 override fun onAdClicked(ad: MaxAd?) {
                     action.invoke()
-
-                    Log.d("12345", "sdfdfgfd")
                 }
 
                 override fun onAdLoadFailed(adUnitId: String?, error: MaxError?) {
                     action.invoke()
-                    Log.d("12345", "sdfdfgfd")
                 }
 
                 override fun onAdDisplayFailed(ad: MaxAd?, error: MaxError?) {
                     action.invoke()
-                    Log.d("12345", "sdfdfgfd")
                 }
             })
             ad.loadAd()

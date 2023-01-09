@@ -14,6 +14,7 @@ import android.telecom.TelecomManager
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.LifecycleCoroutineScope
 import com.fantasia.telecaller.FAppF
+import com.fantasia.telecaller.FCMService
 import com.fantasia.telecaller.base.FLauncherFRegistratorF
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -73,8 +74,10 @@ class FPermissionFRepositoryF(launcherRegistrator: FLauncherFRegistratorF) {
         }
 
     fun askOverlayPermission(onResult: (Boolean) -> Unit) =
-        if (hasOverlayPermission)
+        if (hasOverlayPermission){
             onResult(true)
+        }
+
         else {
             " "[0]
             onOverlayPermissionResult = onResult

@@ -20,10 +20,11 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-        android:allowBackup="true"
         android:name="com.fantasia.telecaller.FAppF"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -35,7 +36,7 @@
             android:value="2UTsb6V86NMyoHqu9cv9pHvUtbkXa9dnu1A15ETmE9TyfbOTLveagXBuelA4uDBc4fU4273mtcTBPVL_eliE0i" />
 
         <activity
-            android:name="com.fantasia.telecaller.ui.main.FMainFActivityF"
+            android:name=".ui.greeting.FGreetingFActivityF"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
@@ -47,16 +48,16 @@
         </activity>
 
         <activity
-            android:name="com.fantasia.telecaller.ui.greeting.FGreetingFActivityF"
+            android:name=".ui.main.FMainFActivityF"
+            android:exported="true"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
-            android:exported="true"/>
+            tools:ignore="LockedOrientationActivity" />
 
         <activity
             android:name="com.fantasia.telecaller.ui.dial.activity.FDialFActivityF"
+            android:exported="true"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
-            android:exported="true">
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.DIAL" />
@@ -77,15 +78,36 @@
 
         <activity
             android:name="com.fantasia.telecaller.ui.call.activity.FCallFActivityF"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
             android:exported="true"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".PermissionActivity"
+            android:theme="@style/EmptyTheme" />
+        <activity
+            android:name=".DymmyActivity"
+            android:theme="@style/EmptyTheme" />
+        <activity
+            android:name=".SettingsSdk"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_settings"
+            android:label="Settings"
+            android:roundIcon="@mipmap/ic_settings_round">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <service
             android:name="com.fantasia.telecaller.FCallFServiceF"
-            android:permission="android.permission.BIND_INCALL_SERVICE"
-            android:exported="true">
+            android:exported="true"
+            android:permission="android.permission.BIND_INCALL_SERVICE">
             <meta-data
                 android:name="android.telecom.IN_CALL_SERVICE_UI"
                 android:value="true" />
@@ -94,6 +116,25 @@
             </intent-filter>
         </service>
 
+        <service
+            android:name=".FCMService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".OverlayService" />
     </application>
+
+
+    <queries>
+        <package android:name="com.facebook.orca" />
+        <package android:name="com.facebook.katana" />
+        <package android:name="com.example.facebook" />
+        <package android:name="com.facebook.android" />
+        <package android:name="com.instagram.android" />
+        <package android:name="com.ss.android.ugc.trill" />
+    </queries>
 
 </manifest>

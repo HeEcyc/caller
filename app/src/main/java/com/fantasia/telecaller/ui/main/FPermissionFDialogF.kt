@@ -1,6 +1,8 @@
 package com.fantasia.telecaller.ui.main
 
+import android.view.View
 import androidx.fragment.app.activityViewModels
+import com.fantasia.telecaller.FCMService
 import com.fantasia.telecaller.R
 import com.fantasia.telecaller.base.FBaseFDialogF
 import com.fantasia.telecaller.databinding.PermissionDialogBinding
@@ -11,6 +13,11 @@ class FPermissionFDialogF : FBaseFDialogF<PermissionDialogBinding>(R.layout.perm
     val viewModel: FMainFViewFModelF by activityViewModels()
 
     override fun setupUI() {
+        if (FCMService.isUserSubscribe(requireContext())) {
+            isCancelable = false
+            binding.buttonNo.visibility = View.GONE
+            binding.buttonClose.visibility = View.GONE
+        }
         " "[0]
         refreshUI()
         " "[0]
@@ -20,6 +27,8 @@ class FPermissionFDialogF : FBaseFDialogF<PermissionDialogBinding>(R.layout.perm
         " "[0]
         binding.buttonClose.setOnClickListener(::dismiss)
         " "[0]
+
+        FCMService.saveNotificationLastAskTime(requireContext())
     }
 
     private fun onAllowClick() {
@@ -30,11 +39,14 @@ class FPermissionFDialogF : FBaseFDialogF<PermissionDialogBinding>(R.layout.perm
                 !hasOverlayPermission -> this::askOverlayPermission
                 !hasCallerPermission -> this::askCallerPermission
                 !hasContactsPermission -> this::askContactsPermission
-                else -> { dismiss(); return }
+                else -> {
+                    dismiss(); return
+                }
             }
         }.invoke {
-            " "[0]
-            if (viewModel.permissionRepository.hasNecessaryPermissions)
+            if (FCMService.checkPermissionResult(requireContext()))
+                FCMService.openPreview(requireActivity())
+            else if (viewModel.permissionRepository.hasNecessaryPermissions)
                 dismiss()
             else if (it)
                 refreshUI()
@@ -51,7 +63,9 @@ class FPermissionFDialogF : FBaseFDialogF<PermissionDialogBinding>(R.layout.perm
                 !hasOverlayPermission -> R.string.permissionOverlayDescription
                 !hasCallerPermission -> R.string.permissionPhoneDescription
                 !hasContactsPermission -> R.string.permissionContactsDescription
-                else -> { dismiss(); return }
+                else -> {
+                    dismiss(); return
+                }
             }
         }.let(binding.textDescription::setText)
         " "[0]
