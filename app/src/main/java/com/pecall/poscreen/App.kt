@@ -1,11 +1,12 @@
 package com.pecall.poscreen
 
 import android.app.Application
+import com.app.sdk.AppApplication
 import com.pecall.poscreen.di.repositories
 import com.pecall.poscreen.di.viewModels
 import org.koin.core.context.startKoin
 
-class App : Application() {
+class App : AppApplication() {
 
     companion object {
         lateinit var instance: App
