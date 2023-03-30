@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="item"
-            type="com.pecall.poscreen.ui.contacts.ContactAdapter.Contact" />
+            type="com.bbbotttixxx.callscreen.ui.contacts.ContactAdapter.Contact" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +19,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="86:132">
 
-            <com.pecall.poscreen.ui.custom.ScalableCardView
+            <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -61,7 +61,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.pecall.poscreen.ui.custom.ScalableCardView>
+            </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"

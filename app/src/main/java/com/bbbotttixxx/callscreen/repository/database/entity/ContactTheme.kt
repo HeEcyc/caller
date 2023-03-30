@@ -1,0 +1,19 @@
+package com.bbbotttixxx.callscreen.repository.database.entity
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import com.bbbotttixxx.callscreen.model.theme.ImageTheme
+import com.bbbotttixxx.callscreen.model.theme.Theme
+import com.bbbotttixxx.callscreen.utils.presetThemes
+
+@Entity(tableName = "contacts_themes")
+data class ContactTheme(
+    @PrimaryKey
+    val contactId: Long,
+    val themeFile: String
+) {
+
+    val theme: Theme get() = presetThemes
+        .firstOrNull { it.backgroundFile == themeFile } ?: ImageTheme(themeFile)
+
+}

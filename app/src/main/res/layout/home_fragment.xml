@@ -5,11 +5,11 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.pecall.poscreen.R"/>
-        <import type="com.pecall.poscreen.repository.LocaleRepository"/>
+        <import type="com.bbbotttixxx.callscreen.R"/>
+        <import type="com.bbbotttixxx.callscreen.repository.LocaleRepository"/>
         <variable
             name="viewModel"
-            type="com.pecall.poscreen.ui.home.HomeViewModel" />
+            type="com.bbbotttixxx.callscreen.ui.home.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.motion.widget.MotionLayout
@@ -69,7 +69,7 @@
             app:layout_constraintBottom_toBottomOf="@id/selectorClosedMarker"
             app:layout_constraintDimensionRatio="360:252">
 
-            <com.pecall.poscreen.ui.custom.ScalableCardView
+            <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -93,7 +93,7 @@
                 android:scrollbars="none"
                 android:adapter="@{viewModel.adapterRV}"/>
 
-            <com.pecall.poscreen.ui.custom.ScalableCardView
+            <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"

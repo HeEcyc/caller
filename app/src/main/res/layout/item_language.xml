@@ -4,10 +4,10 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.pecall.poscreen.repository.LocaleRepository"/>
+        <import type="com.bbbotttixxx.callscreen.repository.LocaleRepository"/>
         <variable
             name="item"
-            type="com.pecall.poscreen.repository.LocaleRepository.Locale" />
+            type="com.bbbotttixxx.callscreen.repository.LocaleRepository.Locale" />
         <variable
             name="localeRepository"
             type="LocaleRepository" />

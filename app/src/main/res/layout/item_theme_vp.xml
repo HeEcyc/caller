@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.pecall.poscreen.ui.custom.ScalableCardView.ScaleType"/>
-        <import type="com.pecall.poscreen.model.theme.NewTheme"/>
+        <import type="com.bbbotttixxx.callscreen.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="com.bbbotttixxx.callscreen.model.theme.NewTheme"/>
         <variable
             name="item"
-            type="com.pecall.poscreen.model.theme.Theme" />
+            type="com.bbbotttixxx.callscreen.model.theme.Theme" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,7 +24,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintDimensionRatio="263:481">
 
-            <com.pecall.poscreen.ui.custom.ScalableCardView
+            <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:cardElevation="0dp"
@@ -42,7 +42,7 @@
                         android:scaleType="centerCrop"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.pecall.poscreen.ui.custom.ScalableCardView>
+            </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/icAdd"
