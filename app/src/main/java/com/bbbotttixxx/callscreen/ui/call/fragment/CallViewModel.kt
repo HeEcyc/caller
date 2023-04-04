@@ -83,9 +83,7 @@ class CallViewModel(
     val gyroscopeObserver = GyroscopeObserver().apply { setMaxRotateRadian(Math.PI / 2.5) }
 
     val dialAdapter = DialAdapter(
-        ::onDialButtonClick,
-        R.drawable.dial_button_call_fragment,
-        Color.parseColor("#243C68")
+        ::onDialButtonClick
     )
     val dialCache = ObservableField("")
 

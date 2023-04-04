@@ -29,4 +29,6 @@
     <string name="next">Próximo</string>
     <string name="choose_for_apply">Escolha para aplicar</string>
     <string name="theme_applied">Tema Aplicado</string>
+    <string name="start_now">Comece agora</string>
+    <string name="what_will_you_choose_to_apply">O que você escolherá para aplicar</string>
 </resources>

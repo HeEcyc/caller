@@ -29,4 +29,6 @@
     <string name="next">التالي</string>
     <string name="choose_for_apply">اختر \"للتقديم\"</string>
     <string name="theme_applied">تم تطبيق الموضوع</string>
+    <string name="start_now">ابدأ الآن</string>
+    <string name="what_will_you_choose_to_apply">ما الذي ستختاره للتقديم</string>
 </resources>

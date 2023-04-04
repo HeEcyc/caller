@@ -22,46 +22,65 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="311:38"
+            app:layout_constraintDimensionRatio="301:60"
             android:clipChildren="false">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="279:38"
-                android:clipChildren="false">
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintHeight_percent="0.47"
-                    android:gravity="center_vertical"
-                    app:autoSizeTextType="uniform"
-                    app:autoSizeMaxTextSize="16sp"
-                    app:autoSizeMinTextSize="1sp"
-                    android:textColor="#243C68"
-                    android:fontFamily="@font/roboto_700"
-                    android:text="@{item.displayName}"/>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.appcompat.widget.AppCompatImageView
+            <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:src="@drawable/ic_selected"
-                android:visibility="@{item == (localeRepository.localeObservable ?? LocaleRepository.Locale.ENGLISH) ? View.VISIBLE : View.GONE}"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHeight_percent="0.63"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.94425"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="269:50"
+                app:layout_constraintHeight_percent="0.8333"
+                app:cardBackgroundColor="@android:color/white"
+                app:scale_by="byHeight"
+                app:scalable_corner_radius="0.16">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="237:50"
+                        android:clipChildren="false">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintHeight_percent="0.36"
+                            android:gravity="center_vertical"
+                            app:autoSizeTextType="uniform"
+                            app:autoSizeMaxTextSize="16sp"
+                            app:autoSizeMinTextSize="1sp"
+                            android:textColor="#1F1F1F"
+                            android:fontFamily="@font/roboto_400"
+                            android:text="@{item.displayName}"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/ic_selected"
+                        android:visibility="@{item == (localeRepository.localeObservable ?? LocaleRepository.Locale.ENGLISH) ? View.VISIBLE : View.GONE}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.48"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintHorizontal_bias="0.93469"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

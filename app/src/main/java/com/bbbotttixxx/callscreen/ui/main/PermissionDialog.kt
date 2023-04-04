@@ -14,6 +14,7 @@ class PermissionDialog : BaseDialog<PermissionDialogBinding>(R.layout.permission
         refreshUI()
         binding.buttonYes.setOnClickListener(::onAllowClick)
         binding.buttonNo.setOnClickListener(::dismiss)
+        binding.buttonClose.setOnClickListener(::dismiss)
     }
 
     private fun onAllowClick() {

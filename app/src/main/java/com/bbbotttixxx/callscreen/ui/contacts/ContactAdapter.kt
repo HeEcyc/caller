@@ -30,8 +30,10 @@ class ContactAdapter(
         object : BaseItem<Contact, ItemContactBinding>(binding) {
             override fun bind(t: Contact) {
                 val avatar = t.userContact.photoThumbnailUri
-                if (avatar !== null)
+                if (avatar !== null) {
                     Glide.with(App.instance).load(avatar).into(binding.avatar)
+                    Glide.with(App.instance).load(avatar).into(binding.avatar2)
+                }
                 binding.root.setOnClickListener { onClick(t) }
             }
         }

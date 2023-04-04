@@ -42,7 +42,7 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
     override fun setupUI() {
         binding.selector.setOnClickListener {}
         binding.root.post {
-            val space = binding.root.width.times(2.5).div(360).toInt()
+            val space = binding.root.width * 5 / 360
             val itemDecoration = ItemDecorationWithEnds(
                 left = space,
                 right = space
@@ -56,16 +56,16 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
             clipChildren = false
             orientation = ViewPager2.ORIENTATION_HORIZONTAL
             setPageTransformer { page, position ->
-                // [0.78;1] 1 - selected; 0.78 - not selected
-                val scaleValue = 0.78f + 0.22f * (1 - min(1f, position.absoluteValue))
+                // [0.7852;1] 1 - selected; 0.7852 - not selected
+                val scaleValue = 0.9f + 0.1f * (1 - min(1f, position.absoluteValue))
                 page.scaleX = scaleValue
                 page.scaleY = scaleValue
                 // 3.4028235E38 - max translation value possible
                 Float.MAX_VALUE
                 page.translationZ = if (position == 0f) 3.4028235E38f else min(3.4028235E38f, 1 / position.absoluteValue)
-                page.translationX = -position * binding.vp2.height * 0.313f
+                page.translationX = -position * binding.vp2.height * 0.25f
                 val icAdd = page.findViewById<View>(R.id.icAdd)
-                icAdd.translationX = -position * binding.vp2.height * 0.19f
+                icAdd.translationX = -position * binding.vp2.height * 0.258f
                 page.findViewById<View>(R.id.overlay).visibility =
                     if (icAdd.isGone && position == 0f) View.VISIBLE else View.GONE
             }
@@ -99,7 +99,6 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
                     mediaPlayer?.repeatMode = Player.REPEAT_MODE_ONE
                     mediaPlayer?.playWhenReady = true
                     mediaPlayer?.prepare()
-                    binding.buttonSound.setImageResource(R.drawable.button_sound_on)
                 } else {
                     stopPlayer()
                 }

@@ -21,10 +21,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="328:402"
+                app:layout_constraintDimensionRatio="328:344"
                 app:layout_constraintWidth_percent="0.9111"
                 app:cardBackgroundColor="@android:color/transparent"
-                app:cardElevation="0dp"
                 app:scale_by="byWidth"
                 app:scalable_corner_radius="0.06">
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,16 +32,9 @@
                     android:background="#FFFFFF">
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="12799:14874"
-                        app:layout_constraintWidth_percent="0.3555"
-                        app:layout_constraintVertical_bias="0.09"
-                        android:src="@drawable/img_applied"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/img_applied"/>
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/buttonClose"
@@ -54,80 +46,9 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintDimensionRatio="1:1"
                         app:layout_constraintWidth_percent="0.07317"
-                        app:layout_constraintVertical_bias="0.04"
+                        app:layout_constraintVertical_bias="0.05"
                         app:layout_constraintHorizontal_bias="0.947"
                         android:src="@drawable/ic_close"/>
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="328:24"
-                        app:layout_constraintVertical_bias="0.5079"
-                        android:gravity="center"
-                        app:autoSizeTextType="uniform"
-                        app:autoSizeMaxTextSize="22sp"
-                        app:autoSizeMinTextSize="1sp"
-                        android:textColor="#243C68"
-                        android:fontFamily="@font/roboto_700"
-                        android:text="@string/theme_applied"/>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/buttonOk"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="156:43"
-                        app:layout_constraintWidth_percent="0.4756"
-                        app:layout_constraintVertical_bias="0.685">
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/button_156x43"/>
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintDimensionRatio="156:24"
-                            android:gravity="center"
-                            app:autoSizeTextType="uniform"
-                            app:autoSizeMaxTextSize="22sp"
-                            app:autoSizeMinTextSize="1sp"
-                            android:textColor="#243C68"
-                            android:fontFamily="@font/roboto_700"
-                            android:text="@string/ok"/>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/buttonCancel"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="156:43"
-                        app:layout_constraintWidth_percent="0.4756"
-                        app:layout_constraintVertical_bias="0.86">
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintDimensionRatio="156:24"
-                            android:gravity="center"
-                            app:autoSizeTextType="uniform"
-                            app:autoSizeMaxTextSize="22sp"
-                            app:autoSizeMinTextSize="1sp"
-                            android:textColor="#243C68"
-                            android:fontFamily="@font/roboto_700"
-                            android:text="@string/ok"/>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>

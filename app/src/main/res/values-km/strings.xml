@@ -29,4 +29,6 @@
     <string name="next">បន្ទាប់</string>
     <string name="choose_for_apply">ជ្រើសរើសសម្រាប់ការដាក់ពាក្យ</string>
     <string name="theme_applied">បានអនុវត្តប្រធានបទ</string>
+    <string name="start_now">ចាប់ផ្តើមឥឡូវនេះ</string>
+    <string name="what_will_you_choose_to_apply">អ្វីដែលអ្នកនឹងជ្រើសរើសដើម្បីដាក់ពាក្យ</string>
 </resources>

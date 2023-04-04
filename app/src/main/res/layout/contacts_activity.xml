@@ -22,7 +22,8 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:clipChildren="true">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -32,7 +33,7 @@
                     android:layout_height="0dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintDimensionRatio="360:98">
+                    app:layout_constraintDimensionRatio="360:102">
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="0dp"
@@ -42,9 +43,9 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintDimensionRatio="1:1"
-                        app:layout_constraintHeight_percent="0.48979"
+                        app:layout_constraintHeight_percent="0.47"
                         app:layout_constraintHorizontal_bias="0.05"
-                        app:layout_constraintVertical_bias="1"
+                        app:layout_constraintVertical_bias="0.7777777"
                         android:src="@drawable/button_back"
                         android:onClick="@{(_) -> viewModel.onBackClick()}"/>
 
@@ -56,9 +57,9 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintDimensionRatio="242:48"
-                        app:layout_constraintHeight_percent="0.48979"
-                        app:layout_constraintHorizontal_bias="0.78644"
-                        app:layout_constraintVertical_bias="1"
+                        app:layout_constraintHeight_percent="0.47"
+                        app:layout_constraintHorizontal_bias="0.8644"
+                        app:layout_constraintVertical_bias="0.7777777"
                         app:cardElevation="0dp"
                         app:cardBackgroundColor="@android:color/transparent"
                         app:scale_by="byHeight"
@@ -66,7 +67,7 @@
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#243C68">
+                            android:background="#1F1F1F">
                             <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
@@ -92,15 +93,15 @@
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintDimensionRatio="170:16"
-                                        app:layout_constraintHeight_percent="0.363636"
+                                        app:layout_constraintDimensionRatio="170:18"
+                                        app:layout_constraintHeight_percent="0.4090909"
                                         app:layout_constraintHorizontal_bias="0.2"
                                         android:gravity="center_vertical"
                                         android:background="@null"
                                         android:textCursorDrawable="@drawable/text_cursor"
-                                        android:textSize="14sp"
-                                        android:textColor="#243C68"
-                                        android:textColorHint="#80243C68"
+                                        android:textSize="16sp"
+                                        android:textColor="#1F1F1F"
+                                        android:textColorHint="#801F1F1F"
                                         android:fontFamily="@font/roboto_400"
                                         android:singleLine="true"
                                         android:inputType="text"
@@ -133,7 +134,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:clipChildren="false">
 
                 <androidx.core.widget.NestedScrollView
                     android:layout_width="match_parent"
@@ -144,17 +146,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-                            <androidx.legacy.widget.Space
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintDimensionRatio="360:20"/>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/rv"
@@ -175,7 +166,7 @@
                                 android:layout_height="0dp"
                                 app:layout_constraintTop_toTopOf="parent"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintDimensionRatio="360:156"/>
+                                app:layout_constraintDimensionRatio="360:198"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -185,38 +176,43 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintDimensionRatio="360:146"
-                    visibleIf="@{viewModel.mode == Mode.CONTACT_SELECTOR}">
+                    app:layout_constraintDimensionRatio="360:188"
+                    visibleIf="@{viewModel.mode == Mode.CONTACT_SELECTOR}"
+                    android:clipChildren="false">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
                         android:id="@+id/buttonApply"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="236:43"
-                        app:layout_constraintHeight_percent="0.29">
-                        <androidx.appcompat.widget.AppCompatImageView
+                        app:layout_constraintDimensionRatio="296:53"
+                        app:layout_constraintHeight_percent="0.2819"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:scale_by="byHeight"
+                        app:scalable_corner_radius="0.188679">
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/button_236x43"/>
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintDimensionRatio="236:18"
-                            android:gravity="center"
-                            app:autoSizeTextType="uniform"
-                            app:autoSizeMaxTextSize="16sp"
-                            app:autoSizeMinTextSize="1sp"
-                            android:textColor="#243C68"
-                            android:fontFamily="@font/roboto_700"
-                            android:text="@string/apply_to_selected"/>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                            android:background="#1F1F1F">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="296:22"
+                                android:gravity="center"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="20sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="@font/roboto_400"
+                                android:text="@string/apply_to_selected"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
                         android:id="@+id/buttonCancel"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
@@ -224,23 +220,52 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="236:43"
-                        app:layout_constraintHeight_percent="0.29"
-                        app:layout_constraintVertical_bias="0.63">
-                        <androidx.appcompat.widget.AppCompatTextView
+                        app:layout_constraintDimensionRatio="296:53"
+                        app:layout_constraintHeight_percent="0.2819"
+                        app:layout_constraintVertical_bias="0.6296"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp"
+                        app:scale_by="byHeight"
+                        app:scalable_corner_radius="0.188679">
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintDimensionRatio="236:18"
-                            android:gravity="center"
-                            app:autoSizeTextType="uniform"
-                            app:autoSizeMaxTextSize="16sp"
-                            app:autoSizeMinTextSize="1sp"
-                            android:textColor="#243C68"
-                            android:fontFamily="@font/roboto_700"
-                            android:text="@string/cancel"/>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                            android:layout_height="match_parent"
+                            android:background="@drawable/app_gradient">
+                            <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="294:51"
+                                app:layout_constraintWidth_percent="0.99"
+                                app:cardBackgroundColor="@android:color/transparent"
+                                app:cardElevation="0dp"
+                                app:scale_by="byHeight"
+                                app:scalable_corner_radius="0.17647">
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/white">
+                                    <com.bbbotttixxx.callscreen.ui.custom.GradientTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHeight_percent="0.43137"
+                                        android:gravity="center"
+                                        app:autoSizeTextType="uniform"
+                                        app:autoSizeMaxTextSize="20sp"
+                                        app:autoSizeMinTextSize="1sp"
+                                        android:fontFamily="@font/roboto_400"
+                                        android:text="@string/cancel"/>
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

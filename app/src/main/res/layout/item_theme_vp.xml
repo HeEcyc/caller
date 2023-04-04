@@ -22,7 +22,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="263:481">
+            app:layout_constraintDimensionRatio="264:419"
+            android:clipChildren="false">
 
             <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
                 android:layout_width="match_parent"
@@ -30,7 +31,7 @@
                 app:cardElevation="0dp"
                 app:cardBackgroundColor="@android:color/transparent"
                 scaleType="@{ScaleType.BY_WIDTH}"
-                scalableCornerRadius="@{0.076f}">
+                scalableCornerRadius="@{0.0757575f}">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -53,7 +54,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintWidth_percent="0.429"
+                app:layout_constraintWidth_percent="0.181818"
                 android:src="@drawable/button_add"
                 visibleIf="@{item instanceof NewTheme}"/>
 
@@ -65,8 +66,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="263:96"
-                app:layout_constraintVertical_bias="0.766"
+                app:layout_constraintDimensionRatio="264:60"
+                app:layout_constraintVertical_bias="0.76323"
                 android:visibility="gone">
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -74,8 +75,8 @@
                     android:layout_height="match_parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="70:96"
-                    app:layout_constraintHorizontal_bias="0.15544"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintHorizontal_bias="0.2549"
                     android:src="@drawable/button_decline"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -83,8 +84,8 @@
                     android:layout_height="match_parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="70:96"
-                    app:layout_constraintHorizontal_bias="0.84456"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintHorizontal_bias="0.7451"
                     android:src="@drawable/button_accept"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>

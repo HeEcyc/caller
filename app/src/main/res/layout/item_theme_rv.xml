@@ -19,11 +19,11 @@
             android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="108:173"
+            app:layout_constraintDimensionRatio="110:170"
             app:cardElevation="0dp"
             app:cardBackgroundColor="@android:color/transparent"
             scaleType="@{ScaleType.BY_WIDTH}"
-            scalableCornerRadius="@{0.09f}">
+            scalableCornerRadius="@{0.0727272f}">
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/preview"
                 android:layout_width="match_parent"

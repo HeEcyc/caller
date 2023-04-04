@@ -8,9 +8,7 @@ import com.bbbotttixxx.callscreen.utils.setOnClickListener
 class AppliedDialog : BaseDialog<AppliedDialogBinding>(R.layout.applied_dialog) {
 
     override fun setupUI() {
-        binding.buttonOk.setOnClickListener(::dismiss)
         binding.buttonClose.setOnClickListener(::dismiss)
-        binding.buttonCancel.setOnClickListener(::dismiss)
     }
 
 }

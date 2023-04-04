@@ -17,7 +17,7 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="86:132">
+            app:layout_constraintDimensionRatio="86:178">
 
             <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
                 android:layout_width="0dp"
@@ -28,10 +28,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintWidth_percent="0.8139"
-                app:layout_constraintVertical_bias="0.16"
+                app:layout_constraintVertical_bias="0.259"
                 app:cardBackgroundColor="@android:color/transparent"
                 app:cardElevation="0dp"
-                app:scalable_corner_radius="0.5">
+                app:scalable_corner_radius="0.142857">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -46,8 +46,36 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#33243C68"
+                        android:background="@drawable/app_gradient"
                         android:visibility="@{item.isSelected ? View.VISIBLE : View.GONE}">
+                        <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintWidth_percent="0.942857"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardElevation="0dp"
+                            app:scalable_corner_radius="0.121212">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/avatar2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintWidth_percent="1.07"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/avatar_placeholder"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="0dp"
                             android:layout_height="0dp"
@@ -70,13 +98,13 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="86:32"
-                app:layout_constraintVertical_bias="0.9"
+                app:layout_constraintDimensionRatio="86:36"
+                app:layout_constraintVertical_bias="0.8"
                 android:gravity="center"
                 app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="14sp"
+                app:autoSizeMaxTextSize="16sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#243C68"
+                android:textColor="#1F1F1F"
                 android:fontFamily="@font/roboto_400"
                 android:text="@{item.userContact.contactName}"/>
 

@@ -29,4 +29,6 @@
     <string name="next">Sonraki</string>
     <string name="choose_for_apply">Başvurmak İçin Seçin</string>
     <string name="theme_applied">Uygulanan Tema</string>
+    <string name="start_now">Şimdi başla</string>
+    <string name="what_will_you_choose_to_apply">Ne Uygulamayı Seçeceksiniz</string>
 </resources>
