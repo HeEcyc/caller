@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.bbbotttixxx.callscreen.ui.call.fragment.CallViewModel" />
+            type="com.paxi.cst.ui.call.fragment.CallViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

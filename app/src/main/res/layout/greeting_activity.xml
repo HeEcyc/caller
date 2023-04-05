@@ -29,7 +29,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="62"/>
 
-            <com.bbbotttixxx.callscreen.ui.custom.GradientTextView
+            <com.paxi.cst.ui.custom.GradientTextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="64"
@@ -45,7 +45,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="40"/>
 
-            <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
+            <com.paxi.cst.ui.custom.ScalableCardView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="412"
@@ -56,14 +56,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@mipmap/img_greeting"/>
-            </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
+            </com.paxi.cst.ui.custom.ScalableCardView>
 
             <androidx.legacy.widget.Space
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="79"/>
 
-            <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
+            <com.paxi.cst.ui.custom.ScalableCardView
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -89,7 +89,7 @@
                         android:fontFamily="@font/roboto_400"
                         android:text="@string/start_now"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
+            </com.paxi.cst.ui.custom.ScalableCardView>
 
             <androidx.legacy.widget.Space
                 android:layout_width="match_parent"

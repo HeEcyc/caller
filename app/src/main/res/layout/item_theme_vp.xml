@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.bbbotttixxx.callscreen.ui.custom.ScalableCardView.ScaleType"/>
-        <import type="com.bbbotttixxx.callscreen.model.theme.NewTheme"/>
+        <import type="com.paxi.cst.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="com.paxi.cst.model.theme.NewTheme"/>
         <variable
             name="item"
-            type="com.bbbotttixxx.callscreen.model.theme.Theme" />
+            type="com.paxi.cst.model.theme.Theme" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,7 +25,7 @@
             app:layout_constraintDimensionRatio="264:419"
             android:clipChildren="false">
 
-            <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
+            <com.paxi.cst.ui.custom.ScalableCardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:cardElevation="0dp"
@@ -43,7 +43,7 @@
                         android:scaleType="centerCrop"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
+            </com.paxi.cst.ui.custom.ScalableCardView>
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/icAdd"

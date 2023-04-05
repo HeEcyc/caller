@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.bbbotttixxx.callscreen.ui.main.MainViewModel" />
+            type="com.paxi.cst.ui.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,7 +18,7 @@
             android:id="@+id/homeFragmentContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.bbbotttixxx.callscreen.ui.home.HomeFragment"
+            android:name="com.paxi.cst.ui.home.HomeFragment"
             tools:layout="@layout/home_fragment" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

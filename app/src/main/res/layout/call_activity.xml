@@ -4,7 +4,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.bbbotttixxx.callscreen.ui.call.activity.CallActivityViewModel" />
+            type="com.paxi.cst.ui.call.activity.CallActivityViewModel" />
     </data>
 
     <androidx.fragment.app.FragmentContainerView
