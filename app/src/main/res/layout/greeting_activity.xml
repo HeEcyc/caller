@@ -1,102 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#F4F5F7"
     android:clipChildren="false">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="0dp"
+    <androidx.legacy.widget.Space
+        android:id="@+id/frame1"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="358:777"/>
+
+    <androidx.legacy.widget.Space
+        android:id="@+id/frame2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintDimensionRatio="360:772"
-        android:clipChildren="false">
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="328:772"
-            android:orientation="vertical"
-            android:clipChildren="false">
+        app:layout_constraintDimensionRatio="358:777"/>
 
-            <androidx.legacy.widget.Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="62"/>
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="frame1,frame2"
+        app:barrierDirection="top"/>
 
-            <com.paxi.cst.ui.custom.GradientTextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="64"
-                android:gravity="center_vertical"
-                app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="30sp"
-                app:autoSizeMinTextSize="1sp"
-                android:fontFamily="@font/roboto_700"
-                android:text="@string/find_your_perfect_call_screen_theme"/>
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="frame1,frame2"
+        app:barrierDirection="bottom"/>
 
-            <androidx.legacy.widget.Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="40"/>
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="frame1,frame2"
+        app:barrierDirection="start"/>
 
-            <com.paxi.cst.ui.custom.ScalableCardView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="412"
-                app:cardBackgroundColor="@color/white"
-                app:scale_by="byWidth"
-                app:scalable_corner_radius="0.04878">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@mipmap/img_greeting"/>
-            </com.paxi.cst.ui.custom.ScalableCardView>
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="frame1,frame2"
+        app:barrierDirection="end"/>
 
-            <androidx.legacy.widget.Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="79"/>
-
-            <com.paxi.cst.ui.custom.ScalableCardView
-                android:id="@+id/button"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="53"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:scale_by="byHeight"
-                app:scalable_corner_radius="0.188679">
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#1F1F1F">
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="328:22"
-                        android:gravity="center"
-                        app:autoSizeTextType="uniform"
-                        app:autoSizeMaxTextSize="20sp"
-                        app:autoSizeMinTextSize="1sp"
-                        android:textColor="#FFFFFF"
-                        android:fontFamily="@font/roboto_400"
-                        android:text="@string/start_now"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.paxi.cst.ui.custom.ScalableCardView>
-
-            <androidx.legacy.widget.Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="62"/>
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/barrierTop"
+        app:layout_constraintBottom_toBottomOf="@id/barrierBottom"
+        app:layout_constraintStart_toStartOf="@id/barrierStart"
+        app:layout_constraintEnd_toEndOf="@id/barrierEnd"
+        app:layout_constraintDimensionRatio="358:777"
+        android:src="@mipmap/img_greeting"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

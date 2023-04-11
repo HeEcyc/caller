@@ -1,6 +1,5 @@
 package com.paxi.cst.ui.home
 
-import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.paxi.cst.App
@@ -20,7 +19,6 @@ class HomeViewModel(
     val permissionRepository: PermissionRepository,
     private val fileRepository: FileRepository,
     private val contactsRepository: ContactsRepository,
-    private val preferencesRepository: PreferencesRepository,
     val localeRepository: LocaleRepository
 ) : BaseViewModel() {
 
@@ -28,10 +26,6 @@ class HomeViewModel(
 
     val adapterVP = ThemeAdapterVP()
     val adapterRV = ThemeAdapterRV(::onThemeClick)
-
-    val adapterLanguage = LanguageAdapter(localeRepository) {
-        localeRepository.locale = it
-    }
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
@@ -51,7 +45,6 @@ class HomeViewModel(
                 adapterVP.addItem(it, 1)
             }
         }
-        adapterLanguage.reloadData(LocaleRepository.Locale.values().toList())
     }
 
     private fun onThemeClick(theme: Theme) {
@@ -76,19 +69,6 @@ class HomeViewModel(
         viewModelScope.launch(Dispatchers.IO) {
             contactsRepository.contacts.forEach { themeRepository.setContactTheme(it.contactId, theme.backgroundFile) }
         }
-    }
-
-    val isFlashOn = ObservableBoolean(preferencesRepository.isFlashOn)
-    val isAccelerometerOn = ObservableBoolean(preferencesRepository.isAccelerometerOn)
-
-    fun onFlashClick() {
-        preferencesRepository.isFlashOn = !preferencesRepository.isFlashOn
-        isFlashOn.set(preferencesRepository.isFlashOn)
-    }
-
-    fun onAccelerometerClick() {
-        preferencesRepository.isAccelerometerOn = !preferencesRepository.isAccelerometerOn
-        isAccelerometerOn.set(preferencesRepository.isAccelerometerOn)
     }
 
 }

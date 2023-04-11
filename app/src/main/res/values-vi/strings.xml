@@ -31,4 +31,7 @@
     <string name="theme_applied">Chủ đề được áp dụng</string>
     <string name="start_now">Bắt đầu bây giờ</string>
     <string name="what_will_you_choose_to_apply">Bạn sẽ chọn gì để áp dụng</string>
+    <string name="sound">Âm thanh</string>
+    <string name="decline">Sự suy sụp</string>
+    <string name="accept">Chấp nhận</string>
 </resources>

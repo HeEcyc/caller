@@ -1,6 +1,21 @@
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-  <item
-    android:drawable="@mipmap/switch_track_checked"
-    android:width="86dp"
-    android:height="43dp"/>
-</layer-list>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="60dp"
+    android:height="30dp"
+    android:viewportWidth="60"
+    android:viewportHeight="30">
+  <path
+      android:pathData="M15,0L45,0A15,15 0,0 1,60 15L60,15A15,15 0,0 1,45 30L15,30A15,15 0,0 1,0 15L0,15A15,15 0,0 1,15 0z">
+    <aapt:attr name="android:fillColor">
+      <gradient 
+          android:startX="47.455"
+          android:startY="4.442"
+          android:endX="27.786"
+          android:endY="41.97"
+          android:type="linear">
+        <item android:offset="0" android:color="#FF66B0F0"/>
+        <item android:offset="1" android:color="#FF12E0FF"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+</vector>

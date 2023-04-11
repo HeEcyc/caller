@@ -17,7 +17,7 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="90:90">
+            app:layout_constraintDimensionRatio="84:84">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
@@ -27,7 +27,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintHeight_percent="0.7777777">
+                app:layout_constraintHeight_percent="0.7619">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/button"
@@ -40,13 +40,13 @@
                     android:layout_height="0dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintDimensionRatio="70:22"
+                    app:layout_constraintDimensionRatio="64:22"
                     android:gravity="center"
                     app:autoSizeTextType="uniform"
                     app:autoSizeMaxTextSize="20sp"
                     app:autoSizeMinTextSize="1sp"
-                    android:textColor="#1F1F1F"
-                    android:fontFamily="@font/roboto_400"
+                    android:textColor="#262D37"
+                    android:fontFamily="@font/avenir_lt_std_700"
                     android:text="@{item.onClickSymbol}"
                     android:visibility="@{item.onLongClickSymbol == null ? View.VISIBLE : View.GONE}"/>
 
@@ -61,13 +61,13 @@
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="70:22"
-                        app:layout_constraintVertical_bias="0.354"
+                        app:layout_constraintDimensionRatio="64:22"
+                        app:layout_constraintVertical_bias="0.2619"
                         android:gravity="center"
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="20sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:fontFamily="@font/roboto_400"
+                        android:fontFamily="@font/avenir_lt_std_700"
                         android:text="@{item.onClickSymbol}"/>
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -76,13 +76,13 @@
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="70:14"
+                        app:layout_constraintDimensionRatio="64:16"
                         app:layout_constraintVertical_bias="0.7321"
                         android:gravity="center"
                         app:autoSizeTextType="uniform"
-                        app:autoSizeMaxTextSize="12sp"
+                        app:autoSizeMaxTextSize="14sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:fontFamily="@font/roboto_300"
+                        android:fontFamily="@font/avenir_lt_std_350"
                         android:letterSpacing="0.325"
                         android:text="@{item.onLongClickSymbol}"/>
 

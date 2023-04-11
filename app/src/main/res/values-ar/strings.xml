@@ -31,4 +31,7 @@
     <string name="theme_applied">تم تطبيق الموضوع</string>
     <string name="start_now">ابدأ الآن</string>
     <string name="what_will_you_choose_to_apply">ما الذي ستختاره للتقديم</string>
+    <string name="sound">صوت</string>
+    <string name="decline">انخفاض</string>
+    <string name="accept">يقبل</string>
 </resources>

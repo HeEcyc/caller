@@ -31,4 +31,7 @@
     <string name="theme_applied">Inilapat ang Tema</string>
     <string name="start_now">Magsimula na</string>
     <string name="what_will_you_choose_to_apply">Ano ang Pipiliin Mo Para Mag-apply</string>
+    <string name="sound">Tunog</string>
+    <string name="decline">Tanggihan</string>
+    <string name="accept">Tanggapin</string>
 </resources>

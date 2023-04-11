@@ -16,8 +16,8 @@ class GradientTextView @JvmOverloads constructor(
 ) : AppCompatTextView(context, attrs, defStyleAttr) {
 
     private var colors = arrayOf(
-        Color.parseColor("#AAF497"),
-        Color.parseColor("#00D2ED")
+        Color.parseColor("#12E0FF"),
+        Color.parseColor("#66B0F0")
     ).toIntArray()
         set(value) {
             field = value
@@ -41,7 +41,7 @@ class GradientTextView @JvmOverloads constructor(
     private fun doOnLayout(changed: Boolean) {
 //        if (changed) {
             paint.shader = LinearGradient(
-                0f, 0f, width.toFloat(), 0f,
+                0f, height.toFloat(), width.toFloat(), 0f,
                 colors,
                 null,
                 Shader.TileMode.CLAMP

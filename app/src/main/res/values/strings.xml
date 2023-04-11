@@ -28,7 +28,10 @@
     <string name="find_your_perfect_call_screen_theme">Find Your Perfect Call Screen Theme</string>
     <string name="next">Next</string>
     <string name="choose_for_apply">Choose For Apply</string>
-    <string name="theme_applied">Theme Applied</string>
+    <string name="theme_applied">Theme Applied!</string>
     <string name="start_now">Start Now</string>
     <string name="what_will_you_choose_to_apply">What Will You Choose To Apply</string>
+    <string name="sound">Sound</string>
+    <string name="decline">Decline</string>
+    <string name="accept">Accept</string>
 </resources>

@@ -39,7 +39,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="572">
+                android:layout_weight="693">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -47,7 +47,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintDimensionRatio="360:572">
+                    app:layout_constraintDimensionRatio="360:588">
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="0dp"
@@ -58,13 +58,13 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintDimensionRatio="332:32"
                         app:layout_constraintWidth_percent="0.9222"
-                        app:layout_constraintVertical_bias="0.055555"
+                        app:layout_constraintVertical_bias="0.0539"
                         android:gravity="center"
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="30sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#1F1F1F"
-                        android:fontFamily="@font/roboto_700"
+                        android:textColor="#262D37"
+                        android:fontFamily="@font/roboto_500"
                         android:singleLine="true"
                         android:lines="1"
                         android:ellipsize="start"
@@ -74,14 +74,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="360:490">
+                        app:layout_constraintDimensionRatio="360:476">
                         <androidx.recyclerview.widget.RecyclerView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintWidth_percent="0.75"
+                            app:layout_constraintWidth_percent="0.7"
                             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                             app:spanCount="3"
                             android:overScrollMode="never"
@@ -98,8 +98,8 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintDimensionRatio="1:1"
-                        app:layout_constraintWidth_percent="0.1666666"
-                        app:layout_constraintVertical_bias="0.8828125"
+                        app:layout_constraintWidth_percent="0.194444"
+                        app:layout_constraintVertical_bias="0.86"
                         android:src="@drawable/button_accept"/>
 
                     <androidx.appcompat.widget.AppCompatImageView
@@ -110,9 +110,9 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintDimensionRatio="1:1"
-                        app:layout_constraintWidth_percent="0.1666666"
-                        app:layout_constraintVertical_bias="0.8828125"
-                        app:layout_constraintHorizontal_bias="0.8"
+                        app:layout_constraintWidth_percent="0.17777777"
+                        app:layout_constraintVertical_bias="0.86"
+                        app:layout_constraintHorizontal_bias="0.78"
                         android:src="@drawable/ic_backspace"
                         android:onClick="@{(_) -> viewModel.backspace()}"/>
 

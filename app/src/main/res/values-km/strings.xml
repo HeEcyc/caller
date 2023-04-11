@@ -31,4 +31,7 @@
     <string name="theme_applied">បានអនុវត្តប្រធានបទ</string>
     <string name="start_now">ចាប់ផ្តើមឥឡូវនេះ</string>
     <string name="what_will_you_choose_to_apply">អ្វីដែលអ្នកនឹងជ្រើសរើសដើម្បីដាក់ពាក្យ</string>
+    <string name="sound">សំឡេង</string>
+    <string name="decline">បដិសេធ</string>
+    <string name="accept">ទទួលយក</string>
 </resources>

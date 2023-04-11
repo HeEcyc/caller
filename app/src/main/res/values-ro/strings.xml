@@ -31,4 +31,7 @@
     <string name="theme_applied">Tema aplicată</string>
     <string name="start_now">Începe acum</string>
     <string name="what_will_you_choose_to_apply">Ce vei alege să aplici</string>
+    <string name="sound">Sunet</string>
+    <string name="decline">Declin</string>
+    <string name="accept">Accept</string>
 </resources>

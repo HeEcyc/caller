@@ -37,7 +37,6 @@ class ContactsActivity : BaseActivity<ContactsViewModel, ContactsActivityBinding
         binding.buttonApply.setOnClickListener {
             applyThemeToContacts(viewModel.selectedContacts)
         }
-        binding.buttonCancel.setOnClickListener(::finish)
         viewModel.addInterlocutor.observe(this, ::addInterlocutor)
         viewModel.closeFragment.observe(this) { onBackPressed() }
         viewModel.hardReloadRV.observe(this) {

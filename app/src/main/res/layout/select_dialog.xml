@@ -12,23 +12,22 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="360:772">
-            <com.paxi.cst.ui.custom.ScalableCardView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="328:344"
-                app:layout_constraintWidth_percent="0.9111"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:scale_by="byWidth"
-                app:scalable_corner_radius="0.06">
+            app:layout_constraintDimensionRatio="360:777">
+
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="328:363"
+                    app:layout_constraintWidth_percent="0.9111"
                     android:background="#FFFFFF">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/bg_328x363"/>
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/buttonClose"
@@ -40,8 +39,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintDimensionRatio="1:1"
                         app:layout_constraintWidth_percent="0.073"
-                        app:layout_constraintVertical_bias="0.05"
-                        app:layout_constraintHorizontal_bias="0.947"
+                        app:layout_constraintVertical_bias="0.0678466"
+                        app:layout_constraintHorizontal_bias="0.93421"
                         android:src="@drawable/ic_close"/>
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -51,15 +50,16 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="275:44"
-                        app:layout_constraintWidth_percent="0.8384"
-                        app:layout_constraintVertical_bias="0.1666666"
+                        app:layout_constraintDimensionRatio="291:44"
+                        app:layout_constraintWidth_percent="0.887"
+                        app:layout_constraintVertical_bias="0.25"
                         android:gravity="center"
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="20sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#1F1F1F"
-                        android:fontFamily="@font/roboto_400"
+                        android:textColor="#262D37"
+                        android:fontFamily="@font/avenir_lt_std_700"
+                        android:textAllCaps="true"
                         android:text="@string/what_will_you_choose_to_apply"/>
 
                     <com.paxi.cst.ui.custom.ScalableCardView
@@ -70,28 +70,31 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="296:53"
-                        app:layout_constraintWidth_percent="0.902439"
-                        app:layout_constraintVertical_bias="0.4948536"
+                        app:layout_constraintDimensionRatio="174:46"
+                        app:layout_constraintWidth_percent="0.53"
+                        app:layout_constraintVertical_bias="0.5078864"
                         app:cardBackgroundColor="@android:color/transparent"
                         app:scale_by="byHeight"
-                        app:scalable_corner_radius="0.188679">
+                        app:scalable_corner_radius="0.5">
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#1F1F1F">
+                            android:background="@drawable/app_gradient">
                             <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 app:layout_constraintTop_toTopOf="parent"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintDimensionRatio="296:18"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="88:32"
+                                app:layout_constraintHeight_percent="0.695652"
                                 android:gravity="center"
                                 app:autoSizeTextType="uniform"
-                                app:autoSizeMaxTextSize="16sp"
+                                app:autoSizeMaxTextSize="14sp"
                                 app:autoSizeMinTextSize="1sp"
                                 android:textColor="#FFFFFF"
-                                android:fontFamily="@font/roboto_400"
+                                android:fontFamily="@font/avenir_lt_std_350"
                                 android:text="@string/apply_to_all"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </com.paxi.cst.ui.custom.ScalableCardView>
@@ -104,34 +107,37 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="296:53"
-                        app:layout_constraintWidth_percent="0.902439"
-                        app:layout_constraintVertical_bias="0.78694"
+                        app:layout_constraintDimensionRatio="174:46"
+                        app:layout_constraintWidth_percent="0.53"
+                        app:layout_constraintVertical_bias="0.779"
                         app:cardBackgroundColor="@android:color/transparent"
                         app:scale_by="byHeight"
-                        app:scalable_corner_radius="0.188679">
+                        app:scalable_corner_radius="0.5">
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#1F1F1F">
+                            android:background="@drawable/app_gradient">
                             <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 app:layout_constraintTop_toTopOf="parent"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintDimensionRatio="296:18"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="88:32"
+                                app:layout_constraintHeight_percent="0.695652"
                                 android:gravity="center"
                                 app:autoSizeTextType="uniform"
-                                app:autoSizeMaxTextSize="16sp"
+                                app:autoSizeMaxTextSize="14sp"
                                 app:autoSizeMinTextSize="1sp"
                                 android:textColor="#FFFFFF"
-                                android:fontFamily="@font/roboto_400"
+                                android:fontFamily="@font/avenir_lt_std_350"
                                 android:text="@string/select_contacts_to_apply"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </com.paxi.cst.ui.custom.ScalableCardView>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.paxi.cst.ui.custom.ScalableCardView>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
     

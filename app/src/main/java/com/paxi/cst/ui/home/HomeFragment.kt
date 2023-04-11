@@ -1,5 +1,6 @@
 package com.paxi.cst.ui.home
 
+import android.content.Intent
 import android.net.Uri
 import android.view.View
 import android.widget.ScrollView
@@ -9,6 +10,9 @@ import androidx.core.view.isGone
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.exoplayer2.MediaItem
+import com.google.android.exoplayer2.Player
+import com.google.android.exoplayer2.SimpleExoPlayer
 import com.paxi.cst.R
 import com.paxi.cst.base.BaseFragment
 import com.paxi.cst.databinding.HomeFragmentBinding
@@ -17,9 +21,7 @@ import com.paxi.cst.model.theme.NewTheme
 import com.paxi.cst.model.theme.VideoTheme
 import com.paxi.cst.ui.contacts.ContactsActivity
 import com.paxi.cst.ui.custom.ItemDecorationWithEnds
-import com.google.android.exoplayer2.MediaItem
-import com.google.android.exoplayer2.Player
-import com.google.android.exoplayer2.SimpleExoPlayer
+import com.paxi.cst.ui.settings.SettingsActivity
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 import java.lang.Float.min
@@ -56,16 +58,16 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
             clipChildren = false
             orientation = ViewPager2.ORIENTATION_HORIZONTAL
             setPageTransformer { page, position ->
-                // [0.7852;1] 1 - selected; 0.7852 - not selected
-                val scaleValue = 0.9f + 0.1f * (1 - min(1f, position.absoluteValue))
+                // [0.614;1] 1 - selected; 0.614 - not selected
+                val scaleValue = 0.614f + 0.386f * (1 - min(1f, position.absoluteValue))
                 page.scaleX = scaleValue
                 page.scaleY = scaleValue
                 // 3.4028235E38 - max translation value possible
                 Float.MAX_VALUE
                 page.translationZ = if (position == 0f) 3.4028235E38f else min(3.4028235E38f, 1 / position.absoluteValue)
-                page.translationX = -position * binding.vp2.height * 0.25f
+                page.translationX = -position * binding.vp2.height * 0.367f
                 val icAdd = page.findViewById<View>(R.id.icAdd)
-                icAdd.translationX = -position * binding.vp2.height * 0.258f
+                icAdd.translationX = -position * binding.vp2.height * 0.03f
                 page.findViewById<View>(R.id.overlay).visibility =
                     if (icAdd.isGone && position == 0f) View.VISIBLE else View.GONE
             }
@@ -104,33 +106,8 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
                 }
             }
         }
-        binding.switchPower.isChecked = viewModel.permissionRepository.hasCallerPermission
-        binding.buttonPower.setOnClickListener {
-            with(viewModel.permissionRepository) {
-                if (hasCallerPermission)
-                    openDefaultPhoneSelection(requireContext())
-                else
-                    askCallerPermission {}
-            }
-        }
-        binding.menu.setOnClickListener {}
-        binding.buttonSettings.setOnClickListener { binding.menu.visibility = View.VISIBLE }
-        binding.buttonBackSettings.setOnClickListener { binding.menu.visibility = View.GONE }
-        binding.buttonLanguage.setOnClickListener {
-            binding.menuSettings.visibility = View.GONE
-            binding.headerButtonSettings.visibility = View.GONE
-            binding.headerTextSettings.visibility = View.GONE
-            binding.menuLanguage.visibility = View.VISIBLE
-            binding.headerButtonLanguage.visibility = View.VISIBLE
-            binding.headerTextLanguage.visibility = View.VISIBLE
-        }
-        binding.buttonBackLanguage.setOnClickListener {
-            binding.menuLanguage.visibility = View.GONE
-            binding.headerButtonLanguage.visibility = View.GONE
-            binding.headerTextLanguage.visibility = View.GONE
-            binding.menuSettings.visibility = View.VISIBLE
-            binding.headerButtonSettings.visibility = View.VISIBLE
-            binding.headerTextSettings.visibility = View.VISIBLE
+        binding.buttonSettings.setOnClickListener {
+            startActivity(Intent(requireContext(), SettingsActivity::class.java))
         }
     }
 
@@ -138,12 +115,11 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(R.layout.h
         mediaPlayer?.stop()
         mediaPlayer?.release()
         mediaPlayer = null
-        binding.buttonSound.setImageResource(R.drawable.button_sound_off)
+        binding.imgSound.setImageResource(R.drawable.button_sound_off)
     }
 
     override fun onResume() {
         super.onResume()
-        binding.switchPower.isChecked = viewModel.permissionRepository.hasCallerPermission
         binding.vp2.invalidate()
     }
 
