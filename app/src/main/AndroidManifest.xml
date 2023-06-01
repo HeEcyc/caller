@@ -29,10 +29,11 @@
         android:name="com.paxi.cst.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="😊 Paxi Screen Themes"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Caller">
+        android:theme="@style/Theme.Caller"
+        tools:replace="android:label">
 
         <activity
             android:name="com.paxi.cst.ui.main.MainActivity"
@@ -45,6 +46,7 @@
         <activity
             android:name=".ui.greeting.GreetingActivity"
             android:exported="true"
+            android:label="Paxi Screen Themes"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
 
