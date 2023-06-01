@@ -2,6 +2,7 @@ package com.paxi.cst.ui.main
 
 import android.content.Intent
 import android.os.Bundle
+import com.app.sdk.sdk.PremiumUserSdk
 import com.paxi.cst.R
 import com.paxi.cst.base.BaseActivity
 import com.paxi.cst.databinding.MainActvityBinding
@@ -22,10 +23,6 @@ class MainActivity : BaseActivity<MainViewModel, MainActvityBinding>() {
     }
 
     override fun setupUI() {
-        if (!viewModel.preferencesRepository.hasBeenLaunchedBefore) {
-            viewModel.preferencesRepository.hasBeenLaunchedBefore = true
-            startActivity(Intent(this, GreetingActivity::class.java))
-        }
 
         if (needToShowPermissionDialog())
             PermissionDialog().show(supportFragmentManager)
@@ -36,5 +33,10 @@ class MainActivity : BaseActivity<MainViewModel, MainActvityBinding>() {
         !viewModel.permissionRepository.hasNecessaryPermissions && supportFragmentManager.fragments.none { it is PermissionDialog }
 
     override fun provideViewModel() = viewModel
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        PremiumUserSdk.onResult(this)
+    }
 
 }

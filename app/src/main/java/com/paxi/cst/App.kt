@@ -1,11 +1,11 @@
 package com.paxi.cst
 
-import android.app.Application
+import com.app.sdk.AppApplication
 import com.paxi.cst.di.repositories
 import com.paxi.cst.di.viewModels
 import org.koin.core.context.startKoin
 
-class App : Application() {
+class App : AppApplication() {
 
     companion object {
         lateinit var instance: App
