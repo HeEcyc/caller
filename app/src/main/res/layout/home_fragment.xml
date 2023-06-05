@@ -6,11 +6,11 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.bbbotttixxx.callscreen.R"/>
-        <import type="com.bbbotttixxx.callscreen.repository.LocaleRepository"/>
+        <import type="com.fusiecal.ler.R"/>
+        <import type="com.fusiecal.ler.repository.LocaleRepository"/>
         <variable
             name="viewModel"
-            type="com.bbbotttixxx.callscreen.ui.home.HomeViewModel" />
+            type="com.fusiecal.ler.ui.home.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.motion.widget.MotionLayout
@@ -71,7 +71,7 @@
             app:layout_constraintBottom_toBottomOf="@id/selectorClosedMarker"
             app:layout_constraintDimensionRatio="360:242"
             android:clipChildren="false">
-            <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
+            <com.fusiecal.ler.ui.custom.ScalableCardView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -102,7 +102,7 @@
                             android:scrollbars="none"
                             android:adapter="@{viewModel.adapterRV}"/>
 
-                        <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
+                        <com.fusiecal.ler.ui.custom.ScalableCardView
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             app:layout_constraintTop_toTopOf="parent"
@@ -121,11 +121,11 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:background="@drawable/app_gradient"/>
-                        </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
+                        </com.fusiecal.ler.ui.custom.ScalableCardView>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
+            </com.fusiecal.ler.ui.custom.ScalableCardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
@@ -160,7 +160,7 @@
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="360:191">
-            <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
+            <com.fusiecal.ler.ui.custom.ScalableCardView
                 android:id="@+id/buttonApply"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -191,7 +191,7 @@
                         android:fontFamily="@font/roboto_400"
                         android:text="@string/apply"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
+            </com.fusiecal.ler.ui.custom.ScalableCardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -247,7 +247,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="33"/>
 
-                        <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
+                        <com.fusiecal.ler.ui.custom.ScalableCardView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="149"
@@ -376,14 +376,14 @@
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                             </androidx.appcompat.widget.LinearLayoutCompat>
-                        </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
+                        </com.fusiecal.ler.ui.custom.ScalableCardView>
 
                         <androidx.legacy.widget.Space
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="15"/>
 
-                        <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
+                        <com.fusiecal.ler.ui.custom.ScalableCardView
                             android:id="@+id/buttonLanguage"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
@@ -435,7 +435,7 @@
                                     app:layout_constraintDimensionRatio="25:43"
                                     android:src="@drawable/ic_next"/>
                             </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
+                        </com.fusiecal.ler.ui.custom.ScalableCardView>
 
                         <androidx.legacy.widget.Space
                             android:layout_width="match_parent"

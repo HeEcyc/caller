@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="item"
-            type="com.bbbotttixxx.callscreen.ui.dial.fragment.DialAdapter.DialButtonViewModel" />
+            type="com.fusiecal.ler.ui.dial.fragment.DialAdapter.DialButtonViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
