@@ -32,8 +32,8 @@ class ContactAdapter(
                 val avatar = t.userContact.photoThumbnailUri
                 if (avatar !== null) {
                     Glide.with(App.instance).load(avatar).into(binding.avatar)
-                    Glide.with(App.instance).load(avatar).into(binding.avatar2)
                 }
+                binding.letter.text = t.userContact.contactName?.trim()?.firstOrNull()?.toString()
                 binding.root.setOnClickListener { onClick(t) }
             }
         }

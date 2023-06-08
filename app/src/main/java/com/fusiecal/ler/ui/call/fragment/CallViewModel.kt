@@ -5,37 +5,35 @@ import android.telecom.PhoneAccountHandle
 import androidx.databinding.ObservableField
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.gjiazhe.panoramaimageview.GyroscopeObserver
 import com.fusiecal.ler.base.BaseViewModel
 import com.fusiecal.ler.model.contact.UserContact
 import com.fusiecal.ler.model.theme.VideoTheme
 import com.fusiecal.ler.repository.PermissionRepository
 import com.fusiecal.ler.repository.PreferencesRepository
-import com.fusiecal.ler.repository.ThemeRepository
 import com.fusiecal.ler.repository.call.AudioManagerRepository
 import com.fusiecal.ler.repository.call.CallRepository
 import com.fusiecal.ler.ui.dial.fragment.DialAdapter
 import com.fusiecal.ler.utils.SingleLiveData
 import com.fusiecal.ler.utils.answer
 import com.fusiecal.ler.utils.hangup
-import com.fusiecal.ler.utils.presetThemes
-import kotlinx.coroutines.*
+import com.gjiazhe.panoramaimageview.GyroscopeObserver
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 
 class CallViewModel(
     val contact: UserContact,
     val callRepository: CallRepository,
     val preferencesRepository: PreferencesRepository,
-    private val themeRepository: ThemeRepository,
     var permissionRepository: PermissionRepository
 ) : BaseViewModel() {
 
     val onAddCallEvents = MutableLiveData<Unit>()
     val onSwapClickEvents = MutableLiveData<Unit>()
 
-    val theme = runBlocking(Dispatchers.IO) {
-        themeRepository.getContactTheme(contact.contactId) ?: presetThemes.first()
-    }
+    val theme = preferencesRepository.theme
 
     private val callCallback = object : Call.Callback() {
 

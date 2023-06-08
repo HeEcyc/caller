@@ -13,193 +13,82 @@
             type="com.fusiecal.ler.ui.home.HomeViewModel" />
     </data>
 
-    <androidx.constraintlayout.motion.widget.MotionLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#F4F5F7"
-        app:layoutDescription="@xml/motion_scene_home_fragment"
-        android:clipChildren="false">
+        android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/navigation"
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintDimensionRatio="360:162">
+            android:layout_height="match_parent"
+            android:background="@drawable/app_gradient"
+            android:orientation="vertical"
+            android:clipChildren="true">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/buttonSettings"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintHeight_percent="0.296"
-                app:layout_constraintHorizontal_bias="0.05"
-                app:layout_constraintVertical_bias="0.63"
-                android:src="@drawable/button_settings"/>
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/buttonSound"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintHeight_percent="0.296"
-                app:layout_constraintHorizontal_bias="0.95"
-                app:layout_constraintVertical_bias="0.63"
-                android:src="@drawable/button_sound_off"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <View
-            android:id="@+id/selectorClosedMarker"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintDimensionRatio="360:42"/>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/selector"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="@id/selectorClosedMarker"
-            app:layout_constraintDimensionRatio="360:242"
-            android:clipChildren="false">
-            <com.fusiecal.ler.ui.custom.ScalableCardView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="360:252"
-                app:cardBackgroundColor="#FFFFFF"
-                app:scale_by="byHeight"
-                app:scalable_corner_radius="0.07">
+                android:layout_height="wrap_content">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintDimensionRatio="360:210">
+
+                    <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="360:242">
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/img_home"/>
 
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/recyclerView"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintDimensionRatio="360:170"
-                            app:layout_constraintVertical_bias="0.3055555"
-                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                            android:orientation="horizontal"
-                            android:overScrollMode="never"
-                            android:scrollbars="none"
-                            android:adapter="@{viewModel.adapterRV}"/>
-
-                        <com.fusiecal.ler.ui.custom.ScalableCardView
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="79:4"
-                            app:layout_constraintHeight_percent="0.0165"
-                            app:layout_constraintVertical_bias="0.9327731"
-                            app:cardElevation="0dp"
-                            android:shadowColor="@android:color/transparent"
-                            app:cardBackgroundColor="@android:color/transparent"
-                            app:scale_by="byHeight"
-                            app:scalable_corner_radius="0.5">
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@drawable/app_gradient"/>
-                        </com.fusiecal.ler.ui.custom.ScalableCardView>
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.fusiecal.ler.ui.custom.ScalableCardView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <View
-            android:id="@+id/handleHitBox"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="@id/selector"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="111:36"
-            app:layout_constraintWidth_percent="0.308333"/>
-
-        <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/barrier"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:constraint_referenced_ids="selector, navigation"
-            app:barrierDirection="bottom"/>
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/vp2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="@id/barrier"
-            app:layout_constraintBottom_toTopOf="@id/apply"
-            android:overScrollMode="never"
-            android:clipChildren="false"/>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/apply"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="360:191">
-            <com.fusiecal.ler.ui.custom.ScalableCardView
-                android:id="@+id/buttonApply"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="328:53"
-                app:layout_constraintHeight_percent="0.277"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:scale_by="byHeight"
-                app:scalable_corner_radius="0.188679">
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#1F1F1F">
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="match_parent"
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/buttonSettings"
+                        android:layout_width="0dp"
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="328:22"
-                        android:gravity="center"
-                        app:autoSizeTextType="uniform"
-                        app:autoSizeMaxTextSize="20sp"
-                        app:autoSizeMinTextSize="1sp"
-                        android:textColor="@android:color/white"
-                        android:fontFamily="@font/roboto_400"
-                        android:text="@string/apply"/>
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintHeight_percent="0.238"
+                        app:layout_constraintHorizontal_bias="0.05"
+                        android:src="@drawable/ic_settings"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/buttonAdd"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintHeight_percent="0.333"
+                        app:layout_constraintHorizontal_bias="0.9448"
+                        android:src="@drawable/button_add" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.fusiecal.ler.ui.custom.ScalableCardView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:adapter="@{viewModel.adapterRV}"
+                android:clipChildren="true"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/menu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#A61F1F1F"
-            android:visibility="gone">
+            android:background="#B8000000"
+            android:visibility="gone"
+            tools:visibility="visible">
             <View
                 android:id="@+id/marker"
                 android:layout_width="0dp"
@@ -208,14 +97,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="301:772"
+                app:layout_constraintDimensionRatio="296:772"
                 app:layout_constraintHorizontal_bias="0"/>
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/marker"
-                android:background="#F4F5F7"/>
+                android:background="@drawable/app_gradient"/>
             <ScrollView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -237,210 +126,173 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="269:273"
-                        app:layout_constraintWidth_percent="0.89"
+                        app:layout_constraintDimensionRatio="246:213"
+                        app:layout_constraintWidth_percent="0.831"
                         android:orientation="vertical"
                         android:clipChildren="false">
 
                         <androidx.legacy.widget.Space
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="33"/>
+                            android:layout_weight="50"/>
 
-                        <com.fusiecal.ler.ui.custom.ScalableCardView
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/buttonPower"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="149"
-                            app:cardBackgroundColor="@android:color/white"
-                            app:scale_by="byHeight"
-                            app:scalable_corner_radius="0.05369">
-                            <androidx.appcompat.widget.LinearLayoutCompat
-                                android:layout_width="match_parent"
+                            android:layout_weight="25">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintDimensionRatio="123:16"
+                                app:layout_constraintWidth_percent="0.5"
+                                android:gravity="center_vertical"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="14sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="@font/roboto_700"
+                                android:textAllCaps="true"
+                                android:text="@string/call_theme"
+                                tools:ignore="TooDeepLayout" />
+                            <androidx.appcompat.widget.AppCompatCheckBox
+                                android:id="@+id/switchPower"
+                                android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:orientation="vertical">
-
-                                <androidx.constraintlayout.widget.ConstraintLayout
-                                    android:id="@+id/buttonPower"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0dp"
-                                    android:layout_weight="43">
-                                    <androidx.appcompat.widget.AppCompatTextView
-                                        android:layout_width="0dp"
-                                        android:layout_height="0dp"
-                                        app:layout_constraintTop_toTopOf="parent"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintDimensionRatio="155:22"
-                                        app:layout_constraintHeight_percent="0.5116"
-                                        app:layout_constraintHorizontal_bias="0.14"
-                                        android:gravity="center_vertical"
-                                        app:autoSizeTextType="uniform"
-                                        app:autoSizeMaxTextSize="20sp"
-                                        app:autoSizeMinTextSize="1sp"
-                                        android:textColor="#1F1F1F"
-                                        android:fontFamily="@font/roboto_400"
-                                        android:text="@string/call_theme"
-                                        tools:ignore="TooDeepLayout" />
-                                    <androidx.appcompat.widget.SwitchCompat
-                                        android:id="@+id/switchPower"
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintDimensionRatio="2:1"
-                                        app:layout_constraintHorizontal_bias="0.9672"
-                                        android:thumb="@drawable/switch_thumb"
-                                        app:track="@drawable/switch_track"
-                                        android:clickable="false"/>
-                                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                                <androidx.legacy.widget.Space
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0dp"
-                                    android:layout_weight="10"/>
-
-                                <androidx.constraintlayout.widget.ConstraintLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0dp"
-                                    android:layout_weight="43"
-                                    android:onClick="@{(_) -> viewModel.onFlashClick()}">
-                                    <androidx.appcompat.widget.AppCompatTextView
-                                        android:layout_width="0dp"
-                                        android:layout_height="0dp"
-                                        app:layout_constraintTop_toTopOf="parent"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintDimensionRatio="155:22"
-                                        app:layout_constraintHeight_percent="0.5116"
-                                        app:layout_constraintHorizontal_bias="0.14"
-                                        android:gravity="center_vertical"
-                                        app:autoSizeTextType="uniform"
-                                        app:autoSizeMaxTextSize="20sp"
-                                        app:autoSizeMinTextSize="1sp"
-                                        android:textColor="#1F1F1F"
-                                        android:fontFamily="@font/roboto_400"
-                                        android:text="@string/flash"/>
-                                    <androidx.appcompat.widget.SwitchCompat
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintDimensionRatio="2:1"
-                                        app:layout_constraintHorizontal_bias="0.9672"
-                                        android:thumb="@drawable/switch_thumb"
-                                        app:track="@drawable/switch_track"
-                                        android:clickable="false"
-                                        android:checked="@{viewModel.isFlashOn}"/>
-                                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                                <androidx.legacy.widget.Space
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0dp"
-                                    android:layout_weight="10"/>
-
-                                <androidx.constraintlayout.widget.ConstraintLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0dp"
-                                    android:layout_weight="43"
-                                    android:onClick="@{(_) -> viewModel.onAccelerometerClick()}">
-                                    <androidx.appcompat.widget.AppCompatTextView
-                                        android:layout_width="0dp"
-                                        android:layout_height="0dp"
-                                        app:layout_constraintTop_toTopOf="parent"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintDimensionRatio="155:22"
-                                        app:layout_constraintHeight_percent="0.5116"
-                                        app:layout_constraintHorizontal_bias="0.14"
-                                        android:gravity="center_vertical"
-                                        app:autoSizeTextType="uniform"
-                                        app:autoSizeMaxTextSize="20sp"
-                                        app:autoSizeMinTextSize="1sp"
-                                        android:textColor="#1F1F1F"
-                                        android:fontFamily="@font/roboto_400"
-                                        android:text="@string/accelerometer"/>
-                                    <androidx.appcompat.widget.SwitchCompat
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintDimensionRatio="2:1"
-                                        app:layout_constraintHorizontal_bias="0.9672"
-                                        android:thumb="@drawable/switch_thumb"
-                                        app:track="@drawable/switch_track"
-                                        android:clickable="false"
-                                        android:checked="@{viewModel.isAccelerometerOn}"/>
-                                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                            </androidx.appcompat.widget.LinearLayoutCompat>
-                        </com.fusiecal.ler.ui.custom.ScalableCardView>
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="2:1"
+                                android:background="@drawable/checkbox"
+                                android:button="@null"
+                                android:clickable="false"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <androidx.legacy.widget.Space
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="15"/>
+                            android:layout_weight="20"/>
 
-                        <com.fusiecal.ler.ui.custom.ScalableCardView
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="25"
+                            android:onClick="@{(_) -> viewModel.onFlashClick()}">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintDimensionRatio="123:16"
+                                app:layout_constraintWidth_percent="0.5"
+                                android:gravity="center_vertical"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="14sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="@font/roboto_700"
+                                android:textAllCaps="true"
+                                android:text="@string/flash"/>
+                            <androidx.appcompat.widget.AppCompatCheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="2:1"
+                                android:background="@drawable/checkbox"
+                                android:button="@null"
+                                android:clickable="false"
+                                android:checked="@{viewModel.isFlashOn}"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.legacy.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="20"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="25"
+                            android:onClick="@{(_) -> viewModel.onAccelerometerClick()}">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintDimensionRatio="123:16"
+                                app:layout_constraintWidth_percent="0.5"
+                                android:gravity="center_vertical"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="14sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="@font/roboto_700"
+                                android:textAllCaps="true"
+                                android:text="@string/accelerometer"/>
+                            <androidx.appcompat.widget.AppCompatCheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="2:1"
+                                android:background="@drawable/checkbox"
+                                android:button="@null"
+                                android:clickable="false"
+                                android:checked="@{viewModel.isAccelerometerOn}"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.legacy.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="50"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/buttonLanguage"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="43"
-                            app:cardBackgroundColor="@android:color/white"
-                            app:scale_by="byHeight"
-                            app:scalable_corner_radius="0.186">
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="0dp"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintDimensionRatio="155:22"
-                                    app:layout_constraintHeight_percent="0.5116"
-                                    app:layout_constraintHorizontal_bias="0.14"
-                                    android:gravity="center_vertical"
-                                    app:autoSizeTextType="uniform"
-                                    app:autoSizeMaxTextSize="20sp"
-                                    app:autoSizeMinTextSize="1sp"
-                                    android:textColor="#1F1F1F"
-                                    android:fontFamily="@font/roboto_400"
-                                    android:text="@string/language"/>
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="0dp"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintDimensionRatio="52:18"
-                                    app:layout_constraintHeight_percent="0.4186"
-                                    app:layout_constraintHorizontal_bias="0.8433"
-                                    android:gravity="center_vertical|end"
-                                    app:autoSizeTextType="uniform"
-                                    app:autoSizeMaxTextSize="16sp"
-                                    app:autoSizeMinTextSize="1sp"
-                                    android:textColor="#801F1F1F"
-                                    android:fontFamily="@font/roboto_400"
-                                    android:text="@{viewModel.localeRepository.localeObservable.displayName ?? LocaleRepository.Locale.ENGLISH.displayName}"/>
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintDimensionRatio="25:43"
-                                    android:src="@drawable/ic_next"/>
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.fusiecal.ler.ui.custom.ScalableCardView>
-
-                        <androidx.legacy.widget.Space
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="33"/>
+                            android:layout_weight="16">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintDimensionRatio="123:16"
+                                app:layout_constraintWidth_percent="0.5"
+                                android:gravity="center_vertical"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="14sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="@font/roboto_700"
+                                android:textAllCaps="true"
+                                android:text="@string/language"/>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="123:16"
+                                app:layout_constraintWidth_percent="0.5"
+                                app:layout_constraintHorizontal_bias="0.8"
+                                android:gravity="center_vertical|end"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="14sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#80FFFFFF"
+                                android:fontFamily="@font/roboto_400"
+                                android:text="@{viewModel.localeRepository.localeObservable.displayName ?? LocaleRepository.Locale.ENGLISH.displayName}"/>
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                android:src="@drawable/ic_next"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -485,15 +337,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintDimensionRatio="360:120"/>
+                app:layout_constraintDimensionRatio="360:54"/>
 
             <Space
                 android:id="@+id/menuHeaderTop"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintDimensionRatio="360:72"/>
-            
+                app:layout_constraintDimensionRatio="360:22"/>
+
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -511,7 +363,7 @@
                         android:layout_height="match_parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="16:48"/>
+                        app:layout_constraintDimensionRatio="16:32"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -525,7 +377,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintDimensionRatio="1:1"
-                        android:src="@drawable/button_settings_back"/>
+                        android:src="@drawable/button_back"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -551,7 +403,7 @@
                         android:layout_height="match_parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="16:48"/>
+                        app:layout_constraintDimensionRatio="16:32"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -564,13 +416,14 @@
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintHeight_percent="0.458333"
+                        app:layout_constraintHeight_percent="0.6875"
                         android:gravity="center"
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="20sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#1F1F1F"
-                        android:fontFamily="@font/roboto_400"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/roboto_700"
+                        android:textAllCaps="true"
                         android:text="@string/settings"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -585,13 +438,14 @@
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintHeight_percent="0.458333"
+                        app:layout_constraintHeight_percent="0.6875"
                         android:gravity="center"
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="20sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#1F1F1F"
-                        android:fontFamily="@font/roboto_400"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/roboto_700"
+                        android:textAllCaps="true"
                         android:text="@string/language"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -603,13 +457,13 @@
                         android:layout_height="match_parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="80:48"/>
+                        app:layout_constraintDimensionRatio="64:32"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.constraintlayout.motion.widget.MotionLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

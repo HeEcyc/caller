@@ -45,8 +45,8 @@
                     app:autoSizeTextType="uniform"
                     app:autoSizeMaxTextSize="20sp"
                     app:autoSizeMinTextSize="1sp"
-                    android:textColor="#1F1F1F"
-                    android:fontFamily="@font/roboto_400"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/roboto_700"
                     android:text="@{item.onClickSymbol}"
                     android:visibility="@{item.onLongClickSymbol == null ? View.VISIBLE : View.GONE}"/>
 
@@ -67,7 +67,8 @@
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="20sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:fontFamily="@font/roboto_400"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/roboto_700"
                         android:text="@{item.onClickSymbol}"/>
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -82,7 +83,8 @@
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="12sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:fontFamily="@font/roboto_300"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/roboto_400"
                         android:letterSpacing="0.325"
                         android:text="@{item.onLongClickSymbol}"/>
 

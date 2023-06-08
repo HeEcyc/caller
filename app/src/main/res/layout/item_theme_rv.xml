@@ -6,29 +6,96 @@
         <import type="com.fusiecal.ler.ui.custom.ScalableCardView.ScaleType"/>
         <variable
             name="item"
-            type="com.fusiecal.ler.model.theme.Theme" />
+            type="com.fusiecal.ler.ui.home.ThemeAdapterRV.ThemeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:clipChildren="false">
 
         <com.fusiecal.ler.ui.custom.ScalableCardView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="110:170"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="156:282"
             app:cardElevation="0dp"
             app:cardBackgroundColor="@android:color/transparent"
             scaleType="@{ScaleType.BY_WIDTH}"
-            scalableCornerRadius="@{0.0727272f}">
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/preview"
+            scalableCornerRadius="@{0.02564f}">
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"/>
+                android:background="@{item.isSelected ? 0xFF873AEC : 0x33FFFFFF}">
+
+                <com.fusiecal.ler.ui.custom.ScalableCardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="144:209"
+                    app:layout_constraintWidth_percent="0.923"
+                    app:layout_constraintVertical_bias="0.1"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:scale_by="byWidth"
+                    app:scalable_corner_radius="0.027777777">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/preview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+                </com.fusiecal.ler.ui.custom.ScalableCardView>
+
+                <com.fusiecal.ler.ui.custom.ScalableCardView
+                    android:id="@+id/button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="121:34"
+                    app:layout_constraintWidth_percent="0.775641"
+                    app:layout_constraintVertical_bias="0.95"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:scale_by="byHeight"
+                    app:scalable_corner_radius="0.117647">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@{item.isSelected ? 0xFFFE4B00 : 0xFFB6F810}">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="121:20"
+                            android:src="@drawable/ic_selected"
+                            android:alpha="@{item.isSelected ? 1f : 0f}"/>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="121:16"
+                            android:gravity="center"
+                            app:autoSizeTextType="uniform"
+                            app:autoSizeMaxTextSize="14sp"
+                            app:autoSizeMinTextSize="1sp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/roboto_700"
+                            android:textAllCaps="true"
+                            android:text="@string/apply"
+                            android:alpha="@{item.isSelected ? 0f : 1f}"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.fusiecal.ler.ui.custom.ScalableCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </com.fusiecal.ler.ui.custom.ScalableCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

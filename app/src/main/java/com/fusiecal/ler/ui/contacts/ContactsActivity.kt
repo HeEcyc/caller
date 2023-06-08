@@ -7,7 +7,6 @@ import androidx.lifecycle.lifecycleScope
 import com.fusiecal.ler.R
 import com.fusiecal.ler.base.BaseActivity
 import com.fusiecal.ler.databinding.ContactsActivityBinding
-import com.fusiecal.ler.model.contact.UserContact
 import com.fusiecal.ler.utils.setOnClickListener
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
@@ -34,15 +33,12 @@ class ContactsActivity : BaseActivity<ContactsViewModel, ContactsActivityBinding
 
     @SuppressLint("ClickableViewAccessibility")
     override fun setupUI() {
-        binding.buttonApply.setOnClickListener {
-            applyThemeToContacts(viewModel.selectedContacts)
-        }
         binding.buttonCancel.setOnClickListener(::finish)
-        viewModel.addInterlocutor.observe(this, ::addInterlocutor)
-        viewModel.closeFragment.observe(this) { onBackPressed() }
-        viewModel.hardReloadRV.observe(this) {
-            binding.rv.adapter = viewModel.adapterContacts
+        binding.buttonOk.setOnClickListener {
+            val number = viewModel.adapterContacts.getData().firstOrNull()?.userContact?.contactNumber ?: return@setOnClickListener
+            addInterlocutor(number)
         }
+        viewModel.closeFragment.observe(this) { onBackPressed() }
     }
 
     private fun addInterlocutor(number: String) {
@@ -50,11 +46,6 @@ class ContactsActivity : BaseActivity<ContactsViewModel, ContactsActivityBinding
             if (it) call(number)
             if (mode == Mode.INTERLOCUTOR_SELECTOR) finish()
         }
-    }
-
-    private fun applyThemeToContacts(contacts: List<UserContact>) {
-        setResult(RESULT_OK, Intent().putExtra(EXTRAS_CONTACTS, contacts.toTypedArray()))
-        finish()
     }
 
     override fun provideViewModel() = viewModel

@@ -3,7 +3,7 @@ package com.fusiecal.ler.utils
 import com.fusiecal.ler.model.theme.Theme
 import com.fusiecal.ler.model.theme.VideoTheme
 
-val videoThemes = List(4) {
+val videoThemes = List(5) {
     VideoTheme(
         "file:///android_asset/videos/vid_$it.mp4",
         "file:///android_asset/gifs/$it.gif",

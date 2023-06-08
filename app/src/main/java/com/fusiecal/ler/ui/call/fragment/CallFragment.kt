@@ -9,15 +9,11 @@ import android.telecom.Call
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.viewModelScope
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
-import com.google.android.exoplayer2.C
-import com.google.android.exoplayer2.MediaItem
-import com.google.android.exoplayer2.Player
-import com.google.android.exoplayer2.SimpleExoPlayer
-import com.google.android.exoplayer2.audio.AudioAttributes
-import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
 import com.fusiecal.ler.App
 import com.fusiecal.ler.R
 import com.fusiecal.ler.base.BaseFragment
@@ -25,8 +21,13 @@ import com.fusiecal.ler.databinding.CallFragmentBinding
 import com.fusiecal.ler.model.contact.UserContact
 import com.fusiecal.ler.model.theme.VideoTheme
 import com.fusiecal.ler.ui.call.activity.CallActivity
-import com.fusiecal.ler.ui.call.dialog.SimDialog
 import com.fusiecal.ler.ui.contacts.ContactsActivity
+import com.google.android.exoplayer2.C
+import com.google.android.exoplayer2.MediaItem
+import com.google.android.exoplayer2.Player
+import com.google.android.exoplayer2.SimpleExoPlayer
+import com.google.android.exoplayer2.audio.AudioAttributes
+import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
@@ -68,7 +69,10 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
         viewModel.callState.observeForever { handleCallState(it) }
 
         viewModel.onAddCallEvents.observe(this) {
-            startActivity(ContactsActivity.newIntent(requireContext(), ContactsActivity.Mode.INTERLOCUTOR_SELECTOR))
+            viewModel.permissionRepository.askOutgoingCallPermissions(requireActivity().lifecycleScope) {
+                if (it)
+                    startActivity(ContactsActivity.newIntent(requireContext(), ContactsActivity.Mode.INTERLOCUTOR_SELECTOR))
+            }
         }
         viewModel.onSwapClickEvents.observe(this) {
             with(activityAs<CallActivity>()) {
@@ -168,7 +172,7 @@ class CallFragment : BaseFragment<CallViewModel, CallFragmentBinding>(R.layout.c
 
     @SuppressLint("MissingPermission")
     private fun chooseSimAccount() {
-        SimDialog().show(parentFragmentManager)
+        viewModel.setCallAccount(viewModel.callRepository.telecomManager.callCapablePhoneAccounts[0])
     }
 
     private fun onActiveCall() {

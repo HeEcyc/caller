@@ -22,31 +22,32 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="301:60"
+            app:layout_constraintDimensionRatio="296:55"
             android:clipChildren="false">
 
             <com.fusiecal.ler.ui.custom.ScalableCardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="269:50"
-                app:layout_constraintHeight_percent="0.8333"
+                app:layout_constraintDimensionRatio="264:50"
+                app:layout_constraintHeight_percent="0.90909"
                 app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="0dp"
                 app:scale_by="byHeight"
-                app:scalable_corner_radius="0.16">
+                app:scalable_corner_radius="0.08">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@{(localeRepository.localeObservable ?? LocaleRepository.Locale.ENGLISH) == item ? 0xFF873AEC : 0x33FFFFFF}">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="237:50"
+                        app:layout_constraintDimensionRatio="232:50"
                         android:clipChildren="false">
 
                         <androidx.appcompat.widget.AppCompatTextView
@@ -55,29 +56,16 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintHeight_percent="0.36"
+                            app:layout_constraintHeight_percent="0.5"
                             android:gravity="center_vertical"
                             app:autoSizeTextType="uniform"
-                            app:autoSizeMaxTextSize="16sp"
+                            app:autoSizeMaxTextSize="14sp"
                             app:autoSizeMinTextSize="1sp"
-                            android:textColor="#1F1F1F"
+                            android:textColor="#FFFFFF"
                             android:fontFamily="@font/roboto_400"
                             android:text="@{item.displayName}"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:src="@drawable/ic_selected"
-                        android:visibility="@{item == (localeRepository.localeObservable ?? LocaleRepository.Locale.ENGLISH) ? View.VISIBLE : View.GONE}"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="1:1"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.48"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintHorizontal_bias="0.93469"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.fusiecal.ler.ui.custom.ScalableCardView>

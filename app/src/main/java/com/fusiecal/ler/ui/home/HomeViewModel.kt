@@ -5,10 +5,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.fusiecal.ler.App
 import com.fusiecal.ler.base.BaseViewModel
-import com.fusiecal.ler.model.contact.UserContact
-import com.fusiecal.ler.model.theme.NewTheme
 import com.fusiecal.ler.model.theme.Theme
-import com.fusiecal.ler.repository.*
+import com.fusiecal.ler.repository.FileRepository
+import com.fusiecal.ler.repository.ImagePickerRepository
+import com.fusiecal.ler.repository.LocaleRepository
+import com.fusiecal.ler.repository.PermissionRepository
+import com.fusiecal.ler.repository.PreferencesRepository
+import com.fusiecal.ler.repository.ThemeRepository
 import com.fusiecal.ler.utils.presetThemes
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
@@ -19,15 +22,14 @@ class HomeViewModel(
     private val imagePickerRepository: ImagePickerRepository,
     val permissionRepository: PermissionRepository,
     private val fileRepository: FileRepository,
-    private val contactsRepository: ContactsRepository,
-    private val preferencesRepository: PreferencesRepository,
+    val preferencesRepository: PreferencesRepository,
     val localeRepository: LocaleRepository
 ) : BaseViewModel() {
 
-    val onThemeSelected = MutableLiveData<Int>()
+    val onThemeClick = MutableLiveData<Theme>()
+    val onPreviewClick = MutableLiveData<Theme>()
 
-    val adapterVP = ThemeAdapterVP()
-    val adapterRV = ThemeAdapterRV(::onThemeClick)
+    val adapterRV = ThemeAdapterRV(::onThemeClick, onPreviewClick::postValue)
 
     val adapterLanguage = LanguageAdapter(localeRepository) {
         localeRepository.locale = it
@@ -36,27 +38,27 @@ class HomeViewModel(
     init {
         viewModelScope.launch(Dispatchers.IO) {
             val themes = listOf(
-                NewTheme,
                 *themeRepository.getCustomThemes().toTypedArray(),
                 *presetThemes.toTypedArray()
-            )
+            ).map { ThemeAdapterRV.ThemeViewModel(it, it == preferencesRepository.theme) }
             launch(Dispatchers.Main) {
-                adapterRV.reloadData(themes.drop(1))
-                adapterVP.reloadData(themes)
+                adapterRV.reloadData(themes)
             }
         }
         viewModelScope.launch(Dispatchers.Main) {
             themeRepository.newThemes.collect {
-                adapterRV.addItem(it, 0)
-                adapterVP.addItem(it, 1)
+                adapterRV.addItem(ThemeAdapterRV.ThemeViewModel(it, false), 0)
             }
         }
         adapterLanguage.reloadData(LocaleRepository.Locale.values().toList())
+        observe(preferencesRepository.themeObservable) { _, _ ->
+            adapterRV.getData().forEach {
+                it.isSelected.set(it.theme == preferencesRepository.theme)
+            }
+        }
     }
 
-    private fun onThemeClick(theme: Theme) {
-        onThemeSelected.postValue(adapterRV.getData().indexOfFirst { it === theme } + 1)
-    }
+    private fun onThemeClick(theme: Theme) = onThemeClick.postValue(theme)
 
     fun addNewTheme() {
         imagePickerRepository.pickImage {
@@ -66,16 +68,9 @@ class HomeViewModel(
         }
     }
 
-    fun applyThemeToContacts(theme: Theme, contacts: List<UserContact>) {
-        viewModelScope.launch(Dispatchers.IO) {
-            contacts.forEach { themeRepository.setContactTheme(it.contactId, theme.backgroundFile) }
-        }
-    }
-
     fun applyToAll(theme: Theme) {
-        viewModelScope.launch(Dispatchers.IO) {
-            contactsRepository.contacts.forEach { themeRepository.setContactTheme(it.contactId, theme.backgroundFile) }
-        }
+        preferencesRepository.theme = theme
+        adapterRV.getData().forEach { it.isSelected.set(it.theme == theme) }
     }
 
     val isFlashOn = ObservableBoolean(preferencesRepository.isFlashOn)

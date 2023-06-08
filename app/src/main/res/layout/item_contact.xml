@@ -17,7 +17,7 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="86:178">
+            app:layout_constraintDimensionRatio="360:80">
 
             <com.fusiecal.ler.ui.custom.ScalableCardView
                 android:layout_width="0dp"
@@ -26,87 +26,95 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintWidth_percent="0.8139"
-                app:layout_constraintVertical_bias="0.259"
+                app:layout_constraintDimensionRatio="328:70"
+                app:layout_constraintWidth_percent="0.9111"
                 app:cardBackgroundColor="@android:color/transparent"
                 app:cardElevation="0dp"
-                app:scalable_corner_radius="0.142857">
+                app:scale_by="byHeight"
+                app:scalable_corner_radius="0.057">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@{item.isSelected ? 0xFF873AEC : 0x33FFFFFF}">
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/avatar"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/avatar_placeholder"/>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/app_gradient"
-                        android:visibility="@{item.isSelected ? View.VISIBLE : View.GONE}">
-                        <com.fusiecal.ler.ui.custom.ScalableCardView
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="1:1"
-                            app:layout_constraintWidth_percent="0.942857"
-                            app:cardBackgroundColor="@android:color/white"
-                            app:cardElevation="0dp"
-                            app:scalable_corner_radius="0.121212">
-                            <androidx.constraintlayout.widget.ConstraintLayout
+                    <com.fusiecal.ler.ui.custom.ScalableCardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintHeight_percent="0.77"
+                        app:layout_constraintHorizontal_bias="0.029"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FE4B00">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/letter"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:id="@+id/avatar2"
-                                    android:layout_width="0dp"
-                                    android:layout_height="0dp"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintWidth_percent="1.07"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/avatar_placeholder"/>
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.fusiecal.ler.ui.custom.ScalableCardView>
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="1:1"
-                            app:layout_constraintWidth_percent="0.34"
-                            android:src="@drawable/ic_selected"/>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="54:52"
+                                android:gravity="center"
+                                app:autoSizeTextType="uniform"
+                                app:autoSizeMaxTextSize="50sp"
+                                app:autoSizeMinTextSize="1sp"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="@font/roboto_700"
+                                android:textAllCaps="true"/>
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/avatar"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.fusiecal.ler.ui.custom.ScalableCardView>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="226:16"
+                        app:layout_constraintHeight_percent="0.22857"
+                        app:layout_constraintHorizontal_bias="0.8"
+                        app:layout_constraintVertical_bias="0.3148"
+                        android:gravity="center_vertical"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="14sp"
+                        app:autoSizeMinTextSize="1sp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/roboto_700"
+                        android:text="@{item.userContact.contactName}"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="226:16"
+                        app:layout_constraintHeight_percent="0.22857"
+                        app:layout_constraintHorizontal_bias="0.8"
+                        app:layout_constraintVertical_bias="0.6852"
+                        android:gravity="center_vertical"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="14sp"
+                        app:autoSizeMinTextSize="1sp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/roboto_400"
+                        android:text="@{item.userContact.contactNumber}"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.fusiecal.ler.ui.custom.ScalableCardView>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="86:36"
-                app:layout_constraintVertical_bias="0.8"
-                android:gravity="center"
-                app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="16sp"
-                app:autoSizeMinTextSize="1sp"
-                android:textColor="#1F1F1F"
-                android:fontFamily="@font/roboto_400"
-                android:text="@{item.userContact.contactName}"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

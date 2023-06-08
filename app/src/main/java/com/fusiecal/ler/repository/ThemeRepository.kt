@@ -21,6 +21,4 @@ class ThemeRepository(private val themeDao: ThemeDao) {
     fun setContactTheme(contactId: Long, themeFile: String) =
         themeDao.upsertContactTheme(ContactTheme(contactId, themeFile))
 
-    fun getContactTheme(contactId: Long) = themeDao.selectContactThemeForId(contactId)?.theme
-
 }
