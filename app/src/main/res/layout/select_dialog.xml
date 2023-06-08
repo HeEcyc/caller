@@ -13,7 +13,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintDimensionRatio="360:772">
-            <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
+            <com.yee.zer.ui.custom.ScalableCardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -62,7 +62,7 @@
                         android:fontFamily="@font/roboto_400"
                         android:text="@string/what_will_you_choose_to_apply"/>
 
-                    <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
+                    <com.yee.zer.ui.custom.ScalableCardView
                         android:id="@+id/buttonAll"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
@@ -94,9 +94,9 @@
                                 android:fontFamily="@font/roboto_400"
                                 android:text="@string/apply_to_all"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
+                    </com.yee.zer.ui.custom.ScalableCardView>
 
-                    <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
+                    <com.yee.zer.ui.custom.ScalableCardView
                         android:id="@+id/buttonSelected"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
@@ -128,10 +128,10 @@
                                 android:fontFamily="@font/roboto_400"
                                 android:text="@string/select_contacts_to_apply"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
+                    </com.yee.zer.ui.custom.ScalableCardView>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
+            </com.yee.zer.ui.custom.ScalableCardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
     

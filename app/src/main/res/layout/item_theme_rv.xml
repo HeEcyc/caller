@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.bbbotttixxx.callscreen.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="com.yee.zer.ui.custom.ScalableCardView.ScaleType"/>
         <variable
             name="item"
-            type="com.bbbotttixxx.callscreen.model.theme.Theme" />
+            type="com.yee.zer.model.theme.Theme" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:clipChildren="false">
 
-        <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
+        <com.yee.zer.ui.custom.ScalableCardView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"/>
-        </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
+        </com.yee.zer.ui.custom.ScalableCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
