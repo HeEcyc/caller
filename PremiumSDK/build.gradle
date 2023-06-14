@@ -1,0 +1,92 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services' apply(false)
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    namespace 'com.app.sdk'
+
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+
+    implementation fileTree(include: ['*.aar'], dir: 'libs')
+
+
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation "com.google.android.gms:play-services-ads-identifier"
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.1.2'
+    implementation 'com.google.android.gms:play-services-base:18.2.0'
+
+    implementation 'com.applovin:applovin-sdk:11.9.0'
+
+    implementation 'androidx.work:work-runtime:2.8.1'
+
+    implementation "com.google.guava:guava:31.0.1-android"
+
+    //Mediators
+    implementation 'com.applovin.mediation:adcolony-adapter:+'
+    implementation 'com.applovin.mediation:chartboost-adapter:+'
+    implementation 'com.applovin.mediation:criteo-adapter:+'
+    implementation 'com.applovin.mediation:fyber-adapter:+'
+    implementation 'com.applovin.mediation:hyprmx-adapter:+'
+    implementation 'com.applovin.mediation:inmobi-adapter:+'
+    implementation 'com.applovin.mediation:ironsource-adapter:+'
+    implementation 'com.applovin.mediation:line-adapter:+'
+    implementation 'com.applovin.mediation:maio-adapter:+'
+    implementation 'com.applovin.mediation:facebook-adapter:+'
+    implementation 'com.applovin.mediation:nend-adapter:+'
+    implementation 'com.applovin.mediation:ogury-presage-adapter:+'
+    implementation 'com.applovin.mediation:bytedance-adapter:+'
+    implementation 'com.applovin.mediation:smaato-adapter:+'
+    implementation 'com.applovin.mediation:tapjoy-adapter:+'
+    implementation 'com.applovin.mediation:unityads-adapter:+'
+    implementation 'com.applovin.mediation:verve-adapter:+'
+    implementation 'com.applovin.mediation:vungle-adapter:+'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.android.installreferrer:installreferrer:2.2'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx:18.3.7'
+    implementation 'com.google.firebase:firebase-analytics-ktx:21.3.0'
+    implementation 'com.google.firebase:firebase-config-ktx:21.4.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+    
+}

@@ -63,34 +63,6 @@
                 android:layout_height="0dp"
                 android:layout_weight="79"/>
 
-            <com.bbbotttixxx.callscreen.ui.custom.ScalableCardView
-                android:id="@+id/button"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="53"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:scale_by="byHeight"
-                app:scalable_corner_radius="0.188679">
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#1F1F1F">
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="328:22"
-                        android:gravity="center"
-                        app:autoSizeTextType="uniform"
-                        app:autoSizeMaxTextSize="20sp"
-                        app:autoSizeMinTextSize="1sp"
-                        android:textColor="#FFFFFF"
-                        android:fontFamily="@font/roboto_400"
-                        android:text="@string/start_now"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.bbbotttixxx.callscreen.ui.custom.ScalableCardView>
-
             <androidx.legacy.widget.Space
                 android:layout_width="match_parent"
                 android:layout_height="0dp"

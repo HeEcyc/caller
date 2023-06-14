@@ -1,11 +1,11 @@
 package com.bbbotttixxx.callscreen
 
-import android.app.Application
+import com.app.sdk.AppApplication
 import com.bbbotttixxx.callscreen.di.repositories
 import com.bbbotttixxx.callscreen.di.viewModels
 import org.koin.core.context.startKoin
 
-class App : Application() {
+class App : AppApplication() {
 
     companion object {
         lateinit var instance: App

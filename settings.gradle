@@ -1,12 +1,34 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
+
         maven { url "https://jitpack.io" }
         maven { url "https://maven.google.com" }
+        mavenCentral()
+        maven { url 'https://android-sdk.is.com/' }
+
+        maven { url "https://verve.jfrog.io/artifactory/verve-gradle-release" }
+        maven { url "https://artifactory.appodeal.com/appodeal" }
+        maven { url "https://android-sdk.is.com" }
+        maven { url "https://imobile-maio.github.io/maven" }
+        maven { url "https://fan-adn.github.io/nendSDK-Android-lib/library" }
+        maven { url "https://maven.ogury.co" }
+        maven { url "https://artifact.bytedance.com/repository/pangle" }
+        maven { url "https://s3.amazonaws.com/smaato-sdk-releases/" }
+        maven { url "https://sdk.tapjoy.com" }
+        maven { url "https://cboost.jfrog.io/artifactory/chartboost-ads/" }
     }
 }
-rootProject.name = "Caller After Lovelycall"
+rootProject.name = "Botix Call Screen"
 include ':app'
+include ':PremiumSDK'
+
