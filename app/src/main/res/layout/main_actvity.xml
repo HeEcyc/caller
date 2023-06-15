@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.fusiecal.ler.ui.main.MainViewModel" />
+            type="com.docall.jocall.ui.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,7 +18,7 @@
             android:id="@+id/homeFragmentContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.fusiecal.ler.ui.home.HomeFragment"
+            android:name="com.docall.jocall.ui.home.HomeFragment"
             tools:layout="@layout/home_fragment" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

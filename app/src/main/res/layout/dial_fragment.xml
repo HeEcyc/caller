@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.fusiecal.ler.ui.dial.fragment.DialViewModel" />
+            type="com.docall.jocall.ui.dial.fragment.DialViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

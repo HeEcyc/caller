@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.fusiecal.ler.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="com.docall.jocall.ui.custom.ScalableCardView.ScaleType"/>
         <import type="android.view.View"/>
-        <import type="com.fusiecal.ler.ui.contacts.ContactsActivity.Mode"/>
-        <import type="com.fusiecal.ler.R"/>
+        <import type="com.docall.jocall.ui.contacts.ContactsActivity.Mode"/>
+        <import type="com.docall.jocall.R"/>
         <variable
             name="viewModel"
-            type="com.fusiecal.ler.ui.contacts.ContactsViewModel" />
+            type="com.docall.jocall.ui.contacts.ContactsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -96,7 +96,7 @@
                     app:layout_constraintDimensionRatio="360:65"
                     android:clipChildren="false">
 
-                    <com.fusiecal.ler.ui.custom.ScalableCardView
+                    <com.docall.jocall.ui.custom.ScalableCardView
                         android:id="@+id/buttonOk"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
@@ -128,9 +128,9 @@
                                 android:textAllCaps="true"
                                 android:text="@string/ok"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.fusiecal.ler.ui.custom.ScalableCardView>
+                    </com.docall.jocall.ui.custom.ScalableCardView>
 
-                    <com.fusiecal.ler.ui.custom.ScalableCardView
+                    <com.docall.jocall.ui.custom.ScalableCardView
                         android:id="@+id/buttonCancel"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
@@ -162,7 +162,7 @@
                                 android:textAllCaps="true"
                                 android:text="@string/cancel"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.fusiecal.ler.ui.custom.ScalableCardView>
+                    </com.docall.jocall.ui.custom.ScalableCardView>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

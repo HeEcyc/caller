@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.fusiecal.ler.ui.custom.ScalableCardView.ScaleType"/>
+        <import type="com.docall.jocall.ui.custom.ScalableCardView.ScaleType"/>
         <variable
             name="item"
-            type="com.fusiecal.ler.ui.home.ThemeAdapterRV.ThemeViewModel" />
+            type="com.docall.jocall.ui.home.ThemeAdapterRV.ThemeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:clipChildren="false">
 
-        <com.fusiecal.ler.ui.custom.ScalableCardView
+        <com.docall.jocall.ui.custom.ScalableCardView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
@@ -29,7 +29,7 @@
                 android:layout_height="match_parent"
                 android:background="@{item.isSelected ? 0xFF873AEC : 0x33FFFFFF}">
 
-                <com.fusiecal.ler.ui.custom.ScalableCardView
+                <com.docall.jocall.ui.custom.ScalableCardView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     app:layout_constraintTop_toTopOf="parent"
@@ -48,9 +48,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"/>
-                </com.fusiecal.ler.ui.custom.ScalableCardView>
+                </com.docall.jocall.ui.custom.ScalableCardView>
 
-                <com.fusiecal.ler.ui.custom.ScalableCardView
+                <com.docall.jocall.ui.custom.ScalableCardView
                     android:id="@+id/button"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -93,10 +93,10 @@
                             android:text="@string/apply"
                             android:alpha="@{item.isSelected ? 0f : 1f}"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
-                </com.fusiecal.ler.ui.custom.ScalableCardView>
+                </com.docall.jocall.ui.custom.ScalableCardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.fusiecal.ler.ui.custom.ScalableCardView>
+        </com.docall.jocall.ui.custom.ScalableCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Fusie Caller</string>
+    <string name="app_name" translatable="false">Dojo Call Themes</string>
     <string name="permissionPhoneDescription">Set the application as your default phone apps</string>
     <string name="permissionContactsDescription">Allow the application to access your contacts</string>
     <string name="permissionOverlayDescription">Allow display over other app</string>

@@ -6,11 +6,11 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.fusiecal.ler.R"/>
-        <import type="com.fusiecal.ler.repository.LocaleRepository"/>
+        <import type="com.docall.jocall.R"/>
+        <import type="com.docall.jocall.repository.LocaleRepository"/>
         <variable
             name="viewModel"
-            type="com.fusiecal.ler.ui.home.HomeViewModel" />
+            type="com.docall.jocall.ui.home.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

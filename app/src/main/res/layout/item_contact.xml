@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="item"
-            type="com.fusiecal.ler.ui.contacts.ContactAdapter.Contact" />
+            type="com.docall.jocall.ui.contacts.ContactAdapter.Contact" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +19,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="360:80">
 
-            <com.fusiecal.ler.ui.custom.ScalableCardView
+            <com.docall.jocall.ui.custom.ScalableCardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -37,7 +37,7 @@
                     android:layout_height="match_parent"
                     android:background="@{item.isSelected ? 0xFF873AEC : 0x33FFFFFF}">
 
-                    <com.fusiecal.ler.ui.custom.ScalableCardView
+                    <com.docall.jocall.ui.custom.ScalableCardView
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         app:layout_constraintTop_toTopOf="parent"
@@ -73,7 +73,7 @@
                                 android:layout_height="match_parent"
                                 android:scaleType="centerCrop"/>
                         </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.fusiecal.ler.ui.custom.ScalableCardView>
+                    </com.docall.jocall.ui.custom.ScalableCardView>
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="0dp"
@@ -114,7 +114,7 @@
                         android:text="@{item.userContact.contactNumber}"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.fusiecal.ler.ui.custom.ScalableCardView>
+            </com.docall.jocall.ui.custom.ScalableCardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

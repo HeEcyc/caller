@@ -4,13 +4,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.fusiecal.ler.ui.dial.activity.DialActivityViewModel" />
+            type="com.docall.jocall.ui.dial.activity.DialActivityViewModel" />
     </data>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.fusiecal.ler.ui.dial.fragment.DialFragment"/>
+        android:name="com.docall.jocall.ui.dial.fragment.DialFragment"/>
 
 </layout>

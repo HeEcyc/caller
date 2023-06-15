@@ -4,10 +4,10 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="com.fusiecal.ler.repository.LocaleRepository"/>
+        <import type="com.docall.jocall.repository.LocaleRepository"/>
         <variable
             name="item"
-            type="com.fusiecal.ler.repository.LocaleRepository.Locale" />
+            type="com.docall.jocall.repository.LocaleRepository.Locale" />
         <variable
             name="localeRepository"
             type="LocaleRepository" />
@@ -25,7 +25,7 @@
             app:layout_constraintDimensionRatio="296:55"
             android:clipChildren="false">
 
-            <com.fusiecal.ler.ui.custom.ScalableCardView
+            <com.docall.jocall.ui.custom.ScalableCardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -68,7 +68,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.fusiecal.ler.ui.custom.ScalableCardView>
+            </com.docall.jocall.ui.custom.ScalableCardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
