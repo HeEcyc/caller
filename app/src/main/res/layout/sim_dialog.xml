@@ -15,29 +15,31 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintDimensionRatio="360:772">
 
-            <com.yee.zer.ui.custom.ScalableCardView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="328:474"
-                app:layout_constraintWidth_percent="0.9111"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:scale_by="byWidth"
-                app:scalable_corner_radius="0.06">
+                app:layout_constraintDimensionRatio="316:394"
+                app:layout_constraintWidth_percent="0.87777777">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="316:392"
+                    android:src="@drawable/bg_sim"/>
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:background="#FFFFFF"
                     android:clipChildren="false">
 
                     <Space
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="16"/>
+                        android:layout_weight="22.5"/>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -50,14 +52,14 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintDimensionRatio="1:1"
-                            app:layout_constraintHorizontal_bias="0.947"
+                            app:layout_constraintHorizontal_bias="0.9349315"
                             android:src="@drawable/ic_close"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.legacy.widget.Space
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="10"/>
+                        android:layout_weight="9"/>
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
@@ -67,19 +69,19 @@
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="20sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#1F1F1F"
-                        android:fontFamily="@font/roboto_400"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/baloo_2_700"
                         android:text="@string/choose_a_sim_card"/>
 
                     <androidx.legacy.widget.Space
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="20"/>
+                        android:layout_weight="35.5"/>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="75"
+                        android:layout_weight="71"
                         android:clipChildren="false">
                         <com.yee.zer.ui.custom.ScalableCardView
                             android:id="@+id/buttonSim1"
@@ -87,167 +89,14 @@
                             android:layout_height="match_parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="296:75"
-                            app:scale_by="byHeight"
-                            app:scalable_corner_radius="0.08">
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="0dp"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintDimensionRatio="60:22"
-                                    app:layout_constraintHeight_percent="0.29333"
-                                    app:layout_constraintHorizontal_bias="0.06779661"
-                                    android:gravity="center_vertical|start"
-                                    app:autoSizeTextType="uniform"
-                                    app:autoSizeMaxTextSize="20sp"
-                                    app:autoSizeMinTextSize="1sp"
-                                    android:textColor="#1F1F1F"
-                                    android:fontFamily="@font/roboto_400"
-                                    android:text="SIM 1"
-                                    tools:ignore="HardcodedText" />
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:id="@+id/selected1"
-                                    android:layout_width="0dp"
-                                    android:layout_height="0dp"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintDimensionRatio="1:1"
-                                    app:layout_constraintHeight_percent="0.32"
-                                    app:layout_constraintHorizontal_bias="0.94"
-                                    android:src="@drawable/ic_selected"/>
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.yee.zer.ui.custom.ScalableCardView>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="14"/>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="75"
-                        android:clipChildren="false">
-                        <com.yee.zer.ui.custom.ScalableCardView
-                            android:id="@+id/buttonSim2"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="296:75"
-                            app:scale_by="byHeight"
-                            app:scalable_corner_radius="0.08">
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="0dp"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintDimensionRatio="60:22"
-                                    app:layout_constraintHeight_percent="0.29333"
-                                    app:layout_constraintHorizontal_bias="0.06779661"
-                                    android:gravity="center_vertical|start"
-                                    app:autoSizeTextType="uniform"
-                                    app:autoSizeMaxTextSize="20sp"
-                                    app:autoSizeMinTextSize="1sp"
-                                    android:textColor="#1F1F1F"
-                                    android:fontFamily="@font/roboto_400"
-                                    android:text="SIM 2"
-                                    tools:ignore="HardcodedText" />
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:id="@+id/selected2"
-                                    android:layout_width="0dp"
-                                    android:layout_height="0dp"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintDimensionRatio="1:1"
-                                    app:layout_constraintHeight_percent="0.32"
-                                    app:layout_constraintHorizontal_bias="0.94"
-                                    android:src="@drawable/ic_selected"
-                                    android:visibility="gone"/>
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.yee.zer.ui.custom.ScalableCardView>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.legacy.widget.Space
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="30"/>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="53">
-                        <com.yee.zer.ui.custom.ScalableCardView
-                            android:id="@+id/buttonOk"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="296:53"
-                            app:cardBackgroundColor="@android:color/transparent"
-                            app:scale_by="byHeight"
-                            app:scalable_corner_radius="0.188679">
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="#1F1F1F">
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0dp"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintDimensionRatio="296:22"
-                                    android:gravity="center"
-                                    app:autoSizeTextType="uniform"
-                                    app:autoSizeMaxTextSize="20sp"
-                                    app:autoSizeMinTextSize="1sp"
-                                    android:textColor="@android:color/white"
-                                    android:fontFamily="@font/roboto_400"
-                                    android:text="@string/ok"/>
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.yee.zer.ui.custom.ScalableCardView>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.legacy.widget.Space
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="32"/>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="53">
-                        <com.yee.zer.ui.custom.ScalableCardView
-                            android:id="@+id/buttonCancel"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="296:53"
-                            app:cardBackgroundColor="@android:color/transparent"
+                            app:layout_constraintDimensionRatio="265:71"
                             app:cardElevation="0dp"
                             app:scale_by="byHeight"
-                            app:scalable_corner_radius="0.188679">
+                            app:scalable_corner_radius="0.14">
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/app_gradient">
+                                android:background="@drawable/gradient_orange">
                                 <com.yee.zer.ui.custom.ScalableCardView
                                     android:layout_width="0dp"
                                     android:layout_height="0dp"
@@ -255,31 +104,100 @@
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintDimensionRatio="294:51"
-                                    app:layout_constraintWidth_percent="0.99324324324"
-                                    app:cardBackgroundColor="@android:color/transparent"
+                                    app:layout_constraintDimensionRatio="263:69"
+                                    app:layout_constraintWidth_percent="0.992445280188"
                                     app:cardElevation="0dp"
+                                    app:cardBackgroundColor="#4D67DE"
                                     app:scale_by="byHeight"
-                                    app:scalable_corner_radius="0.17647">
+                                    app:scalable_corner_radius="0.13">
                                     <androidx.constraintlayout.widget.ConstraintLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:background="@android:color/white"
+                                        android:background="#33FFFFFF"
                                         tools:ignore="TooDeepLayout">
-                                        <com.yee.zer.ui.custom.GradientTextView
-                                            android:layout_width="wrap_content"
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
                                             android:layout_height="0dp"
                                             app:layout_constraintTop_toTopOf="parent"
                                             app:layout_constraintBottom_toBottomOf="parent"
                                             app:layout_constraintStart_toStartOf="parent"
                                             app:layout_constraintEnd_toEndOf="parent"
-                                            app:layout_constraintHeight_percent="0.43137"
-                                            android:gravity="center"
+                                            app:layout_constraintDimensionRatio="235:22"
+                                            app:layout_constraintHeight_percent="0.31884"
+                                            android:gravity="center_vertical|start"
                                             app:autoSizeTextType="uniform"
                                             app:autoSizeMaxTextSize="20sp"
                                             app:autoSizeMinTextSize="1sp"
-                                            android:fontFamily="@font/roboto_400"
-                                            android:text="@string/cancel"/>
+                                            android:textColor="#FFFFFF"
+                                            android:fontFamily="@font/baloo_2_400"
+                                            android:text="SIM 1"
+                                            tools:ignore="HardcodedText" />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </com.yee.zer.ui.custom.ScalableCardView>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </com.yee.zer.ui.custom.ScalableCardView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="16"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="71"
+                        android:clipChildren="false">
+                        <com.yee.zer.ui.custom.ScalableCardView
+                            android:id="@+id/buttonSim2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="265:71"
+                            app:cardElevation="0dp"
+                            app:scale_by="byHeight"
+                            app:scalable_corner_radius="0.14"
+                            android:alpha="0.5">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/gradient_orange">
+                                <com.yee.zer.ui.custom.ScalableCardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintDimensionRatio="263:69"
+                                    app:layout_constraintWidth_percent="0.992445280188"
+                                    app:cardElevation="0dp"
+                                    app:cardBackgroundColor="#4D67DE"
+                                    app:scale_by="byHeight"
+                                    app:scalable_corner_radius="0.13">
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#33FFFFFF"
+                                        tools:ignore="TooDeepLayout">
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintDimensionRatio="235:22"
+                                            app:layout_constraintHeight_percent="0.31884"
+                                            android:gravity="center_vertical|start"
+                                            app:autoSizeTextType="uniform"
+                                            app:autoSizeMaxTextSize="20sp"
+                                            app:autoSizeMinTextSize="1sp"
+                                            android:textColor="#FFFFFF"
+                                            android:fontFamily="@font/baloo_2_400"
+                                            android:text="SIM 2"
+                                            tools:ignore="HardcodedText" />
                                     </androidx.constraintlayout.widget.ConstraintLayout>
                                 </com.yee.zer.ui.custom.ScalableCardView>
                             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -289,10 +207,86 @@
                     <androidx.legacy.widget.Space
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="50"/>
+                        android:layout_weight="40"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="43">
+
+                        <com.yee.zer.ui.custom.ScalableCardView
+                            android:id="@+id/buttonOk"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="124:43"
+                            app:layout_constraintHorizontal_bias="0.90625"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardElevation="0dp"
+                            app:scale_by="byHeight"
+                            app:scalable_corner_radius="0.232558">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/gradient_orange">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="124:22"
+                                    android:gravity="center"
+                                    app:autoSizeTextType="uniform"
+                                    app:autoSizeMaxTextSize="20sp"
+                                    app:autoSizeMinTextSize="1sp"
+                                    android:textColor="@android:color/white"
+                                    android:fontFamily="@font/baloo_2_700"
+                                    android:text="@string/ok"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </com.yee.zer.ui.custom.ScalableCardView>
+
+                        <com.yee.zer.ui.custom.ScalableCardView
+                            android:id="@+id/buttonCancel"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="124:43"
+                            app:layout_constraintHorizontal_bias="0.09375"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardElevation="0dp"
+                            app:scale_by="byHeight"
+                            app:scalable_corner_radius="0.232558">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/gradient_orange">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="124:22"
+                                    android:gravity="center"
+                                    app:autoSizeTextType="uniform"
+                                    app:autoSizeMaxTextSize="20sp"
+                                    app:autoSizeMinTextSize="1sp"
+                                    android:textColor="@android:color/white"
+                                    android:fontFamily="@font/baloo_2_700"
+                                    android:text="@string/cancel"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </com.yee.zer.ui.custom.ScalableCardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.legacy.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="40"/>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
-            </com.yee.zer.ui.custom.ScalableCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

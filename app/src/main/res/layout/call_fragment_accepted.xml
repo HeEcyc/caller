@@ -31,13 +31,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="332:64"
                 app:layout_constraintWidth_percent="0.9222"
-                app:layout_constraintVertical_bias="0.1723"
+                app:layout_constraintVertical_bias="0.1709"
                 android:gravity="center"
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="30sp"
                 app:autoSizeMinTextSize="1sp"
                 android:textColor="#FFFFFF"
-                android:fontFamily="@font/roboto_700"
+                android:fontFamily="@font/baloo_2_700"
                 android:text="@{viewModel.contact.contactName}"/>
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -49,13 +49,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="332:22"
                 app:layout_constraintWidth_percent="0.9222"
-                app:layout_constraintVertical_bias="0.274666666"
+                app:layout_constraintVertical_bias="0.258874"
                 android:gravity="center"
                 app:autoSizeTextType="uniform"
                 app:autoSizeMaxTextSize="20sp"
                 app:autoSizeMinTextSize="1sp"
                 android:textColor="#FFFFFF"
-                android:fontFamily="@font/roboto_400"
+                android:fontFamily="@font/baloo_2_700"
                 android:text="@{viewModel.contact.contactNumber}"/>
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -66,8 +66,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintWidth_percent="0.1666666"
-                app:layout_constraintVertical_bias="0.789"
+                app:layout_constraintWidth_percent="0.194444"
+                app:layout_constraintVertical_bias="0.799"
                 android:src="@drawable/button_decline"
                 android:onClick="@{(_) -> viewModel.cancelCall()}"/>
 
@@ -197,7 +197,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="1"
             app:layout_constraintHeight_percent="0.836787"
-            android:background="#FFFFFF"
+            android:background="#4D67DE"
             android:orientation="vertical"
             android:visibility="gone">
 
@@ -251,8 +251,8 @@
                         app:autoSizeTextType="uniform"
                         app:autoSizeMaxTextSize="26sp"
                         app:autoSizeMinTextSize="1sp"
-                        android:textColor="#243C68"
-                        android:fontFamily="@font/roboto_700"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/baloo_2_700"
                         android:singleLine="true"
                         android:lines="1"
                         android:ellipsize="start"

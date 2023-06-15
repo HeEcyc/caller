@@ -17,7 +17,7 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="86:178">
+            app:layout_constraintDimensionRatio="86:136">
 
             <com.yee.zer.ui.custom.ScalableCardView
                 android:layout_width="0dp"
@@ -28,10 +28,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintWidth_percent="0.8139"
-                app:layout_constraintVertical_bias="0.259"
+                app:layout_constraintVertical_bias="0.17424242"
                 app:cardBackgroundColor="@android:color/transparent"
                 app:cardElevation="0dp"
-                app:scalable_corner_radius="0.142857">
+                app:scalable_corner_radius="0.5">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -41,12 +41,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/avatar_placeholder"/>
+                        android:src="@drawable/avatar_placeholder"
+                        android:alpha="@{item.isSelected ? 0f : 0.5f}"/>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/app_gradient"
+                        android:background="@drawable/gradient_orange"
                         android:visibility="@{item.isSelected ? View.VISIBLE : View.GONE}">
                         <com.yee.zer.ui.custom.ScalableCardView
                             android:layout_width="0dp"
@@ -56,36 +57,21 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintDimensionRatio="1:1"
-                            app:layout_constraintWidth_percent="0.942857"
-                            app:cardBackgroundColor="@android:color/white"
+                            app:layout_constraintWidth_percent="0.97"
+                            app:cardBackgroundColor="#4D67DE"
                             app:cardElevation="0dp"
-                            app:scalable_corner_radius="0.121212">
+                            app:scalable_corner_radius="0.5">
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/avatar2"
-                                    android:layout_width="0dp"
-                                    android:layout_height="0dp"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintWidth_percent="1.07"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:scaleType="centerCrop"
                                     android:src="@drawable/avatar_placeholder"/>
                             </androidx.constraintlayout.widget.ConstraintLayout>
                         </com.yee.zer.ui.custom.ScalableCardView>
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintDimensionRatio="1:1"
-                            app:layout_constraintWidth_percent="0.34"
-                            android:src="@drawable/ic_selected"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -96,16 +82,14 @@
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="86:36"
-                app:layout_constraintVertical_bias="0.8"
+                app:layout_constraintDimensionRatio="86:32"
+                app:layout_constraintVertical_bias="0.889423"
                 android:gravity="center"
                 app:autoSizeTextType="uniform"
-                app:autoSizeMaxTextSize="16sp"
+                app:autoSizeMaxTextSize="14sp"
                 app:autoSizeMinTextSize="1sp"
-                android:textColor="#1F1F1F"
-                android:fontFamily="@font/roboto_400"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/baloo_2_400"
                 android:text="@{item.userContact.contactName}"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

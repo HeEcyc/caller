@@ -22,65 +22,78 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="301:60"
+            app:layout_constraintDimensionRatio="301:53"
             android:clipChildren="false">
 
-            <com.yee.zer.ui.custom.ScalableCardView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="269:50"
-                app:layout_constraintHeight_percent="0.8333"
-                app:cardBackgroundColor="@android:color/white"
-                app:scale_by="byHeight"
-                app:scalable_corner_radius="0.16">
-                <androidx.constraintlayout.widget.ConstraintLayout
+                app:layout_constraintDimensionRatio="269:44"
+                app:layout_constraintHeight_percent="0.83">
+
+                <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bg_269x44"/>
 
+                <com.yee.zer.ui.custom.ScalableCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:scale_by="byHeight"
+                    app:scalable_corner_radius="0.181818"
+                    android:alpha="@{item == (localeRepository.localeObservable ?? LocaleRepository.Locale.ENGLISH) ? 1f : 0f}">
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintDimensionRatio="237:50"
-                        android:clipChildren="false">
-
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:layout_width="wrap_content"
+                        android:background="@drawable/gradient_orange">
+                        <com.yee.zer.ui.custom.ScalableCardView
+                            android:layout_width="0dp"
                             android:layout_height="0dp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintHeight_percent="0.36"
-                            android:gravity="center_vertical"
-                            app:autoSizeTextType="uniform"
-                            app:autoSizeMaxTextSize="16sp"
-                            app:autoSizeMinTextSize="1sp"
-                            android:textColor="#1F1F1F"
-                            android:fontFamily="@font/roboto_400"
-                            android:text="@{item.displayName}"/>
-
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="267:42"
+                            app:layout_constraintWidth_percent="0.992565"
+                            app:scale_by="byHeight"
+                            app:scalable_corner_radius="0.1666666"
+                            app:cardBackgroundColor="#7185E5"
+                            app:cardElevation="0dp"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.yee.zer.ui.custom.ScalableCardView>
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="0dp"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="237:44"
+                    android:clipChildren="false">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
                         android:layout_height="0dp"
-                        android:src="@drawable/ic_selected"
-                        android:visibility="@{item == (localeRepository.localeObservable ?? LocaleRepository.Locale.ENGLISH) ? View.VISIBLE : View.GONE}"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="1:1"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.48"
                         app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintHorizontal_bias="0.93469"/>
+                        app:layout_constraintHeight_percent="0.363636"
+                        android:gravity="center_vertical"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="14sp"
+                        app:autoSizeMinTextSize="1sp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/baloo_2_400"
+                        android:text="@{item.displayName}"
+                        android:alpha="@{item == (localeRepository.localeObservable ?? LocaleRepository.Locale.ENGLISH) ? 1f : 0.5f}"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.yee.zer.ui.custom.ScalableCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

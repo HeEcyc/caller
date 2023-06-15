@@ -6,9 +6,14 @@ import androidx.lifecycle.viewModelScope
 import com.yee.zer.App
 import com.yee.zer.base.BaseViewModel
 import com.yee.zer.model.contact.UserContact
-import com.yee.zer.model.theme.NewTheme
 import com.yee.zer.model.theme.Theme
-import com.yee.zer.repository.*
+import com.yee.zer.repository.ContactsRepository
+import com.yee.zer.repository.FileRepository
+import com.yee.zer.repository.ImagePickerRepository
+import com.yee.zer.repository.LocaleRepository
+import com.yee.zer.repository.PermissionRepository
+import com.yee.zer.repository.PreferencesRepository
+import com.yee.zer.repository.ThemeRepository
 import com.yee.zer.utils.presetThemes
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
@@ -24,38 +29,40 @@ class HomeViewModel(
     val localeRepository: LocaleRepository
 ) : BaseViewModel() {
 
-    val onThemeSelected = MutableLiveData<Int>()
+    val onThemeSelected = MutableLiveData<Theme>()
 
-    val adapterVP = ThemeAdapterVP()
-    val adapterRV = ThemeAdapterRV(::onThemeClick)
+    val adapterRV = ThemeAdapterHome(::onThemeClick)
 
     val adapterLanguage = LanguageAdapter(localeRepository) {
         localeRepository.locale = it
     }
 
+    var theme: Theme? = null
+
     init {
         viewModelScope.launch(Dispatchers.IO) {
             val themes = listOf(
-                NewTheme,
                 *themeRepository.getCustomThemes().toTypedArray(),
                 *presetThemes.toTypedArray()
-            )
+            ).mapIndexed { index, theme -> ThemeAdapterHome.Item(theme, index == 0) }
             launch(Dispatchers.Main) {
-                adapterRV.reloadData(themes.drop(1))
-                adapterVP.reloadData(themes)
+                adapterRV.reloadData(themes)
             }
+            theme = themes.first().theme
+            onThemeSelected.postValue(themes.first().theme)
         }
         viewModelScope.launch(Dispatchers.Main) {
             themeRepository.newThemes.collect {
-                adapterRV.addItem(it, 0)
-                adapterVP.addItem(it, 1)
+                adapterRV.addItem(ThemeAdapterHome.Item(it), 0)
             }
         }
         adapterLanguage.reloadData(LocaleRepository.Locale.values().toList())
     }
 
     private fun onThemeClick(theme: Theme) {
-        onThemeSelected.postValue(adapterRV.getData().indexOfFirst { it === theme } + 1)
+        this.theme = theme
+        onThemeSelected.postValue(theme)
+        adapterRV.getData().forEach { it.isSelected.set(it.theme === theme) }
     }
 
     fun addNewTheme() {

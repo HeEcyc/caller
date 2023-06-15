@@ -4,22 +4,22 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.yee.zer.base.BaseAdapter
-import com.yee.zer.databinding.ItemThemeRvBinding
+import com.yee.zer.databinding.ItemThemeBinding
 import com.yee.zer.model.theme.NewTheme
 import com.yee.zer.model.theme.Theme
 
-class ThemeAdapterRV(
+class ThemeAdapter(
     private val onItemClick: (Theme) -> Unit = {}
-) : BaseAdapter<Theme, ItemThemeRvBinding>() {
+) : BaseAdapter<Theme, ItemThemeBinding>() {
 
     override fun getViewBinding(
         inflater: LayoutInflater,
         viewGroup: ViewGroup,
         item: Int
-    ) = ItemThemeRvBinding.inflate(inflater, viewGroup, false)
+    ) = ItemThemeBinding.inflate(inflater, viewGroup, false)
 
-    override fun createHolder(binding: ItemThemeRvBinding) =
-        object : BaseItem<Theme, ItemThemeRvBinding>(binding) {
+    override fun createHolder(binding: ItemThemeBinding) =
+        object : BaseItem<Theme, ItemThemeBinding>(binding) {
             override fun bind(t: Theme) {
                 binding.root.setOnClickListener { onItemClick(t) }
                 if (t !is NewTheme)
